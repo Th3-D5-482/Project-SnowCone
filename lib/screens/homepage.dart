@@ -25,7 +25,7 @@ class HomepageState extends State<Homepage> {
                   fontWeight: FontWeight.bold,
                   decoration: TextDecoration.underline,
                   decorationColor: Colors.green,
-                  decorationThickness: 5,
+                  decorationThickness: 4,
                 ),
               ),
             ],
