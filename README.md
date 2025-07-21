@@ -1,4 +1,4 @@
-# App
+# 🍧Project SnowCone
 
 ### 🔐 Code name: Project SnowCone
 
