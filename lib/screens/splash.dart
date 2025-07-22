@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/screens/homepage.dart';
+import 'package:snowcone/screens/welcome.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
       Navigator.push(
         // ignore: use_build_context_synchronously
         context,
-        MaterialPageRoute(builder: (context) => const Homepage()),
+        MaterialPageRoute(builder: (context) => const Welcome()),
       );
     });
   }
