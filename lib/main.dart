@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/screens/homepage.dart';
 import 'package:snowcone/screens/splash.dart';
 
 void main() {
@@ -14,11 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "SnowCone",
       theme: ThemeData(
-        primaryColor: Colors.green,
+        primaryColor: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.black,
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Colors.transparent,
-          selectedItemColor: Colors.green,
+          selectedItemColor: Colors.blueGrey,
           unselectedItemColor: Colors.white,
           showUnselectedLabels: false,
         ),

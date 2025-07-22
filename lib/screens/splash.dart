@@ -12,7 +12,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.push(
         // ignore: use_build_context_synchronously
         context,
@@ -29,23 +29,34 @@ class _SplashState extends State<Splash> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 110,
-                backgroundImage: AssetImage('assets/images/Th3_D5_482.jpeg'),
+              Image(
+                image: AssetImage('assets/images/logo.png'),
+                width: 200,
+                height: 200,
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: Text(
-                  'Project SnowCone',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Project',
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 8.0),
+                  Text(
+                    'SnowCone',
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'By: Th3_D5_482',
-                  style: TextStyle(fontSize: 16, color: Colors.grey),
-                ),
+              SizedBox(height: 5),
+              Text(
+                'By: Th3_D5_482',
+                style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
             ],
           ),
