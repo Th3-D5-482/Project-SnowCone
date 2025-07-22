@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snowcone/screens/homepage.dart';
+import 'package:snowcone/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           displaySmall: TextStyle(color: Colors.white),
         ),
       ),
-      home: const Homepage(),
+      home: const Splash(),
     );
   }
 }
