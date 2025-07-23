@@ -34,13 +34,13 @@ class Welcome extends StatelessWidget {
             children: [
               Text(
                 'Explore your favorite',
-                style: TextStyle(fontSize: 18, color: Colors.grey),
+                style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               SizedBox(width: 8.0),
               Text(
                 'songs',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 22,
                   color: Colors.blueGrey,
                   fontWeight: FontWeight.bold,
                 ),
@@ -53,13 +53,13 @@ class Welcome extends StatelessWidget {
               SizedBox(width: 8.0),
               Text(
                 'Master every',
-                style: TextStyle(fontSize: 18, color: Colors.grey),
+                style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               SizedBox(width: 8.0),
               Text(
                 'chord',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 22,
                   color: Colors.blueGrey,
                   fontWeight: FontWeight.bold,
                 ),
@@ -72,13 +72,13 @@ class Welcome extends StatelessWidget {
               SizedBox(width: 8.0),
               Text(
                 'Play with',
-                style: TextStyle(fontSize: 18, color: Colors.grey),
+                style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               SizedBox(width: 8.0),
               Text(
                 'confidence',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 22,
                   color: Colors.blueGrey,
                   fontWeight: FontWeight.bold,
                 ),
