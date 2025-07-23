@@ -115,7 +115,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 30),
                 Row(
                   children: [
                     Expanded(child: Divider(color: Colors.grey, thickness: 1)),
@@ -128,7 +128,52 @@ class SignIn extends StatelessWidget {
                     Expanded(child: Divider(color: Colors.grey, thickness: 1)),
                   ],
                 ),
+                SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(350, 50),
+                    backgroundColor: Colors.blueGrey,
+                    foregroundColor: Colors.white,
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                      side: BorderSide(color: Colors.blueGrey, width: 2),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.email, size: 20),
+                      SizedBox(width: 10),
+                      Text('Sign in with Email'),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Don\'t have an account?',
+                      style: TextStyle(fontSize: 18, color: Colors.grey),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.blueGrey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
