@@ -29,6 +29,19 @@ class MyApp extends StatelessWidget {
           displayMedium: TextStyle(color: Colors.white),
           displaySmall: TextStyle(color: Colors.white),
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueGrey,
+            foregroundColor: Colors.white,
+            textStyle: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+          ),
+        ),
       ),
       home: const Splash(),
     );
