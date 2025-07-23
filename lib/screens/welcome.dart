@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/screens/signin.dart';
+import 'package:snowcone/screens/sign_in.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -94,7 +94,7 @@ class Welcome extends StatelessWidget {
                 Navigator.of(context).push(
                   PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        const Signin(),
+                        const SignIn(),
                     transitionDuration: Duration(milliseconds: 100),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) =>
