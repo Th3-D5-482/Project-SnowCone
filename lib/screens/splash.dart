@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/screens/homepage.dart';
 import 'package:snowcone/screens/welcome.dart';
 
 class Splash extends StatefulWidget {
