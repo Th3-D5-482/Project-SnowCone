@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/screens/homepage.dart';
 import 'package:snowcone/screens/welcome.dart';
 
 class Splash extends StatefulWidget {
@@ -13,10 +14,15 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.push(
-        // ignore: use_build_context_synchronously
-        context,
-        MaterialPageRoute(builder: (context) => const Welcome()),
+      // ignore: use_build_context_synchronously
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              const Welcome(),
+          transitionDuration: const Duration(milliseconds: 800),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              FadeTransition(opacity: animation, child: child),
+        ),
       );
     });
   }
