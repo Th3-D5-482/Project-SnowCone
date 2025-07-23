@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -27,8 +28,8 @@ class SignIn extends StatelessWidget {
                 ),
                 Image(
                   image: AssetImage('assets/images/logo.png'),
-                  width: 280,
-                  height: 280,
+                  width: 250,
+                  height: 250,
                 ),
                 SizedBox(height: 20),
                 Text(
@@ -39,6 +40,95 @@ class SignIn extends StatelessWidget {
                     color: Colors.blueGrey,
                   ),
                 ),
+                SizedBox(height: 40),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(350, 50),
+                    backgroundColor: Colors.transparent,
+                    foregroundColor: Colors.white,
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                      side: BorderSide(color: Colors.blueGrey, width: 2),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(FontAwesomeIcons.google, size: 20),
+                      SizedBox(width: 10),
+                      Text('Sign in with Google'),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(350, 50),
+                    backgroundColor: Colors.transparent,
+                    foregroundColor: Colors.white,
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                      side: BorderSide(color: Colors.blueGrey, width: 2),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(FontAwesomeIcons.microsoft, size: 20),
+                      SizedBox(width: 10),
+                      Text('Sign in with Microsoft'),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(350, 50),
+                    backgroundColor: Colors.transparent,
+                    foregroundColor: Colors.white,
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                      side: BorderSide(color: Colors.blueGrey, width: 2),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(FontAwesomeIcons.apple, size: 20),
+                      SizedBox(width: 10),
+                      Text('Sign in with Apple'),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 40),
+                Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.grey, thickness: 1)),
+                    SizedBox(width: 8),
+                    Text(
+                      'Or',
+                      style: TextStyle(fontSize: 20, color: Colors.grey),
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(child: Divider(color: Colors.grey, thickness: 1)),
+                  ],
+                ),
+                SizedBox(height: 20),
               ],
             ),
           ),
