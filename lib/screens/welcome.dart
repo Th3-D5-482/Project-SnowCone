@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/screens/signin.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -89,7 +90,18 @@ class Welcome extends StatelessWidget {
             ),
             SizedBox(height: 40),
             ElevatedButton(
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.of(context).push(
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        const Signin(),
+                    transitionDuration: Duration(milliseconds: 100),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) =>
+                            FadeTransition(opacity: animation, child: child),
+                  ),
+                ),
+              },
               style: ElevatedButton.styleFrom(fixedSize: Size(350, 50)),
               child: Text('Get Started'),
             ),
