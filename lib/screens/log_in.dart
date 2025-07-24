@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:snowcone/screens/sign_in.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -9,6 +10,7 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+  bool visibility = false;
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -49,26 +51,49 @@ class _LogInState extends State<LogIn> {
                   ),
                 ),
                 SizedBox(height: 30),
-                TextField(
-                  decoration: InputDecoration(
-                    label: Text('Email', style: TextStyle(color: Colors.white)),
-                    hintText: 'Enter your email',
-                    prefixIcon: Icon(Icons.email, color: Colors.white54),
+                SizedBox(
+                  width: 380,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      label: Text(
+                        'Email',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      hintText: 'Enter your email',
+                      prefixIcon: Icon(Icons.email, color: Colors.white54),
+                    ),
+                    autocorrect: false,
+                    autofillHints: [AutofillHints.email],
+                    keyboardType: TextInputType.emailAddress,
                   ),
-                  autocorrect: false,
-                  autofillHints: [AutofillHints.email],
-                  keyboardType: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 20),
-                TextField(
-                  decoration: InputDecoration(
-                    label: Text(
-                      'Password',
-                      style: TextStyle(color: Colors.white),
+                SizedBox(
+                  width: 380,
+                  height: 60,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      label: Text(
+                        'Password',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      hintText: 'Enter your password',
+                      prefixIcon: Icon(Icons.lock, color: Colors.white54),
+                      suffix: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            visibility = !visibility;
+                          });
+                        },
+                        icon: visibility
+                            ? Icon(Icons.visibility)
+                            : Icon(Icons.visibility_off),
+                      ),
                     ),
-                    hintText: 'Enter your password',
-                    prefixIcon: Icon(Icons.lock, color: Colors.white54),
-                    suffixIcon: Icon(Icons.visibility, color: Colors.white54),
+                    keyboardType: TextInputType.visiblePassword,
+                    obscureText: visibility ? false : true,
+                    autocorrect: false,
+                    enableSuggestions: false,
                   ),
                 ),
                 SizedBox(height: 20),
@@ -115,6 +140,41 @@ class _LogInState extends State<LogIn> {
                     'Forgot Password?',
                     style: TextStyle(color: Colors.blueGrey, fontSize: 16),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Have an account?',
+                      style: TextStyle(fontSize: 18, color: Colors.grey),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    const SignIn(),
+                            transitionDuration: Duration(milliseconds: 100),
+                            transitionsBuilder:
+                                (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) => FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                ),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Sign In',
+                        style: TextStyle(fontSize: 20, color: Colors.blueGrey),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
