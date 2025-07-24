@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:snowcone/screens/log_in.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -130,7 +131,21 @@ class SignIn extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            const LogIn(),
+                        transitionDuration: const Duration(milliseconds: 100),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) =>
+                                FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                ),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(350, 50),
                     backgroundColor: Colors.blueGrey,
@@ -162,7 +177,28 @@ class SignIn extends StatelessWidget {
                       style: TextStyle(fontSize: 18, color: Colors.grey),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    const LogIn(),
+                            transitionDuration: const Duration(
+                              milliseconds: 100,
+                            ),
+                            transitionsBuilder:
+                                (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) => FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                ),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Sign Up',
                         style: TextStyle(
