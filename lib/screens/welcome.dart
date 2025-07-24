@@ -95,7 +95,7 @@ class Welcome extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () => {
                   Navigator.of(context).push(

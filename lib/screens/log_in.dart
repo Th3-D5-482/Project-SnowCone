@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snowcone/screens/sign_in.dart';
@@ -98,6 +99,9 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 20),
                 Row(
+                  mainAxisAlignment: kIsWeb
+                      ? MainAxisAlignment.center
+                      : MainAxisAlignment.start,
                   children: [
                     Checkbox(
                       value: isChecked,
@@ -171,7 +175,11 @@ class _LogInState extends State<LogIn> {
                       },
                       child: Text(
                         'Sign In',
-                        style: TextStyle(fontSize: 20, color: Colors.blueGrey),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.blueGrey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
