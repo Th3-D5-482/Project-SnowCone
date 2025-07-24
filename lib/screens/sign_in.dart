@@ -40,7 +40,7 @@ class SignIn extends StatelessWidget {
                     color: Colors.blueGrey,
                   ),
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -153,7 +153,7 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
