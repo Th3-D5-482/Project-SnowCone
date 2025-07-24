@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/screens/sign_in.dart';
@@ -96,21 +97,29 @@ class Welcome extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () => {
-                  Navigator.of(context).push(
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          const SignIn(),
-                      transitionDuration: Duration(milliseconds: 100),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) =>
-                              FadeTransition(opacity: animation, child: child),
+              Padding(
+                padding: kIsWeb
+                    ? const EdgeInsets.only(bottom: 24)
+                    : const EdgeInsets.only(bottom: 16),
+                child: ElevatedButton(
+                  onPressed: () => {
+                    Navigator.of(context).push(
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            const SignIn(),
+                        transitionDuration: Duration(milliseconds: 100),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) =>
+                                FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                ),
+                      ),
                     ),
-                  ),
-                },
-                style: ElevatedButton.styleFrom(fixedSize: Size(350, 50)),
-                child: Text('Get Started'),
+                  },
+                  style: ElevatedButton.styleFrom(fixedSize: Size(350, 50)),
+                  child: Text('Get Started'),
+                ),
               ),
             ],
           ),

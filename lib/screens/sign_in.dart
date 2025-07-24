@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snowcone/screens/log_in.dart';
@@ -118,21 +119,32 @@ class SignIn extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 Row(
+                  mainAxisAlignment: kIsWeb
+                      ? MainAxisAlignment.center
+                      : MainAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      width: 171,
-                      child: Divider(color: Colors.grey, thickness: 1),
-                    ),
+                    kIsWeb
+                        ? SizedBox(
+                            width: 160,
+                            child: Divider(color: Colors.grey, thickness: 1),
+                          )
+                        : Expanded(
+                            child: Divider(color: Colors.grey, thickness: 1),
+                          ),
                     SizedBox(width: 8),
                     Text(
                       'Or',
                       style: TextStyle(fontSize: 20, color: Colors.grey),
                     ),
                     SizedBox(width: 8),
-                    SizedBox(
-                      width: 171,
-                      child: Divider(color: Colors.grey, thickness: 1),
-                    ),
+                    kIsWeb
+                        ? SizedBox(
+                            width: 160,
+                            child: Divider(color: Colors.grey, thickness: 1),
+                          )
+                        : Expanded(
+                            child: Divider(color: Colors.grey, thickness: 1),
+                          ),
                   ],
                 ),
                 SizedBox(height: 30),
