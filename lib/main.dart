@@ -42,6 +42,22 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16.0)),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16.0)),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16.0)),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
+          ),
+          labelStyle: TextStyle(color: Colors.white),
+          hintStyle: TextStyle(color: Colors.white54),
+        ),
       ),
       home: const Splash(),
     );
