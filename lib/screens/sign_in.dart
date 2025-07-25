@@ -92,31 +92,6 @@ class SignIn extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: Size(350, 50),
-                    backgroundColor: Colors.transparent,
-                    foregroundColor: Colors.white,
-                    textStyle: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                      side: BorderSide(color: Colors.blueGrey, width: 2),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(FontAwesomeIcons.apple, size: 20),
-                      SizedBox(width: 10),
-                      Text('Sign in with Apple'),
-                    ],
-                  ),
-                ),
                 SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: kIsWeb

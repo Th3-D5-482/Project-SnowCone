@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/sign_in.dart';
 
 class LogIn extends StatefulWidget {
@@ -121,7 +122,21 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            const HomePage(),
+                        transitionDuration: const Duration(milliseconds: 100),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) =>
+                                FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                ),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(350, 50),
                     backgroundColor: Colors.blueGrey,
