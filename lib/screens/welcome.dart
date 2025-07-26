@@ -42,7 +42,7 @@ class Welcome extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -99,7 +99,7 @@ class Welcome extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 40),
               Padding(
                 padding: kIsWeb
                     ? const EdgeInsets.only(bottom: 24)
