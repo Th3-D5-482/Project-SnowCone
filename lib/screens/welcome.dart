@@ -21,7 +21,7 @@ class Welcome extends StatelessWidget {
             children: [
               Image(
                 image: AssetImage('assets/images/welcome.png'),
-                height: kIsWeb ? 500 : null,
+                height: kIsWeb ? 480 : null,
               ),
               SizedBox(height: 20),
               Row(
