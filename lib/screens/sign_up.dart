@@ -1,19 +1,20 @@
-import 'package:flutter/foundation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/screens/home_page.dart';
-import 'package:snowcone/screens/sign_up.dart';
-import 'package:snowcone/screens/welcome.dart';
+import 'package:snowcone/screens/log_in.dart';
 
-class LogIn extends StatefulWidget {
-  const LogIn({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LogIn> createState() => _LogInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LogInState extends State<LogIn> {
+class _SignUpState extends State<SignUp> {
   bool visibility = false;
-  bool isChecked = true;
+  late TextEditingController email;
+  late TextEditingController password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +46,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Log In',
+                  'Sign Up',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -56,6 +57,7 @@ class _LogInState extends State<LogIn> {
                 SizedBox(
                   width: 380,
                   child: TextField(
+                    controller: email,
                     decoration: InputDecoration(
                       label: Text(
                         'Email',
@@ -74,6 +76,7 @@ class _LogInState extends State<LogIn> {
                   width: 380,
                   height: 60,
                   child: TextField(
+                    controller: password,
                     decoration: InputDecoration(
                       label: Text(
                         'Password',
@@ -98,45 +101,66 @@ class _LogInState extends State<LogIn> {
                     enableSuggestions: false,
                   ),
                 ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: kIsWeb
-                      ? MainAxisAlignment.center
-                      : MainAxisAlignment.start,
-                  children: [
-                    Checkbox(
-                      value: isChecked,
-                      onChanged: (value) => setState(() {
-                        isChecked = value ?? false;
-                      }),
-                      activeColor: Colors.blueGrey,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                      ),
-                      side: BorderSide(color: Colors.white54, width: 1.5),
-                    ),
-                    Text(
-                      'Remember me',
-                      style: TextStyle(color: Colors.blueGrey, fontSize: 16),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
+                SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) =>
-                            const HomePage(),
-                        transitionDuration: const Duration(milliseconds: 100),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) =>
-                                FadeTransition(
+                  onPressed: () async {
+                    final trimmedEmail = email.text.trim();
+                    final trimmedPassword = password.text.trim();
+                    if (trimmedEmail.isNotEmpty && trimmedPassword.isNotEmpty) {
+                      try {
+                        await FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
+                              email: trimmedEmail,
+                              password: trimmedPassword,
+                            );
+                        // ignore: use_build_context_synchronously
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Sign up successful!')),
+                        );
+                        // ignore: use_build_context_synchronously
+                        Navigator.of(context).pushReplacement(
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    HomePage(),
+                            transitionDuration: const Duration(
+                              milliseconds: 100,
+                            ),
+                            transitionsBuilder:
+                                (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) => FadeTransition(
                                   opacity: animation,
                                   child: child,
                                 ),
-                      ),
-                    );
+                          ),
+                        );
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'email-already-in-use') {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Email already in use')),
+                          );
+                        } else if (e.code == 'weak-password') {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Weak password')),
+                          );
+                        } else {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Error: ${e.message}')),
+                          );
+                        }
+                      }
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Please fill in all fields')),
+                      );
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(350, 50),
@@ -150,21 +174,14 @@ class _LogInState extends State<LogIn> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                   ),
-                  child: Text('Log In'),
+                  child: Text('Sign Up'),
                 ),
-                SizedBox(height: 8),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: Colors.blueGrey, fontSize: 16),
-                  ),
-                ),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Don\'t have an account?',
+                      'Have an account?',
                       style: TextStyle(fontSize: 18, color: Colors.grey),
                     ),
                     TextButton(
@@ -173,7 +190,7 @@ class _LogInState extends State<LogIn> {
                           PageRouteBuilder(
                             pageBuilder:
                                 (context, animation, secondaryAnimation) =>
-                                    const SignUp(),
+                                    const LogIn(),
                             transitionDuration: Duration(milliseconds: 100),
                             transitionsBuilder:
                                 (
@@ -189,7 +206,7 @@ class _LogInState extends State<LogIn> {
                         );
                       },
                       child: Text(
-                        'Sign Up',
+                        'Log In',
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.blueGrey,
