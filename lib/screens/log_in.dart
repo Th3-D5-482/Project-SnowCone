@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/screens/home_page.dart';
-import 'package:snowcone/screens/sign_in.dart';
+import 'package:snowcone/screens/welcome.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -172,7 +172,7 @@ class _LogInState extends State<LogIn> {
                           PageRouteBuilder(
                             pageBuilder:
                                 (context, animation, secondaryAnimation) =>
-                                    const SignIn(),
+                                    const Welcome(),
                             transitionDuration: Duration(milliseconds: 100),
                             transitionsBuilder:
                                 (
