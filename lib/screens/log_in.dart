@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart'
+    show FirebaseAuth, FirebaseAuthException;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/sign_up.dart';
-import 'package:snowcone/screens/welcome.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -14,6 +15,16 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   bool visibility = false;
   bool isChecked = true;
+  late TextEditingController email;
+  late TextEditingController password;
+
+  @override
+  void initState() {
+    super.initState();
+    email = TextEditingController();
+    password = TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +67,7 @@ class _LogInState extends State<LogIn> {
                 SizedBox(
                   width: 380,
                   child: TextField(
+                    controller: email,
                     decoration: InputDecoration(
                       label: Text(
                         'Email',
@@ -74,6 +86,7 @@ class _LogInState extends State<LogIn> {
                   width: 380,
                   height: 60,
                   child: TextField(
+                    controller: password,
                     decoration: InputDecoration(
                       label: Text(
                         'Password',
@@ -123,20 +136,67 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) =>
-                            const HomePage(),
-                        transitionDuration: const Duration(milliseconds: 100),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) =>
-                                FadeTransition(
+                  onPressed: () async {
+                    final trimmedEmail = email.text.trim();
+                    final trimmedPassword = password.text.trim();
+                    if (isChecked &&
+                        trimmedEmail.isNotEmpty &&
+                        trimmedPassword.isNotEmpty) {
+                      try {
+                        await FirebaseAuth.instance.signInWithEmailAndPassword(
+                          email: trimmedEmail,
+                          password: trimmedPassword,
+                        );
+                        // ignore: use_build_context_synchronously
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Login successful')),
+                        );
+                        // ignore: use_build_context_synchronously
+                        Navigator.of(context).pushReplacement(
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    const HomePage(),
+                            transitionDuration: Duration(milliseconds: 100),
+                            transitionsBuilder:
+                                (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) => FadeTransition(
                                   opacity: animation,
                                   child: child,
                                 ),
-                      ),
-                    );
+                          ),
+                        );
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('User not found')),
+                          );
+                        } else if (e.code == 'wrong-password') {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Wrong password')),
+                          );
+                        } else {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Login failed: ${e.message}'),
+                            ),
+                          );
+                        }
+                      }
+                      // Handle login logic here
+                    } else {
+                      // Show error message
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Please fill in all fields')),
+                      );
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(350, 50),

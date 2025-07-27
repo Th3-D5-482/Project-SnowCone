@@ -16,6 +16,13 @@ class _SignUpState extends State<SignUp> {
   late TextEditingController password;
 
   @override
+  void initState() {
+    super.initState();
+    email = TextEditingController();
+    password = TextEditingController();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
