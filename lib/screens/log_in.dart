@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart'
     show FirebaseAuth, FirebaseAuthException;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/sign_up.dart';
 
@@ -139,14 +140,17 @@ class _LogInState extends State<LogIn> {
                   onPressed: () async {
                     final trimmedEmail = email.text.trim();
                     final trimmedPassword = password.text.trim();
-                    if (isChecked &&
-                        trimmedEmail.isNotEmpty &&
-                        trimmedPassword.isNotEmpty) {
+                    if (trimmedEmail.isNotEmpty && trimmedPassword.isNotEmpty) {
                       try {
                         await FirebaseAuth.instance.signInWithEmailAndPassword(
                           email: trimmedEmail,
                           password: trimmedPassword,
                         );
+                        if (isChecked) {
+                          final SharedPreferences pref =
+                              await SharedPreferences.getInstance();
+                          await pref.setBool('isChecked', true);
+                        }
                         // ignore: use_build_context_synchronously
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Login successful')),
