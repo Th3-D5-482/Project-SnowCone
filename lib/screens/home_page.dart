@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -23,7 +24,9 @@ class _HomePageState extends State<HomePage> {
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: kIsWeb
+                  ? const EdgeInsets.symmetric(horizontal: 200, vertical: 20)
+                  : const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 2.0,
+                      childAspectRatio: kIsWeb ? 8.1 : 2.0,
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                     ),
