@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -97,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(width: 10),
                             Flexible(
                               child: Text(
-                                'Hillsong Song',
+                                'Hillsong Worship',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
