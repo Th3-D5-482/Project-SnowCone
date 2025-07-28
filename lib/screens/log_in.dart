@@ -185,7 +185,9 @@ class _LogInState extends State<LogIn> {
                           // ignore: use_build_context_synchronously
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text('Login failed: ${e.message}'),
+                              content: Text(
+                                'Invalid login details. Please check your email or password, or sign up if you don\'t have an account.',
+                              ),
                             ),
                           );
                         }
@@ -213,13 +215,6 @@ class _LogInState extends State<LogIn> {
                   child: Text('Log In'),
                 ),
                 SizedBox(height: 8),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: Colors.blueGrey, fontSize: 16),
-                  ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

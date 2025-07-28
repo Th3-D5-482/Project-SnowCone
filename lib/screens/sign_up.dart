@@ -115,7 +115,8 @@ class _SignUpState extends State<SignUp> {
                     final trimmedPassword = password.text.trim();
                     if (trimmedEmail.isNotEmpty && trimmedPassword.isNotEmpty) {
                       try {
-                        await FirebaseAuth.instance
+                        // ignore: unused_local_variable
+                        final userCredential = await FirebaseAuth.instance
                             .createUserWithEmailAndPassword(
                               email: trimmedEmail,
                               password: trimmedPassword,
@@ -124,7 +125,7 @@ class _SignUpState extends State<SignUp> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Sign up successful!')),
                         );
-                        // ignore: use_build_context_synchronously
+                        //ignore: use_build_context_synchronously
                         Navigator.of(context).pushReplacement(
                           PageRouteBuilder(
                             pageBuilder:
