@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: kIsWeb ? 8.1 : 2.0,
+                      childAspectRatio: kIsWeb ? 8.1 : 2.8,
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                     ),
@@ -102,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 maxLines: 2,
                                 softWrap: true,
