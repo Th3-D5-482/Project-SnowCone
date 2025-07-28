@@ -11,6 +11,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final _formKey = GlobalKey<FormState>();
   bool visibility = false;
   late TextEditingController email;
   late TextEditingController password;
@@ -63,19 +64,34 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(height: 30),
                 SizedBox(
                   width: 380,
-                  child: TextField(
-                    controller: email,
-                    decoration: InputDecoration(
-                      label: Text(
-                        'Email',
-                        style: TextStyle(color: Colors.white),
+                  child: Form(
+                    key: _formKey,
+                    child: TextFormField(
+                      controller: email,
+                      decoration: InputDecoration(
+                        label: Text(
+                          'Email',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        hintText: 'Enter your email',
+                        prefixIcon: Icon(Icons.email, color: Colors.white54),
                       ),
-                      hintText: 'Enter your email',
-                      prefixIcon: Icon(Icons.email, color: Colors.white54),
+                      autocorrect: false,
+                      autofillHints: [AutofillHints.email],
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your email';
+                        }
+                        final emailPattern = RegExp(
+                          r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+                        );
+                        if (!emailPattern.hasMatch(value)) {
+                          return 'Please enter a valid email';
+                        }
+                        return null;
+                      },
                     ),
-                    autocorrect: false,
-                    autofillHints: [AutofillHints.email],
-                    keyboardType: TextInputType.emailAddress,
                   ),
                 ),
                 SizedBox(height: 20),
@@ -113,7 +129,9 @@ class _SignUpState extends State<SignUp> {
                   onPressed: () async {
                     final trimmedEmail = email.text.trim();
                     final trimmedPassword = password.text.trim();
-                    if (trimmedEmail.isNotEmpty && trimmedPassword.isNotEmpty) {
+                    if (_formKey.currentState!.validate() &&
+                        trimmedEmail.isNotEmpty &&
+                        trimmedPassword.isNotEmpty) {
                       try {
                         // ignore: unused_local_variable
                         final userCredential = await FirebaseAuth.instance
