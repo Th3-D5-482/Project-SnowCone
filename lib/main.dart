@@ -1,31 +1,9 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/firebase_options.dart';
 import 'package:snowcone/screens/splash.dart';
 // ignore: depend_on_referenced_packages
 import 'package:firebase_core/firebase_core.dart';
-
-Future<void> checkInternetConnection(BuildContext context) async {
-  var connectivityResult = await Connectivity().checkConnectivity();
-  // ignore: unrelated_type_equality_checks
-  if (connectivityResult == ConnectivityResult.none) {
-    showDialog(
-      // ignore: use_build_context_synchronously
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('No Internet'),
-        content: const Text("Your device isn't connected to the internet."),
-        actions: [
-          TextButton(
-            child: const Text('OK'),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,15 +23,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-    // Check internet connection on app start
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      checkInternetConnection(context);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
