@@ -20,7 +20,7 @@ class Welcome extends StatelessWidget {
           child: Column(
             children: [
               Image(
-                image: AssetImage('assets/images/welcome.png'),
+                image: AssetImage('assets/images/random/welcome.png'),
                 height: kIsWeb ? 480 : null,
               ),
               SizedBox(height: 20),

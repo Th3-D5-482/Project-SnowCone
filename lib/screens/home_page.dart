@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:snowcone/database.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -66,72 +65,73 @@ class _HomeViewState extends State<HomeView> {
           padding: kIsWeb
               ? const EdgeInsets.symmetric(horizontal: 200, vertical: 20)
               : const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'assets/images/Th3_D5_482.jpeg',
-                    ),
-                    radius: 30,
+          child: StreamBuilder(
+            stream: getMusic(),
+            builder: (context, asyncSnapshot) {
+              if (asyncSnapshot.connectionState == ConnectionState.waiting) {
+                return SizedBox(
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height - 100,
+                  child: const Center(child: CircularProgressIndicator()),
+                );
+              } else if (asyncSnapshot.hasError) {
+                return Center(
+                  child: Text(
+                    'Error: ${asyncSnapshot.error}',
+                    style: const TextStyle(color: Colors.red),
                   ),
-                  const SizedBox(width: 8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'Welcome back !',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                );
+              }
+              final musica = (asyncSnapshot.data ?? [])
+                  .where((item) => item['isContinueListening'] == true)
+                  .toList();
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage(
+                          'assets/images/random/Th3_D5_482.jpeg',
                         ),
+                        radius: 30,
                       ),
-                      Text(
-                        'Th3-D5-482',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      const SizedBox(width: 8),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Welcome back !',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Th3-D5-482',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                'Continue Listening',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 10),
-              StreamBuilder<List<Map<String, dynamic>>>(
-                stream: getMusic(),
-                builder: (context, asyncSnapshot) {
-                  if (asyncSnapshot.connectionState ==
-                      ConnectionState.waiting) {
-                    return const Center(child: CircularProgressIndicator());
-                  } else if (asyncSnapshot.hasError) {
-                    return const Center(
-                      child: Text(
-                        'Error loading data',
-                        style: TextStyle(color: Colors.red),
-                      ),
-                    );
-                  }
-
-                  final musica = (asyncSnapshot.data ?? [])
-                      .where((item) => item['isContinueListening'] == true)
-                      .toList();
-
-                  return GridView.builder(
+                  const SizedBox(height: 20),
+                  const Text(
+                    'Continue Listening',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -171,10 +171,10 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       );
                     },
-                  );
-                },
-              ),
-            ],
+                  ),
+                ],
+              );
+            },
           ),
         ),
       ),

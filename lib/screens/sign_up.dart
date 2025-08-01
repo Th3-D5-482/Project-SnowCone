@@ -48,7 +48,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 Image(
-                  image: AssetImage('assets/images/logo.png'),
+                  image: AssetImage('assets/images/random/logo.png'),
                   width: 250,
                   height: 250,
                 ),

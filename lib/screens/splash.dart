@@ -40,7 +40,7 @@ class _SplashState extends State<Splash> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(
-                image: AssetImage('assets/images/logo.png'),
+                image: AssetImage('assets/images/random/logo.png'),
                 width: 200,
                 height: 200,
               ),
