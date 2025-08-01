@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:snowcone/database.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
 
@@ -13,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 0;
+
   @override
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
@@ -118,14 +120,15 @@ class _HomeViewState extends State<HomeView> {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
-                itemCount: 6,
+                itemCount: music.length,
                 itemBuilder: (context, index) {
+                  final song = music[index];
                   return Card(
                     color: Color.fromARGB(255, 30, 30, 30),
                     child: Row(
                       children: [
                         Image(
-                          image: AssetImage('assets/images/hillsong.png'),
+                          image: AssetImage(song['image'] ?? ''),
                           width: 80,
                           height: 100,
                           fit: BoxFit.cover,
@@ -133,7 +136,7 @@ class _HomeViewState extends State<HomeView> {
                         SizedBox(width: 10),
                         Flexible(
                           child: Text(
-                            'Hillsong Worship',
+                            song['songName'] ?? '',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
