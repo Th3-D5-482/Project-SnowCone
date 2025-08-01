@@ -116,6 +116,15 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ],
                       ),
+                      const Spacer(),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.settings_sharp,
+                          color: Colors.grey,
+                          size: 28,
+                        ),
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
