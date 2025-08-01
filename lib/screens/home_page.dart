@@ -111,48 +111,63 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               const SizedBox(height: 10),
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: kIsWeb ? 8.1 : 2.5,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                itemCount:
-                    music
-                        .where((item) => item['isContinueListening'] == true)
-                        .length +
-                    1,
-                itemBuilder: (context, index) {
-                  final song = music[index];
-                  return Card(
-                    color: const Color.fromARGB(255, 30, 30, 30),
-                    child: Row(
-                      children: [
-                        Image(
-                          image: NetworkImage(song['image']),
-                          width: 80,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                        const SizedBox(width: 10),
-                        Flexible(
-                          child: Text(
-                            song['name'] ?? '',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            maxLines: 2,
-                            softWrap: true,
-                          ),
-                        ),
-                      ],
+              StreamBuilder(
+                stream: null,
+                builder: (context, asyncSnapshot) {
+                  if (asyncSnapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (asyncSnapshot.hasError) {
+                    return const Center(
+                      child: Text(
+                        'Error loading data',
+                        style: TextStyle(color: Colors.red),
+                      ),
+                    );
+                  }
+                  final musica = music
+                      .where((item) => item['isContinueListening'] == true)
+                      .toList();
+                  return GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: kIsWeb ? 8.1 : 2.5,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
                     ),
+                    itemCount: musica.length + 1,
+                    itemBuilder: (context, index) {
+                      final song = music[index];
+                      return Card(
+                        color: const Color.fromARGB(255, 30, 30, 30),
+                        child: Row(
+                          children: [
+                            Image(
+                              image: NetworkImage(song['image']),
+                              width: 80,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(width: 10),
+                            Flexible(
+                              child: Text(
+                                song['name'] ?? '',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                maxLines: 2,
+                                softWrap: true,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   );
                 },
               ),

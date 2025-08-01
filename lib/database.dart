@@ -1,6 +1,6 @@
 final List<Map<String, dynamic>> music = [
   {
-    "id": 0,
+    "id": 1,
     "name": "How Great Is Our God",
     "artist": "Chris Tomlin",
     "releaseYear": 2004,
@@ -17,7 +17,7 @@ final List<Map<String, dynamic>> music = [
     "isCotinueListening": true,
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Way Maker",
     "artist": "Sinach / Leeland",
     "releaseYear": 2015,
@@ -35,7 +35,7 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "10,000 Reasons (Bless the Lord)",
     "artist": "Matt Redman",
     "releaseYear": 2011,
@@ -53,7 +53,7 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Reckless Love",
     "artist": "Cory Asbury",
     "releaseYear": 2017,
@@ -71,7 +71,7 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Who You Say I Am",
     "artist": "Hillsong Worship",
     "releaseYear": 2018,
@@ -89,93 +89,21 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 5,
-    "name": "Great Are You Lord",
-    "artist": "All Sons & Daughters",
-    "releaseYear": 2014,
-    "album": "All Sons & Daughters",
-    "duration": "4:25",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/great_are_you_lord.png?updatedAt=1754059568216",
-    "audio": "assets/audio/great_are_you_lord.mp3",
-    "genre": "Worship",
-    "key": "A",
-    "bpm": 72,
-    "keyTheme": "Breath, Praise",
-    "description":
-        "A humble yet profound invitation to worship, declaring God's restorative power.",
-    "isContinueListening": true,
-  },
-  {
     "id": 6,
-    "name": "Holy Forever",
-    "artist": "Chris Tomlin",
-    "releaseYear": 2022,
-    "album": "Always",
-    "duration": "5:08",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/holy_forever.png?updatedAt=1754059568547",
-    "audio": "assets/audio/holy_forever.mp3",
-    "genre": "Worship",
-    "key": "D♭",
-    "bpm": 72,
-    "keyTheme": "Eternity, Holiness",
-    "description":
-        "A majestic anthem celebrating God's eternal holiness and glory.",
-    "isContinueListening": false,
-  },
-  {
-    "id": 7,
     "name": "Graves Into Gardens",
     "artist": "Elevation Worship",
     "releaseYear": 2020,
     "album": "Graves Into Gardens",
-    "duration": "7:34",
+    "duration": "5:02",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/graves_into_garden.png?updatedAt=1754059568512",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/graves_into_gardens.png?updatedAt=1754059566802",
     "audio": "assets/audio/graves_into_gardens.mp3",
     "genre": "Worship",
-    "key": "B",
-    "bpm": 70,
-    "keyTheme": "Transformation, Triumph",
-    "description":
-        "Celebrates divine power to restore and renew, turning mourning into dancing.",
-    "isContinueListening": false,
-  },
-  {
-    "id": 8,
-    "name": "Build My Life",
-    "artist": "Pat Barrett",
-    "releaseYear": 2018,
-    "album": "Pat Barrett",
-    "duration": "4:23",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/build_my_life.png?updatedAt=1754059568097",
-    "audio": "assets/audio/build_my_life.mp3",
-    "genre": "Worship",
     "key": "A♭",
-    "bpm": 72,
-    "keyTheme": "Surrender, Foundation",
+    "bpm": 80,
+    "keyTheme": "Transformation, Hope",
     "description":
-        "A prayerful posture of trust and devotion, inspired by Luke 6.",
-    "isContinueListening": false,
-  },
-  {
-    "id": 9,
-    "name": "What An Awesome God",
-    "artist": "Phil Wickham",
-    "releaseYear": 2025,
-    "album": "Song of the Saints",
-    "duration": "4:20",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/what_an_awesome_god.png?updatedAt=1754059568142",
-    "audio": "assets/audio/what_an_awesome_god.mp3",
-    "genre": "Worship",
-    "key": "D",
-    "bpm": 76,
-    "keyTheme": "Awe, Majesty",
-    "description":
-        "A modern revival of Rich Mullins’ classic chorus, declaring God's greatness with fresh verses.",
-    "isContinueListening": false,
+        "A song of hope declaring God's power to transform our lives and circumstances.",
+    "isContinueListening": true,
   },
 ];
