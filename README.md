@@ -12,7 +12,8 @@
 
 ## 🧰 Technologies Used  
 - **Flutter** – Native performance for mobile, web, and desktop with one codebase  
-- **Firebase** – Secure authentication, cloud-based storage, and user data sync  
+- **Firebase** – Secure authentication, cloud-based storage, and user data sync
+- **ImageKit.io** – Media CDN and cloud storage platform for optimized delivery of assets including images, videos, and other static files
 - **AI Integration** – Smart recognition of song titles, keys, and signatures
 
 ---
