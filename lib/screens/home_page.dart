@@ -113,7 +113,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               const SizedBox(height: 10),
               StreamBuilder<List<Map<String, dynamic>>>(
-                stream: null,
+                stream: getMusic(),
                 builder: (context, asyncSnapshot) {
                   if (asyncSnapshot.connectionState ==
                       ConnectionState.waiting) {
@@ -127,7 +127,7 @@ class _HomeViewState extends State<HomeView> {
                     );
                   }
 
-                  final musica = music
+                  final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
                       .toList();
 

@@ -4,25 +4,29 @@ final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Music');
 
 Stream<List<Map<String, dynamic>>> getMusic() {
   return musicDB.onValue.map((event) {
-    final data = event.snapshot.value as Map<dynamic, dynamic>?;
-    if (data == null) return [];
-    return data.entries.map((entry) {
-      final item = entry.value as Map<dynamic, dynamic>;
+    final data = event.snapshot.value;
+
+    if (data == null || data is! List) return [];
+
+    final List rawList = data;
+    // Remove any nulls (due to deleted items or gaps in Firebase array)
+    return rawList.where((item) => item != null).map((item) {
+      final song = item as Map<dynamic, dynamic>;
       return {
-        'id': item['id'],
-        'name': item['name'],
-        'artist': item['artist'],
-        'releaseYear': item['releaseYear'],
-        'album': item['album'],
-        'duration': item['duration'],
-        'image': item['image'],
-        'audio': item['audio'],
-        'genre': item['genre'],
-        'key': item['key'],
-        'bpm': item['bpm'],
-        'keyTheme': item['keyTheme'],
-        'description': item['description'],
-        'isContinueListening': item['isContinueListening'] ?? false,
+        'id': song['id'],
+        'name': song['name'],
+        'artist': song['artist'],
+        'releaseYear': song['releaseYear'],
+        'album': song['album'],
+        'duration': song['duration'],
+        'image': song['image'],
+        'audio': song['audio'],
+        'genre': song['genre'],
+        'key': song['key'],
+        'bpm': song['bpm'],
+        'keyTheme': song['keyTheme'],
+        'description': song['description'],
+        'isContinueListening': song['isContinueListening'] ?? false,
       };
     }).toList();
   });
