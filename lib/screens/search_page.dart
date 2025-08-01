@@ -20,9 +20,8 @@ class _SearchPageState extends State<SearchPage> {
                 ? EdgeInsetsGeometry.symmetric(horizontal: 200, vertical: 20)
                 : EdgeInsetsGeometry.all(16),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   'Search Page',
