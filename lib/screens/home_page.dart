@@ -15,6 +15,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
 
+  late List<Map<String, dynamic>> music;
+
   @override
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
@@ -120,7 +122,11 @@ class _HomeViewState extends State<HomeView> {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
-                itemCount: music.length,
+                itemCount:
+                    music
+                        .where((song) => song['isContinueListening'] == true)
+                        .length +
+                    1,
                 itemBuilder: (context, index) {
                   final song = music[index];
                   return Card(
@@ -136,7 +142,7 @@ class _HomeViewState extends State<HomeView> {
                         SizedBox(width: 10),
                         Flexible(
                           child: Text(
-                            song['songName'] ?? '',
+                            song['name'] ?? '',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
