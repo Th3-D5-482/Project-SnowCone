@@ -62,15 +62,12 @@ class _HomeViewState extends State<HomeView> {
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: kIsWeb
-              ? const EdgeInsets.symmetric(horizontal: 200, vertical: 20)
-              : const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: StreamBuilder(
             stream: getMusic(),
             builder: (context, asyncSnapshot) {
               if (asyncSnapshot.connectionState == ConnectionState.waiting) {
                 return SizedBox(
-                  width: double.infinity,
                   height: MediaQuery.of(context).size.height - 100,
                   child: const Center(child: CircularProgressIndicator()),
                 );
