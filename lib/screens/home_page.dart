@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:snowcone/database/home_page_db.dart';
+import 'package:snowcone/database.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
 
@@ -56,28 +56,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<Map<String, dynamic>> _normalizeSongs(dynamic data) {
-    // Handles both List and Map from Firebase or local DB
-    if (data == null) return [];
-    if (data is List) {
-      return data
-          .where((item) => item != null)
-          .map<Map<String, dynamic>>(
-            (item) => Map<String, dynamic>.from(item as Map),
-          )
-          .toList();
-    }
-    if (data is Map) {
-      return data.values
-          .where((item) => item != null)
-          .map<Map<String, dynamic>>(
-            (item) => Map<String, dynamic>.from(item as Map),
-          )
-          .toList();
-    }
-    return [];
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -133,66 +111,48 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               const SizedBox(height: 10),
-              StreamBuilder(
-                stream: getMusicStream(),
-                builder: (context, snapshot) {
-                  final songs = _normalizeSongs(snapshot.data);
-                  final filteredSongs = songs
-                      .where((song) => song['isContinueListening'] == true)
-                      .toList();
-
-                  return GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: kIsWeb ? 8.1 : 2.5,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                    ),
-                    itemCount: filteredSongs.length,
-                    itemBuilder: (context, index) {
-                      final song = filteredSongs[index];
-                      return Card(
-                        color: const Color.fromARGB(255, 30, 30, 30),
-                        child: Row(
-                          children: [
-                            if (song['image'] != null &&
-                                song['image'].toString().isNotEmpty)
-                              Image(
-                                image: AssetImage(song['image']),
-                                width: 80,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              )
-                            else
-                              Container(
-                                width: 80,
-                                height: 100,
-                                color: Colors.grey[800],
-                                child: const Icon(
-                                  Icons.music_note,
-                                  color: Colors.white54,
-                                ),
-                              ),
-                            const SizedBox(width: 10),
-                            Flexible(
-                              child: Text(
-                                song['name'] ?? '',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                maxLines: 2,
-                                softWrap: true,
-                              ),
-                            ),
-                          ],
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: kIsWeb ? 8.1 : 2.5,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                itemCount:
+                    music
+                        .where((item) => item['isContinueListening'] == true)
+                        .length +
+                    1,
+                itemBuilder: (context, index) {
+                  final song = music[index];
+                  return Card(
+                    color: const Color.fromARGB(255, 30, 30, 30),
+                    child: Row(
+                      children: [
+                        Image(
+                          image: NetworkImage(song['image']),
+                          width: 80,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                      );
-                    },
+                        const SizedBox(width: 10),
+                        Flexible(
+                          child: Text(
+                            song['name'] ?? '',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                      ],
+                    ),
                   );
                 },
               ),
