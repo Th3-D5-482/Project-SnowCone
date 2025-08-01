@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database.dart';
+import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
 
@@ -111,7 +112,7 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               const SizedBox(height: 10),
-              StreamBuilder(
+              StreamBuilder<List<Map<String, dynamic>>>(
                 stream: null,
                 builder: (context, asyncSnapshot) {
                   if (asyncSnapshot.connectionState ==
@@ -125,9 +126,11 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     );
                   }
+
                   final musica = music
                       .where((item) => item['isContinueListening'] == true)
                       .toList();
+
                   return GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -144,8 +147,8 @@ class _HomeViewState extends State<HomeView> {
                         color: const Color.fromARGB(255, 30, 30, 30),
                         child: Row(
                           children: [
-                            Image(
-                              image: NetworkImage(song['image']),
+                            Image.network(
+                              song['image'],
                               width: 80,
                               height: 100,
                               fit: BoxFit.cover,
