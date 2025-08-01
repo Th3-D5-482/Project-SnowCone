@@ -14,6 +14,7 @@
 - **Flutter** – Native performance for mobile, web, and desktop with one codebase  
 - **Firebase** – Secure authentication, cloud-based storage, and user data sync
 - **ImageKit.io** – Media CDN and cloud storage platform for optimized delivery of assets including images, videos, and other static files
+- **PicLumen** – AI-powered image generation tool used to create all visual assets for SnowCone. Supports high-resolution outputs, customizable styles (e.g. realistic, anime, abstract), and smart editing features like background removal and upscaling.
 - **AI Integration** – Smart recognition of song titles, keys, and signatures
 
 ---
