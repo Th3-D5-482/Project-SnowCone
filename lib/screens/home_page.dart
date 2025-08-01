@@ -137,9 +137,9 @@ class _HomeViewState extends State<HomeView> {
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                     ),
-                    itemCount: musica.length + 1,
+                    itemCount: musica.length,
                     itemBuilder: (context, index) {
-                      final song = music[index];
+                      final song = musica[index];
                       return Card(
                         color: const Color.fromARGB(255, 30, 30, 30),
                         child: Row(
