@@ -37,7 +37,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        'Sorry to Disappoint Mate,',
+                        'Sorry, mate. 🚧',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 20,
@@ -46,7 +46,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        'Work In Progress!',
+                        'Work in progress, yeah?',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 20,

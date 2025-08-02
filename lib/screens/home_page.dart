@@ -121,7 +121,6 @@ class _HomeViewState extends State<HomeView> {
                         icon: const Icon(
                           Icons.settings_sharp,
                           color: Colors.grey,
-                          size: 28,
                         ),
                         onPressed: () {},
                       ),

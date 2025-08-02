@@ -36,7 +36,7 @@ class _SearchPageState extends State<SearchPage> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        'Sorry to Disappoint Mate,',
+                        'Sorry, mate. 🚧',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 20,
@@ -45,7 +45,7 @@ class _SearchPageState extends State<SearchPage> {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        'Work In Progress!',
+                        'Work in progress, yeah?',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 20,
