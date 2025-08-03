@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:snowcone/database.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -56,11 +57,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<String> topMixes = [
-    'Praise & Power Mix',
-    'Chill Vibes',
-    'Workout Beats',
-  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -201,18 +197,39 @@ class _HomeViewState extends State<HomeView> {
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
+                        final topMix = topMixes[index];
                         return SizedBox(
                           width: 200,
                           height: 180,
                           child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
                             color: Color.fromARGB(255, 30, 30, 30),
-                            child: Text(
-                              topMixes[index],
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            child: Stack(
+                              children: [
+                                Image.asset(
+                                  topMix['image']!,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: 180,
+                                  opacity: const AlwaysStoppedAnimation(0.5),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      topMix['name']!,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         );

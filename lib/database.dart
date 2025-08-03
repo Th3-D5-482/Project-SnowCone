@@ -107,3 +107,18 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
 ];
+
+final List<Map<String, String>> topMixes = [
+  {
+    'name': 'Praise & Power Mix',
+    'image': 'assets/images/top_mixes/praise_and_power_mix.png',
+  },
+  {
+    'name': 'Reflect & Restore Mix',
+    'image': 'assets/images/top_mixes/reflect_and_restore_mix.png',
+  },
+  {
+    'name': 'Faith & Fire Mix',
+    'image': 'assets/images/top_mixes/faith_and_fire_mix.png',
+  },
+];
