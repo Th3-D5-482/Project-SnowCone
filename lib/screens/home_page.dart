@@ -56,6 +56,11 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  List<String> topMixes = [
+    'Praise & Power Mix',
+    'Chill Vibes',
+    'Workout Beats',
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -176,6 +181,43 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       );
                     },
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    'Your Top Mixes',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  SizedBox(
+                    height: 180,
+                    width: double.infinity,
+                    child: ListView.builder(
+                      itemCount: 3,
+                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          width: 200,
+                          height: 180,
+                          child: Card(
+                            color: Color.fromARGB(255, 30, 30, 30),
+                            child: Text(
+                              topMixes[index],
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               );
