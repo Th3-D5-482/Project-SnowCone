@@ -28,6 +28,7 @@ Stream<List<Map<String, dynamic>>> getMusic() {
         'keyTheme': song['keyTheme'],
         'description': song['description'],
         'isContinueListening': song['isContinueListening'] ?? false,
+        'isRecentlyListened': song['isRecentlyListened'] ?? false,
       };
     }).toList();
   });

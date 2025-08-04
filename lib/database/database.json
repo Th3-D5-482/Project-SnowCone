@@ -14,7 +14,8 @@
       "bpm": 68,
       "keyTheme": "Majesty, Praise",
       "description": "A timeless anthem glorifying God's greatness.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
     },
     {
       "id": 1,
@@ -30,7 +31,8 @@
       "bpm": 70,
       "keyTheme": "Miracles, Presence",
       "description": "A global worship movement declaring God as miracle worker and light in the darkness.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
     },
     {
       "id": 2,
@@ -46,7 +48,8 @@
       "bpm": 73,
       "keyTheme": "Gratitude, Faithfulness",
       "description": "A stirring song reflecting a life of thankful worship inspired by Psalm 103.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
     },
     {
       "id": 3,
@@ -62,7 +65,8 @@
       "bpm": 83,
       "keyTheme": "God's Pursuit, Grace",
       "description": "A powerful narrative of God's unrelenting love, inspired by Luke 15.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
     },
     {
       "id": 4,
@@ -78,7 +82,8 @@
       "bpm": 72,
       "keyTheme": "Eternity, Holiness",
       "description": "A majestic anthem celebrating God's eternal holiness and glory.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
     },
     {
       "id": 5,
@@ -94,7 +99,59 @@
       "bpm": 72,
       "keyTheme": "Breath, Praise",
       "description": "A humble yet profound invitation to worship, declaring God's restorative power.",
-      "isContinueListening": true
+      "isContinueListening": true,
+      "isRecentlyListened": false
+    },
+    {
+      "id": 6,
+      "name": "Goodness of God",
+      "artist": "Bethel Music & Jenn Johnson",
+      "releaseYear": 2019,
+      "album": "Victory",
+      "duration": "5:04",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/goodness_of_god.png?updatedAt=1754325767596",
+      "audio": "assets/audio/goodness_of_god.mp3",
+      "genre": "Worship",
+      "key": "A♭",
+      "bpm": 63,
+      "keyTheme": "Faithfulness, Surrender",
+      "description": "A heartfelt anthem of God's unwavering goodness through every season of life.",
+      "isContinueListening": false,
+      "isRecentlyListened": true
+    },
+    {
+      "id": 7,
+      "name": "What a Beautiful Name",
+      "artist": "Hillsong Worship",
+      "releaseYear": 2016,
+      "album": "Let There Be Light",
+      "duration": "5:41",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/what_a_beatiful_name.png?updatedAt=1754325854554",
+      "audio": "assets/audio/what_a_beautiful_name.mp3",
+      "genre": "Worship",
+      "key": "D",
+      "bpm": 68,
+      "keyTheme": "Power, Majesty",
+      "description": "A soaring declaration of Jesus’ name and its unmatched beauty, power, and authority.",
+      "isContinueListening": false,
+      "isRecentlyListened": true
+    },
+    {
+      "id": 8,
+      "name": "I Speak Jesus",
+      "artist": "Charity Gayle",
+      "releaseYear": 2021,
+      "album": "Endless Praise",
+      "duration": "4:50",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/i_speak_jesus.png?updatedAt=1754325947974",
+      "audio": "assets/audio/i_speak_jesus.mp3",
+      "genre": "Worship",
+      "key": "D",
+      "bpm": 70,
+      "keyTheme": "Healing, Authority",
+      "description": "A bold and prayerful declaration of Jesus’ name over fear, darkness, and every situation.",
+      "isContinueListening": false,
+      "isRecentlyListened": true
     }
   ],
   "topMixes": [
