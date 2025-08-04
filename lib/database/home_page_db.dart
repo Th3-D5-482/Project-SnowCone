@@ -1,6 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 
 final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Music');
+final DatabaseReference topMixesDB = FirebaseDatabase.instance.ref('topMixes');
 
 Stream<List<Map<String, dynamic>>> getMusic() {
   return musicDB.onValue.map((event) {
@@ -28,6 +29,21 @@ Stream<List<Map<String, dynamic>>> getMusic() {
         'description': song['description'],
         'isContinueListening': song['isContinueListening'] ?? false,
       };
+    }).toList();
+  });
+}
+
+Stream<List<Map<String, dynamic>>> getTopMixes() {
+  return topMixesDB.onValue.map((event) {
+    final data = event.snapshot.value;
+
+    if (data == null || data is! List) return [];
+
+    final List rawList = data;
+
+    return rawList.where((item) => item != null).map((item) {
+      final mix = item as Map<dynamic, dynamic>;
+      return {"id": mix['id'], "name": mix['name'], "image": mix['image']};
     }).toList();
   });
 }

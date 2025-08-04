@@ -1,13 +1,13 @@
 final List<Map<String, dynamic>> music = [
   {
-    "id": 1,
+    "id": 0,
     "name": "How Great Is Our God",
     "artist": "Chris Tomlin",
     "releaseYear": 2004,
     "album": "Arriving",
     "duration": "4:26",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/how_great_is_our_god.png?updatedAt=1754077398846",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/how_great_is_our_god.png?updatedAt=1754077398846",
     "audio": "assets/audio/how_great_is_our_god.mp3",
     "genre": "Worship",
     "key": "C",
@@ -17,14 +17,14 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "Way Maker",
     "artist": "Sinach / Leeland",
     "releaseYear": 2015,
     "album": "Way Maker (Live)",
     "duration": "4:45",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/way_maker.png?updatedAt=1754077398957",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/way_maker.png?updatedAt=1754077398957",
     "audio": "assets/audio/way_maker.mp3",
     "genre": "Worship",
     "key": "E",
@@ -35,14 +35,14 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "10,000 Reasons (Bless the Lord)",
     "artist": "Matt Redman",
     "releaseYear": 2011,
     "album": "10,000 Reasons",
     "duration": "4:22",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/10000_reasons.png?updatedAt=1754077399082",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/10000_reasons.png?updatedAt=1754077399082",
     "audio": "assets/audio/10000_reasons.mp3",
     "genre": "Worship",
     "key": "G",
@@ -53,14 +53,14 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Reckless Love",
     "artist": "Cory Asbury",
     "releaseYear": 2017,
     "album": "Reckless Love",
     "duration": "5:31",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/reckless_love.png?updatedAt=1754077398772",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/reckless_love.png?updatedAt=1754077398772",
     "audio": "assets/audio/reckless_love.mp3",
     "genre": "Contemporary",
     "key": "G♭",
@@ -71,14 +71,14 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Holy Forever",
     "artist": "Chris Tomlin",
     "releaseYear": 2022,
     "album": "Always",
     "duration": "5:08",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/holy_forever.png?updatedAt=1754077399263",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/holy_forever.png?updatedAt=1754077399263",
     "audio": "assets/audio/holy_forever.mp3",
     "genre": "Worship",
     "key": "D♭",
@@ -89,14 +89,14 @@ final List<Map<String, dynamic>> music = [
     "isContinueListening": true,
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Great Are You Lord",
     "artist": "All Sons & Daughters",
     "releaseYear": 2014,
     "album": "All Sons & Daughters",
     "duration": "4:25",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/great_are_you_lord.png?updatedAt=1754077399359",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/great_are_you_lord.png?updatedAt=1754077399359",
     "audio": "assets/audio/great_are_you_lord.mp3",
     "genre": "Worship",
     "key": "A",
@@ -108,17 +108,23 @@ final List<Map<String, dynamic>> music = [
   },
 ];
 
-final List<Map<String, String>> topMixes = [
+final List<Map<String, dynamic>> topMixes = [
   {
+    'id': 0,
     'name': 'Praise & Power Mix',
-    'image': 'assets/images/top_mixes/praise_and_power_mix.png',
+    'image':
+        'https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/praise_and_power_mix.png?updatedAt=1754307513482',
   },
   {
+    'id': 1,
     'name': 'Reflect & Restore Mix',
-    'image': 'assets/images/top_mixes/reflect_and_restore_mix.png',
+    'image':
+        'https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/reflect_and_restore_mix.png?updatedAt=1754307513710',
   },
   {
+    'id': 2,
     'name': 'Faith & Fire Mix',
-    'image': 'assets/images/top_mixes/faith_and_fire_mix.png',
+    'image':
+        'https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/faith_and_fire_mix.png?updatedAt=1754307513586',
   },
 ];

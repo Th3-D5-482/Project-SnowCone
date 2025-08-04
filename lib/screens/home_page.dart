@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:snowcone/database.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -65,12 +64,14 @@ class _HomeViewState extends State<HomeView> {
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: StreamBuilder(
-            stream: getMusic(),
+            stream: getTopMixes(),
             builder: (context, asyncSnapshot) {
               if (asyncSnapshot.connectionState == ConnectionState.waiting) {
                 return SizedBox(
                   height: MediaQuery.of(context).size.height - 100,
-                  child: const Center(child: CircularProgressIndicator()),
+                  child: const Center(
+                    child: CircularProgressIndicator(color: Colors.blueGrey),
+                  ),
                 );
               } else if (asyncSnapshot.hasError) {
                 return Center(
@@ -83,6 +84,7 @@ class _HomeViewState extends State<HomeView> {
               final musica = (asyncSnapshot.data ?? [])
                   .where((item) => item['isContinueListening'] == true)
                   .toList();
+              final topMixes = asyncSnapshot.data ?? [];
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -200,7 +202,7 @@ class _HomeViewState extends State<HomeView> {
                         final topMix = topMixes[index];
                         return SizedBox(
                           width: 200,
-                          height: 180,
+                          height: 150,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16.0),
@@ -208,11 +210,11 @@ class _HomeViewState extends State<HomeView> {
                             color: Color.fromARGB(255, 30, 30, 30),
                             child: Stack(
                               children: [
-                                Image.asset(
+                                Image.network(
                                   topMix['image']!,
                                   fit: BoxFit.cover,
                                   width: double.infinity,
-                                  height: 180,
+                                  height: double.infinity,
                                   opacity: const AlwaysStoppedAnimation(0.5),
                                 ),
                                 Padding(
