@@ -33,17 +33,35 @@ Stream<List<Map<String, dynamic>>> getMusic() {
   });
 }
 
-Stream<List<Map<String, dynamic>>> getTopMixes() {
-  return topMixesDB.onValue.map((event) {
-    final data = event.snapshot.value;
+Future<List<Map<String, dynamic>>> getTopMixes() async {
+  final snapshot = await topMixesDB.once();
+  final data = snapshot.snapshot.value;
 
-    if (data == null || data is! List) return [];
+  if (data == null || (data is! List && data is! Map)) return [];
 
-    final List rawList = data;
+  final List<Map<String, dynamic>> mixesList = [];
 
-    return rawList.where((item) => item != null).map((item) {
-      final mix = item as Map<dynamic, dynamic>;
-      return {"id": mix['id'], "name": mix['name'], "image": mix['image']};
-    }).toList();
-  });
+  if (data is List) {
+    for (final item in data) {
+      if (item != null && item is Map) {
+        mixesList.add({
+          "id": item['id'],
+          "name": item['name'],
+          "image": item['image'],
+        });
+      }
+    }
+  } else if (data is Map) {
+    data.forEach((key, value) {
+      if (value != null && value is Map) {
+        mixesList.add({
+          "id": value['id'],
+          "name": value['name'],
+          "image": value['image'],
+        });
+      }
+    });
+  }
+
+  return mixesList;
 }
