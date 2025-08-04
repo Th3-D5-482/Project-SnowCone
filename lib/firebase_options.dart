@@ -50,14 +50,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBKx38qii7rj46_qvqDU3hfYMbHL1sKehs',
-    appId: '1:63708234599:web:bb18d61fac485cc6a765c2',
-    messagingSenderId: '63708234599',
-    projectId: 'snowcone-f6759',
-    authDomain: 'snowcone-f6759.firebaseapp.com',
-    storageBucket: 'snowcone-f6759.firebasestorage.app',
-    measurementId: 'G-BQ0R7K9PZR',
-    databaseURL: 'https://snowcone-f6759.firebaseio.com',
+    apiKey: "AIzaSyBKx38qii7rj46_qvqDU3hfYMbHL1sKehs",
+    authDomain: "snowcone-f6759.firebaseapp.com",
+    databaseURL: "https://snowcone-f6759-default-rtdb.firebaseio.com",
+    projectId: "snowcone-f6759",
+    storageBucket: "snowcone-f6759.firebasestorage.app",
+    messagingSenderId: "63708234599",
+    appId: "1:63708234599:web:bb18d61fac485cc6a765c2",
+    measurementId: "G-BQ0R7K9PZR",
   );
 
   static const FirebaseOptions android = FirebaseOptions(
