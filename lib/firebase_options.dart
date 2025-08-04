@@ -57,6 +57,7 @@ class DefaultFirebaseOptions {
     authDomain: 'snowcone-f6759.firebaseapp.com',
     storageBucket: 'snowcone-f6759.firebasestorage.app',
     measurementId: 'G-BQ0R7K9PZR',
+    databaseURL: 'https://snowcone-f6759.firebaseio.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
