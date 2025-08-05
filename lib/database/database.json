@@ -207,19 +207,40 @@
   ],
   "topMixes": [
     {
-      "id": 0,
-      "name": "Praise & Power Mix",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/praise_and_power_mix.png?updatedAt=1754307513482"
-    },
-    {
-      "id": 1,
-      "name": "Reflect & Restore Mix",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/reflect_and_restore_mix.png?updatedAt=1754307513710"
-    },
-    {
-      "id": 2,
-      "name": "Faith & Fire Mix",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/faith_and_fire_mix.png?updatedAt=1754307513586"
-    }
+    "id": 0,
+    "name": "Praise & Power Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/praise_and_power%20_mix.png?updatedAt=1754416557861"
+  },
+  {
+    "id": 1,
+    "name": "Worship & Wonder Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/worship_and_wonder_mix.png?updatedAt=1754416739740"
+  },
+  {
+    "id": 2,
+    "name": "Grace & Redemption Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/grace_and_redemption_mix.png?updatedAt=1754416969862"
+  },
+  {
+    "id": 3,
+    "name": "Revival & Fire Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/revival_and_fire_mix.png?updatedAt=1754417138995"
+  },
+  {
+    "id": 4,
+    "name": "Reflect & Restore Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/reflection_and_surrender_mix.png?updatedAt=1754417289881"
+  },
+  {
+    "id": 5,
+    "name": "Daily Devotion Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/daily_devotion_mix.png?updatedAt=1754417473891"
+  }
   ]
 }
