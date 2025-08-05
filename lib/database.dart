@@ -38,7 +38,7 @@ final List<Map<String, dynamic>> music = [
   },
   {
     "id": 2,
-    "name": "10,000 Reasons (Bless the Lord)",
+    "name": "10,000 Reasons",
     "artist": "Matt Redman",
     "releaseYear": 2011,
     "album": "10,000 Reasons",
