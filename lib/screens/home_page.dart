@@ -280,11 +280,11 @@ class _HomeViewState extends State<HomeView> {
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           final recentSong = recentMusica[index];
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 16.0),
-                            child: SizedBox(
-                              width: 200,
-                              height: 200,
+                          return SizedBox(
+                            width: 200,
+                            height: 200,
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 16.0),
                               child: Card(
                                 color: Color.fromARGB(255, 30, 30, 30),
                                 shape: RoundedRectangleBorder(
