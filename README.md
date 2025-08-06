@@ -61,7 +61,7 @@
 
 Ready to experience the magic? Choose your platform and dive in:
 
-- 🔗 **[Launch Web App](https://your-snowcone-web-link.com)** – Try SnowCone directly in your browser  
+- 🔗 **[Launch Web App](https://th3d5482snowcone.netlify.app)** – Try SnowCone directly in your browser  
 - 📱 **[Download for Android](https://your-snowcone-android-link.com)** – Get the app on your device  
 
 ---
