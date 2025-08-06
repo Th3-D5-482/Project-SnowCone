@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart'
     show FirebaseAuth, FirebaseAuthException;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/screens/home_page.dart';
@@ -139,7 +140,9 @@ class _LogInState extends State<LogIn> {
                     ),
                     SizedBox(height: 20),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: kIsWeb
+                          ? MainAxisAlignment.center
+                          : MainAxisAlignment.start,
                       children: [
                         Checkbox(
                           value: isChecked,
