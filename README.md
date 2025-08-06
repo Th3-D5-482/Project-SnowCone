@@ -62,7 +62,7 @@
 Ready to experience the magic? Choose your platform and dive in:
 
 - 🔗 **[Launch Web App](https://th3d5482snowcone.netlify.app)** – Try SnowCone directly in your browser  
-- 📱 **[Download for Android](https://your-snowcone-android-link.com)** – Get the app on your device  
+- 📱 **[Download SnowCone APK](https://github.com/Th3-D5-482/Project-SnowCone/releases/download/V1.0.0/app-release.apk)**  - Get the App on your Device
 
 ---
 
@@ -83,4 +83,4 @@ Special thanks to [Chandrama](https://www.figma.com/@chandrama), whose design ar
 ## 🎯 Conclusion  
 Project SnowCone is built for the modern musician. With its sleek interface, intelligent features, and creative flexibility, it transforms how artists engage with music. Whether you're composing, rehearsing, or performing live, SnowCone is there to guide, support, and inspire.
 
-> _Want to see SnowCone in action? [Try it now](https://your-snowcone-web-link.com) or [view screenshots](https://your-snowcone-gallery-link.com) to get a taste of the experience._
+> _Want to see SnowCone in action? [Try it now](https://th3d5482snowcone) or [view screenshots](https://your-snowcone-gallery-link.com) to get a taste of the experience._
