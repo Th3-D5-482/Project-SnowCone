@@ -97,119 +97,197 @@ class _HomeViewState extends State<HomeView> {
                   final recentMusica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isRecentlyListened'] == true)
                       .toList();
-                  return Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/images/random/Th3_D5_482.jpeg',
-                              ),
-                              radius: 30,
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const CircleAvatar(
+                            backgroundImage: AssetImage(
+                              'assets/images/random/Th3_D5_482.jpeg',
                             ),
-                            const SizedBox(width: 8),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Welcome back !',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  'Th3-D5-482',
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const Spacer(),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.settings_sharp,
-                                color: Colors.grey,
-                              ),
-                              onPressed: () {},
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        const Text(
-                          'Continue Listening',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                            radius: 30,
                           ),
+                          const SizedBox(width: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'Welcome back !',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                'Th3-D5-482',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          IconButton(
+                            icon: const Icon(
+                              Icons.settings_sharp,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Continue Listening',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
-                        const SizedBox(height: 10),
-                        LayoutBuilder(
-                          builder: (context, constraints) {
-                            double screenWidth = constraints.maxWidth;
+                      ),
+                      const SizedBox(height: 10),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
 
-                            // Dynamically adjust column count
-                            int crossAxisCount;
-                            double aspectRatio;
+                          // Dynamically adjust column count
+                          int crossAxisCount;
+                          double aspectRatio;
 
-                            if (screenWidth >= 1200) {
-                              crossAxisCount = 4;
-                              aspectRatio = 3.5;
-                            } else if (screenWidth >= 800) {
-                              crossAxisCount = 3;
-                              aspectRatio = 4;
-                            } else {
-                              crossAxisCount = 2;
-                              aspectRatio = 2.5;
-                            }
+                          if (screenWidth >= 1200) {
+                            crossAxisCount = 4;
+                            aspectRatio = 3.5;
+                          } else if (screenWidth >= 800) {
+                            crossAxisCount = 3;
+                            aspectRatio = 4;
+                          } else {
+                            crossAxisCount = 2;
+                            aspectRatio = 2.5;
+                          }
 
-                            return GridView.builder(
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: crossAxisCount,
-                                    childAspectRatio: aspectRatio,
-                                    crossAxisSpacing: 12,
-                                    mainAxisSpacing: 12,
-                                  ),
-                              itemCount: musica.length,
-                              itemBuilder: (context, index) {
-                                final song = musica[index];
-                                return Card(
-                                  color: const Color.fromARGB(255, 30, 30, 30),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8),
-                                    child: Row(
-                                      children: [
-                                        Image.network(
-                                          song['image'],
-                                          width: 80,
-                                          height: 100,
-                                          fit: BoxFit.cover,
-                                        ),
-                                        const SizedBox(width: 10),
-                                        Expanded(
-                                          child: Text(
-                                            song['name'] ?? '',
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                            maxLines: 2,
+                          return GridView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: crossAxisCount,
+                                  childAspectRatio: aspectRatio,
+                                  crossAxisSpacing: 12,
+                                  mainAxisSpacing: 12,
+                                ),
+                            itemCount: musica.length,
+                            itemBuilder: (context, index) {
+                              final song = musica[index];
+                              return Card(
+                                color: const Color.fromARGB(255, 30, 30, 30),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8),
+                                  child: Row(
+                                    children: [
+                                      Image.network(
+                                        song['image'],
+                                        width: 80,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Expanded(
+                                        child: Text(
+                                          song['name'] ?? '',
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                            overflow: TextOverflow.ellipsis,
                                           ),
+                                          maxLines: 2,
                                         ),
-                                      ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        },
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Your Top Mixes',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      SizedBox(
+                        height: 130,
+                        width: double.infinity,
+                        child: FutureBuilder(
+                          future: getTopMixes(),
+                          builder: (context, asyncSnapshot) {
+                            if (asyncSnapshot.hasError) {
+                              return Center(
+                                child: Text(
+                                  'Error: ${asyncSnapshot.error}',
+                                  style: const TextStyle(color: Colors.red),
+                                ),
+                              );
+                            }
+                            final topMixes = asyncSnapshot.data ?? [];
+                            return ListView.builder(
+                              itemCount: topMixes.length,
+                              shrinkWrap: true,
+                              physics: const BouncingScrollPhysics(),
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                final topMix = topMixes[index];
+                                return SizedBox(
+                                  width: 200,
+                                  height: 130,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right: 16.0),
+                                    child: Card(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          16.0,
+                                        ),
+                                      ),
+                                      color: Color.fromARGB(255, 30, 30, 30),
+                                      child: Stack(
+                                        children: [
+                                          Image.network(
+                                            topMix['image']!,
+                                            fit: BoxFit.cover,
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                            opacity:
+                                                const AlwaysStoppedAnimation(
+                                                  0.5,
+                                                ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Align(
+                                              alignment: Alignment.center,
+                                              child: Text(
+                                                topMix['name']!,
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 );
@@ -217,134 +295,50 @@ class _HomeViewState extends State<HomeView> {
                             );
                           },
                         ),
-                        SizedBox(height: 20),
-                        Text(
-                          'Your Top Mixes',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Based on your recent listening',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                          height: 130,
-                          width: double.infinity,
-                          child: FutureBuilder(
-                            future: getTopMixes(),
-                            builder: (context, asyncSnapshot) {
-                              if (asyncSnapshot.hasError) {
-                                return Center(
-                                  child: Text(
-                                    'Error: ${asyncSnapshot.error}',
-                                    style: const TextStyle(color: Colors.red),
+                      ),
+                      SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 180,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: recentMusica.length,
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) {
+                            final recentSong = recentMusica[index];
+                            return SizedBox(
+                              width: 180,
+                              height: 180,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 16.0),
+                                child: Card(
+                                  color: Color.fromARGB(255, 30, 30, 30),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0),
                                   ),
-                                );
-                              }
-                              final topMixes = asyncSnapshot.data ?? [];
-                              return ListView.builder(
-                                itemCount: topMixes.length,
-                                shrinkWrap: true,
-                                physics: const BouncingScrollPhysics(),
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  final topMix = topMixes[index];
-                                  return SizedBox(
-                                    width: 200,
-                                    height: 130,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                        right: 16.0,
-                                      ),
-                                      child: Card(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            16.0,
-                                          ),
-                                        ),
-                                        color: Color.fromARGB(255, 30, 30, 30),
-                                        child: Stack(
-                                          children: [
-                                            Image.network(
-                                              topMix['image']!,
-                                              fit: BoxFit.cover,
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                              opacity:
-                                                  const AlwaysStoppedAnimation(
-                                                    0.5,
-                                                  ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.all(
-                                                8.0,
-                                              ),
-                                              child: Align(
-                                                alignment: Alignment.center,
-                                                child: Text(
-                                                  topMix['name']!,
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              );
-                            },
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Text(
-                          'Based on your recent listening',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 180,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: recentMusica.length,
-                            physics: const BouncingScrollPhysics(),
-                            shrinkWrap: true,
-                            itemBuilder: (context, index) {
-                              final recentSong = recentMusica[index];
-                              return SizedBox(
-                                width: 180,
-                                height: 180,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right: 16.0),
-                                  child: Card(
-                                    color: Color.fromARGB(255, 30, 30, 30),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                    ),
-                                    child: Image.network(
-                                      recentSong['image']!,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                    ),
+                                  child: Image.network(
+                                    recentSong['image']!,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    height: double.infinity,
                                   ),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   );
                 },
               ),
