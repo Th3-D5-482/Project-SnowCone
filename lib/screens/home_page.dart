@@ -55,6 +55,16 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  String getGretting() {
+    final hour = DateTime.now().hour;
+    if (hour < 12) {
+      return 'Good Morning';
+    } else if (hour < 17) {
+      return 'Good Afternoon';
+    }
+    return 'Good Eveining';
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -112,9 +122,9 @@ class _HomeViewState extends State<HomeView> {
                           const SizedBox(width: 8),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
-                                'Welcome back !',
+                                getGretting(),
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
