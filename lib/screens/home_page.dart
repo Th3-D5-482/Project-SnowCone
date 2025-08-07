@@ -58,11 +58,11 @@ class _HomeViewState extends State<HomeView> {
   String getGretting() {
     final hour = DateTime.now().hour;
     if (hour < 12) {
-      return 'Good Morning';
+      return 'Good morning';
     } else if (hour < 17) {
-      return 'Good Afternoon';
+      return 'Good afternoon';
     }
-    return 'Good Eveining';
+    return 'Good evening';
   }
 
   @override
@@ -190,7 +190,7 @@ class _HomeViewState extends State<HomeView> {
                                   crossAxisSpacing: 12,
                                   mainAxisSpacing: 12,
                                 ),
-                            itemCount: musica.length,
+                            itemCount: 6,
                             itemBuilder: (context, index) {
                               final song = musica[index];
                               return Card(
@@ -316,37 +316,83 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 10),
-                      SizedBox(
-                        width: double.infinity,
-                        height: 180,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: recentMusica.length,
-                          physics: const BouncingScrollPhysics(),
-                          shrinkWrap: true,
-                          itemBuilder: (context, index) {
-                            final recentSong = recentMusica[index];
-                            return SizedBox(
-                              width: 180,
-                              height: 180,
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 16.0),
-                                child: Card(
-                                  color: Color.fromARGB(255, 30, 30, 30),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16.0),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
+
+                          return screenWidth > 800
+                              ? SizedBox(
+                                  width: double.infinity,
+                                  height: 180,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: List.generate(6, (index) {
+                                      final recentSong = recentMusica[index];
+                                      return SizedBox(
+                                        width: 180,
+                                        height: 180,
+                                        child: Card(
+                                          color: const Color.fromARGB(
+                                            255,
+                                            30,
+                                            30,
+                                            30,
+                                          ),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                              16.0,
+                                            ),
+                                          ),
+                                          child: Image.network(
+                                            recentSong['image']!,
+                                            fit: BoxFit.cover,
+                                            width: double.infinity,
+                                            height: double.infinity,
+                                          ),
+                                        ),
+                                      );
+                                    }),
                                   ),
-                                  child: Image.network(
-                                    recentSong['image']!,
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
-                                    height: double.infinity,
+                                )
+                              : SizedBox(
+                                  width: double.infinity,
+                                  height: 180,
+                                  child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: 6,
+                                    physics: const BouncingScrollPhysics(),
+                                    itemBuilder: (context, index) {
+                                      final recentSong = recentMusica[index];
+                                      return Padding(
+                                        padding: EdgeInsets.only(right: 16),
+                                        child: SizedBox(
+                                          width: 180,
+                                          height: 180,
+                                          child: Card(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              30,
+                                              30,
+                                              30,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                            ),
+                                            child: Image.network(
+                                              recentSong['image']!,
+                                              fit: BoxFit.cover,
+                                              width: double.infinity,
+                                              height: double.infinity,
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
                                   ),
-                                ),
-                              ),
-                            );
-                          },
-                        ),
+                                );
+                        },
                       ),
                     ],
                   );
