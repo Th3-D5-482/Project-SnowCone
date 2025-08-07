@@ -63,15 +63,7 @@ class _SplashState extends State<Splash> {
                   ),
                 ],
               ),
-              Text(
-                'The Last Project',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.blueGrey,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
+              SizedBox(height: 5),
               Text(
                 'By: Th3_D5_482',
                 style: TextStyle(fontSize: 20, color: Colors.grey),
