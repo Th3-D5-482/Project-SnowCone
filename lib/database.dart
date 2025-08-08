@@ -177,7 +177,7 @@ final List<Map<String, dynamic>> music = [
     "album": "Cornerstone",
     "duration": "6:30",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/i_surrender.png?updatedAt=1754414239199",
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Images/i_surrender.png?updatedAt=1754646219567",
     "audio": "assets/audio/i_surrender.mp3",
     "genre": "Worship",
     "key": "D",

@@ -10,6 +10,15 @@
 
 ---
 
+## ✝️ Faith-Focused Foundation  
+**Project SnowCone** is more than a music companion—it's a worship-centered platform built for Christian musicians, worship leaders, and spiritual creatives. Every feature is thoughtfully designed to support the heart of worship, from real-time chord transposition during live praise sets to AI-assisted planning for Sunday services and devotional sessions.  
+
+Whether you're preparing for a church gathering, leading a youth worship night, or simply seeking deeper intimacy through music, SnowCone empowers you to serve with excellence and authenticity.  
+
+> _Rooted in faith. Powered by tech. Inspired by worship._
+
+---
+
 ## 🧰 Technologies Used  
 - **Flutter** – Native performance for mobile, web, and desktop with one codebase  
 - **Firebase** – Secure authentication, cloud-based storage, and user data sync  
@@ -62,7 +71,7 @@
 Ready to experience the magic? Choose your platform and dive in:
 
 - 🔗 **[Launch Web App](https://th3d5482snowcone.netlify.app)** – Try SnowCone directly in your browser  
-- 📱 **[Download SnowCone APK](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/app-debug.apk)**  - Get the App on your Device
+- 📱 **[Download SnowCone APK](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/app-debug.apk)** – Get the App on your Device  
 
 ---
 
