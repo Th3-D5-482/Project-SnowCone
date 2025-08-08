@@ -71,7 +71,7 @@ Ready to experience the magic? Choose your platform and dive in:
 Curious what SnowCone looks like in action?  
 Check out our dedicated gallery with screenshots and design highlights:
 
-- 📸 **[View App Screenshots](https://your-snowcone-gallery-link.com)**  
+- 📸 **[View App Screenshots](screenshots.md)**  
 
 ---
 
@@ -83,4 +83,4 @@ Special thanks to [Chandrama](https://www.figma.com/@chandrama), whose design ar
 ## 🎯 Conclusion  
 Project SnowCone is built for the modern musician. With its sleek interface, intelligent features, and creative flexibility, it transforms how artists engage with music. Whether you're composing, rehearsing, or performing live, SnowCone is there to guide, support, and inspire.
 
-> _Want to see SnowCone in action? [Try it now](https://th3d5482snowcone.netlify.app) or [view screenshots](https://your-snowcone-gallery-link.com) to get a taste of the experience._
+> _Want to see SnowCone in action? [Try it now](https://th3d5482snowcone.netlify.app) or [view screenshots](screenshots.md) to get a taste of the experience._
