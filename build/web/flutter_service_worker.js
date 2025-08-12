@@ -3,9 +3,13 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "d5499c436cad6e6b26eb13e204b4d102",
-"assets/AssetManifest.bin.json": "68961fbf72802176d075059ec46a9512",
-"assets/AssetManifest.json": "b0048b7bf0d64279ee1c1312396a670a",
+const RESOURCES = {"assets/AssetManifest.bin": "ff6891fafacc36e2c24e9bae74337109",
+"assets/AssetManifest.bin.json": "17d7cb072a8b19f64bf49df37eb9d2fe",
+"assets/AssetManifest.json": "69999ced59cfc4f4f8f3b51171df7348",
+"assets/assets/images/genres/christian_contemporary.png": "47f89d6a7a021da044c2da6ab3b7ba8d",
+"assets/assets/images/genres/gospel.png": "1e66dfd06f919ae405f925cc3ff8c7f3",
+"assets/assets/images/genres/praise.png": "0c2ede593f0f66ce6d9ff378d736d69e",
+"assets/assets/images/genres/worship.png": "dacbb74c20d21e60372c7f535082a35c",
 "assets/assets/images/random/logo.png": "6c1c2966eceb0db12b85f42238818ced",
 "assets/assets/images/random/me.png": "f9735f1628cc93395bd2b0f6a1d00088",
 "assets/assets/images/random/Th3_D5_482.jpeg": "68d4a3f6fad3544dcc5259d38f5e8e25",
@@ -47,14 +51,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "d5499c436cad6e6b26eb13e204b4d102
 "canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
-"flutter_bootstrap.js": "3c7e6d81107991e25b4bcc53998db34e",
+"flutter_bootstrap.js": "0f8527a8ba4e2c2476917502f38ee362",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "6050ecd400596b6ec56121843dc6e750",
 "/": "6050ecd400596b6ec56121843dc6e750",
-"main.dart.js": "bf039688980f2a9f336e2b057cf2bbbd",
+"main.dart.js": "0b5be3fc3c5790c15ad76f9507f29fff",
 "manifest.json": "6858a767bc61f44ddcf96ba3905fea09",
 "version.json": "794af03ad599eb48d29243c1d69873a8"};
 // The application shell files that are downloaded before a service worker can

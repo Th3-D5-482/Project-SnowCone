@@ -1,7 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 
 final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Music');
-final DatabaseReference topMixesDB = FirebaseDatabase.instance.ref('topMixes');
+final DatabaseReference topMixesDB = FirebaseDatabase.instance.ref('TopMixes');
 
 Stream<List<Map<String, dynamic>>> getMusic() {
   return musicDB.onValue.map((event) {

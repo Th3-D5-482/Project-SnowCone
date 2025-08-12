@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/database/search_page_db.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -27,23 +28,13 @@ class _SearchPageState extends State<SearchPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/random/logo.png',
-                          width: 40,
-                          height: 40,
-                        ),
-                        SizedBox(width: 8),
-                        Text(
-                          'Search',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blueGrey,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      'Search',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                     SizedBox(height: 20),
                     TextField(
@@ -79,46 +70,70 @@ class _SearchPageState extends State<SearchPage> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 300,
-                      child: GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 1.5,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                        ),
-                        itemCount: 4,
-                        itemBuilder: (context, index) {
-                          return Card(
-                            child: Stack(
-                              children: [
-                                Image.asset(
-                                  'assets/images/top_mixes/worship_and_wonder_mix.png',
-                                  width: double.infinity,
-                                  height: double.infinity,
-                                  fit: BoxFit.cover,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      'Hello World',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                    FutureBuilder(
+                      future: getGenres(),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return SizedBox(
+                            height: MediaQuery.of(context).size.height - 100,
+                            child: const Center(
+                              child: CircularProgressIndicator(
+                                color: Colors.blueGrey,
+                              ),
                             ),
                           );
-                        },
-                      ),
+                        } else if (snapshot.hasError) {
+                          return Text(
+                            'Error: ${snapshot.error}',
+                            style: const TextStyle(color: Colors.red),
+                          );
+                        }
+                        final topGeneres = snapshot.data ?? [];
+                        return SizedBox(
+                          width: double.infinity,
+                          height: 300,
+                          child: GridView.builder(
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  childAspectRatio: 1.5,
+                                  crossAxisSpacing: 10,
+                                  mainAxisSpacing: 10,
+                                ),
+                            itemCount: topGeneres.length,
+                            itemBuilder: (context, index) {
+                              final genres = topGeneres[index];
+                              return Card(
+                                child: Stack(
+                                  children: [
+                                    Image.network(
+                                      genres['image']!,
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          genres['name']!,
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

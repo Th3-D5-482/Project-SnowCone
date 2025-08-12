@@ -205,7 +205,7 @@
       "isRecentlyListened": true
     }
   ],
-  "topMixes": [
+  "TopMixes": [
     {
     "id": 0,
     "name": "Praise & Power Mix",
@@ -242,5 +242,31 @@
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Top%20Mixes/daily_devotion_mix.png?updatedAt=1754417473891"
   }
-  ]
+  ],
+  "Genres": [
+  {
+    "id": 0,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755025990567"
+  },
+  {
+    "id": 1,
+    "name": "Praise",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/praise.png?updatedAt=1755025894308"
+  },
+  {
+    "id": 2,
+    "name": "Gospel",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/gospel.png?updatedAt=1755026120853"
+  },
+  {
+    "id": 3,
+    "name": "Christian Contemporary",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/christian_contemporary.png?updatedAt=1755026465370"
+  }
+]
 }

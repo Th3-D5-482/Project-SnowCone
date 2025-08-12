@@ -268,8 +268,28 @@ final List<Map<String, dynamic>> topMixes = [
 ];
 
 List<Map<String, dynamic>> getGenere = [
-  {"id": 0, "name": "Worship", "image": ""},
-  {"id": 1, "name": "Praise", "image": ""},
-  {"id": 2, "name": "Gospel", "image": ""},
-  {"id": 3, "name": "Christian Contemporary", "image": ""},
+  {
+    "id": 0,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755025990567",
+  },
+  {
+    "id": 1,
+    "name": "Praise",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/praise.png?updatedAt=1755025894308",
+  },
+  {
+    "id": 2,
+    "name": "Gospel",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/gospel.png?updatedAt=1755026120853",
+  },
+  {
+    "id": 3,
+    "name": "Christian Contemporary",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/christian_contemporary.png?updatedAt=1755026465370",
+  },
 ];
