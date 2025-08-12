@@ -1,0 +1,11 @@
+# Force Dart files to be detected
+*.dart linguist-detectable=true
+
+# Ignore HTML files from detection (often misclassified as JavaScript)
+*.html linguist-detectable=false
+
+# Optional: Ignore other non-Dart files that might skew detection
+*.js linguist-detectable=false
+*.css linguist-detectable=false
+*.json linguist-detectable=false
+*.md linguist-detectable=false

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63708234599",
+    "project_id": "snowcone-f6759",
+    "storage_bucket": "snowcone-f6759.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63708234599:android:228bcd9ab7f497e8a765c2",
+        "android_client_info": {
+          "package_name": "com.example.snowcone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQLyWJRO_LU_7eI-RliDhUzykBXIAh9dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
