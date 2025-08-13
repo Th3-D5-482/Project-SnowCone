@@ -70,68 +70,90 @@ class _SearchPageState extends State<SearchPage> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    FutureBuilder(
-                      future: getGenres(),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState ==
-                            ConnectionState.waiting) {
-                          return SizedBox(
-                            height: MediaQuery.of(context).size.height - 100,
-                            child: const Center(
-                              child: CircularProgressIndicator(
-                                color: Colors.blueGrey,
-                              ),
-                            ),
-                          );
-                        } else if (snapshot.hasError) {
-                          return Text(
-                            'Error: ${snapshot.error}',
-                            style: const TextStyle(color: Colors.red),
-                          );
+                    LayoutBuilder(
+                      builder: (context, constraints) {
+                        double screenWidth = constraints.maxWidth;
+                        int crossAxisCount;
+                        double aspectRatio;
+                        if (screenWidth >= 1200) {
+                          crossAxisCount = 2;
+                          aspectRatio = 4;
+                        } else if (screenWidth >= 800) {
+                          crossAxisCount = 2;
+                          aspectRatio = 4;
+                        } else {
+                          crossAxisCount = 2;
+                          aspectRatio = 1.5;
                         }
-                        final topGeneres = snapshot.data ?? [];
-                        return SizedBox(
-                          width: double.infinity,
-                          height: 300,
-                          child: GridView.builder(
-                            gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  childAspectRatio: 1.5,
-                                  crossAxisSpacing: 10,
-                                  mainAxisSpacing: 10,
-                                ),
-                            itemCount: topGeneres.length,
-                            itemBuilder: (context, index) {
-                              final genres = topGeneres[index];
-                              return Card(
-                                child: Stack(
-                                  children: [
-                                    Image.network(
-                                      genres['image']!,
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          genres['name']!,
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                        return FutureBuilder(
+                          future: getGenres(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height - 100,
+                                child: const Center(
+                                  child: CircularProgressIndicator(
+                                    color: Colors.blueGrey,
+                                  ),
                                 ),
                               );
-                            },
-                          ),
+                            } else if (snapshot.hasError) {
+                              return Text(
+                                'Error: ${snapshot.error}',
+                                style: const TextStyle(color: Colors.red),
+                              );
+                            }
+                            final topGeneres = snapshot.data ?? [];
+                            return SizedBox(
+                              width: double.infinity,
+                              height: 300,
+                              child: GridView.builder(
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: crossAxisCount,
+                                      childAspectRatio: aspectRatio,
+                                      crossAxisSpacing: 10,
+                                      mainAxisSpacing: 10,
+                                    ),
+                                itemCount: topGeneres.length,
+                                itemBuilder: (context, index) {
+                                  final genres = topGeneres[index];
+                                  return Card(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(16),
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Image.network(
+                                          genres['image']!,
+                                          width: double.infinity,
+                                          height: double.infinity,
+                                          fit: BoxFit.cover,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: Text(
+                                              genres['name']!,
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
+                            );
+                          },
                         );
                       },
                     ),

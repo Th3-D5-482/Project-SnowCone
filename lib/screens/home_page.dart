@@ -164,14 +164,11 @@ class _HomeViewState extends State<HomeView> {
                       LayoutBuilder(
                         builder: (context, constraints) {
                           double screenWidth = constraints.maxWidth;
-
-                          // Dynamically adjust column count
                           int crossAxisCount;
                           double aspectRatio;
-
                           if (screenWidth >= 1200) {
-                            crossAxisCount = 4;
-                            aspectRatio = 3.5;
+                            crossAxisCount = 3;
+                            aspectRatio = 4;
                           } else if (screenWidth >= 800) {
                             crossAxisCount = 3;
                             aspectRatio = 4;
@@ -179,7 +176,6 @@ class _HomeViewState extends State<HomeView> {
                             crossAxisCount = 2;
                             aspectRatio = 2.5;
                           }
-
                           return GridView.builder(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
