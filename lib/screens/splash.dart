@@ -33,65 +33,47 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/images/random/logo.png',
+                width: 200,
+                height: 200,
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(
-                    image: AssetImage('assets/images/random/logo.png'),
-                    width: 200,
-                    height: 200,
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Project',
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(width: 8.0),
-                      Text(
-                        'SnowCone',
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
                   Text(
-                    'The Last Project',
+                    'Project',
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 8.0),
+                  Text(
+                    'SnowCone',
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey,
+                      color: Colors.blueGrey,
                     ),
                   ),
                 ],
               ),
-            ),
-            Positioned(
-              bottom: 20,
-              right: 0,
-              left: 0,
-              child: Center(
-                child: Text(
-                  'By: Th3_D5_482',
-                  style: TextStyle(fontSize: 20, color: Colors.grey),
+              SizedBox(height: 10),
+              Text(
+                'The Last Project',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey,
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

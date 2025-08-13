@@ -19,9 +19,10 @@ class Welcome extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Image(
-                image: AssetImage('assets/images/random/welcome.png'),
+              Image.asset(
+                'assets/images/random/welcome.png',
                 height: kIsWeb ? 480 : null,
+                width: double.infinity,
               ),
               SizedBox(height: 20),
               Row(
