@@ -3,12 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "ff6891fafacc36e2c24e9bae74337109",
-"assets/AssetManifest.bin.json": "17d7cb072a8b19f64bf49df37eb9d2fe",
-"assets/AssetManifest.json": "69999ced59cfc4f4f8f3b51171df7348",
-"assets/assets/images/genres/christian_contemporary.png": "47f89d6a7a021da044c2da6ab3b7ba8d",
-"assets/assets/images/genres/gospel.png": "1e66dfd06f919ae405f925cc3ff8c7f3",
-"assets/assets/images/genres/praise.png": "0c2ede593f0f66ce6d9ff378d736d69e",
+const RESOURCES = {"assets/AssetManifest.bin": "387ed7871c32aeb38412f07f4abefe39",
+"assets/AssetManifest.bin.json": "c5f7a52f656c7ed26766314d2c6d9f2f",
+"assets/AssetManifest.json": "da93b78a9462bb640284a598cad171d4",
+"assets/assets/images/genres/devotional.png": "58b20bc835dcd85a52ba41f14f120648",
+"assets/assets/images/genres/gospel.png": "b3382fb245212ff89c73878fc444cd19",
+"assets/assets/images/genres/praise.png": "064976feff3f6bb75d0f2b0a01fd9e8a",
 "assets/assets/images/genres/worship.png": "dacbb74c20d21e60372c7f535082a35c",
 "assets/assets/images/random/logo.png": "6c1c2966eceb0db12b85f42238818ced",
 "assets/assets/images/random/me.png": "f9735f1628cc93395bd2b0f6a1d00088",
@@ -51,7 +51,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "ff6891fafacc36e2c24e9bae74337109
 "canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
-"flutter_bootstrap.js": "0f8527a8ba4e2c2476917502f38ee362",
+"flutter_bootstrap.js": "b04f6edbe94a5393020e3f2ec13fa8d6",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",

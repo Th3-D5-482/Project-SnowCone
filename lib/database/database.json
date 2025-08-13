@@ -248,25 +248,25 @@
     "id": 0,
     "name": "Worship",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755025990567"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755091863145"
   },
   {
     "id": 1,
     "name": "Praise",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/praise.png?updatedAt=1755025894308"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/praise.png?updatedAt=1755092126664"
   },
   {
     "id": 2,
     "name": "Gospel",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/gospel.png?updatedAt=1755026120853"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/gospel.png?updatedAt=1755090607311"
   },
   {
     "id": 3,
-    "name": "Christian Contemporary",
+    "name": "Devotional",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/christian_contemporary.png?updatedAt=1755026465370"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/devotional.png?updatedAt=1755091642552"
   }
 ]
 }
