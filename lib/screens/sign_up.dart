@@ -23,10 +23,6 @@ class _SignUpState extends State<SignUp> {
     password = TextEditingController();
   }
 
-  double getResponsivePadding(double width) {
-    return (width * 0.10).clamp(16.0, 600.0);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +32,7 @@ class _SignUpState extends State<SignUp> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              double horizontalPadding = getResponsivePadding(screenWidth);
+              double horizontalPadding = screenWidth > 800 ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,

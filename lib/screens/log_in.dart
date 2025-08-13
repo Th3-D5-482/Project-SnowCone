@@ -20,10 +20,6 @@ class _LogInState extends State<LogIn> {
   late TextEditingController email;
   late TextEditingController password;
 
-  double getResponsivePadding(double width) {
-    return (width * 0.10).clamp(16.0, 600.0);
-  }
-
   @override
   void initState() {
     super.initState();
@@ -40,7 +36,7 @@ class _LogInState extends State<LogIn> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              double horizontalPadding = getResponsivePadding(screenWidth);
+              double horizontalPadding = screenWidth > 800 ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,

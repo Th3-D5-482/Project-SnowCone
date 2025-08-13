@@ -65,10 +65,6 @@ class _HomeViewState extends State<HomeView> {
     return 'Good evening';
   }
 
-  double getResponsivePadding(double width) {
-    return (width * 0.10).clamp(16.0, 600.0);
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -78,7 +74,7 @@ class _HomeViewState extends State<HomeView> {
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
             // ignore: unused_local_variable
-            double horizontalPadding = getResponsivePadding(screenWidth);
+            double horizontalPadding = screenWidth > 800 ? 200 : 16;
             return Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: horizontalPadding,
@@ -259,7 +255,7 @@ class _HomeViewState extends State<HomeView> {
                               itemBuilder: (context, index) {
                                 final topMix = topMixes[index];
                                 return SizedBox(
-                                  width: 200,
+                                  width: 190,
                                   height: 130,
                                   child: Padding(
                                     padding: const EdgeInsets.only(right: 16.0),
