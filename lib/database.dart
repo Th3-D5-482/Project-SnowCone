@@ -270,15 +270,15 @@ final List<Map<String, dynamic>> topMixes = [
 List<Map<String, dynamic>> getGenere = [
   {
     "id": 0,
-    "name": "Worship",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755091863145",
-  },
-  {
-    "id": 1,
     "name": "Praise",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/praise.png?updatedAt=1755092126664",
+  },
+  {
+    "id": 1,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Genres/worship.png?updatedAt=1755091863145",
   },
   {
     "id": 2,
