@@ -77,8 +77,8 @@ class _SearchPageState extends State<SearchPage> {
                         int crossAxisCount;
                         double aspectRatio;
                         if (screenWidth >= 1200) {
-                          crossAxisCount = 2;
-                          aspectRatio = 3.5;
+                          crossAxisCount = 4;
+                          aspectRatio = 2;
                         } else if (screenWidth >= 800) {
                           crossAxisCount = 2;
                           aspectRatio = 4;
