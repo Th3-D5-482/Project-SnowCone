@@ -13,7 +13,8 @@
       "bpm": 68,
       "keyTheme": "Majesty, Praise",
       "description": "A timeless anthem glorifying God's greatness.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 0
     },
     {
       "id": 1,
@@ -28,7 +29,8 @@
       "bpm": 70,
       "keyTheme": "Miracles, Presence",
       "description": "A global worship movement declaring God as miracle worker and light in the darkness.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 1
     },
     {
       "id": 2,
@@ -43,7 +45,8 @@
       "bpm": 73,
       "keyTheme": "Gratitude, Faithfulness",
       "description": "A stirring song reflecting a life of thankful worship inspired by Psalm 103.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 2
     },
     {
       "id": 3,
@@ -58,7 +61,8 @@
       "bpm": 83,
       "keyTheme": "God's Pursuit, Grace",
       "description": "A powerful narrative of God's unrelenting love, inspired by Luke 15.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 3
     },
     {
       "id": 4,
@@ -73,7 +77,8 @@
       "bpm": 72,
       "keyTheme": "Eternity, Holiness",
       "description": "A majestic anthem celebrating God's eternal holiness and glory.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 4
     },
     {
       "id": 5,
@@ -88,7 +93,8 @@
       "bpm": 72,
       "keyTheme": "Breath, Praise",
       "description": "A humble yet profound invitation to worship, declaring God's restorative power.",
-      "isRecentlyListened": true
+      "isRecentlyListened": true,
+      "albumID": 5
     }
   ],
   "TopMixes": [
