@@ -39,6 +39,7 @@ class _SearchPageState extends State<SearchPage> {
                     SizedBox(height: 20),
                     TextField(
                       controller: searchInput,
+                      style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Songs, Artist, Podcasts & More',
                         hintStyle: TextStyle(color: Colors.grey),
