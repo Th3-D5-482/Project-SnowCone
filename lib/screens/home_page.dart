@@ -81,7 +81,7 @@ class _HomeViewState extends State<HomeView> {
                 vertical: 16,
               ),
               child: StreamBuilder(
-                stream: getMusic(),
+                stream: getContinueListening(),
                 builder: (context, asyncSnapshot) {
                   if (asyncSnapshot.connectionState ==
                       ConnectionState.waiting) {
@@ -103,9 +103,6 @@ class _HomeViewState extends State<HomeView> {
                   }
                   final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
-                      .toList();
-                  final recentMusica = (asyncSnapshot.data ?? [])
-                      .where((item) => item['isRecentlyListened'] == true)
                       .toList();
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,7 +165,7 @@ class _HomeViewState extends State<HomeView> {
                           double aspectRatio;
                           if (screenWidth >= 1200) {
                             crossAxisCount = 3;
-                            aspectRatio = 4;
+                            aspectRatio = 3.5;
                           } else if (screenWidth >= 800) {
                             crossAxisCount = 3;
                             aspectRatio = 4;
@@ -186,7 +183,7 @@ class _HomeViewState extends State<HomeView> {
                                   crossAxisSpacing: 12,
                                   mainAxisSpacing: 12,
                                 ),
-                            itemCount: 6,
+                            itemCount: musica.length,
                             itemBuilder: (context, index) {
                               final song = musica[index];
                               return Card(
@@ -196,7 +193,7 @@ class _HomeViewState extends State<HomeView> {
                                   child: Row(
                                     children: [
                                       Image.network(
-                                        song['image'],
+                                        song['image']!,
                                         width: 80,
                                         height: 100,
                                         fit: BoxFit.cover,
@@ -312,82 +309,94 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 10),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          double screenWidth = constraints.maxWidth;
-
-                          return screenWidth > 800
-                              ? SizedBox(
-                                  width: double.infinity,
-                                  height: 180,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: List.generate(6, (index) {
-                                      final recentSong = recentMusica[index];
-                                      return SizedBox(
-                                        width: 180,
-                                        height: 180,
-                                        child: Card(
-                                          color: const Color.fromARGB(
-                                            255,
-                                            30,
-                                            30,
-                                            30,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(
-                                              16.0,
+                      StreamBuilder(
+                        stream: getMusic(),
+                        builder: (context, asyncSnapshot) {
+                          final recentMusica = (asyncSnapshot.data ?? [])
+                              .where(
+                                (item) => item['isRecentlyListened'] == true,
+                              )
+                              .toList();
+                          return LayoutBuilder(
+                            builder: (context, constraints) {
+                              double screenWidth = constraints.maxWidth;
+                              return screenWidth > 800
+                                  ? SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: List.generate(6, (index) {
+                                          final recentSong =
+                                              recentMusica[index];
+                                          return SizedBox(
+                                            width: 180,
+                                            height: 180,
+                                            child: Card(
+                                              color: const Color.fromARGB(
+                                                255,
+                                                30,
+                                                30,
+                                                30,
+                                              ),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(16.0),
+                                              ),
+                                              child: Image.network(
+                                                recentSong['image']!,
+                                                fit: BoxFit.cover,
+                                                width: double.infinity,
+                                                height: double.infinity,
+                                              ),
                                             ),
-                                          ),
-                                          child: Image.network(
-                                            recentSong['image']!,
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                            height: double.infinity,
-                                          ),
-                                        ),
-                                      );
-                                    }),
-                                  ),
-                                )
-                              : SizedBox(
-                                  width: double.infinity,
-                                  height: 180,
-                                  child: ListView.builder(
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: 6,
-                                    physics: const BouncingScrollPhysics(),
-                                    itemBuilder: (context, index) {
-                                      final recentSong = recentMusica[index];
-                                      return Padding(
-                                        padding: EdgeInsets.only(right: 16),
-                                        child: SizedBox(
-                                          width: 180,
-                                          height: 180,
-                                          child: Card(
-                                            color: const Color.fromARGB(
-                                              255,
-                                              30,
-                                              30,
-                                              30,
+                                          );
+                                        }),
+                                      ),
+                                    )
+                                  : SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: recentMusica.length,
+                                        physics: const BouncingScrollPhysics(),
+                                        itemBuilder: (context, index) {
+                                          final recentSong =
+                                              recentMusica[index];
+                                          return Padding(
+                                            padding: EdgeInsets.only(right: 16),
+                                            child: SizedBox(
+                                              width: 180,
+                                              height: 180,
+                                              child: Card(
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        16.0,
+                                                      ),
+                                                ),
+                                                child: Image.network(
+                                                  recentSong['image']!,
+                                                  fit: BoxFit.cover,
+                                                  width: double.infinity,
+                                                  height: double.infinity,
+                                                ),
+                                              ),
                                             ),
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(16.0),
-                                            ),
-                                            child: Image.network(
-                                              recentSong['image']!,
-                                              fit: BoxFit.cover,
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                );
+                                          );
+                                        },
+                                      ),
+                                    );
+                            },
+                          );
                         },
                       ),
                     ],

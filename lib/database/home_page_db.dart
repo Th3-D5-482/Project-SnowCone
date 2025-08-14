@@ -1,34 +1,23 @@
 import 'package:firebase_database/firebase_database.dart';
 
-final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Music');
+final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Albums');
 final DatabaseReference topMixesDB = FirebaseDatabase.instance.ref('TopMixes');
+final DatabaseReference recentListeningDB = FirebaseDatabase.instance.ref(
+  'Music',
+);
 
-Stream<List<Map<String, dynamic>>> getMusic() {
+Stream<List<Map<String, dynamic>>> getContinueListening() {
   return musicDB.onValue.map((event) {
     final data = event.snapshot.value;
-
     if (data == null || data is! List) return [];
-
     final List rawList = data;
-    // Remove any nulls (due to deleted items or gaps in Firebase array)
     return rawList.where((item) => item != null).map((item) {
       final song = item as Map<dynamic, dynamic>;
       return {
-        'id': song['id'],
-        'name': song['name'],
-        'artist': song['artist'],
-        'releaseYear': song['releaseYear'],
-        'album': song['album'],
-        'duration': song['duration'],
-        'image': song['image'],
-        'audio': song['audio'],
-        'genre': song['genre'],
-        'key': song['key'],
-        'bpm': song['bpm'],
-        'keyTheme': song['keyTheme'],
-        'description': song['description'],
-        'isContinueListening': song['isContinueListening'] ?? false,
-        'isRecentlyListened': song['isRecentlyListened'] ?? false,
+        "id": song['id'],
+        "name": song['name'],
+        "image": song['image'],
+        "isContinueListening": song['isContinueListening'],
       };
     }).toList();
   });
@@ -65,4 +54,30 @@ Future<List<Map<String, dynamic>>> getTopMixes() async {
   }
 
   return mixesList;
+}
+
+Stream<List<Map<String, dynamic>>> getMusic() {
+  return recentListeningDB.onValue.map((event) {
+    final data = event.snapshot.value;
+    if (data == null || data is! List) return [];
+    final List rawData = data;
+    return rawData.where((item) => item != null).map((item) {
+      final songs = item as Map<dynamic, dynamic>;
+      return {
+        "id": songs['id'],
+        "name": songs['name'],
+        "artist": songs['artist'],
+        "releaseYear": songs['releaseYear'],
+        "duration": songs['duration'],
+        "image": songs['image'],
+        "audio": songs['audio'],
+        "genre": songs['genre'],
+        "key": songs['key'],
+        "bpm": songs['bpm'],
+        "keyTheme": songs['keyTheme'],
+        "description": songs['description'],
+        "isRecentlyListened": songs['isRecentlyListened'],
+      };
+    }).toList();
+  });
 }
