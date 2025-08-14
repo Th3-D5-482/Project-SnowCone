@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "7a89ad2a544aa97c024f2d90c488f79a",
-"assets/AssetManifest.bin.json": "561f152cffde8ab08a1b0fd40cc2947f",
-"assets/AssetManifest.json": "7d63488469ddc6b87ff1ab67fd466a45",
+const RESOURCES = {"assets/AssetManifest.bin": "b568b4497fad5fd2ec68fbf376e5eac0",
+"assets/AssetManifest.bin.json": "f197fbf20277edc45aa0305b751b3386",
+"assets/AssetManifest.json": "b04b721d939b60e178e282536140b672",
 "assets/assets/images/album/10,000_reasons.png": "3e763a1e59fdc19b88fb5ca0234312bf",
 "assets/assets/images/album/all_sons_and_daughters.png": "6e6740f8f3f1f87f913cd950604d8b73",
 "assets/assets/images/album/always.png": "6c4f80e32bbff5046fd4e3a8696759eb",
@@ -27,7 +27,6 @@ const RESOURCES = {"assets/AssetManifest.bin": "7a89ad2a544aa97c024f2d90c488f79a
 "assets/assets/images/songs/how_great_is_our_god.png": "cf99888efc940a28f2b2ab54fa08694d",
 "assets/assets/images/songs/reckless_love.png": "9b04f0d91134de76574ecd832033c930",
 "assets/assets/images/songs/way_maker.png": "c464b72ea269576b4473a2e39bce224d",
-"assets/assets/images/top_mixes/daily_devotion_mix.png": "23759dfc4ff594c8e92363820cda5942",
 "assets/assets/images/top_mixes/grace_and_redemption_mix.png": "41aedd574e040c02ad47d452c1abebd2",
 "assets/assets/images/top_mixes/praise_and_power%2520_mix.png": "90f5d5ffdacd5ba28fef95ba995e7a38",
 "assets/assets/images/top_mixes/reflection_and_surrender_mix.png": "9c75a63129f09e4df71a7f337e25d3c8",
@@ -52,7 +51,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "7a89ad2a544aa97c024f2d90c488f79a
 "canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
-"flutter_bootstrap.js": "ba2cc5bda834a87cac8ee6f51cf0d1c8",
+"flutter_bootstrap.js": "05a08ee530cd19d1e14a8ee8cdede833",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
