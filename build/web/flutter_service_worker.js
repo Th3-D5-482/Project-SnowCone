@@ -3,9 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "9c507b9d36587e390b4cfb42c9504350",
-"assets/AssetManifest.bin.json": "a1a42a50289d78a425ea809e33d388a2",
-"assets/AssetManifest.json": "5a16f7fbec8fbed9362b078944fc3710",
+const RESOURCES = {"assets/AssetManifest.bin": "7a89ad2a544aa97c024f2d90c488f79a",
+"assets/AssetManifest.bin.json": "561f152cffde8ab08a1b0fd40cc2947f",
+"assets/AssetManifest.json": "7d63488469ddc6b87ff1ab67fd466a45",
+"assets/assets/images/album/10,000_reasons.png": "3e763a1e59fdc19b88fb5ca0234312bf",
+"assets/assets/images/album/all_sons_and_daughters.png": "6e6740f8f3f1f87f913cd950604d8b73",
+"assets/assets/images/album/always.png": "6c4f80e32bbff5046fd4e3a8696759eb",
+"assets/assets/images/album/ariving.png": "093f2431738b38ff36052205980828e6",
+"assets/assets/images/album/reckless_love.png": "1d4588f8463e38f2d1518f8920de1d25",
+"assets/assets/images/album/way_maker.png": "8d3c20fe4a60c5632904ebaa7d71c5d3",
 "assets/assets/images/genres/devotional.png": "58b20bc835dcd85a52ba41f14f120648",
 "assets/assets/images/genres/gospel.png": "b3382fb245212ff89c73878fc444cd19",
 "assets/assets/images/genres/praise.png": "064976feff3f6bb75d0f2b0a01fd9e8a",
@@ -46,14 +52,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "9c507b9d36587e390b4cfb42c9504350
 "canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
-"flutter_bootstrap.js": "b9b7f533546b3551ff24ae38af400ee6",
+"flutter_bootstrap.js": "6b5c56652f313316c0f18d441ac756ef",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "6050ecd400596b6ec56121843dc6e750",
 "/": "6050ecd400596b6ec56121843dc6e750",
-"main.dart.js": "113803cd7c9db208e101ba1db84da2f8",
+"main.dart.js": "2f3d3664752a3953bf5e694fb267c5e3",
 "manifest.json": "6858a767bc61f44ddcf96ba3905fea09",
 "version.json": "794af03ad599eb48d29243c1d69873a8"};
 // The application shell files that are downloaded before a service worker can

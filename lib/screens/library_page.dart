@@ -28,7 +28,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'Library Page',
+                      'Library',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,

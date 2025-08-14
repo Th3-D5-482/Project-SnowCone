@@ -69,6 +69,7 @@ flutter:
   - assets/images/songs/
   - assets/images/top_mixes/
   - assets/images/genres/
+  - assets/images/album/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
