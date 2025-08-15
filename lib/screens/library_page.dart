@@ -31,7 +31,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       'Library',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -47,7 +47,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             'Sorry, mate. 🚧',
                             style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 20,
+                              fontSize: 22,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -56,7 +56,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             'Work in progress, yeah?',
                             style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 20,
+                              fontSize: 22,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

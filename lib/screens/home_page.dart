@@ -165,10 +165,10 @@ class _HomeViewState extends State<HomeView> {
                           double aspectRatio;
                           if (screenWidth >= 1200) {
                             crossAxisCount = 3;
-                            aspectRatio = 5;
+                            aspectRatio = 6;
                           } else if (screenWidth >= 800) {
                             crossAxisCount = 3;
-                            aspectRatio = 4;
+                            aspectRatio = 5;
                           } else {
                             crossAxisCount = 2;
                             aspectRatio = 2.5;
@@ -237,67 +237,58 @@ class _HomeViewState extends State<HomeView> {
                                   future: getTopMixes(),
                                   builder: (context, asyncSnapshot) {
                                     final topMixes = asyncSnapshot.data ?? [];
-                                    return Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 16.0,
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: topMixes.map<Widget>((
-                                          topMix,
-                                        ) {
-                                          return SizedBox(
-                                            width: 190,
-                                            height: 130,
-                                            child: Card(
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(16.0),
-                                              ),
-                                              color: const Color.fromARGB(
-                                                255,
-                                                30,
-                                                30,
-                                                30,
-                                              ),
-                                              child: Stack(
-                                                children: [
-                                                  Image.network(
-                                                    topMix['image']!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.infinity,
-                                                    height: double.infinity,
-                                                    opacity:
-                                                        const AlwaysStoppedAnimation(
-                                                          0.5,
-                                                        ),
+                                    return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: topMixes.map<Widget>((topMix) {
+                                        return SizedBox(
+                                          width: 190,
+                                          height: 130,
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                            ),
+                                            color: const Color.fromARGB(
+                                              255,
+                                              30,
+                                              30,
+                                              30,
+                                            ),
+                                            child: Stack(
+                                              children: [
+                                                Image.network(
+                                                  topMix['image']!,
+                                                  fit: BoxFit.cover,
+                                                  width: double.infinity,
+                                                  height: double.infinity,
+                                                  opacity:
+                                                      const AlwaysStoppedAnimation(
+                                                        0.5,
+                                                      ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                    8.0,
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                          8.0,
-                                                        ),
-                                                    child: Align(
-                                                      alignment:
-                                                          Alignment.center,
-                                                      child: Text(
-                                                        topMix['name']!,
-                                                        style: const TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Text(
+                                                      topMix['name']!,
+                                                      style: const TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                          );
-                                        }).toList(),
-                                      ),
+                                          ),
+                                        );
+                                      }).toList(),
                                     );
                                   },
                                 )
