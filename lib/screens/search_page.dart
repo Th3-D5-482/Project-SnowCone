@@ -109,7 +109,7 @@ class _SearchPageState extends State<SearchPage> {
                             final topGeneres = snapshot.data ?? [];
                             return SizedBox(
                               width: double.infinity,
-                              height: 300,
+                              height: 260,
                               child: GridView.builder(
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
@@ -140,6 +140,86 @@ class _SearchPageState extends State<SearchPage> {
                                             alignment: Alignment.center,
                                             child: Text(
                                               genres['name']!,
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Browse All',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    LayoutBuilder(
+                      builder: (context, constraints) {
+                        double screenWidth = constraints.maxWidth;
+                        int crossAxisCount;
+                        double aspectRatio;
+                        if (screenWidth >= 1200) {
+                          crossAxisCount = 3;
+                          aspectRatio = 2;
+                        } else if (screenWidth >= 800) {
+                          crossAxisCount = 2;
+                          aspectRatio = 4;
+                        } else {
+                          crossAxisCount = 2;
+                          aspectRatio = 1.5;
+                        }
+                        return FutureBuilder(
+                          future: getBrowseAll(),
+                          builder: (context, asyncSnapshot) {
+                            final browseAlls = asyncSnapshot.data ?? [];
+                            return SizedBox(
+                              width: double.infinity,
+                              child: GridView.builder(
+                                physics: NeverScrollableScrollPhysics(),
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: crossAxisCount,
+                                      childAspectRatio: aspectRatio,
+                                      crossAxisSpacing: 10,
+                                      mainAxisSpacing: 10,
+                                    ),
+                                itemCount: browseAlls.length,
+                                shrinkWrap: true,
+                                itemBuilder: (context, index) {
+                                  final browseAll = browseAlls[index];
+                                  return Card(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(16),
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Image.network(
+                                          browseAll['image']!,
+                                          width: double.infinity,
+                                          height: double.infinity,
+                                          fit: BoxFit.cover,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: Text(
+                                              browseAll['name'],
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold,

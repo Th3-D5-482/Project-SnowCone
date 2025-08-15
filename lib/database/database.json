@@ -129,7 +129,7 @@
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/reflection_and_surrender_mix.png?updatedAt=1755193009540"
   }
   ],
-  "Genres": [
+  "TopGenres": [
   {
     "id": 0,
     "name": "Praise",
@@ -191,6 +191,44 @@
     "name": "All Sons & Daughters",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1755194957030",
     "isContinueListening": true
+  }
+],
+"BrowseAll" :[
+  {
+    "id": 0,
+    "name": "Praise",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
+  },
+  {
+    "id": 1,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
+  },
+  {
+    "id": 2,
+    "name": "Gospel",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1755192979567"
+  },
+  {
+    "id": 3,
+    "name": "Devotional",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/devotional.png?updatedAt=1755192979693"
+  },
+  {
+    "id": 4,
+    "name": "Praise",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
+  },
+  {
+    "id": 5,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
   }
 ]
 }
