@@ -42,7 +42,7 @@ class _DisclaimerState extends State<Disclaimer> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/images/random/disclaimer.png',
+                    'assets/images/random/warning.png',
                     width: 180,
                     height: 180,
                   ),

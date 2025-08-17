@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "84f4ee706fc9b2a283376b21fa6373e8",
-"assets/AssetManifest.bin.json": "d5fe1c18f87a8dd83eb9793f5f601a3e",
-"assets/AssetManifest.json": "abe5b396753025c9182d72a52e8dae1e",
+const RESOURCES = {"assets/AssetManifest.bin": "61bd9e0715b1b680a2dbd3fa37ca8681",
+"assets/AssetManifest.bin.json": "eac818f4ece3f9e11bc09871d64e0488",
+"assets/AssetManifest.json": "3b3d63e9499cf87a6485e779bfb70d66",
 "assets/assets/images/album/10,000_reasons.png": "3e763a1e59fdc19b88fb5ca0234312bf",
 "assets/assets/images/album/all_sons_and_daughters.png": "6e6740f8f3f1f87f913cd950604d8b73",
 "assets/assets/images/album/always.png": "6c4f80e32bbff5046fd4e3a8696759eb",
@@ -16,11 +16,11 @@ const RESOURCES = {"assets/AssetManifest.bin": "84f4ee706fc9b2a283376b21fa6373e8
 "assets/assets/images/genres/gospel.png": "b3382fb245212ff89c73878fc444cd19",
 "assets/assets/images/genres/praise.png": "064976feff3f6bb75d0f2b0a01fd9e8a",
 "assets/assets/images/genres/worship.png": "dacbb74c20d21e60372c7f535082a35c",
-"assets/assets/images/random/disclaimer.png": "10d3d0329303a95f9e19f32dee590228",
 "assets/assets/images/random/logo.png": "6c1c2966eceb0db12b85f42238818ced",
 "assets/assets/images/random/logo2.png": "82eb2fe858493e6f432f79e65efc6aa6",
 "assets/assets/images/random/me.png": "f9735f1628cc93395bd2b0f6a1d00088",
 "assets/assets/images/random/Th3_D5_482.jpeg": "68d4a3f6fad3544dcc5259d38f5e8e25",
+"assets/assets/images/random/warning.png": "10d3d0329303a95f9e19f32dee590228",
 "assets/assets/images/random/welcome.png": "c2e6b80ef83528eda3501511449ea3e7",
 "assets/assets/images/songs/10000_reasons.png": "86d90b45aba7eca12ec60afa97422154",
 "assets/assets/images/songs/great_are_you_lord.png": "f57ea855e7df588648efd0440705acca",
@@ -55,14 +55,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "84f4ee706fc9b2a283376b21fa6373e8
 "canvaskit/skwasm_heavy.wasm": "8034ad26ba2485dab2fd49bdd786837b",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
-"flutter_bootstrap.js": "e910bdd8d23648e46eb84002fa4ab2b3",
+"flutter_bootstrap.js": "0a5468258e27774299f1e619302bf5bd",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "6050ecd400596b6ec56121843dc6e750",
 "/": "6050ecd400596b6ec56121843dc6e750",
-"main.dart.js": "679e4973d962b2a3bb11fb5e87efd67a",
+"main.dart.js": "7397594b76b4c83f9ddf3d3c978bed8c",
 "manifest.json": "6858a767bc61f44ddcf96ba3905fea09",
 "version.json": "794af03ad599eb48d29243c1d69873a8"};
 // The application shell files that are downloaded before a service worker can
