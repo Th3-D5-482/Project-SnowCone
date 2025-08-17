@@ -84,3 +84,9 @@ Special thanks to [Chandrama](https://www.figma.com/@chandrama), whose design ar
 Project SnowCone is built for the modern musician. With its sleek interface, intelligent features, and creative flexibility, it transforms how artists engage with music. Whether you're composing, rehearsing, or performing live, SnowCone is there to guide, support, and inspire.
 
 > _Want to see SnowCone in action? [Try it now](https://th3d5482snowcone.netlify.app) or [view screenshots](screenshots.md) to get a taste of the experience._
+
+---
+
+## ⚠️ Disclaimer  
+This project is a personal initiative created for self-learning and development. I am a self-taught developer exploring faith-centered digital tools to grow in both skill and spirit. SnowCone is not intended for commercial use, distribution, or monetization. All content is curated respectfully, with no intent to infringe upon copyright or harm users.  
+This app is a reflection of my journey—built with purpose, not profit.
