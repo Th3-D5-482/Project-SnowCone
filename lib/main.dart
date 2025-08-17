@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snowcone/firebase_options.dart';
-import 'package:snowcone/screens/splash.dart';
+import 'package:snowcone/screens/disclaimer.dart';
 // ignore: depend_on_referenced_packages
 import 'package:firebase_core/firebase_core.dart';
 
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
           hintStyle: TextStyle(color: Colors.white54),
         ),
       ),
-      home: const Splash(),
+      home: const Disclaimer(),
     );
   }
 }
