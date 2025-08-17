@@ -12,7 +12,7 @@ class _DisclaimerState extends State<Disclaimer> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 8), () {
       // ignore: use_build_context_synchronously
       Navigator.of(context).push(
         PageRouteBuilder(
