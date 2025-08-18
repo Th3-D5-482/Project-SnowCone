@@ -196,37 +196,37 @@
 "BrowseAll" :[
   {
     "id": 0,
-    "name": "Praise",
+    "name": "Soaking",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
   },
   {
     "id": 1,
-    "name": "Worship",
+    "name": "Acoustic",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
   },
   {
     "id": 2,
-    "name": "Gospel",
+    "name": "Ambient",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1755192979567"
   },
   {
     "id": 3,
-    "name": "Devotional",
+    "name": "Instrumental",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/devotional.png?updatedAt=1755192979693"
   },
   {
     "id": 4,
-    "name": "Praise",
+    "name": "Spoken",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
   },
   {
     "id": 5,
-    "name": "Worship",
+    "name": "Fusion",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
   }
