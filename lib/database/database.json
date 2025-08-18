@@ -198,37 +198,37 @@
     "id": 0,
     "name": "Soaking",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/soaking.png?updatedAt=1755524807503"
   },
   {
     "id": 1,
     "name": "Acoustic",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/acoustic.png?updatedAt=1755524807709"
   },
   {
     "id": 2,
     "name": "Ambient",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1755192979567"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/ambient.png?updatedAt=1755524807157"
   },
   {
     "id": 3,
     "name": "Instrumental",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/devotional.png?updatedAt=1755192979693"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/instrumental.png?updatedAt=1755525638988"
   },
   {
     "id": 4,
     "name": "Spoken",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1755192979651"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/spoken.png?updatedAt=1755525266517"
   },
   {
     "id": 5,
     "name": "Fusion",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1755192979627"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/fusion.png?updatedAt=1755524808277"
   }
 ]
 }
