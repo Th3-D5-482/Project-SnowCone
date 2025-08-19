@@ -27,41 +27,42 @@ class _LibraryPageState extends State<LibraryPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
-                      'Library',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Library',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.search, color: Colors.grey, size: 28),
+                      ],
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height - 100,
-                      width: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'Sorry, mate. 🚧',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.blueGrey,
+                          radius: 24,
+                          child: Icon(
+                            Icons.add_outlined,
+                            color: Colors.black,
+                            size: 30,
                           ),
-                          SizedBox(height: 8),
-                          Text(
-                            'Work in progress, yeah?',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        ),
+                        SizedBox(width: 16),
+                        Text(
+                          'Add New Playlist',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
