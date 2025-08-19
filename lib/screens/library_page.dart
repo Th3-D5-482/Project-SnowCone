@@ -8,6 +8,7 @@ class LibraryPage extends StatefulWidget {
 }
 
 class _LibraryPageState extends State<LibraryPage> {
+  late List<String> libraryTypes = ["Folders", "Playlist", "Artist", "Albums"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +42,24 @@ class _LibraryPageState extends State<LibraryPage> {
                         Spacer(),
                         Icon(Icons.search, color: Colors.grey, size: 28),
                       ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: List.generate(libraryTypes.length, (index) {
+                        final libraryType = libraryTypes[index];
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: Chip(
+                            label: Text(libraryType),
+                            labelStyle: TextStyle(color: Colors.white),
+                            backgroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadiusGeometry.circular(16),
+                              side: BorderSide(color: Colors.blueGrey),
+                            ),
+                          ),
+                        );
+                      }),
                     ),
                     SizedBox(height: 20),
                     Row(
