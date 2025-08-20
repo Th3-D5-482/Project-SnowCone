@@ -190,6 +190,7 @@ class _LibraryPageState extends State<LibraryPage> {
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                         ),
+                                        overflow: TextOverflow.ellipsis,
                                       ),
                                     ],
                                   ),

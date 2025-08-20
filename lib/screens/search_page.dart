@@ -109,7 +109,7 @@ class _SearchPageState extends State<SearchPage> {
                             final topGeneres = snapshot.data ?? [];
                             return SizedBox(
                               width: double.infinity,
-                              height: 260,
+                              height: screenWidth > 800 ? 300 : 260,
                               child: GridView.builder(
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
