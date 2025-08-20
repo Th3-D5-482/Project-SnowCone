@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/database/home_page_db.dart';
 
 class LibraryPage extends StatefulWidget {
-  const LibraryPage({super.key});
+  final VoidCallback onSearchTap;
+  const LibraryPage({super.key, required this.onSearchTap});
 
   @override
   State<LibraryPage> createState() => _LibraryPageState();
@@ -22,7 +24,7 @@ class _LibraryPageState extends State<LibraryPage> {
               double screenWidth = constraints.maxWidth;
               double horizontalPadding = screenWidth > 800 ? 200 : 16;
               return Padding(
-                padding: EdgeInsetsGeometry.symmetric(
+                padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
                   vertical: 16,
                 ),
@@ -43,7 +45,7 @@ class _LibraryPageState extends State<LibraryPage> {
                         ),
                         Spacer(),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: widget.onSearchTap,
                           icon: Icon(
                             Icons.search_rounded,
                             size: 28,
@@ -72,7 +74,7 @@ class _LibraryPageState extends State<LibraryPage> {
                                   ? Colors.blueGrey
                                   : Colors.black,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusGeometry.circular(16),
+                                borderRadius: BorderRadius.circular(16),
                                 side: BorderSide(color: Colors.blueGrey),
                               ),
                             ),
@@ -152,6 +154,51 @@ class _LibraryPageState extends State<LibraryPage> {
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(height: 20),
+                    StreamBuilder(
+                      stream: getMusic(),
+                      builder: (context, asyncSnapshot) {
+                        final recentlyPlayeded = asyncSnapshot.data ?? [];
+                        return SizedBox(
+                          width: double.infinity,
+                          height: 510,
+                          child: ListView.builder(
+                            itemCount: recentlyPlayeded.length,
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            scrollDirection: Axis.vertical,
+                            itemBuilder: (context, index) {
+                              final recentlyPlayed = recentlyPlayeded[index];
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Card(
+                                  color: Colors.transparent,
+                                  child: Row(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 30,
+                                        backgroundImage: NetworkImage(
+                                          recentlyPlayed['image'],
+                                        ),
+                                      ),
+                                      SizedBox(width: 28),
+                                      Text(
+                                        recentlyPlayed['name'],
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

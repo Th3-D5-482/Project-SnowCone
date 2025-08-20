@@ -25,7 +25,17 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         body: IndexedStack(
           index: index,
-          children: const [HomeView(), SearchPage(), LibraryPage()],
+          children: [
+            const HomeView(),
+            const SearchPage(),
+            LibraryPage(
+              onSearchTap: () {
+                setState(() {
+                  index = 1;
+                });
+              },
+            ),
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
