@@ -38,7 +38,7 @@ class Welcome extends StatelessWidget {
                     'SnowCone',
                     style: TextStyle(
                       fontSize: 34,
-                      color: Colors.blueGrey,
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -57,7 +57,7 @@ class Welcome extends StatelessWidget {
                     'songs',
                     style: TextStyle(
                       fontSize: 22,
-                      color: Colors.blueGrey,
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -76,7 +76,7 @@ class Welcome extends StatelessWidget {
                     'chord',
                     style: TextStyle(
                       fontSize: 22,
-                      color: Colors.blueGrey,
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -95,7 +95,7 @@ class Welcome extends StatelessWidget {
                     'confidence',
                     style: TextStyle(
                       fontSize: 22,
-                      color: Colors.blueGrey,
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

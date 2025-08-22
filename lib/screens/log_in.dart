@@ -70,7 +70,7 @@ class _LogInState extends State<LogIn> {
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blueGrey,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -150,7 +150,7 @@ class _LogInState extends State<LogIn> {
                           onChanged: (value) => setState(() {
                             isChecked = value ?? false;
                           }),
-                          activeColor: Colors.blueGrey,
+                          activeColor: Theme.of(context).primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4.0),
                           ),
@@ -159,7 +159,7 @@ class _LogInState extends State<LogIn> {
                         Text(
                           'Remember me',
                           style: TextStyle(
-                            color: Colors.blueGrey,
+                            color: Theme.of(context).primaryColor,
                             fontSize: 16,
                           ),
                         ),
@@ -243,7 +243,7 @@ class _LogInState extends State<LogIn> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(350, 50),
-                        backgroundColor: Colors.blueGrey,
+                        backgroundColor: Theme.of(context).primaryColor,
                         foregroundColor: Colors.white,
                         textStyle: TextStyle(
                           fontSize: 18,
@@ -290,7 +290,7 @@ class _LogInState extends State<LogIn> {
                             'Sign Up',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Colors.blueGrey,
+                              color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

@@ -100,9 +100,9 @@ class _HomeViewState extends State<HomeView> {
                       ConnectionState.waiting) {
                     return SizedBox(
                       height: MediaQuery.of(context).size.height - 100,
-                      child: const Center(
+                      child: Center(
                         child: CircularProgressIndicator(
-                          color: Colors.blueGrey,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                     );

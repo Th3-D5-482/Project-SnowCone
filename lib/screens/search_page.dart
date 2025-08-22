@@ -94,9 +94,9 @@ class _SearchPageState extends State<SearchPage> {
                               return SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height - 100,
-                                child: const Center(
+                                child: Center(
                                   child: CircularProgressIndicator(
-                                    color: Colors.blueGrey,
+                                    color: Theme.of(context).primaryColor,
                                   ),
                                 ),
                               );

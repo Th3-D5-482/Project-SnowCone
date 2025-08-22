@@ -26,7 +26,7 @@ class _OfflinePageState extends State<OfflinePage> {
     return Scaffold(
       body: RefreshIndicator(
         onRefresh: _handleRefresh,
-        color: Colors.blueGrey,
+        color: Theme.of(context).primaryColor,
         backgroundColor: Colors.black87,
         child: SingleChildScrollView(
           physics: AlwaysScrollableScrollPhysics(),
@@ -36,7 +36,13 @@ class _OfflinePageState extends State<OfflinePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/images/random/no_wifi.png', height: 300),
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/random/no_wifi.png',
+                    ),
+                    radius: 130,
+                    backgroundColor: Colors.transparent,
+                  ),
                   SizedBox(height: 20),
                   const Text(
                     'Sorry mate, you\'re offline!',
@@ -45,6 +51,14 @@ class _OfflinePageState extends State<OfflinePage> {
                       fontWeight: FontWeight.bold,
                       color: Colors.grey,
                     ),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () => _handleRefresh(),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).primaryColor,
+                    ),
+                    child: Text('Retry'),
                   ),
                 ],
               ),

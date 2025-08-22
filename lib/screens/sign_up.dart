@@ -66,7 +66,7 @@ class _SignUpState extends State<SignUp> {
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blueGrey,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -203,7 +203,7 @@ class _SignUpState extends State<SignUp> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(350, 50),
-                        backgroundColor: Colors.blueGrey,
+                        backgroundColor: Theme.of(context).primaryColor,
                         foregroundColor: Colors.white,
                         textStyle: TextStyle(
                           fontSize: 18,
@@ -250,7 +250,7 @@ class _SignUpState extends State<SignUp> {
                             'Log In',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Colors.blueGrey,
+                              color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

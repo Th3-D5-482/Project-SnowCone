@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.black,
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.transparent,
-          selectedItemColor: Colors.blueGrey,
+          selectedItemColor: Theme.of(context).primaryColor,
           unselectedItemColor: Colors.white,
           showUnselectedLabels: false,
         ),
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Theme.of(context).primaryColor,
             foregroundColor: Colors.white,
             textStyle: const TextStyle(
               fontSize: 18,
@@ -50,15 +50,24 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: const BorderSide(color: Colors.blueGrey, width: 2),
+            borderSide: BorderSide(
+              color: Theme.of(context).primaryColor,
+              width: 2,
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: const BorderSide(color: Colors.blueGrey, width: 2),
+            borderSide: BorderSide(
+              color: Theme.of(context).primaryColor,
+              width: 2,
+            ),
           ),
           border: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: const BorderSide(color: Colors.blueGrey, width: 2),
+            borderSide: BorderSide(
+              color: Theme.of(context).primaryColor,
+              width: 2,
+            ),
           ),
           labelStyle: const TextStyle(color: Colors.white),
           hintStyle: const TextStyle(color: Colors.white54),
