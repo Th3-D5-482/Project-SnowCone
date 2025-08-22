@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -26,14 +27,16 @@ class _HomePageState extends State<HomePage> {
         body: IndexedStack(
           index: index,
           children: [
-            const HomeView(),
-            const SearchPage(),
-            LibraryPage(
-              onSearchTap: () {
-                setState(() {
-                  index = 1;
-                });
-              },
+            ConnectivityOverlay(child: const HomeView()),
+            ConnectivityOverlay(child: const SearchPage()),
+            ConnectivityOverlay(
+              child: LibraryPage(
+                onSearchTap: () {
+                  setState(() {
+                    index = 1;
+                  });
+                },
+              ),
             ),
           ],
         ),

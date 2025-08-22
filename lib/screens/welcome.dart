@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/log_in.dart';
 
 class Welcome extends StatelessWidget {
@@ -110,7 +111,7 @@ class Welcome extends StatelessWidget {
                     Navigator.of(context).push(
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            const LogIn(),
+                            ConnectivityOverlay(child: const LogIn()),
                         transitionDuration: Duration(milliseconds: 100),
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) =>

@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart'
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/sign_up.dart';
 
@@ -192,7 +193,9 @@ class _LogInState extends State<LogIn> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        const HomePage(),
+                                        ConnectivityOverlay(
+                                          child: const HomePage(),
+                                        ),
                                 transitionDuration: Duration(milliseconds: 100),
                                 transitionsBuilder:
                                     (
@@ -266,7 +269,9 @@ class _LogInState extends State<LogIn> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        const SignUp(),
+                                        ConnectivityOverlay(
+                                          child: const SignUp(),
+                                        ),
                                 transitionDuration: Duration(milliseconds: 100),
                                 transitionsBuilder:
                                     (
