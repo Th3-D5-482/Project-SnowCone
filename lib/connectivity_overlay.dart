@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/screens/offline_page.dart';
 import 'connectivity_service.dart';
-import 'screens/no_internet_screen.dart';
 
 class ConnectivityOverlay extends StatefulWidget {
   final Widget child;
@@ -31,10 +31,7 @@ class _ConnectivityOverlayState extends State<ConnectivityOverlay> {
     // 👇 Full replacement, not overlay
     return _hasInternet
         ? widget.child
-        : const Scaffold(
-            backgroundColor: Colors.black,
-            body: NoInternetScreen(),
-          );
+        : const Scaffold(backgroundColor: Colors.black, body: OfflinePage());
   }
 
   @override
