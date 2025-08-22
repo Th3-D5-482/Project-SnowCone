@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/connectivity_wrapper.dart';
+import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/firebase_options.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
           hintStyle: const TextStyle(color: Colors.white54),
         ),
       ),
-      home: ConnectivityWrapper(child: Disclaimer()),
+      home: ConnectivityOverlay(child: Disclaimer()),
     );
   }
 }
