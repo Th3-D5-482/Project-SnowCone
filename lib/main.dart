@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/connectivity_wrapper.dart';
 import 'package:snowcone/firebase_options.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:http/http.dart' as http;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -64,72 +64,7 @@ class MyApp extends StatelessWidget {
           hintStyle: const TextStyle(color: Colors.white54),
         ),
       ),
-      home: const SplashScreen(),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  bool? hasInternet;
-
-  @override
-  void initState() {
-    super.initState();
-    checkInternet();
-  }
-
-  Future<void> checkInternet() async {
-    try {
-      final response = await http
-          .get(Uri.parse('https://www.google.com'))
-          .timeout(const Duration(seconds: 5));
-      setState(() {
-        hasInternet = response.statusCode == 200;
-      });
-    } catch (_) {
-      setState(() {
-        hasInternet = false;
-      });
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (hasInternet == null) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
-    } else if (hasInternet!) {
-      return const Disclaimer();
-    } else {
-      return const NoInternetScreen();
-    }
-  }
-}
-
-class NoInternetScreen extends StatelessWidget {
-  const NoInternetScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/random/no_connection.png', height: 200),
-            Text(
-              'No Internet Connection',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ),
+      home: ConnectivityWrapper(child: Disclaimer()),
     );
   }
 }
