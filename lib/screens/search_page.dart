@@ -96,7 +96,9 @@ class _SearchPageState extends State<SearchPage> {
                                     MediaQuery.of(context).size.height - 100,
                                 child: Center(
                                   child: CircularProgressIndicator(
-                                    color: Theme.of(context).primaryColor,
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.primary,
                                   ),
                                 ),
                               );

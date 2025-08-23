@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/splash.dart';
 
 class Disclaimer extends StatefulWidget {
@@ -17,8 +16,7 @@ class _DisclaimerState extends State<Disclaimer> {
       // ignore: use_build_context_synchronously
       Navigator.of(context).push(
         PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) =>
-              ConnectivityOverlay(child: Splash()),
+          pageBuilder: (context, animation, secondaryAnimation) => Splash(),
           transitionDuration: Duration(milliseconds: 800),
           transitionsBuilder: (context, animation, secondaryAnimation, child) =>
               FadeTransition(opacity: animation, child: child),

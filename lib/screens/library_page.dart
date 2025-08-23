@@ -71,12 +71,12 @@ class _LibraryPageState extends State<LibraryPage> {
                               label: Text(libraryType),
                               labelStyle: TextStyle(color: Colors.white),
                               backgroundColor: isSelected
-                                  ? Theme.of(context).primaryColor
+                                  ? Theme.of(context).colorScheme.primary
                                   : Colors.black,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                                 side: BorderSide(
-                                  color: Theme.of(context).primaryColor,
+                                  color: Theme.of(context).colorScheme.primary,
                                 ),
                               ),
                             ),
@@ -88,7 +88,9 @@ class _LibraryPageState extends State<LibraryPage> {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Theme.of(context).primaryColor,
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.primary,
                           radius: 24,
                           child: Icon(
                             Icons.add_outlined,
@@ -110,7 +112,9 @@ class _LibraryPageState extends State<LibraryPage> {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Theme.of(context).primaryColor,
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.primary,
                           radius: 24,
                           child: Icon(
                             Icons.favorite_border_rounded,

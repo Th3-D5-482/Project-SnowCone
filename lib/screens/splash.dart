@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/welcome.dart';
 
@@ -21,9 +20,7 @@ class _SplashState extends State<Splash> {
       Navigator.of(context).push(
         PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) =>
-              prefs.getBool('isChecked') == true
-              ? ConnectivityOverlay(child: const HomePage())
-              : ConnectivityOverlay(child: const Welcome()),
+              prefs.getBool('isChecked') == true ? HomePage() : Welcome(),
           transitionDuration: const Duration(milliseconds: 800),
           transitionsBuilder: (context, animation, secondaryAnimation, child) =>
               FadeTransition(opacity: animation, child: child),
@@ -59,7 +56,7 @@ class _SplashState extends State<Splash> {
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                   ),
                 ],

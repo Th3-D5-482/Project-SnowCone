@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/log_in.dart';
 
@@ -66,7 +65,7 @@ class _SignUpState extends State<SignUp> {
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -159,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        ConnectivityOverlay(child: HomePage()),
+                                        HomePage(),
                                 transitionDuration: const Duration(
                                   milliseconds: 100,
                                 ),
@@ -203,7 +202,7 @@ class _SignUpState extends State<SignUp> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(350, 50),
-                        backgroundColor: Theme.of(context).primaryColor,
+                        backgroundColor: Theme.of(context).colorScheme.primary,
                         foregroundColor: Colors.white,
                         textStyle: TextStyle(
                           fontSize: 18,
@@ -229,9 +228,7 @@ class _SignUpState extends State<SignUp> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        ConnectivityOverlay(
-                                          child: const LogIn(),
-                                        ),
+                                        LogIn(),
                                 transitionDuration: Duration(milliseconds: 100),
                                 transitionsBuilder:
                                     (
@@ -250,7 +247,7 @@ class _SignUpState extends State<SignUp> {
                             'Log In',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Theme.of(context).primaryColor,
+                              color: Theme.of(context).colorScheme.primary,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

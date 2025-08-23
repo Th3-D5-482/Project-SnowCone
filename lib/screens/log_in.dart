@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart'
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/sign_up.dart';
 
@@ -70,7 +69,7 @@ class _LogInState extends State<LogIn> {
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -150,7 +149,7 @@ class _LogInState extends State<LogIn> {
                           onChanged: (value) => setState(() {
                             isChecked = value ?? false;
                           }),
-                          activeColor: Theme.of(context).primaryColor,
+                          activeColor: Theme.of(context).colorScheme.primary,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4.0),
                           ),
@@ -159,7 +158,7 @@ class _LogInState extends State<LogIn> {
                         Text(
                           'Remember me',
                           style: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 16,
                           ),
                         ),
@@ -193,9 +192,7 @@ class _LogInState extends State<LogIn> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        ConnectivityOverlay(
-                                          child: const HomePage(),
-                                        ),
+                                        HomePage(),
                                 transitionDuration: Duration(milliseconds: 100),
                                 transitionsBuilder:
                                     (
@@ -243,7 +240,7 @@ class _LogInState extends State<LogIn> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(350, 50),
-                        backgroundColor: Theme.of(context).primaryColor,
+                        backgroundColor: Theme.of(context).colorScheme.primary,
                         foregroundColor: Colors.white,
                         textStyle: TextStyle(
                           fontSize: 18,
@@ -269,9 +266,7 @@ class _LogInState extends State<LogIn> {
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
-                                        ConnectivityOverlay(
-                                          child: const SignUp(),
-                                        ),
+                                        SignUp(),
                                 transitionDuration: Duration(milliseconds: 100),
                                 transitionsBuilder:
                                     (
@@ -290,7 +285,7 @@ class _LogInState extends State<LogIn> {
                             'Sign Up',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Theme.of(context).primaryColor,
+                              color: Theme.of(context).colorScheme.primary,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

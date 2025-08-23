@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/firebase_options.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,11 +17,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "SnowCone",
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueGrey,
+          brightness: Brightness.dark,
+        ),
         primaryColor: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.black,
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.transparent,
-          selectedItemColor: Theme.of(context).primaryColor,
+          selectedItemColor: Theme.of(context).colorScheme.primary,
           unselectedItemColor: Colors.white,
           showUnselectedLabels: false,
         ),
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).primaryColor,
+            backgroundColor: Theme.of(context).colorScheme.primary,
             foregroundColor: Colors.white,
             textStyle: const TextStyle(
               fontSize: 18,
@@ -51,21 +54,21 @@ class MyApp extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
             borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
               width: 2,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
             borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
               width: 2,
             ),
           ),
           border: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
             borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
               width: 2,
             ),
           ),
@@ -73,7 +76,7 @@ class MyApp extends StatelessWidget {
           hintStyle: const TextStyle(color: Colors.white54),
         ),
       ),
-      home: ConnectivityOverlay(child: Disclaimer()),
+      home: Disclaimer(),
     );
   }
 }

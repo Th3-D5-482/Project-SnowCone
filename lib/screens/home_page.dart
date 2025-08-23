@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:snowcone/connectivity_overlay.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -27,16 +26,14 @@ class _HomePageState extends State<HomePage> {
         body: IndexedStack(
           index: index,
           children: [
-            ConnectivityOverlay(child: const HomeView()),
-            ConnectivityOverlay(child: const SearchPage()),
-            ConnectivityOverlay(
-              child: LibraryPage(
-                onSearchTap: () {
-                  setState(() {
-                    index = 1;
-                  });
-                },
-              ),
+            HomeView(),
+            SearchPage(),
+            LibraryPage(
+              onSearchTap: () {
+                setState(() {
+                  index = 1;
+                });
+              },
             ),
           ],
         ),
@@ -46,6 +43,7 @@ class _HomePageState extends State<HomePage> {
           onTap: (value) => setState(() {
             index = value;
           }),
+          fixedColor: Theme.of(context).colorScheme.primary,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
@@ -102,7 +100,7 @@ class _HomeViewState extends State<HomeView> {
                       height: MediaQuery.of(context).size.height - 100,
                       child: Center(
                         child: CircularProgressIndicator(
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
                     );
