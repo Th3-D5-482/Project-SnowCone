@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snowcone/connectivity_overlay.dart';
 
 class OfflinePage extends StatefulWidget {
   const OfflinePage({super.key});
@@ -14,7 +15,8 @@ class _OfflinePageState extends State<OfflinePage> {
       // ignore: use_build_context_synchronously
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const OfflinePage(),
+        pageBuilder: (_, _, _) =>
+            ConnectivityOverlay(child: const OfflinePage()),
         transitionDuration: Duration.zero,
         reverseTransitionDuration: Duration.zero,
       ),
