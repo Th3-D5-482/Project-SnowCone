@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:snowcone/firebase_options.dart';
+import 'package:snowcone/offline_screen.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(const ConnectivityWrapper());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "SnowCone",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -77,6 +80,26 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Disclaimer(),
+    );
+  }
+}
+
+class ConnectivityWrapper extends StatelessWidget {
+  const ConnectivityWrapper({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<List<ConnectivityResult>>(
+      stream: Connectivity().onConnectivityChanged,
+      builder: (context, snapshot) {
+        final results = snapshot.data;
+        final isConnected =
+            results != null &&
+            results.any((result) => result != ConnectivityResult.none);
+        return MaterialApp(
+          home: isConnected ? const MyApp() : const OfflineScreen(),
+        );
+      },
     );
   }
 }
