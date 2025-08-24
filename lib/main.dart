@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:snowcone/firebase_options.dart';
-import 'package:snowcone/offline_screen.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:snowcone/screens/offline_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -97,7 +97,8 @@ class ConnectivityWrapper extends StatelessWidget {
             results != null &&
             results.any((result) => result != ConnectivityResult.none);
         return MaterialApp(
-          home: isConnected ? const MyApp() : const OfflineScreen(),
+          debugShowCheckedModeBanner: false,
+          home: isConnected ? const MyApp() : const OfflinePage(),
         );
       },
     );

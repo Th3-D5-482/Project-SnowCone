@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class OfflineScreen extends StatefulWidget {
-  const OfflineScreen({super.key});
+class OfflinePage extends StatelessWidget {
+  const OfflinePage({super.key});
 
-  @override
-  State<OfflineScreen> createState() => _OfflineScreenState();
-}
-
-class _OfflineScreenState extends State<OfflineScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
