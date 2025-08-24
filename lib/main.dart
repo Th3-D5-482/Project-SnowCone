@@ -1,14 +1,15 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/firebase_options.dart';
 import 'package:snowcone/screens/disclaimer.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:snowcone/screens/offline_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const ConnectivityWrapper());
+  runApp(ConnectivityWrapper());
 }
 
 class MyApp extends StatelessWidget {
@@ -89,18 +90,25 @@ class ConnectivityWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<List<ConnectivityResult>>(
-      stream: Connectivity().onConnectivityChanged,
-      builder: (context, snapshot) {
-        final results = snapshot.data;
-        final isConnected =
-            results != null &&
-            results.any((result) => result != ConnectivityResult.none);
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: isConnected ? const MyApp() : const OfflinePage(),
-        );
-      },
-    );
+    if (kIsWeb) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const MyApp(),
+      );
+    } else {
+      return StreamBuilder<List<ConnectivityResult>>(
+        stream: Connectivity().onConnectivityChanged,
+        builder: (context, snapshot) {
+          final results = snapshot.data;
+          final isConnected =
+              results != null &&
+              results.any((result) => result != ConnectivityResult.none);
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: isConnected ? const MyApp() : OfflinePage(),
+          );
+        },
+      );
+    }
   }
 }
