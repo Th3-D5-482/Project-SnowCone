@@ -99,7 +99,7 @@ class _SearchPageState extends State<SearchPage> {
                                 ConnectionState.waiting) {
                               return SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height - 100,
+                                    MediaQuery.of(context).size.height - 200,
                                 child: Center(
                                   child: CircularProgressIndicator(
                                     color: Colors.blueGrey,
