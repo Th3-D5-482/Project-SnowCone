@@ -30,7 +30,7 @@ class _SearchPageState extends State<SearchPage> {
               return Padding(
                 padding: EdgeInsetsGeometry.symmetric(
                   horizontal: horizontalPadding,
-                  //vertical: 16,
+                  vertical: 16,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
