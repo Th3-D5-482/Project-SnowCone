@@ -35,13 +35,24 @@ class _SearchPageState extends State<SearchPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Search',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: AssetImage(
+                            'assets/images/random/Th3_D5_482.jpeg',
+                          ),
+                          radius: 20,
+                        ),
+                        SizedBox(width: 12),
+                        Text(
+                          'Search',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 20),
                     TextField(
