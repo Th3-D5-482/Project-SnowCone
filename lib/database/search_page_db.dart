@@ -19,6 +19,7 @@ Future<List<Map<String, dynamic>>> getGenres() async {
           "id": item['id'],
           "image": item['image'],
           "name": item['name'],
+          "color": item['color'],
         });
       }
     }
@@ -29,6 +30,7 @@ Future<List<Map<String, dynamic>>> getGenres() async {
           "id": value['id'],
           "image": value['image'],
           "name": value['name'],
+          "color": value['color'],
         });
       }
     });

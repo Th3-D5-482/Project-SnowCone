@@ -10,6 +10,13 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   late TextEditingController searchInput = TextEditingController();
+
+  Color hexToColor(String hex) {
+    hex = hex.trim().replaceFirst('#', '');
+    if (hex.length == 6) hex = 'FF$hex';
+    return Color(int.tryParse('0x$hex') ?? 0xFFCCCCCC);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +30,7 @@ class _SearchPageState extends State<SearchPage> {
               return Padding(
                 padding: EdgeInsetsGeometry.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: 16,
+                  //vertical: 16,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +97,7 @@ class _SearchPageState extends State<SearchPage> {
                           aspectRatio = 4;
                         } else {
                           crossAxisCount = 2;
-                          aspectRatio = 1.5;
+                          aspectRatio = 2;
                         }
                         return FutureBuilder(
                           future: getGenres(),
@@ -115,7 +122,7 @@ class _SearchPageState extends State<SearchPage> {
                             final topGeneres = snapshot.data ?? [];
                             return SizedBox(
                               width: double.infinity,
-                              height: screenWidth > 800 ? 300 : 260,
+                              height: screenWidth > 800 ? 300 : 200,
                               child: GridView.builder(
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
@@ -132,18 +139,25 @@ class _SearchPageState extends State<SearchPage> {
                                       borderRadius:
                                           BorderRadiusGeometry.circular(16),
                                     ),
+                                    color: (genres['color'] != null)
+                                        ? hexToColor(genres['color'])
+                                        : Color(0xFFCCCCCC),
                                     child: Stack(
                                       children: [
-                                        Image.network(
-                                          genres['image']!,
-                                          width: double.infinity,
-                                          height: double.infinity,
-                                          fit: BoxFit.cover,
-                                        ),
+                                        // ClipRRect(
+                                        //   borderRadius:
+                                        //       BorderRadiusGeometry.circular(8),
+                                        //   child: Image.network(
+                                        //     genres['image']!,
+                                        //     width: double.infinity,
+                                        //     height: double.infinity,
+                                        //     fit: BoxFit.cover,
+                                        //   ),
+                                        // ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Align(
-                                            alignment: Alignment.center,
+                                            alignment: Alignment.topLeft,
                                             child: Text(
                                               genres['name']!,
                                               style: TextStyle(

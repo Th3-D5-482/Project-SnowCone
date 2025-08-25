@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.transparent,
           currentIndex: index,
           iconSize: 28,
           onTap: (value) => setState(() {
