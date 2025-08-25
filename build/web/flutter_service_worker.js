@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "66f10981fb82f03dd2ed9fd5e3fc4189",
-"assets/AssetManifest.bin.json": "ca9713cc54dcadd3c8d30d0dff55fdc2",
-"assets/AssetManifest.json": "93bc8c56ca748232d991e523504a53b3",
+const RESOURCES = {"assets/AssetManifest.bin": "f89f9928276a07790507faa8958f9311",
+"assets/AssetManifest.bin.json": "2071d93a910d9cd4ccad8ee8282171d3",
+"assets/AssetManifest.json": "23b4a2ed1b268be2196940742e549d63",
 "assets/assets/images/album/10,000_reasons.png": "3e763a1e59fdc19b88fb5ca0234312bf",
 "assets/assets/images/album/all_sons_and_daughters.png": "6e6740f8f3f1f87f913cd950604d8b73",
 "assets/assets/images/album/always.png": "6c4f80e32bbff5046fd4e3a8696759eb",
@@ -23,6 +23,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "66f10981fb82f03dd2ed9fd5e3fc4189
 "assets/assets/images/random/Th3_D5_482.jpeg": "68d4a3f6fad3544dcc5259d38f5e8e25",
 "assets/assets/images/random/warning.png": "10d3d0329303a95f9e19f32dee590228",
 "assets/assets/images/random/welcome.png": "c2e6b80ef83528eda3501511449ea3e7",
+"assets/assets/images/random/welcome2.png": "6d04f0f0e9c6dc45fe929fc5725d7814",
 "assets/assets/images/songs/10000_reasons.png": "86d90b45aba7eca12ec60afa97422154",
 "assets/assets/images/songs/great_are_you_lord.png": "f57ea855e7df588648efd0440705acca",
 "assets/assets/images/songs/holy_forever.png": "f8efd65d41fc3290700e4aefc6b88428",
@@ -56,14 +57,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "66f10981fb82f03dd2ed9fd5e3fc4189
 "canvaskit/skwasm_heavy.wasm": "8034ad26ba2485dab2fd49bdd786837b",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
-"flutter_bootstrap.js": "bb562f1e5fb93abdf596df1496e3000a",
+"flutter_bootstrap.js": "3b9263455542965c3a2dd08af03c3b2d",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "6050ecd400596b6ec56121843dc6e750",
 "/": "6050ecd400596b6ec56121843dc6e750",
-"main.dart.js": "46bb7343023d32c2ad0bfb91d2b1bd36",
+"main.dart.js": "27d7b20a1e21be022116993fe8501c3c",
 "manifest.json": "6858a767bc61f44ddcf96ba3905fea09",
 "version.json": "794af03ad599eb48d29243c1d69873a8"};
 // The application shell files that are downloaded before a service worker can
