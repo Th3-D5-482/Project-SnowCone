@@ -45,11 +45,17 @@ class _SearchPageState extends State<SearchPage> {
                         hintStyle: TextStyle(color: Colors.grey),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.white, width: 2),
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                            width: 2,
+                          ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.white, width: 2),
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                            width: 2,
+                          ),
                         ),
                         prefixIcon: Icon(
                           Icons.search_rounded,
@@ -96,9 +102,7 @@ class _SearchPageState extends State<SearchPage> {
                                     MediaQuery.of(context).size.height - 100,
                                 child: Center(
                                   child: CircularProgressIndicator(
-                                    color: Theme.of(
-                                      context,
-                                    ).colorScheme.primary,
+                                    color: Colors.blueGrey,
                                   ),
                                 ),
                               );

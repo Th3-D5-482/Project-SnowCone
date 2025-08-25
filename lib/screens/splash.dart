@@ -56,7 +56,7 @@ class _SplashState extends State<Splash> {
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.primary,
+                      color: Colors.blueGrey,
                     ),
                   ),
                 ],

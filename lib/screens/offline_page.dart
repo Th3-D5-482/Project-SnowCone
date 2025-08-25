@@ -12,7 +12,7 @@ class OfflinePage extends StatelessWidget {
           onRefresh: () async {
             await Future.delayed(const Duration(seconds: 2));
           },
-          color: Theme.of(context).colorScheme.primary,
+          color: Colors.blueGrey,
           backgroundColor: Colors.black87,
           child: ListView(
             physics: AlwaysScrollableScrollPhysics(),

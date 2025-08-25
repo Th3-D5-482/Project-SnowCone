@@ -75,9 +75,7 @@ class _LibraryPageState extends State<LibraryPage> {
                                   : Colors.black,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
-                                side: BorderSide(
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
+                                side: BorderSide(color: Colors.blueGrey),
                               ),
                             ),
                           ),
@@ -88,9 +86,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Theme.of(
-                            context,
-                          ).colorScheme.primary,
+                          backgroundColor: Colors.blueGrey,
                           radius: 24,
                           child: Icon(
                             Icons.add_outlined,
@@ -112,9 +108,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Theme.of(
-                            context,
-                          ).colorScheme.primary,
+                          backgroundColor: Colors.blueGrey,
                           radius: 24,
                           child: Icon(
                             Icons.favorite_border_rounded,

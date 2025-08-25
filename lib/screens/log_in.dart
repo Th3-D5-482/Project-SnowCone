@@ -69,7 +69,7 @@ class _LogInState extends State<LogIn> {
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Colors.blueGrey,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -149,7 +149,7 @@ class _LogInState extends State<LogIn> {
                           onChanged: (value) => setState(() {
                             isChecked = value ?? false;
                           }),
-                          activeColor: Theme.of(context).colorScheme.primary,
+                          activeColor: Colors.blueGrey,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4.0),
                           ),
@@ -158,7 +158,7 @@ class _LogInState extends State<LogIn> {
                         Text(
                           'Remember me',
                           style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Colors.blueGrey,
                             fontSize: 16,
                           ),
                         ),
@@ -240,7 +240,7 @@ class _LogInState extends State<LogIn> {
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(350, 50),
-                        backgroundColor: Theme.of(context).colorScheme.primary,
+                        backgroundColor: Colors.blueGrey,
                         foregroundColor: Colors.white,
                         textStyle: TextStyle(
                           fontSize: 18,
@@ -285,7 +285,7 @@ class _LogInState extends State<LogIn> {
                             'Sign Up',
                             style: TextStyle(
                               fontSize: 18,
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Colors.blueGrey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

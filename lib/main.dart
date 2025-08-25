@@ -21,15 +21,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "SnowCone",
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blueGrey,
-          brightness: Brightness.dark,
-        ),
         primaryColor: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.black,
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.transparent,
-          selectedItemColor: Theme.of(context).colorScheme.primary,
+          selectedItemColor: Colors.blueGrey,
           unselectedItemColor: Colors.white,
           showUnselectedLabels: false,
         ),
@@ -43,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.primary,
+            backgroundColor: Colors.blueGrey,
             foregroundColor: Colors.white,
             textStyle: const TextStyle(
               fontSize: 18,
@@ -57,24 +53,15 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
-              width: 2,
-            ),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
-              width: 2,
-            ),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
           ),
           border: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
-              width: 2,
-            ),
+            borderSide: BorderSide(color: Colors.blueGrey, width: 2),
           ),
           labelStyle: const TextStyle(color: Colors.white),
           hintStyle: const TextStyle(color: Colors.white54),

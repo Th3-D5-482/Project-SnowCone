@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           onTap: (value) => setState(() {
             index = value;
           }),
-          fixedColor: Theme.of(context).colorScheme.primary,
+          fixedColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
@@ -100,7 +100,7 @@ class _HomeViewState extends State<HomeView> {
                       height: MediaQuery.of(context).size.height - 100,
                       child: Center(
                         child: CircularProgressIndicator(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Colors.blueGrey,
                         ),
                       ),
                     );
