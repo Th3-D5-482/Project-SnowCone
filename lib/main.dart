@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
             unselectedItemColor: Colors.grey,
             showSelectedLabels: true,
             showUnselectedLabels: true,
+            selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
           ),
           textTheme: const TextTheme(
             bodyLarge: TextStyle(color: Colors.white),
