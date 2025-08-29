@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "475819000576",
+    "firebase_url": "https://snowcone-45bcb-default-rtdb.firebaseio.com",
+    "project_id": "snowcone-45bcb",
+    "storage_bucket": "snowcone-45bcb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475819000576:android:771388648791232273e9e5",
+        "android_client_info": {
+          "package_name": "com.example.snowcone.snowcone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1crPLDK8BGmTH6fLFSgxLxFXa7jHTzqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

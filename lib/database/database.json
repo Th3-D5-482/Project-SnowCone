@@ -1,0 +1,244 @@
+{
+  "Music": [
+    {
+      "id": 0,
+      "name": "How Great Is Our God",
+      "artist": "Chris Tomlin",
+      "releaseYear": 2004,
+      "duration": "4:26",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1755193165866",
+      "audio": "assets/audio/how_great_is_our_god.mp3",
+      "genre": "Worship",
+      "key": "C",
+      "bpm": 68,
+      "keyTheme": "Majesty, Praise",
+      "description": "A timeless anthem glorifying God's greatness.",
+      "isRecentlyListened": true,
+      "albumID": 0
+    },
+    {
+      "id": 1,
+      "name": "Way Maker",
+      "artist": "Sinach / Leeland",
+      "releaseYear": 2015,
+      "duration": "4:45",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/way_maker.png?updatedAt=1755193164852",
+      "audio": "assets/audio/way_maker.mp3",
+      "genre": "Worship",
+      "key": "E",
+      "bpm": 70,
+      "keyTheme": "Miracles, Presence",
+      "description": "A global worship movement declaring God as miracle worker and light in the darkness.",
+      "isRecentlyListened": true,
+      "albumID": 1
+    },
+    {
+      "id": 2,
+      "name": "10,000 Reasons",
+      "artist": "Matt Redman",
+      "releaseYear": 2011,
+      "duration": "4:22",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/10000_reasons.png?updatedAt=1755193163844",
+      "audio": "assets/audio/10000_reasons.mp3",
+      "genre": "Worship",
+      "key": "G",
+      "bpm": 73,
+      "keyTheme": "Gratitude, Faithfulness",
+      "description": "A stirring song reflecting a life of thankful worship inspired by Psalm 103.",
+      "isRecentlyListened": true,
+      "albumID": 2
+    },
+    {
+      "id": 3,
+      "name": "Reckless Love",
+      "artist": "Cory Asbury",
+      "releaseYear": 2017,
+      "duration": "5:31",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/reckless_love.png?updatedAt=1755193169020",
+      "audio": "assets/audio/reckless_love.mp3",
+      "genre": "Contemporary",
+      "key": "G♭",
+      "bpm": 83,
+      "keyTheme": "God's Pursuit, Grace",
+      "description": "A powerful narrative of God's unrelenting love, inspired by Luke 15.",
+      "isRecentlyListened": true,
+      "albumID": 3
+    },
+    {
+      "id": 4,
+      "name": "Holy Forever",
+      "artist": "Chris Tomlin",
+      "releaseYear": 2022,
+      "duration": "5:08",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_forever.png?updatedAt=1755193162370",
+      "audio": "assets/audio/holy_forever.mp3",
+      "genre": "Worship",
+      "key": "D♭",
+      "bpm": 72,
+      "keyTheme": "Eternity, Holiness",
+      "description": "A majestic anthem celebrating God's eternal holiness and glory.",
+      "isRecentlyListened": true,
+      "albumID": 4
+    },
+    {
+      "id": 5,
+      "name": "Great Are You Lord",
+      "artist": "All Sons & Daughters",
+      "releaseYear": 2014,
+      "duration": "4:25",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1755193161279",
+      "audio": "assets/audio/great_are_you_lord.mp3",
+      "genre": "Worship",
+      "key": "A",
+      "bpm": 72,
+      "keyTheme": "Breath, Praise",
+      "description": "A humble yet profound invitation to worship, declaring God's restorative power.",
+      "isRecentlyListened": true,
+      "albumID": 5
+    }
+  ],
+  "TopMixes": [
+    {
+    "id": 0,
+    "name": "Praise & Power Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/praise_and_power%20_mix.png?updatedAt=1755193009582"
+  },
+  {
+    "id": 1,
+    "name": "Worship & Wonder Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/worship_and_wonder_mix.png?updatedAt=1755193009580"
+  },
+  {
+    "id": 2,
+    "name": "Grace & Redemption Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/grace_and_redemption_mix.png?updatedAt=1755193009689"
+  },
+  {
+    "id": 3,
+    "name": "Revival & Fire Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/revival_and_fire_mix.png?updatedAt=1755193009565"
+  },
+  {
+    "id": 4,
+    "name": "Reflect & Restore Mix",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/reflection_and_surrender_mix.png?updatedAt=1755193009540"
+  }
+  ],
+  "TopGenres": [
+  {
+    "id": 0,
+    "name": "Worship",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
+    "color": "#cc0088"
+  },
+  {
+    "id": 1,
+    "name": "Praise",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
+    "color": "#096f50"
+  },
+  {
+    "id": 2,
+    "name": "Gospel",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
+    "color": "#7c00e0"
+  },
+  {
+    "id": 3,
+    "name": "Pop",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
+    "color": "#203062"
+  }
+],
+"Albums": [
+  {
+    "id": 0,
+    "name": "Arriving",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/ariving.png?updatedAt=1755193926289",
+    "isContinueListening": true
+  },
+  {
+    "id": 1,
+    "name": "Way Maker",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1755194275749",
+    "isContinueListening": true
+  },
+  {
+    "id": 2,
+    "name": "10,000 Reasons",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1755194393282",
+    "isContinueListening": true
+  },
+  {
+    "id": 3,
+    "name": "Reckless Love",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1755194657934",
+    "isContinueListening": true
+  },
+  {
+    "id": 4,
+    "name": "Always",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1755194825079",
+    "isContinueListening": true
+  },
+  {
+    "id": 5,
+    "name": "All Sons & Daughters",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1755194957030",
+    "isContinueListening": true
+  }
+],
+"BrowseAll" :[
+  {
+    "id": 0,
+    "name": "Hymns",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
+    "color": "#8c5eaa"
+  },
+  {
+    "id": 1,
+    "name": "Rock",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
+    "color": "#096f50"
+  },
+  {
+    "id": 2,
+    "name": "HipHop",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
+    "color": "#628c0d"
+  },
+  {
+    "id": 3,
+    "name": "Indie",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
+    "color": "#4e8095"
+  },
+  {
+    "id": 4,
+    "name": "Folk",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
+    "color": "#cc0088"
+  },
+  {
+    "id": 5,
+    "name": "Country",
+    "image":
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
+    "color": "#b2590d"
+  }
+]
+}
