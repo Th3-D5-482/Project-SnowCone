@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/search_page_db.dart';
 
@@ -36,7 +37,7 @@ class _SearchPageState extends State<SearchPage> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
-            double horizontalPadding = screenWidth > 800 ? 200 : 16;
+            double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
             return Padding(
               padding: EdgeInsetsGeometry.symmetric(
                 horizontal: horizontalPadding,

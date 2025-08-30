@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database/home_page_db.dart';
@@ -75,7 +76,7 @@ class _HomeViewState extends State<HomeView> {
         builder: (context, constraints) {
           double screenWidth = constraints.maxWidth;
           // ignore: unused_local_variable
-          double horizontalPadding = screenWidth > 800 ? 200 : 16;
+          double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
           return Padding(
             padding: EdgeInsets.symmetric(
               horizontal: horizontalPadding,
@@ -246,7 +247,7 @@ class _HomeViewState extends State<HomeView> {
                             LayoutBuilder(
                               builder: (context, constraints) {
                                 double screenWidth = constraints.maxWidth;
-                                return screenWidth > 800
+                                return screenWidth > 800 && kIsWeb
                                     ? FutureBuilder(
                                         future: getTopMixes(),
                                         builder: (context, asyncSnapshot) {
@@ -448,7 +449,7 @@ class _HomeViewState extends State<HomeView> {
                                 return LayoutBuilder(
                                   builder: (context, constraints) {
                                     double screenWidth = constraints.maxWidth;
-                                    return screenWidth > 800
+                                    return screenWidth > 800 && kIsWeb
                                         ? SizedBox(
                                             width: double.infinity,
                                             height: 180,

@@ -82351,15 +82351,6 @@
     call$3$bodyColor$decorationColor$displayColor($0, $1, $2) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$3$bodyColor$decorationColor$displayColor", 0, [$0, $1, $2], ["bodyColor", "decorationColor", "displayColor"], 0));
     },
-    call$2$primaryTextTheme$textTheme($0, $1) {
-      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$primaryTextTheme$textTheme", 0, [$0, $1], ["primaryTextTheme", "textTheme"], 0));
-    },
-    call$1$brightness($0) {
-      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$brightness", 0, [$0], ["brightness"], 0));
-    },
-    call$2$aspect($0, $1) {
-      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$aspect", 0, [$0, $1], ["aspect"], 0));
-    },
     call$3$replace$state($0, $1, $2) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$3$replace$state", 0, [$0, $1, $2], ["replace", "state"], 0));
     },
@@ -82380,6 +82371,9 @@
     },
     call$1$0($T1) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$0", 0, [$T1], [], 1));
+    },
+    call$2$aspect($0, $1) {
+      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$aspect", 0, [$0, $1], ["aspect"], 0));
     },
     call$8$removeBottomInset$removeBottomPadding$removeLeftPadding$removeRightPadding$removeTopPadding($0, $1, $2, $3, $4, $5, $6, $7) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$8$removeBottomInset$removeBottomPadding$removeLeftPadding$removeRightPadding$removeTopPadding", 0, [$0, $1, $2, $3, $4, $5, $6, $7], ["removeBottomInset", "removeBottomPadding", "removeLeftPadding", "removeRightPadding", "removeTopPadding"], 0));
@@ -82446,6 +82440,12 @@
     },
     call$2$padding$viewPadding($0, $1) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$padding$viewPadding", 0, [$0, $1], ["padding", "viewPadding"], 0));
+    },
+    call$2$primaryTextTheme$textTheme($0, $1) {
+      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$primaryTextTheme$textTheme", 0, [$0, $1], ["primaryTextTheme", "textTheme"], 0));
+    },
+    call$1$brightness($0) {
+      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$brightness", 0, [$0], ["brightness"], 0));
     },
     call$1$isLiveRegion($0) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$isLiveRegion", 0, [$0], ["isLiveRegion"], 0));
@@ -199806,7 +199806,7 @@
   A.MyApp.prototype = {
     build$1(context) {
       var _null = null;
-      return new A.AnnotatedRegion(new A.SystemUiOverlayStyle(_null, _null, _null, _null, B.Color_Edl, _null, B.Brightness_1, _null), A.MaterialApp$(false, new A.Disclaimer(_null), A.ThemeData_ThemeData(new A.BottomNavigationBarThemeData(B.Color_Edl, _null, _null, _null, B.MaterialColor_M34, B.MaterialColor_wdy, B.TextStyle_KXJ, _null, true, true, _null, _null, _null, _null), _null, _null, new A.ElevatedButtonThemeData(A.ElevatedButton_styleFrom(_null, _null, A.Theme_of(context).primaryColor, _null, _null, _null, _null, _null, _null, _null, B.Color_wst, _null, _null, _null, _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, B.TextStyle_8hE, _null)), A.InputDecorationTheme$(new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), B.TextStyle_RUn, B.TextStyle_Gna), B.MaterialColor_M34, B.Color_vnR, B.TextTheme_MNr, _null), "SnowCone"), _null, type$.AnnotatedRegion_SystemUiOverlayStyle);
+      return new A.AnnotatedRegion(new A.SystemUiOverlayStyle(_null, _null, _null, _null, B.Color_Edl, _null, B.Brightness_1, _null), A.MaterialApp$(false, new A.Disclaimer(_null), A.ThemeData_ThemeData(new A.BottomNavigationBarThemeData(B.Color_Edl, _null, _null, _null, B.MaterialColor_M34, B.MaterialColor_wdy, B.TextStyle_KXJ, _null, true, true, _null, _null, _null, _null), _null, _null, new A.ElevatedButtonThemeData(A.ElevatedButton_styleFrom(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, B.Color_wst, _null, _null, _null, _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, B.TextStyle_8hE, _null)), A.InputDecorationTheme$(new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), new A.OutlineInputBorder(4, B.BorderRadius_IFL, new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), B.TextStyle_RUn, B.TextStyle_Gna), B.MaterialColor_M34, B.Color_vnR, B.TextTheme_MNr, _null), "SnowCone"), _null, type$.AnnotatedRegion_SystemUiOverlayStyle);
     }
   };
   A.ConnectivityWrapper.prototype = {

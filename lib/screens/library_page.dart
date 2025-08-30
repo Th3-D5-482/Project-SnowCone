@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -15,7 +16,7 @@ class _LibraryPageState extends State<LibraryPage> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
-            double horizontalPadding = screenWidth > 800 ? 200 : 16;
+            double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
             return Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: horizontalPadding,
