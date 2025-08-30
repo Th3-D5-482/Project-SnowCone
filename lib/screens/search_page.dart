@@ -100,7 +100,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Your Top Genres',
+                      'Your top genres',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -196,7 +196,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Browse All',
+                      'Browse all',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

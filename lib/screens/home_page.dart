@@ -153,7 +153,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       const SizedBox(height: 20),
                       const Text(
-                        'Continue Listening',
+                        'Continue listening',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -229,7 +229,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Your Top Mixes',
+                        'Your top mixes',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
