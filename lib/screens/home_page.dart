@@ -72,499 +72,461 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          double screenWidth = constraints.maxWidth;
-          // ignore: unused_local_variable
-          double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
-          return Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: horizontalPadding,
-              vertical: 8,
-            ),
-            child: StreamBuilder(
-              stream: getContinueListening(),
-              builder: (context, asyncSnapshot) {
-                if (asyncSnapshot.connectionState == ConnectionState.waiting) {
-                  return SizedBox(
-                    height: MediaQuery.of(context).size.height - 100,
-                    child: Center(
-                      child: CircularProgressIndicator(color: Colors.blueGrey),
-                    ),
-                  );
-                } else if (asyncSnapshot.hasError) {
-                  return Center(
-                    child: Text(
-                      'Error: ${asyncSnapshot.error}',
-                      style: const TextStyle(color: Colors.red),
-                    ),
-                  );
-                }
-                final musica = (asyncSnapshot.data ?? [])
-                    .where((item) => item['isContinueListening'] == true)
-                    .toList();
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'assets/images/random/Th3_D5_482.jpeg',
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            double screenWidth = constraints.maxWidth;
+            // ignore: unused_local_variable
+            double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
+            return Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: horizontalPadding,
+                vertical: 8,
+              ),
+              child: StreamBuilder(
+                stream: getContinueListening(),
+                builder: (context, asyncSnapshot) {
+                  if (asyncSnapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height - 100,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          color: Colors.blueGrey,
+                        ),
+                      ),
+                    );
+                  } else if (asyncSnapshot.hasError) {
+                    return Center(
+                      child: Text(
+                        'Error: ${asyncSnapshot.error}',
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    );
+                  }
+                  final musica = (asyncSnapshot.data ?? [])
+                      .where((item) => item['isContinueListening'] == true)
+                      .toList();
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const CircleAvatar(
+                            backgroundImage: AssetImage(
+                              'assets/images/random/Th3_D5_482.jpeg',
+                            ),
+                            radius: 30,
                           ),
-                          radius: 30,
-                        ),
-                        const SizedBox(width: 12),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              getGretting(),
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                          const SizedBox(width: 12),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                getGretting(),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Th3-D5-482',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                              Text(
+                                'Th3-D5-482',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        const Spacer(),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.settings_sharp,
-                            color: Colors.grey,
+                            ],
                           ),
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Continue listening',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          const Spacer(),
+                          IconButton(
+                            icon: const Icon(
+                              Icons.settings_sharp,
+                              color: Colors.grey,
                             ),
-                            const SizedBox(height: 10),
-                            LayoutBuilder(
-                              builder: (context, constraints) {
-                                double screenWidth = constraints.maxWidth;
-                                int crossAxisCount;
-                                double aspectRatio;
-                                if (screenWidth >= 1200) {
-                                  crossAxisCount = 3;
-                                  aspectRatio = 6;
-                                } else if (screenWidth >= 800) {
-                                  crossAxisCount = 3;
-                                  aspectRatio = 5;
-                                } else {
-                                  crossAxisCount = 2;
-                                  aspectRatio = 2.5;
-                                }
-                                return GridView.builder(
-                                  shrinkWrap: true,
-                                  physics: const NeverScrollableScrollPhysics(),
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: crossAxisCount,
-                                        childAspectRatio: aspectRatio,
-                                        crossAxisSpacing: 12,
-                                        mainAxisSpacing: 12,
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Continue listening',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
+                          int crossAxisCount;
+                          double aspectRatio;
+                          if (screenWidth >= 1200) {
+                            crossAxisCount = 3;
+                            aspectRatio = 6;
+                          } else if (screenWidth >= 800) {
+                            crossAxisCount = 3;
+                            aspectRatio = 5;
+                          } else {
+                            crossAxisCount = 2;
+                            aspectRatio = 2.5;
+                          }
+                          return GridView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: crossAxisCount,
+                                  childAspectRatio: aspectRatio,
+                                  crossAxisSpacing: 12,
+                                  mainAxisSpacing: 12,
+                                ),
+                            itemCount: musica.length,
+                            itemBuilder: (context, index) {
+                              final song = musica[index];
+                              return Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                                color: const Color.fromARGB(255, 30, 30, 30),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8),
+                                  child: Row(
+                                    children: [
+                                      Image.network(
+                                        song['image']!,
+                                        width: 80,
+                                        height: 100,
+                                        fit: BoxFit.cover,
                                       ),
-                                  itemCount: musica.length,
-                                  itemBuilder: (context, index) {
-                                    final song = musica[index];
-                                    return Card(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadiusGeometry.circular(8),
-                                      ),
-                                      color: const Color.fromARGB(
-                                        255,
-                                        30,
-                                        30,
-                                        30,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8),
-                                        child: Row(
-                                          children: [
-                                            Image.network(
-                                              song['image']!,
-                                              width: 80,
-                                              height: 100,
-                                              fit: BoxFit.cover,
-                                            ),
-                                            const SizedBox(width: 10),
-                                            Expanded(
-                                              child: Text(
-                                                song['name'] ?? '',
-                                                style: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 16,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                ),
-                                                maxLines: 2,
-                                              ),
-                                            ),
-                                          ],
+                                      const SizedBox(width: 10),
+                                      Expanded(
+                                        child: Text(
+                                          song['name'] ?? '',
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          maxLines: 2,
                                         ),
                                       ),
-                                    );
-                                  },
-                                );
-                              },
-                            ),
-                            SizedBox(height: 20),
-                            Text(
-                              'Your top mixes',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            LayoutBuilder(
-                              builder: (context, constraints) {
-                                double screenWidth = constraints.maxWidth;
-                                return screenWidth > 800 && kIsWeb
-                                    ? FutureBuilder(
-                                        future: getTopMixes(),
-                                        builder: (context, asyncSnapshot) {
-                                          final topMixes =
-                                              asyncSnapshot.data ?? [];
-                                          return Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: topMixes.map<Widget>((
-                                              topMix,
-                                            ) {
-                                              return SizedBox(
-                                                width: 190,
-                                                height: 130,
-                                                child: Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                          8.0,
-                                                        ),
-                                                  ),
-                                                  color: const Color.fromARGB(
-                                                    255,
-                                                    30,
-                                                    30,
-                                                    30,
-                                                  ),
-                                                  child: Stack(
-                                                    children: [
-                                                      ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadiusGeometry.circular(
-                                                              8,
-                                                            ),
-                                                        child: Image.network(
-                                                          topMix['image']!,
-                                                          fit: BoxFit.cover,
-                                                          width:
-                                                              double.infinity,
-                                                          height:
-                                                              double.infinity,
-                                                          opacity:
-                                                              const AlwaysStoppedAnimation(
-                                                                0.5,
-                                                              ),
-                                                        ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        },
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Your top mixes',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
+                          return screenWidth > 800 && kIsWeb
+                              ? FutureBuilder(
+                                  future: getTopMixes(),
+                                  builder: (context, asyncSnapshot) {
+                                    final topMixes = asyncSnapshot.data ?? [];
+                                    return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: topMixes.map<Widget>((topMix) {
+                                        return SizedBox(
+                                          width: 190,
+                                          height: 130,
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            color: const Color.fromARGB(
+                                              255,
+                                              30,
+                                              30,
+                                              30,
+                                            ),
+                                            child: Stack(
+                                              children: [
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
                                                       ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(
-                                                              16.0,
-                                                            ),
-                                                        child: Align(
-                                                          alignment:
-                                                              Alignment.center,
-                                                          child: Text(
-                                                            topMix['name']!,
-                                                            style:
-                                                                const TextStyle(
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize: 16,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
+                                                  child: Image.network(
+                                                    topMix['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                    opacity:
+                                                        const AlwaysStoppedAnimation(
+                                                          0.5,
                                                         ),
-                                                      ),
-                                                    ],
                                                   ),
                                                 ),
-                                              );
-                                            }).toList(),
-                                          );
-                                        },
-                                      )
-                                    : SizedBox(
-                                        height: 130,
-                                        width: double.infinity,
-                                        child: FutureBuilder(
-                                          future: getTopMixes(),
-                                          builder: (context, asyncSnapshot) {
-                                            if (asyncSnapshot.hasError) {
-                                              return Center(
-                                                child: Text(
-                                                  'Error: ${asyncSnapshot.error}',
-                                                  style: const TextStyle(
-                                                    color: Colors.red,
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                    16.0,
                                                   ),
-                                                ),
-                                              );
-                                            }
-                                            final topMixes =
-                                                asyncSnapshot.data ?? [];
-                                            return ListView.builder(
-                                              itemCount: topMixes.length,
-                                              shrinkWrap: true,
-                                              physics:
-                                                  const BouncingScrollPhysics(),
-                                              scrollDirection: Axis.horizontal,
-                                              itemBuilder: (context, index) {
-                                                final topMix = topMixes[index];
-                                                return SizedBox(
-                                                  width: 190,
-                                                  height: 130,
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                          right: 16.0,
-                                                        ),
-                                                    child: Card(
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius.circular(
-                                                              8.0,
-                                                            ),
-                                                      ),
-                                                      color:
-                                                          const Color.fromARGB(
-                                                            255,
-                                                            30,
-                                                            30,
-                                                            30,
-                                                          ),
-                                                      child: Stack(
-                                                        children: [
-                                                          ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadiusGeometry.circular(
-                                                                  8,
-                                                                ),
-                                                            child: Image.network(
-                                                              topMix['image']!,
-                                                              fit: BoxFit.cover,
-                                                              width: double
-                                                                  .infinity,
-                                                              height: double
-                                                                  .infinity,
-                                                              opacity:
-                                                                  const AlwaysStoppedAnimation(
-                                                                    0.5,
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets.all(
-                                                                  16.0,
-                                                                ),
-                                                            child: Align(
-                                                              alignment:
-                                                                  Alignment
-                                                                      .center,
-                                                              child: Text(
-                                                                topMix['name']!,
-                                                                style: const TextStyle(
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize: 16,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
+                                                  child: Align(
+                                                    alignment: Alignment.center,
+                                                    child: Text(
+                                                      topMix['name']!,
+                                                      style: const TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ),
-                                                );
-                                              },
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        );
+                                      }).toList(),
+                                    );
+                                  },
+                                )
+                              : SizedBox(
+                                  height: 130,
+                                  width: double.infinity,
+                                  child: FutureBuilder(
+                                    future: getTopMixes(),
+                                    builder: (context, asyncSnapshot) {
+                                      if (asyncSnapshot.hasError) {
+                                        return Center(
+                                          child: Text(
+                                            'Error: ${asyncSnapshot.error}',
+                                            style: const TextStyle(
+                                              color: Colors.red,
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      final topMixes = asyncSnapshot.data ?? [];
+                                      return ListView.builder(
+                                        itemCount: topMixes.length,
+                                        shrinkWrap: true,
+                                        physics: const BouncingScrollPhysics(),
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (context, index) {
+                                          final topMix = topMixes[index];
+                                          return SizedBox(
+                                            width: 190,
+                                            height: 130,
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                right: 16.0,
+                                              ),
+                                              child: Card(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                child: Stack(
+                                                  children: [
+                                                    ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadiusGeometry.circular(
+                                                            8,
+                                                          ),
+                                                      child: Image.network(
+                                                        topMix['image']!,
+                                                        fit: BoxFit.cover,
+                                                        width: double.infinity,
+                                                        height: double.infinity,
+                                                        opacity:
+                                                            const AlwaysStoppedAnimation(
+                                                              0.5,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                            16.0,
+                                                          ),
+                                                      child: Align(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        child: Text(
+                                                          topMix['name']!,
+                                                          style:
+                                                              const TextStyle(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 16,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                  ),
+                                );
+                        },
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Based on your recent listening',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      StreamBuilder(
+                        stream: getMusic(),
+                        builder: (context, asyncSnapshot) {
+                          final recentMusica = (asyncSnapshot.data ?? [])
+                              .where(
+                                (item) => item['isRecentlyListened'] == true,
+                              )
+                              .toList();
+                          return LayoutBuilder(
+                            builder: (context, constraints) {
+                              double screenWidth = constraints.maxWidth;
+                              return screenWidth > 800 && kIsWeb
+                                  ? SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: List.generate(
+                                          recentMusica.length,
+                                          (index) {
+                                            final recentSong =
+                                                recentMusica[index];
+                                            return SizedBox(
+                                              width: 180,
+                                              height: 180,
+                                              child: Card(
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    recentSong['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
+                                                ),
+                                              ),
                                             );
                                           },
                                         ),
-                                      );
-                              },
-                            ),
-                            SizedBox(height: 20),
-                            Text(
-                              'Based on your recent listening',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            StreamBuilder(
-                              stream: getMusic(),
-                              builder: (context, asyncSnapshot) {
-                                final recentMusica = (asyncSnapshot.data ?? [])
-                                    .where(
-                                      (item) =>
-                                          item['isRecentlyListened'] == true,
+                                      ),
                                     )
-                                    .toList();
-                                return LayoutBuilder(
-                                  builder: (context, constraints) {
-                                    double screenWidth = constraints.maxWidth;
-                                    return screenWidth > 800 && kIsWeb
-                                        ? SizedBox(
-                                            width: double.infinity,
-                                            height: 180,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: List.generate(
-                                                recentMusica.length,
-                                                (index) {
-                                                  final recentSong =
-                                                      recentMusica[index];
-                                                  return SizedBox(
-                                                    width: 180,
-                                                    height: 180,
-                                                    child: Card(
-                                                      color:
-                                                          const Color.fromARGB(
-                                                            255,
-                                                            30,
-                                                            30,
-                                                            30,
-                                                          ),
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius.circular(
-                                                              8.0,
-                                                            ),
+                                  : SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: recentMusica.length,
+                                        physics: const BouncingScrollPhysics(),
+                                        itemBuilder: (context, index) {
+                                          final recentSong =
+                                              recentMusica[index];
+                                          return Padding(
+                                            padding: EdgeInsets.only(right: 16),
+                                            child: SizedBox(
+                                              width: 180,
+                                              height: 180,
+                                              child: Card(
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
                                                       ),
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadiusGeometry.circular(
-                                                              8,
-                                                            ),
-                                                        child: Image.network(
-                                                          recentSong['image']!,
-                                                          fit: BoxFit.cover,
-                                                          width:
-                                                              double.infinity,
-                                                          height:
-                                                              double.infinity,
-                                                        ),
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
                                                       ),
-                                                    ),
-                                                  );
-                                                },
+                                                  child: Image.network(
+                                                    recentSong['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
+                                                ),
                                               ),
                                             ),
-                                          )
-                                        : SizedBox(
-                                            width: double.infinity,
-                                            height: 180,
-                                            child: ListView.builder(
-                                              scrollDirection: Axis.horizontal,
-                                              itemCount: recentMusica.length,
-                                              physics:
-                                                  const BouncingScrollPhysics(),
-                                              itemBuilder: (context, index) {
-                                                final recentSong =
-                                                    recentMusica[index];
-                                                return Padding(
-                                                  padding: EdgeInsets.only(
-                                                    right: 16,
-                                                  ),
-                                                  child: SizedBox(
-                                                    width: 180,
-                                                    height: 180,
-                                                    child: Card(
-                                                      color:
-                                                          const Color.fromARGB(
-                                                            255,
-                                                            30,
-                                                            30,
-                                                            30,
-                                                          ),
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius.circular(
-                                                              8.0,
-                                                            ),
-                                                      ),
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadiusGeometry.circular(
-                                                              8,
-                                                            ),
-                                                        child: Image.network(
-                                                          recentSong['image']!,
-                                                          fit: BoxFit.cover,
-                                                          width:
-                                                              double.infinity,
-                                                          height:
-                                                              double.infinity,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                );
-                                              },
-                                            ),
                                           );
-                                  },
-                                );
-                              },
-                            ),
-                          ],
-                        ),
+                                        },
+                                      ),
+                                    );
+                            },
+                          );
+                        },
                       ),
-                    ),
-                  ],
-                );
-              },
-            ),
-          );
-        },
+                    ],
+                  );
+                },
+              ),
+            );
+          },
+        ),
       ),
     );
   }
