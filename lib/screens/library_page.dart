@@ -12,92 +12,97 @@ class _LibraryPageState extends State<LibraryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              double screenWidth = constraints.maxWidth;
-              double horizontalPadding = screenWidth > 800 ? 200 : 16;
-              return Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: horizontalPadding,
-                  vertical: 8,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/images/random/Th3_D5_482.jpeg',
-                              ),
-                              radius: 20,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            double screenWidth = constraints.maxWidth;
+            double horizontalPadding = screenWidth > 800 ? 200 : 16;
+            return Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: horizontalPadding,
+                vertical: 8,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage(
+                              'assets/images/random/Th3_D5_482.jpeg',
                             ),
-                            SizedBox(width: 12),
-                            Text(
-                              'Library',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add_rounded,
-                            size: 34,
-                            color: Colors.grey,
+                            radius: 20,
                           ),
+                          SizedBox(width: 12),
+                          Text(
+                            'Library',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.add_rounded,
+                          size: 34,
+                          color: Colors.grey,
                         ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height - 150,
-                      child: Center(
+                      ),
+                    ],
+                  ),
+                  Divider(color: Colors.grey[800], thickness: 2),
+                  Expanded(
+                    child: Center(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CircleAvatar(
-                              radius: 80,
-                              backgroundImage: AssetImage(
-                                'assets/images/random/library.png',
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            Text(
-                              'Your library is empty!',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              'Add music to make it yours.',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.grey,
-                              ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: 80,
+                                  backgroundImage: AssetImage(
+                                    'assets/images/random/library.png',
+                                  ),
+                                ),
+                                SizedBox(height: 16),
+                                Text(
+                                  'Your library is empty!',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  'Add music to make it yours.',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
-          ),
+                  ),
+                ],
+              ),
+            );
+          },
         ),
       ),
     );
