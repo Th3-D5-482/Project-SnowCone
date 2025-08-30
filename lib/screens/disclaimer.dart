@@ -28,45 +28,32 @@ class _DisclaimerState extends State<Disclaimer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          double screenWidth = constraints.maxWidth;
-          double horizontalPadding = screenWidth > 800 ? 200 : 16;
-          return Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: horizontalPadding,
-              vertical: 8,
-            ),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(height: 80),
-                  CircleAvatar(
-                    radius: 100,
-                    backgroundColor: Color(0xFFFFC107),
-                    child: Icon(Icons.warning, color: Colors.black, size: 150),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Disclaimer',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'This app is a personal learning project.\nNot for commercial use or distribution.\nAll content is curated respectfully.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.grey,
-                      height: 1.5,
-                    ),
-                  ),
-                ],
+      body: Center(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 80),
+              CircleAvatar(
+                radius: 100,
+                backgroundColor: Color(0xFFFFC107),
+                child: Icon(Icons.warning, color: Colors.black, size: 150),
               ),
-            ),
-          );
-        },
+              SizedBox(height: 20),
+              Text(
+                'Disclaimer',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'This app is a personal learning project.\nNot for commercial use or distribution.\nAll content is curated respectfully.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.grey, height: 1.5),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

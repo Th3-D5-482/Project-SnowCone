@@ -43,7 +43,7 @@ class _LogInState extends State<LogIn> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              double horizontalPadding = screenWidth > 800 ? 200 : 16;
+              double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
@@ -158,9 +158,7 @@ class _LogInState extends State<LogIn> {
                     ),
                     SizedBox(height: 20),
                     Row(
-                      mainAxisAlignment: kIsWeb
-                          ? MainAxisAlignment.center
-                          : MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Checkbox(
                           value: isChecked,

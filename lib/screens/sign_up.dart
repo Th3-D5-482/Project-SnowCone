@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/log_in.dart';
@@ -39,7 +40,7 @@ class _SignUpState extends State<SignUp> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              double horizontalPadding = screenWidth > 800 ? 200 : 16;
+              double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,

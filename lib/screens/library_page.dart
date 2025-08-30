@@ -60,6 +60,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     ],
                   ),
                   Divider(color: Colors.grey[800], thickness: 2),
+                  SizedBox(height: 16),
                   Expanded(
                     child: Center(
                       child: SingleChildScrollView(
