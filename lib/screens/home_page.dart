@@ -178,7 +178,7 @@ class _HomeViewState extends State<HomeView> {
                           int crossAxisCount;
                           double aspectRatio;
                           if (orientation == Orientation.landscape) {
-                            crossAxisCount = screenWidth > 1000 ? 3 : 3;
+                            crossAxisCount = 3;
                             aspectRatio = kIsWeb ? 5 : 4;
                           } else {
                             if (screenWidth >= 1200) {
