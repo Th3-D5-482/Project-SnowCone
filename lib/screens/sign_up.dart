@@ -40,7 +40,15 @@ class _SignUpState extends State<SignUp> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
+              bool isDesktop =
+                  kIsWeb &&
+                  (defaultTargetPlatform == TargetPlatform.macOS ||
+                      defaultTargetPlatform == TargetPlatform.windows ||
+                      defaultTargetPlatform == TargetPlatform.linux) &&
+                  screenWidth > 1000;
+              double horizontalPadding = screenWidth > 1000 && isDesktop
+                  ? 200
+                  : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,

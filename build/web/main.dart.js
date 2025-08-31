@@ -199828,7 +199828,7 @@
     },
     build$1(context) {
       var _null = null;
-      return A.Scaffold$(A.Center$(A.SingleChildScrollView$(A.Column$(A._setArrayType([A.SizedBox$(_null, 80, _null), A.CircleAvatar$(A.Color$(4294951175), _null, A.Icon$(B.IconData_59083_MaterialIcons_false, B.Color_vnR, _null, 150), 100), A.SizedBox$(_null, 20, _null), A.Text$("Disclaimer", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 28, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.Text$("This app is a personal learning project.\nNot for commercial use or distribution.\nAll content is curated respectfully.", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, 1.5, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_2, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), B.Axis_1), _null, _null), _null);
+      return A.Scaffold$(A.Center$(A.SingleChildScrollView$(A.Column$(A._setArrayType([A.CircleAvatar$(A.Color$(4294951175), _null, A.Icon$(B.IconData_59083_MaterialIcons_false, B.Color_vnR, _null, 150), 100), A.SizedBox$(_null, 20, _null), A.Text$("Disclaimer", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 28, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.Text$("This app is a personal learning project.\nNot for commercial use or distribution.\nAll content is curated respectfully.", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, 1.5, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_2, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), B.Axis_1), _null, _null), _null);
     }
   };
   A._DisclaimerState_initState_closure.prototype = {
@@ -200135,7 +200135,8 @@
   A._LibraryPageState_build_closure.prototype = {
     call$2(context, constraints) {
       var t4, _null = null,
-        horizontalPadding = constraints.maxWidth > 800 ? 200 : 16,
+        isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && constraints.maxWidth > 1000,
+        horizontalPadding = isDesktop ? 200 : 16,
         t1 = type$.JSArray_Widget,
         t2 = A.Row$(A._setArrayType([A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Library", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), A.Spacer$(), A.IconButton$(_null, _null, A.Icon$(B.IconData_62775_MaterialIcons_false, B.MaterialColor_wdy, _null, 34), _null, _null, new A._LibraryPageState_build__closure(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0),
         t3 = B.Map_GGfjP.$index(0, type$.MaterialColor._eval$1("ColorSwatch.T")._as(800));
@@ -200177,7 +200178,9 @@
   A._LogInState_build_closure.prototype = {
     call$2(context, constraints) {
       var t10, t11, t12, t13, t14, t15, t16, _null = null,
-        horizontalPadding = constraints.maxWidth > 800 ? 200 : 16,
+        screenWidth = constraints.maxWidth,
+        isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && screenWidth > 1000,
+        horizontalPadding = screenWidth > 1000 && isDesktop ? 200 : 16,
         t1 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 30), _null, _null, new A._LogInState_build__closure(context), _null, _null, _null), _null, _null, _null),
         t2 = A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/logo2.png", _null, _null), _null, 100),
         t3 = A.SizedBox$(_null, 20, _null),
@@ -200443,7 +200446,8 @@
   A._SearchPageState_build_closure.prototype = {
     call$2(context, constraints) {
       var _null = null,
-        horizontalPadding = constraints.maxWidth > 800 ? 200 : 16,
+        isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && constraints.maxWidth > 1000,
+        horizontalPadding = isDesktop ? 200 : 16,
         t1 = type$.JSArray_Widget,
         t2 = A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Search", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0),
         t3 = A.SizedBox$(_null, 20, _null),
@@ -200567,7 +200571,9 @@
   A._SignUpState_build_closure.prototype = {
     call$2(context, constraints) {
       var t10, t11, t12, t13, t14, t15, _null = null,
-        horizontalPadding = constraints.maxWidth > 800 ? 200 : 16,
+        screenWidth = constraints.maxWidth,
+        isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && screenWidth > 1000,
+        horizontalPadding = screenWidth > 1000 && isDesktop ? 200 : 16,
         t1 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 30), _null, _null, new A._SignUpState_build__closure(context), _null, _null, _null), _null, _null, _null),
         t2 = A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/logo2.png", _null, _null), _null, 100),
         t3 = A.SizedBox$(_null, 20, _null),
@@ -200847,41 +200853,44 @@
   };
   A.Welcome_build_closure.prototype = {
     call$2(context, constraints) {
-      var t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, _null = null,
+      var t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, _null = null,
         _s8_ = "SnowCone",
         _s21_ = "Explore your favorite",
         _s12_ = "Master every",
         _s9_ = "Play with",
         _s10_ = "confidence",
         _s11_ = "Get Started",
-        t1 = type$.JSArray_Widget;
-      if (constraints.maxWidth > 800) {
+        screenWidth = constraints.maxWidth,
+        isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && screenWidth > 1000,
+        t1 = screenWidth > 1000 && isDesktop,
+        t2 = type$.JSArray_Widget;
+      if (t1) {
         A.debugCheckHasMediaQuery(context);
-        t2 = A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data;
+        t1 = A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data;
         t3 = A.ClipRRect$(A.BorderRadius$circular(32), A.Image$asset("assets/images/random/welcome2.png", 450, _null));
         t4 = A.SizedBox$(_null, _null, 50);
-        t5 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t5 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t6 = A.SizedBox$(_null, 50, _null);
-        t7 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t7 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t8 = A.SizedBox$(_null, 20, _null);
-        t9 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t9 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t10 = A.SizedBox$(_null, 20, _null);
-        t11 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t11 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t12 = A.SizedBox$(_null, 40, _null);
         t13 = A.ElevatedButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
-        t2 = A.SizedBox$(A.Row$(A._setArrayType([t3, t4, A.Column$(A._setArrayType([t5, t6, t7, t8, t9, t10, t11, t12, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure(context), t13), _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0), t2.size._dy, _null);
-        t1 = t2;
+        t1 = A.SizedBox$(A.Row$(A._setArrayType([t3, t4, A.Column$(A._setArrayType([t5, t6, t7, t8, t9, t10, t11, t12, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure(context), t13), _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0), t1.size._dy, _null);
       } else {
-        t2 = A.Image$asset("assets/images/random/welcome.png", _null, 1 / 0);
+        t1 = A.Image$asset("assets/images/random/welcome.png", _null, 1 / 0);
         t3 = A.SizedBox$(_null, 20, _null);
-        t4 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t4 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t5 = A.SizedBox$(_null, 30, _null);
-        t6 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-        t7 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-        t8 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t6 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t7 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t8 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t9 = A.SizedBox$(_null, 40, _null);
         t10 = A.ElevatedButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
-        t1 = A.Column$(A._setArrayType([t2, t3, t4, t5, t6, t7, t8, t9, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure0(context), t10), _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        t2 = A.Column$(A._setArrayType([t1, t3, t4, t5, t6, t7, t8, t9, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure0(context), t10), _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        t1 = t2;
       }
       return t1;
     },

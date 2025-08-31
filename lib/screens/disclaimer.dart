@@ -34,7 +34,6 @@ class _DisclaimerState extends State<Disclaimer> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 80),
               CircleAvatar(
                 radius: 100,
                 backgroundColor: Color(0xFFFFC107),

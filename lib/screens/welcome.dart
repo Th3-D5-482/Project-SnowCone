@@ -20,7 +20,13 @@ class Welcome extends StatelessWidget {
           child: LayoutBuilder(
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
-              return screenWidth > 800
+              bool isDesktop =
+                  kIsWeb &&
+                  (defaultTargetPlatform == TargetPlatform.macOS ||
+                      defaultTargetPlatform == TargetPlatform.windows ||
+                      defaultTargetPlatform == TargetPlatform.linux) &&
+                  screenWidth > 1000;
+              return screenWidth > 1000 && isDesktop
                   ? SizedBox(
                       height: MediaQuery.of(context).size.height,
                       child: Row(
