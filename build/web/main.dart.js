@@ -199955,17 +199955,18 @@
   };
   A._HomeViewState_build___closure1.prototype = {
     call$2(context, constraints) {
-      var aspectRatio, t1,
-        screenWidth = constraints.maxWidth,
-        crossAxisCount = 3;
-      if (screenWidth >= 1200)
-        aspectRatio = 6;
-      else if (screenWidth >= 800)
-        aspectRatio = 5;
-      else {
-        crossAxisCount = 2;
-        aspectRatio = 2.5;
-      }
+      var crossAxisCount, aspectRatio, t1,
+        screenWidth = constraints.maxWidth;
+      A.debugCheckHasMediaQuery(context);
+      crossAxisCount = 3;
+      aspectRatio = 5;
+      if (!(A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data.get$orientation() === B.Orientation_1))
+        if (screenWidth >= 1200)
+          aspectRatio = 6;
+        else if (!(screenWidth >= 800)) {
+          crossAxisCount = 2;
+          aspectRatio = 2.5;
+        }
       t1 = this.musica;
       return A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(aspectRatio, crossAxisCount, 12, 12), new A._HomeViewState_build____closure3(t1), t1.length, B.NeverScrollableScrollPhysics_null, true);
     },
