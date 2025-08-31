@@ -117,17 +117,23 @@ class _SearchPageState extends State<SearchPage> {
                     LayoutBuilder(
                       builder: (context, constraints) {
                         double screenWidth = constraints.maxWidth;
+                        final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
-                        if (screenWidth >= 1200) {
-                          crossAxisCount = 4;
-                          aspectRatio = 2;
-                        } else if (screenWidth >= 800) {
+                        if (orientation == Orientation.landscape) {
                           crossAxisCount = 2;
-                          aspectRatio = 4;
+                          aspectRatio = kIsWeb ? 5 : 4;
                         } else {
-                          crossAxisCount = 2;
-                          aspectRatio = 2;
+                          if (screenWidth >= 1200) {
+                            crossAxisCount = 4;
+                            aspectRatio = 2;
+                          } else if (screenWidth >= 800) {
+                            crossAxisCount = 2;
+                            aspectRatio = 5;
+                          } else {
+                            crossAxisCount = 2;
+                            aspectRatio = 2;
+                          }
                         }
                         return FutureBuilder(
                           future: getGenres(),
@@ -213,17 +219,23 @@ class _SearchPageState extends State<SearchPage> {
                     LayoutBuilder(
                       builder: (context, constraints) {
                         double screenWidth = constraints.maxWidth;
+                        final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
-                        if (screenWidth >= 1200) {
-                          crossAxisCount = 3;
-                          aspectRatio = 2;
-                        } else if (screenWidth >= 800) {
+                        if (orientation == Orientation.landscape) {
                           crossAxisCount = 2;
-                          aspectRatio = 4;
+                          aspectRatio = kIsWeb ? 4.7 : 3.7;
                         } else {
-                          crossAxisCount = 2;
-                          aspectRatio = 1.7;
+                          if (screenWidth >= 1200) {
+                            crossAxisCount = 3;
+                            aspectRatio = 2;
+                          } else if (screenWidth >= 800) {
+                            crossAxisCount = 2;
+                            aspectRatio = 4.7;
+                          } else {
+                            crossAxisCount = 2;
+                            aspectRatio = 1.7;
+                          }
                         }
                         return FutureBuilder(
                           future: getBrowseAll(),
@@ -244,50 +256,54 @@ class _SearchPageState extends State<SearchPage> {
                                 shrinkWrap: true,
                                 itemBuilder: (context, index) {
                                   final browseAll = browseAlls[index];
-                                  return Card(
-                                    color: (browseAll['color'] != null)
-                                        ? hexToColor(browseAll['color'])
-                                        : Color(0xFFCCCCCC),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadiusGeometry.circular(8),
+                                  return ClipRRect(
+                                    borderRadius: BorderRadiusGeometry.circular(
+                                      8,
                                     ),
-                                    child: Stack(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              browseAll['name'],
-                                              style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white,
+                                    child: Card(
+                                      color: (browseAll['color'] != null)
+                                          ? hexToColor(browseAll['color'])
+                                          : Color(0xFFCCCCCC),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadiusGeometry.circular(8),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Align(
+                                              alignment: Alignment.topLeft,
+                                              child: Text(
+                                                browseAll['name'],
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        Spacer(),
-                                        Positioned(
-                                          top: 30,
-                                          left: 103,
-                                          child: Transform.rotate(
-                                            angle: 0.4,
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadiusGeometry.circular(
-                                                    8,
-                                                  ),
-                                              child: Image.network(
-                                                browseAll['image'],
-                                                width: 80,
-                                                height: 80,
+                                          Spacer(),
+                                          Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: Transform.rotate(
+                                              angle: 0.4,
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadiusGeometry.circular(
+                                                      8,
+                                                    ),
+                                                child: Image.network(
+                                                  browseAll['image'],
+                                                  width: 80,
+                                                  height: 80,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   );
                                 },
