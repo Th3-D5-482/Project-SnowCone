@@ -52891,8 +52891,9 @@
     _HomeViewState_build_closure: function _HomeViewState_build_closure(t0) {
       this.$this = t0;
     },
-    _HomeViewState_build__closure: function _HomeViewState_build__closure(t0) {
+    _HomeViewState_build__closure: function _HomeViewState_build__closure(t0, t1) {
       this.$this = t0;
+      this.isDesktop = t1;
     },
     _HomeViewState_build___closure: function _HomeViewState_build___closure() {
     },
@@ -52904,7 +52905,8 @@
     _HomeViewState_build____closure3: function _HomeViewState_build____closure3(t0) {
       this.musica = t0;
     },
-    _HomeViewState_build___closure2: function _HomeViewState_build___closure2() {
+    _HomeViewState_build___closure2: function _HomeViewState_build___closure2(t0) {
+      this.isDesktop = t0;
     },
     _HomeViewState_build____closure1: function _HomeViewState_build____closure1() {
     },
@@ -52915,12 +52917,14 @@
     _HomeViewState_build_____closure1: function _HomeViewState_build_____closure1(t0) {
       this.topMixes = t0;
     },
-    _HomeViewState_build___closure3: function _HomeViewState_build___closure3() {
+    _HomeViewState_build___closure3: function _HomeViewState_build___closure3(t0) {
+      this.isDesktop = t0;
     },
     _HomeViewState_build____closure: function _HomeViewState_build____closure() {
     },
-    _HomeViewState_build____closure0: function _HomeViewState_build____closure0(t0) {
-      this.recentMusica = t0;
+    _HomeViewState_build____closure0: function _HomeViewState_build____closure0(t0, t1) {
+      this.isDesktop = t0;
+      this.recentMusica = t1;
     },
     _HomeViewState_build_____closure: function _HomeViewState_build_____closure(t0) {
       this.recentMusica = t0;
@@ -199907,14 +199911,15 @@
   };
   A._HomeViewState_build_closure.prototype = {
     call$2(context, constraints) {
-      var horizontalPadding = constraints.maxWidth > 800 ? 200 : 16;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 8, horizontalPadding, 8), A.StreamBuilder$(new A._HomeViewState_build__closure(this.$this), A.getContinueListening(), type$.List_Map_String_dynamic), null);
+      var isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && constraints.maxWidth > 1000,
+        horizontalPadding = isDesktop ? 200 : 16;
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 8, horizontalPadding, 8), A.StreamBuilder$(new A._HomeViewState_build__closure(this.$this, isDesktop), A.getContinueListening(), type$.List_Map_String_dynamic), null);
     },
     $signature: 76
   };
   A._HomeViewState_build__closure.prototype = {
     call$2(context, asyncSnapshot) {
-      var t1, musica, _null = null;
+      var t1, musica, t2, _null = null;
       type$.BuildContext._as(context);
       type$.AsyncSnapshot_List_Map_String_dynamic._as(asyncSnapshot);
       if (asyncSnapshot.connectionState === B.ConnectionState_1) {
@@ -199932,7 +199937,8 @@
       t1 = J.where$1$ax(t1, new A._HomeViewState_build___closure());
       musica = A.List_List$_of(t1, t1.$ti._eval$1("Iterable.E"));
       t1 = type$.JSArray_Widget;
-      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_9x0, B.SizedBox_12_null_null_null, A.Column$(A._setArrayType([A.Text$(this.$this.getGretting$0(), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$("Th3-D5-482", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Spacer_null, A.IconButton$(_null, _null, B.Icon_Lve, _null, _null, new A._HomeViewState_build___closure0(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, B.Text_X4Y, B.SizedBox_null_10_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure1(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Your top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure2()), A.SizedBox$(_null, 20, _null), A.Text$("Based on your recent listening", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.StreamBuilder$(new A._HomeViewState_build___closure3(), A.getMusic(), type$.List_Map_String_dynamic)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
+      t2 = this.isDesktop;
+      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_9x0, B.SizedBox_12_null_null_null, A.Column$(A._setArrayType([A.Text$(this.$this.getGretting$0(), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$("Th3-D5-482", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Spacer_null, A.IconButton$(_null, _null, B.Icon_Lve, _null, _null, new A._HomeViewState_build___closure0(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, B.Text_X4Y, B.SizedBox_null_10_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure1(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Your top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure2(t2)), A.SizedBox$(_null, 20, _null), A.Text$("Based on your recent listening", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.StreamBuilder$(new A._HomeViewState_build___closure3(t2), A.getMusic(), type$.List_Map_String_dynamic)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
     $signature: 644
   };
@@ -199985,8 +199991,13 @@
   };
   A._HomeViewState_build___closure2.prototype = {
     call$2(context, constraints) {
-      var t1 = type$.List_Map_String_dynamic;
-      return constraints.maxWidth > 800 ? A.FutureBuilder$(new A._HomeViewState_build____closure1(), A.getTopMixes(), t1) : A.SizedBox$(A.FutureBuilder$(new A._HomeViewState_build____closure2(), A.getTopMixes(), t1), 130, 1 / 0);
+      var t1, t2;
+      if (constraints.maxWidth > 1000)
+        t1 = this.isDesktop;
+      else
+        t1 = false;
+      t2 = type$.List_Map_String_dynamic;
+      return t1 ? A.FutureBuilder$(new A._HomeViewState_build____closure1(), A.getTopMixes(), t2) : A.SizedBox$(A.FutureBuilder$(new A._HomeViewState_build____closure2(), A.getTopMixes(), t2), 130, 1 / 0);
     },
     $signature: 648
   };
@@ -200056,7 +200067,7 @@
         t1 = A._setArrayType([], type$.JSArray_Map_String_dynamic);
       t1 = J.where$1$ax(t1, new A._HomeViewState_build____closure());
       recentMusica = A.List_List$_of(t1, t1.$ti._eval$1("Iterable.E"));
-      return A.LayoutBuilder$(new A._HomeViewState_build____closure0(recentMusica));
+      return A.LayoutBuilder$(new A._HomeViewState_build____closure0(this.isDesktop, recentMusica));
     },
     $signature: 653
   };
@@ -200068,9 +200079,14 @@
   };
   A._HomeViewState_build____closure0.prototype = {
     call$2(context, constraints) {
-      var t1 = this.recentMusica,
-        t2 = t1.length;
-      return constraints.maxWidth > 800 ? A.SizedBox$(A.Row$(A.List_List$generate(t2, new A._HomeViewState_build_____closure(t1), true, type$.Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0), 180, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t1), t2, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 180, 1 / 0);
+      var t1, t2, t3;
+      if (constraints.maxWidth > 1000)
+        t1 = this.isDesktop;
+      else
+        t1 = false;
+      t2 = this.recentMusica;
+      t3 = t2.length;
+      return t1 ? A.SizedBox$(A.Row$(A.List_List$generate(t3, new A._HomeViewState_build_____closure(t2), true, type$.Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0), 180, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t2), t3, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 180, 1 / 0);
     },
     $signature: 654
   };

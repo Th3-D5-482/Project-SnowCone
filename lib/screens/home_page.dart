@@ -77,8 +77,14 @@ class _HomeViewState extends State<HomeView> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
+            bool isDesktop =
+                kIsWeb &&
+                (defaultTargetPlatform == TargetPlatform.macOS ||
+                    defaultTargetPlatform == TargetPlatform.windows ||
+                    defaultTargetPlatform == TargetPlatform.linux) &&
+                screenWidth > 1000;
             // ignore: unused_local_variable
-            double horizontalPadding = screenWidth > 800 && kIsWeb ? 200 : 16;
+            double horizontalPadding = isDesktop ? 200 : 16;
             return Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: horizontalPadding,
@@ -241,7 +247,7 @@ class _HomeViewState extends State<HomeView> {
                       LayoutBuilder(
                         builder: (context, constraints) {
                           double screenWidth = constraints.maxWidth;
-                          return screenWidth > 800 && kIsWeb
+                          return screenWidth > 1000 && kIsWeb && isDesktop
                               ? FutureBuilder(
                                   future: getTopMixes(),
                                   builder: (context, asyncSnapshot) {
@@ -424,7 +430,7 @@ class _HomeViewState extends State<HomeView> {
                           return LayoutBuilder(
                             builder: (context, constraints) {
                               double screenWidth = constraints.maxWidth;
-                              return screenWidth > 800 && kIsWeb
+                              return screenWidth > 1000 && kIsWeb && isDesktop
                                   ? SizedBox(
                                       width: double.infinity,
                                       height: 180,
