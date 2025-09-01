@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:firebase_database/firebase_database.dart';
+import 'package:http/http.dart' as http;
 
 final DatabaseReference topGenresDB = FirebaseDatabase.instance.ref(
   'TopGenres',
@@ -67,4 +70,21 @@ Future<List<Map<String, dynamic>>> getBrowseAll() async {
     });
   }
   return browseList;
+}
+
+final String baseurl = 'https://snowcone-45bcb-default-rtdb.firebaseio.com';
+
+Future<List<dynamic>> getData(String node) async {
+  final response = await http.get(Uri.parse('$baseurl/$node.json'));
+
+  if (response.statusCode == 200) {
+    final decoded = json.decode(response.body);
+    if (decoded is List) {
+      return decoded;
+    } else {
+      throw Exception('Unexpected data format: expected a list');
+    }
+  } else {
+    throw Exception('Failed to fetch data');
+  }
 }

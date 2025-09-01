@@ -145,9 +145,9 @@ class _SearchPageState extends State<SearchPage> {
                           }
                         }
                         return FutureBuilder(
-                          future: getGenres(),
+                          future: getData('TopGenres'),
                           builder: (context, snapshot) {
-                            final topGeneres = snapshot.data ?? [];
+                            final topGenres = snapshot.data ?? [];
                             return SizedBox(
                               width: double.infinity,
                               height: screenWidth > 800 ? 240 : 200,
@@ -159,10 +159,10 @@ class _SearchPageState extends State<SearchPage> {
                                       crossAxisSpacing: 10,
                                       mainAxisSpacing: 10,
                                     ),
-                                itemCount: topGeneres.length,
+                                itemCount: topGenres.length,
                                 physics: NeverScrollableScrollPhysics(),
                                 itemBuilder: (context, index) {
-                                  final genres = topGeneres[index];
+                                  final genres = topGenres[index];
                                   return Card(
                                     shape: RoundedRectangleBorder(
                                       borderRadius:
