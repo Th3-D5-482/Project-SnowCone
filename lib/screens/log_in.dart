@@ -137,7 +137,7 @@ class _LogInState extends State<LogIn> {
                     SizedBox(height: 20),
                     SizedBox(
                       width: 380,
-                      height: 60,
+                      height: 50,
                       child: TextField(
                         controller: password,
                         decoration: InputDecoration(

@@ -133,7 +133,7 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(height: 20),
                     SizedBox(
                       width: 380,
-                      height: 60,
+                      height: 50,
                       child: TextField(
                         controller: password,
                         decoration: InputDecoration(

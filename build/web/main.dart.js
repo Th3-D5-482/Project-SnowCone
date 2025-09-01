@@ -49494,9 +49494,6 @@
     },
     _DefaultSnapshotPainter: function _DefaultSnapshotPainter() {
     },
-    Spacer$() {
-      return new A.Spacer(null);
-    },
     Spacer: function Spacer(t0) {
       this.key = t0;
     },
@@ -53009,25 +53006,37 @@
     _SearchPageState_build__closure: function _SearchPageState_build__closure(t0) {
       this.$this = t0;
     },
-    _SearchPageState_build___closure0: function _SearchPageState_build___closure0(t0, t1, t2) {
-      this._box_0 = t0;
-      this.$this = t1;
-      this.screenWidth = t2;
+    _SearchPageState_build___closure0: function _SearchPageState_build___closure0(t0, t1, t2, t3, t4) {
+      var _ = this;
+      _._box_0 = t0;
+      _.$this = t1;
+      _.screenWidth = t2;
+      _.topOffSet = t3;
+      _.leftOffSet = t4;
     },
-    _SearchPageState_build____closure0: function _SearchPageState_build____closure0(t0, t1) {
-      this.$this = t0;
-      this.topGeneres = t1;
+    _SearchPageState_build____closure0: function _SearchPageState_build____closure0(t0, t1, t2, t3) {
+      var _ = this;
+      _.$this = t0;
+      _.topGeneres = t1;
+      _.topOffSet = t2;
+      _.leftOffSet = t3;
     },
     _SearchPageState_build__closure0: function _SearchPageState_build__closure0(t0) {
       this.$this = t0;
     },
-    _SearchPageState_build___closure: function _SearchPageState_build___closure(t0, t1) {
-      this._box_1 = t0;
-      this.$this = t1;
+    _SearchPageState_build___closure: function _SearchPageState_build___closure(t0, t1, t2, t3) {
+      var _ = this;
+      _._box_1 = t0;
+      _.$this = t1;
+      _.topOffSet = t2;
+      _.leftOffSet = t3;
     },
-    _SearchPageState_build____closure: function _SearchPageState_build____closure(t0, t1) {
-      this.$this = t0;
-      this.browseAlls = t1;
+    _SearchPageState_build____closure: function _SearchPageState_build____closure(t0, t1, t2, t3) {
+      var _ = this;
+      _.$this = t0;
+      _.browseAlls = t1;
+      _.topOffSet = t2;
+      _.leftOffSet = t3;
     },
     SignUp: function SignUp(t0) {
       this.key = t0;
@@ -200139,7 +200148,7 @@
         isDesktop = (A.defaultTargetPlatform() === B.TargetPlatform_4 || A.defaultTargetPlatform() === B.TargetPlatform_5 || A.defaultTargetPlatform() === B.TargetPlatform_3) && constraints.maxWidth > 1000,
         horizontalPadding = isDesktop ? 200 : 16,
         t1 = type$.JSArray_Widget,
-        t2 = A.Row$(A._setArrayType([A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Library", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), A.Spacer$(), A.IconButton$(_null, _null, A.Icon$(B.IconData_62775_MaterialIcons_false, B.MaterialColor_wdy, _null, 34), _null, _null, new A._LibraryPageState_build__closure(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0),
+        t2 = A.Row$(A._setArrayType([A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Library", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), new A.Spacer(_null), A.IconButton$(_null, _null, A.Icon$(B.IconData_62775_MaterialIcons_false, B.MaterialColor_wdy, _null, 34), _null, _null, new A._LibraryPageState_build__closure(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0),
         t3 = B.Map_GGfjP.$index(0, type$.MaterialColor._eval$1("ColorSwatch.T")._as(800));
       A.debugCheckHasMediaQuery(context);
       t4 = A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data;
@@ -200202,7 +200211,7 @@
       t14 = t8.visibility;
       t15 = t14 ? A.Icon$(B.IconData_59069_MaterialIcons_false, _null, _null, _null) : A.Icon$(B.IconData_59070_MaterialIcons_false, _null, _null, _null);
       t15 = A.InputDecoration$(_null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, "Enter your password", _null, _null, _null, _null, _null, _null, t12, _null, _null, true, true, _null, t13, _null, _null, _null, _null, _null, A.IconButton$(_null, _null, t15, _null, _null, new A._LogInState_build__closure1(t8), _null, _null, _null), _null, _null, _null, _null, _null, _null);
-      t11 = A.SizedBox$(A.TextField$(false, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t11, _null, _null, _null, _null, _null, 2, t15, B.DragStartBehavior_1, true, _null, false, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_7_null_null, _null, _null, _null, 1, _null, _null, !t14, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), 60, 380);
+      t11 = A.SizedBox$(A.TextField$(false, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t11, _null, _null, _null, _null, _null, 2, t15, B.DragStartBehavior_1, true, _null, false, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_7_null_null, _null, _null, _null, 1, _null, _null, !t14, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), 50, 380);
       t12 = A.SizedBox$(_null, 20, _null);
       t13 = t8.isChecked;
       t14 = A.BorderRadius$circular(4);
@@ -200462,12 +200471,15 @@
   };
   A._SearchPageState_build__closure.prototype = {
     call$2(context, constraints) {
-      var orientation, t1 = {},
+      var orientation, t2, topOffSet, leftOffSet, t1 = {},
         screenWidth = constraints.maxWidth;
       A.debugCheckHasMediaQuery(context);
       orientation = A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data.get$orientation();
       t1.aspectRatio = t1.crossAxisCount = null;
-      if (orientation === B.Orientation_1) {
+      t2 = orientation === B.Orientation_1;
+      topOffSet = t2 ? 40 : 30;
+      leftOffSet = t2 ? 480 : 105;
+      if (t2) {
         t1.crossAxisCount = 2;
         t1.aspectRatio = 5;
       } else if (screenWidth >= 1200) {
@@ -200478,44 +200490,47 @@
         t1.aspectRatio = 5;
       } else
         t1.aspectRatio = t1.crossAxisCount = 2;
-      return A.FutureBuilder$(new A._SearchPageState_build___closure0(t1, this.$this, screenWidth), A.getGenres(), type$.List_Map_String_dynamic);
+      return A.FutureBuilder$(new A._SearchPageState_build___closure0(t1, this.$this, screenWidth, topOffSet, leftOffSet), A.getGenres(), type$.List_Map_String_dynamic);
     },
     $signature: 237
   };
   A._SearchPageState_build___closure0.prototype = {
     call$2(context, snapshot) {
-      var t1, t2, t3,
+      var t1, t2, t3, _this = this,
         topGeneres = type$.AsyncSnapshot_List_Map_String_dynamic._as(snapshot).data;
       if (topGeneres == null)
         topGeneres = A._setArrayType([], type$.JSArray_Map_String_dynamic);
-      t1 = this.screenWidth > 800 ? 300 : 200;
-      t2 = this._box_0;
+      t1 = _this.screenWidth > 800 ? 240 : 200;
+      t2 = _this._box_0;
       t3 = t2.crossAxisCount;
-      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t2.aspectRatio, t3, 10, 10), new A._SearchPageState_build____closure0(this.$this, topGeneres), J.get$length$asx(topGeneres), new A.NeverScrollableScrollPhysics(null), false), t1, 1 / 0);
+      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t2.aspectRatio, t3, 10, 10), new A._SearchPageState_build____closure0(_this.$this, topGeneres, _this.topOffSet, _this.leftOffSet), J.get$length$asx(topGeneres), new A.NeverScrollableScrollPhysics(null), false), t1, 1 / 0);
     },
     $signature: 238
   };
   A._SearchPageState_build____closure0.prototype = {
     call$2(context, index) {
-      var genres, t1, t2, t3, _null = null;
+      var genres, t1, t2, t3, _this = this, _null = null;
       type$.BuildContext._as(context);
-      genres = J.$index$asx(this.topGeneres, A._asInt(index));
+      genres = J.$index$asx(_this.topGeneres, A._asInt(index));
       t1 = A.BorderRadius$circular(8);
-      t2 = genres.$index(0, "color") != null ? this.$this.hexToColor$1(A._asString(genres.$index(0, "color"))) : A.Color$(4291611852);
+      t2 = genres.$index(0, "color") != null ? _this.$this.hexToColor$1(A._asString(genres.$index(0, "color"))) : A.Color$(4291611852);
       t3 = genres.$index(0, "name");
       t3.toString;
-      return A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t3), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Spacer$(), A.Positioned$(_null, A.Transform$rotate(0.5, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(genres.$index(0, "image")), _null, 80, _null, 80))), _null, _null, 102, _null, 20, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t2, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
+      return A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t3), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.5, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(genres.$index(0, "image")), _null, 80, _null, 80))), _null, _null, _this.leftOffSet, _null, _this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t2, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
     },
     $signature: 234
   };
   A._SearchPageState_build__closure0.prototype = {
     call$2(context, constraints) {
-      var orientation, t1 = {},
+      var orientation, t2, topOffSet, leftOffSet, t1 = {},
         screenWidth = constraints.maxWidth;
       A.debugCheckHasMediaQuery(context);
       orientation = A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data.get$orientation();
       t1.aspectRatio = t1.crossAxisCount = null;
-      if (orientation === B.Orientation_1) {
+      t2 = orientation === B.Orientation_1;
+      topOffSet = t2 ? 40 : 30;
+      leftOffSet = t2 ? 480 : 105;
+      if (t2) {
         t1.crossAxisCount = 2;
         t1.aspectRatio = 4.7;
       } else if (screenWidth >= 1200) {
@@ -200528,31 +200543,31 @@
         t1.crossAxisCount = 2;
         t1.aspectRatio = 1.7;
       }
-      return A.FutureBuilder$(new A._SearchPageState_build___closure(t1, this.$this), A.getBrowseAll(), type$.List_Map_String_dynamic);
+      return A.FutureBuilder$(new A._SearchPageState_build___closure(t1, this.$this, topOffSet, leftOffSet), A.getBrowseAll(), type$.List_Map_String_dynamic);
     },
     $signature: 237
   };
   A._SearchPageState_build___closure.prototype = {
     call$2(context, asyncSnapshot) {
-      var t1, t2,
+      var t1, t2, _this = this,
         browseAlls = type$.AsyncSnapshot_List_Map_String_dynamic._as(asyncSnapshot).data;
       if (browseAlls == null)
         browseAlls = A._setArrayType([], type$.JSArray_Map_String_dynamic);
-      t1 = this._box_1;
+      t1 = _this._box_1;
       t2 = t1.crossAxisCount;
-      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t1.aspectRatio, t2, 10, 10), new A._SearchPageState_build____closure(this.$this, browseAlls), J.get$length$asx(browseAlls), new A.NeverScrollableScrollPhysics(null), true), null, 1 / 0);
+      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t1.aspectRatio, t2, 10, 10), new A._SearchPageState_build____closure(_this.$this, browseAlls, _this.topOffSet, _this.leftOffSet), J.get$length$asx(browseAlls), new A.NeverScrollableScrollPhysics(null), true), null, 1 / 0);
     },
     $signature: 238
   };
   A._SearchPageState_build____closure.prototype = {
     call$2(context, index) {
-      var browseAll, t1, t2, t3, _null = null;
+      var browseAll, t1, t2, t3, _this = this, _null = null;
       type$.BuildContext._as(context);
-      browseAll = J.$index$asx(this.browseAlls, A._asInt(index));
+      browseAll = J.$index$asx(_this.browseAlls, A._asInt(index));
       t1 = A.BorderRadius$circular(8);
-      t2 = browseAll.$index(0, "color") != null ? this.$this.hexToColor$1(A._asString(browseAll.$index(0, "color"))) : A.Color$(4291611852);
+      t2 = browseAll.$index(0, "color") != null ? _this.$this.hexToColor$1(A._asString(browseAll.$index(0, "color"))) : A.Color$(4291611852);
       t3 = A.BorderRadius$circular(8);
-      return A.ClipRRect$(t1, A.Card$(A.Row$(A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(browseAll.$index(0, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Spacer$(), A.Align$(B.Alignment_1_1, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(browseAll.$index(0, "image")), _null, 80, _null, 80))), _null, _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), t2, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5)));
+      return A.ClipRRect$(t1, A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(browseAll.$index(0, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(browseAll.$index(0, "image")), _null, 80, _null, 80))), _null, _null, _this.leftOffSet, _null, _this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t2, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5)));
     },
     $signature: 663
   };
@@ -200606,7 +200621,7 @@
       t14 = t8.visibility;
       t15 = t14 ? A.Icon$(B.IconData_59069_MaterialIcons_false, _null, _null, _null) : A.Icon$(B.IconData_59070_MaterialIcons_false, _null, _null, _null);
       t15 = A.InputDecoration$(_null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, "Enter your password", _null, _null, _null, _null, _null, _null, t12, _null, _null, true, true, _null, t13, _null, _null, _null, _null, _null, A.IconButton$(_null, _null, t15, _null, _null, new A._SignUpState_build__closure1(t8), _null, _null, _null), _null, _null, _null, _null, _null, _null);
-      t11 = A.SizedBox$(A.TextField$(false, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t11, _null, _null, _null, _null, _null, 2, t15, B.DragStartBehavior_1, true, _null, false, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_7_null_null, _null, _null, _null, 1, _null, _null, !t14, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), 60, 380);
+      t11 = A.SizedBox$(A.TextField$(false, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t11, _null, _null, _null, _null, _null, 2, t15, B.DragStartBehavior_1, true, _null, false, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_7_null_null, _null, _null, _null, 1, _null, _null, !t14, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), 50, 380);
       t12 = A.SizedBox$(_null, 40, _null);
       t13 = A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
       t13 = A.ElevatedButton_styleFrom(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), B.Color_wst, _null, _null, _null, _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(16), B.BorderSide_Ah5), _null, _null, _null, t13, _null);
@@ -206466,7 +206481,6 @@
     B.Alignment_0_1 = new A.Alignment(0, 1);
     B.Alignment_0_m1 = new A.Alignment(0, -1);
     B.Alignment_1_0 = new A.Alignment(1, 0);
-    B.Alignment_1_1 = new A.Alignment(1, 1);
     B.Alignment_m1_0 = new A.Alignment(-1, 0);
     B.Alignment_m1_1 = new A.Alignment(-1, 1);
     B.Alignment_m1_m1 = new A.Alignment(-1, -1);

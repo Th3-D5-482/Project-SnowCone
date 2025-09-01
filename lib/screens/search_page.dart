@@ -120,6 +120,15 @@ class _SearchPageState extends State<SearchPage> {
                         final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
+                        final double topOffSet =
+                            (orientation == Orientation.landscape) ? 40 : 30;
+                        final double leftOffSet =
+                            (orientation == Orientation.landscape)
+                            ? kIsWeb
+                                  ? 480
+                                  : 355
+                            : 105;
+                        (orientation == Orientation.landscape);
                         if (orientation == Orientation.landscape) {
                           crossAxisCount = 2;
                           aspectRatio = kIsWeb ? 5 : 4;
@@ -141,7 +150,7 @@ class _SearchPageState extends State<SearchPage> {
                             final topGeneres = snapshot.data ?? [];
                             return SizedBox(
                               width: double.infinity,
-                              height: screenWidth > 800 ? 300 : 200,
+                              height: screenWidth > 800 ? 240 : 200,
                               child: GridView.builder(
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
@@ -178,10 +187,9 @@ class _SearchPageState extends State<SearchPage> {
                                             ),
                                           ),
                                         ),
-                                        Spacer(),
                                         Positioned(
-                                          top: 20,
-                                          left: 102,
+                                          top: topOffSet,
+                                          left: leftOffSet,
                                           child: Transform.rotate(
                                             angle: 0.5,
                                             child: ClipRRect(
@@ -222,6 +230,14 @@ class _SearchPageState extends State<SearchPage> {
                         final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
+                        final double topOffSet =
+                            (orientation == Orientation.landscape) ? 40 : 30;
+                        final double leftOffSet =
+                            (orientation == Orientation.landscape)
+                            ? kIsWeb
+                                  ? 480
+                                  : 355
+                            : 105;
                         if (orientation == Orientation.landscape) {
                           crossAxisCount = 2;
                           aspectRatio = kIsWeb ? 4.7 : 3.7;
@@ -268,7 +284,7 @@ class _SearchPageState extends State<SearchPage> {
                                         borderRadius:
                                             BorderRadiusGeometry.circular(8),
                                       ),
-                                      child: Row(
+                                      child: Stack(
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
@@ -284,9 +300,9 @@ class _SearchPageState extends State<SearchPage> {
                                               ),
                                             ),
                                           ),
-                                          Spacer(),
-                                          Align(
-                                            alignment: Alignment.bottomRight,
+                                          Positioned(
+                                            top: topOffSet,
+                                            left: leftOffSet,
                                             child: Transform.rotate(
                                               angle: 0.4,
                                               child: ClipRRect(
