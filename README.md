@@ -67,8 +67,8 @@ This app is a reflection of my journey—built with purpose, not profit.
 
 Ready to experience the magic? Choose your platform and dive in:
 
-- 🔗 **[Try in Browser](https://th3d5482snowcone.netlify.app)** – Try SnowCone directly in your browser  
-- 📱 **[Get for Android](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/app-debug.apk)** – Get the App on your Device  
+- 🔗 **[Try in Browser](https://th3d5482snowcone.netlify.app)** – No install, just vibes
+- 📱 **[Get for Android](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/app-debug.apk)** – Sideload the magic, no Play Store needed  
 - 🖥️ **[Get for Windows](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/SnowCone-Windows.zip)** – Fire it up on your PC, mate  
 
 ---
