@@ -91,7 +91,7 @@ class _HomeViewState extends State<HomeView> {
                 vertical: 8,
               ),
               child: StreamBuilder(
-                stream: getContinueListening(),
+                stream: getConitnueListening('Albums'),
                 builder: (context, asyncSnapshot) {
                   if (asyncSnapshot.connectionState ==
                       ConnectionState.waiting) {
@@ -259,7 +259,7 @@ class _HomeViewState extends State<HomeView> {
                           double screenWidth = constraints.maxWidth;
                           return screenWidth > 1000 && kIsWeb && isDesktop
                               ? FutureBuilder(
-                                  future: getTopMixes(),
+                                  future: getTopMixes('TopMixes'),
                                   builder: (context, asyncSnapshot) {
                                     final topMixes = asyncSnapshot.data ?? [];
                                     return Row(
@@ -327,7 +327,7 @@ class _HomeViewState extends State<HomeView> {
                                   height: 130,
                                   width: double.infinity,
                                   child: FutureBuilder(
-                                    future: getTopMixes(),
+                                    future: getTopMixes('TopMixes'),
                                     builder: (context, asyncSnapshot) {
                                       if (asyncSnapshot.hasError) {
                                         return Center(
@@ -430,7 +430,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 10),
                       StreamBuilder(
-                        stream: getMusic(),
+                        stream: getMusic('Music'),
                         builder: (context, asyncSnapshot) {
                           final recentMusica = (asyncSnapshot.data ?? [])
                               .where(

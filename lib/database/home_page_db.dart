@@ -1,84 +1,53 @@
-import 'package:firebase_database/firebase_database.dart';
+import 'dart:convert';
 
-final DatabaseReference musicDB = FirebaseDatabase.instance.ref('Albums');
-final DatabaseReference topMixesDB = FirebaseDatabase.instance.ref('TopMixes');
-final DatabaseReference recentListeningDB = FirebaseDatabase.instance.ref(
-  'Music',
-);
+import 'package:http/http.dart' as http;
 
-Stream<List<Map<String, dynamic>>> getContinueListening() {
-  return musicDB.onValue.map((event) {
-    final data = event.snapshot.value;
-    if (data == null || data is! List) return [];
-    final List rawList = data;
-    return rawList.where((item) => item != null).map((item) {
-      final song = item as Map<dynamic, dynamic>;
-      return {
-        "id": song['id'],
-        "name": song['name'],
-        "image": song['image'],
-        "isContinueListening": song['isContinueListening'],
-      };
-    }).toList();
-  });
-}
+final String baseUrl = 'https://snowcone-45bcb-default-rtdb.firebaseio.com/';
 
-Future<List<Map<String, dynamic>>> getTopMixes() async {
-  final snapshot = await topMixesDB.once();
-  final data = snapshot.snapshot.value;
-
-  if (data == null || (data is! List && data is! Map)) return [];
-
-  final List<Map<String, dynamic>> mixesList = [];
-
-  if (data is List) {
-    for (final item in data) {
-      if (item != null && item is Map) {
-        mixesList.add({
-          "id": item['id'],
-          "name": item['name'],
-          "image": item['image'],
-        });
+Stream<List<dynamic>> getMusic(String encode) async* {
+  while (true) {
+    final respose = await http.get(Uri.parse('$baseUrl/$encode.json'));
+    if (respose.statusCode == 200) {
+      final decoded = json.decode(respose.body);
+      if (decoded is List) {
+        yield decoded;
+      } else {
+        throw Exception('Failed to load data');
       }
+    } else {
+      throw Exception('Failed to load data');
     }
-  } else if (data is Map) {
-    data.forEach((key, value) {
-      if (value != null && value is Map) {
-        mixesList.add({
-          "id": value['id'],
-          "name": value['name'],
-          "image": value['image'],
-        });
-      }
-    });
+    await Future.delayed(Duration(seconds: 1));
   }
-
-  return mixesList;
 }
 
-Stream<List<Map<String, dynamic>>> getMusic() {
-  return recentListeningDB.onValue.map((event) {
-    final data = event.snapshot.value;
-    if (data == null || data is! List) return [];
-    final List rawData = data;
-    return rawData.where((item) => item != null).map((item) {
-      final songs = item as Map<dynamic, dynamic>;
-      return {
-        "id": songs['id'],
-        "name": songs['name'],
-        "artist": songs['artist'],
-        "releaseYear": songs['releaseYear'],
-        "duration": songs['duration'],
-        "image": songs['image'],
-        "audio": songs['audio'],
-        "genre": songs['genre'],
-        "key": songs['key'],
-        "bpm": songs['bpm'],
-        "keyTheme": songs['keyTheme'],
-        "description": songs['description'],
-        "isRecentlyListened": songs['isRecentlyListened'],
-        "albumID": songs['albumID'],
-      };
-    }).toList();
-  });
+Future<List<dynamic>> getTopMixes(String encode) async {
+  final respose = await http.get(Uri.parse('$baseUrl/$encode.json'));
+  if (respose.statusCode == 200) {
+    final decoded = json.decode(respose.body);
+    if (decoded is List) {
+      return decoded;
+    } else {
+      throw Exception('Failed to load data');
+    }
+  } else {
+    throw Exception('Failed to load data');
+  }
+}
+
+Stream<List<dynamic>> getConitnueListening(String encode) async* {
+  while (true) {
+    final respose = await http.get(Uri.parse('$baseUrl/$encode.json'));
+    if (respose.statusCode == 200) {
+      final decoded = json.decode(respose.body);
+      if (decoded is List) {
+        yield decoded;
+      } else {
+        throw Exception('Failed to load data');
+      }
+    } else {
+      throw Exception('Failed to load data');
+    }
+    await Future.delayed(Duration(seconds: 1));
+  }
 }

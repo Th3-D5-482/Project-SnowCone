@@ -145,7 +145,7 @@ class _SearchPageState extends State<SearchPage> {
                           }
                         }
                         return FutureBuilder(
-                          future: getData('TopGenres'),
+                          future: getTopGeneres('TopGenres'),
                           builder: (context, snapshot) {
                             final topGenres = snapshot.data ?? [];
                             return SizedBox(
@@ -254,7 +254,7 @@ class _SearchPageState extends State<SearchPage> {
                           }
                         }
                         return FutureBuilder(
-                          future: getBrowseAll(),
+                          future: getBrowseAll('BrowseAll'),
                           builder: (context, asyncSnapshot) {
                             final browseAlls = asyncSnapshot.data ?? [];
                             return SizedBox(
