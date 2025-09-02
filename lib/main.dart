@@ -89,7 +89,7 @@ class ConnectivityWrapper extends StatelessWidget {
     if (kIsWeb) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const MyApp(),
+        home: const MyApp(),  
       );
     } else {
       return StreamBuilder<List<ConnectivityResult>>(
