@@ -19,11 +19,11 @@ class _LibraryPageState extends State<LibraryPage> {
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
               bool isDesktop =
-                  kIsWeb &&
+                  kIsWeb ||
                   (defaultTargetPlatform == TargetPlatform.macOS ||
-                      defaultTargetPlatform == TargetPlatform.windows ||
-                      defaultTargetPlatform == TargetPlatform.linux) &&
-                  screenWidth > 1000;
+                          defaultTargetPlatform == TargetPlatform.windows ||
+                          defaultTargetPlatform == TargetPlatform.linux) &&
+                      screenWidth > 1000;
               double horizontalPadding = isDesktop ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
