@@ -28,7 +28,7 @@ class _LibraryPageState extends State<LibraryPage> {
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: 8,
+                  vertical: kIsWeb ? 16 : 8,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,11 +45,11 @@ class _LibraryPageState extends State<LibraryPage> {
                               ),
                               radius: 20,
                             ),
-                            SizedBox(width: 12),
+                            SizedBox(width: 8),
                             Text(
                               'Library',
                               style: TextStyle(
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),

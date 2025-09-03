@@ -49,7 +49,7 @@ class _SearchPageState extends State<SearchPage> {
               return Padding(
                 padding: EdgeInsetsGeometry.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: 8,
+                  vertical: kIsWeb ? 16 : 8,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,11 +62,11 @@ class _SearchPageState extends State<SearchPage> {
                           ),
                           radius: 20,
                         ),
-                        SizedBox(width: 12),
+                        SizedBox(width: 8),
                         Text(
                           'Search',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),

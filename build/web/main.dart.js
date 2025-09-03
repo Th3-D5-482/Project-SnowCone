@@ -201380,7 +201380,7 @@
   A._HomePageState.prototype = {
     build$1(context) {
       var _null = null;
-      return new A.WillPopScope(A.Scaffold$(new A.IndexedStack(this.index, A._setArrayType([new A.HomeView(_null), new A.SearchPage(_null), new A.LibraryPage(_null)], type$.JSArray_Widget), _null), A.BottomNavigationBar$(B.Color_Edl, this.index, 28, B.List_z24, new A._HomePageState_build_closure(this), 16, 14)), new A._HomePageState_build_closure0(), _null);
+      return new A.WillPopScope(A.Scaffold$(new A.IndexedStack(this.index, A._setArrayType([new A.HomeView(_null), new A.SearchPage(_null), new A.LibraryPage(_null)], type$.JSArray_Widget), _null), A.BottomNavigationBar$(B.Color_Edl, this.index, 28, B.List_z24, new A._HomePageState_build_closure(this), 14, 14)), new A._HomePageState_build_closure0(), _null);
     }
   };
   A._HomePageState_build_closure0.prototype = {
@@ -201441,7 +201441,7 @@
   };
   A._HomeViewState_build_closure.prototype = {
     call$2(context, constraints) {
-      return new A.Padding(new A.EdgeInsets(200, 8, 200, 8), A.StreamBuilder$(new A._HomeViewState_build__closure(this.$this, true), A.getConitnueListening("Albums"), type$.List_dynamic), null);
+      return new A.Padding(new A.EdgeInsets(200, 16, 200, 16), A.StreamBuilder$(new A._HomeViewState_build__closure(this.$this, true), A.getConitnueListening("Albums"), type$.List_dynamic), null);
     },
     $signature: 67
   };
@@ -201458,7 +201458,7 @@
       t1 = t1.showGreeting ? t1.getGretting$0() : "SnowCone";
       t2 = type$.JSArray_Widget;
       t3 = this.isDesktop;
-      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_m7o, B.SizedBox_12_null_null_null, A.Text$(t1, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, B.Text_X4Y, B.SizedBox_null_10_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure0(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Your top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure1(t3)), A.SizedBox$(_null, 20, _null), A.Text$("Based on your recent listening", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.StreamBuilder$(new A._HomeViewState_build___closure2(t3), A.getMusic("Music"), type$.List_dynamic)], t2), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
+      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_m7o, B.SizedBox_8_null_null_null, A.Text$(t1, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, B.Text_X4Y, B.SizedBox_null_10_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure0(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Your top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure1(t3)), A.SizedBox$(_null, 20, _null), A.Text$("Based on your recent listening", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.StreamBuilder$(new A._HomeViewState_build___closure2(t3), A.getMusic("Music"), type$.List_dynamic)], t2), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
     $signature: 642
   };
@@ -201480,10 +201480,10 @@
           aspectRatio = 6;
         else if (!(screenWidth >= 800)) {
           crossAxisCount = 2;
-          aspectRatio = 2.5;
+          aspectRatio = 2.8;
         }
       t1 = this.musica;
-      return A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(aspectRatio, crossAxisCount, 12, 12), new A._HomeViewState_build____closure3(t1), t1.length, B.NeverScrollableScrollPhysics_null, true);
+      return A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(aspectRatio, crossAxisCount, 1, 1), new A._HomeViewState_build____closure3(t1), t1.length, B.NeverScrollableScrollPhysics_null, true);
     },
     $signature: 644
   };
@@ -201500,9 +201500,9 @@
       t2 = J.getInterceptor$asx(song);
       t3 = t2.$index(song, "image");
       t3.toString;
-      t3 = A.Image$network(A._asString(t3), B.BoxFit_2, 100, _null, 80);
+      t3 = A.Image$network(A._asString(t3), B.BoxFit_2, 100, _null, 60);
       t2 = t2.$index(song, "name");
-      return A.Card$(new A.Padding(B.EdgeInsets_8_8_8_8, A.Row$(A._setArrayType([t3, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t2 == null ? "" : t2), 2, _null, _null, B.TextStyle_ari, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
+      return A.Card$(new A.Padding(B.EdgeInsets_0_0_16_0, A.Row$(A._setArrayType([t3, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t2 == null ? "" : t2), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
     },
     $signature: 232
   };
@@ -201655,11 +201655,11 @@
     call$2(context, constraints) {
       var t4, _null = null,
         t1 = type$.JSArray_Widget,
-        t2 = A.Row$(A._setArrayType([A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Library", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), new A.Spacer(_null), A.IconButton$(_null, _null, A.Icon$(B.IconData_62775_MaterialIcons_false, B.MaterialColor_wdy, _null, 34), _null, _null, new A._LibraryPageState_build__closure(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0),
+        t2 = A.Row$(A._setArrayType([A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 8), A.Text$("Library", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), new A.Spacer(_null), A.IconButton$(_null, _null, A.Icon$(B.IconData_62775_MaterialIcons_false, B.MaterialColor_wdy, _null, 34), _null, _null, new A._LibraryPageState_build__closure(), _null, _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, 0),
         t3 = B.Map_GGfjP.$index(0, type$.MaterialColor._eval$1("ColorSwatch.T")._as(800));
       A.debugCheckHasMediaQuery(context);
       t4 = A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data;
-      return new A.Padding(new A.EdgeInsets(200, 8, 200, 8), A.Column$(A._setArrayType([t2, new A.Divider(2, t3, _null), A.SizedBox$(A.Center$(A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/library.png", _null, _null), _null, 80), A.SizedBox$(_null, 16, _null), A.Text$("Your library is empty!", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 8, _null), A.Text$("Add music to make it yours.", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), _null, _null), t4.size._dy * 0.8, _null)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_0), _null);
+      return new A.Padding(new A.EdgeInsets(200, 16, 200, 16), A.Column$(A._setArrayType([t2, new A.Divider(2, t3, _null), A.SizedBox$(A.Center$(A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/library.png", _null, _null), _null, 80), A.SizedBox$(_null, 16, _null), A.Text$("Your library is empty!", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 8, _null), A.Text$("Add music to make it yours.", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), _null, _null), t4.size._dy * 0.8, _null)], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_0), _null);
     },
     $signature: 67
   };
@@ -201962,13 +201962,13 @@
     call$2(context, constraints) {
       var _null = null,
         t1 = type$.JSArray_Widget,
-        t2 = A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 12), A.Text$("Search", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0),
+        t2 = A.Row$(A._setArrayType([A.CircleAvatar$(_null, new A.AssetImage("assets/images/random/Th3_D5_482.jpeg", _null, _null), _null, 20), A.SizedBox$(_null, _null, 8), A.Text$("Search", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0),
         t3 = A.SizedBox$(_null, 20, _null),
         t4 = this.$this,
         t5 = t4.get$searchInput(),
         t6 = A.TextStyle$(_null, _null, B.Color_vnR, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null),
         t7 = A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
-      return new A.Padding(new A.EdgeInsets(200, 8, 200, 8), A.Column$(A._setArrayType([t2, t3, A.TextField$(true, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t5, _null, _null, _null, _null, _null, 2, A.InputDecoration$(_null, new A.OutlineInputBorder(4, A.BorderRadius$circular(20), new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, B.Color_wst, true, _null, _null, _null, _null, new A.OutlineInputBorder(4, A.BorderRadius$circular(20), new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, _null, _null, _null, _null, _null, _null, t7, "Search songs, artists, chords or tabs", _null, _null, _null, _null, _null, _null, _null, _null, _null, true, true, _null, A.Icon$(B.IconData_983357_MaterialIcons_false, B.MaterialColor_wdy, _null, _null), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null), B.DragStartBehavior_1, true, _null, true, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_0_null_null, _null, _null, _null, 1, _null, _null, false, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, t6, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), A.SizedBox$(_null, 20, _null), A.Text$("Your top genres", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._SearchPageState_build__closure(t4)), A.SizedBox$(_null, 20, _null), A.Text$("Browse all", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._SearchPageState_build__closure0(t4))], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(200, 16, 200, 16), A.Column$(A._setArrayType([t2, t3, A.TextField$(true, B.List_empty, false, _null, true, B.Clip_1, _null, A.text_field_TextField__defaultContextMenuBuilder$closure(), t5, _null, _null, _null, _null, _null, 2, A.InputDecoration$(_null, new A.OutlineInputBorder(4, A.BorderRadius$circular(20), new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, B.Color_wst, true, _null, _null, _null, _null, new A.OutlineInputBorder(4, A.BorderRadius$circular(20), new A.BorderSide(B.MaterialColor_M34, 2, B.BorderStyle_1, -1)), _null, _null, _null, _null, _null, _null, _null, _null, t7, "Search songs, artists, chords or tabs", _null, _null, _null, _null, _null, _null, _null, _null, _null, true, true, _null, A.Icon$(B.IconData_983357_MaterialIcons_false, B.MaterialColor_wdy, _null, _null), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null), B.DragStartBehavior_1, true, _null, true, _null, false, _null, B.Type_EditableText_O5i, _null, _null, _null, _null, B.TextInputType_0_null_null, _null, _null, _null, 1, _null, _null, false, "\u2022", _null, _null, _null, _null, _null, false, _null, _null, false, _null, true, _null, B.EdgeInsets_20_20_20_20, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, t6, true, B.TextAlign_4, _null, B.TextCapitalization_30, _null, _null, _null, _null), A.SizedBox$(_null, 20, _null), A.Text$("Your top genres", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._SearchPageState_build__closure(t4)), A.SizedBox$(_null, 20, _null), A.Text$("Browse all", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._SearchPageState_build__closure0(t4))], t1), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 67
   };
@@ -211378,7 +211378,7 @@
     B.Size_t5z = new A.Size(1 / 0, 1 / 0);
     B.SizedBox_0_0_null_null = new A.SizedBox(0, 0, null, null);
     B.SizedBox_10_null_null_null = new A.SizedBox(10, null, null, null);
-    B.SizedBox_12_null_null_null = new A.SizedBox(12, null, null, null);
+    B.SizedBox_8_null_null_null = new A.SizedBox(8, null, null, null);
     B.SizedBox_8pG = new A.SizedBox(1 / 0, 1 / 0, null, null);
     B.SizedBox_null_10_null_null = new A.SizedBox(null, 10, null, null);
     B.SizedBox_null_20_null_null = new A.SizedBox(null, 20, null, null);
@@ -211513,10 +211513,10 @@
     B.Shadow_eT9 = new A.Shadow(B.Color_vnR, B.Offset_0_0, 1);
     B.List_kDz = makeConstList([B.Shadow_eT9], type$.JSArray_Shadow);
     B.TextStyle_a5a = new A.TextStyle(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.List_kDz, null, null, null);
-    B.TextStyle_ari = new A.TextStyle(true, B.Color_wst, null, null, null, null, 16, B.FontWeight_6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.TextOverflow_2);
     B.TextStyle_c2P = new A.TextStyle(false, B.CupertinoDynamicColor_yWg, null, "CupertinoSystemText", null, null, 10, B.FontWeight_4, null, -0.24, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_dPI = new A.TextStyle(false, null, null, null, null, null, 14, B.FontWeight_3, null, -0.15, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_dXK = new A.TextStyle(false, B.CupertinoDynamicColor_b5s, null, "CupertinoSystemText", null, null, 17, null, null, -0.41, null, null, null, null, null, null, null, B.TextDecoration_0, null, null, null, null, null, null, null, null);
+    B.TextStyle_g9S = new A.TextStyle(true, B.Color_wst, null, null, null, null, 14, B.FontWeight_6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.TextOverflow_2);
     B.MaterialColor_nI1 = new A.MaterialColor(B.Map_tFKwC, 1, 0.9568627450980393, 0.2627450980392157, 0.21176470588235294, B.ColorSpace_0);
     B.TextStyle_njP = new A.TextStyle(true, B.MaterialColor_nI1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_pPb = new A.TextStyle(false, B.CupertinoDynamicColor_b5s, null, "CupertinoSystemText", null, null, 17, B.FontWeight_5, null, -0.41, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);

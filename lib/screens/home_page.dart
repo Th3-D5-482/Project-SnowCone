@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           currentIndex: index,
-          selectedFontSize: 16,
+          selectedFontSize: 14,
           unselectedFontSize: 14,
           iconSize: 28,
           onTap: (value) => setState(() {
@@ -102,7 +102,7 @@ class _HomeViewState extends State<HomeView> {
             return Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: horizontalPadding,
-                vertical: 8,
+                vertical: kIsWeb ? 16 : 8,
               ),
               child: StreamBuilder(
                 stream: getConitnueListening('Albums'),
@@ -122,12 +122,12 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             radius: 20,
                           ),
-                          const SizedBox(width: 12),
+                          const SizedBox(width: 8),
                           Text(
                             showGreeting ? getGretting() : "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -164,7 +164,7 @@ class _HomeViewState extends State<HomeView> {
                               aspectRatio = 5;
                             } else {
                               crossAxisCount = 2;
-                              aspectRatio = 2.5;
+                              aspectRatio = 2.8;
                             }
                           }
 
@@ -175,8 +175,8 @@ class _HomeViewState extends State<HomeView> {
                                 SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: crossAxisCount,
                                   childAspectRatio: aspectRatio,
-                                  crossAxisSpacing: 12,
-                                  mainAxisSpacing: 12,
+                                  crossAxisSpacing: 1,
+                                  mainAxisSpacing: 1,
                                 ),
                             itemCount: musica.length,
                             itemBuilder: (context, index) {
@@ -189,12 +189,12 @@ class _HomeViewState extends State<HomeView> {
                                 ),
                                 color: const Color.fromARGB(255, 30, 30, 30),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(8),
+                                  padding: const EdgeInsets.only(right: 16),
                                   child: Row(
                                     children: [
                                       Image.network(
                                         song['image']!,
-                                        width: 80,
+                                        width: 60,
                                         height: 100,
                                         fit: BoxFit.cover,
                                       ),
@@ -205,7 +205,7 @@ class _HomeViewState extends State<HomeView> {
                                           style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                           maxLines: 2,
