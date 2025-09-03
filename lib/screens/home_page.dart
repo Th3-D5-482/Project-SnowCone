@@ -69,6 +69,20 @@ class _HomeViewState extends State<HomeView> {
     return 'Good evening';
   }
 
+  bool showGreeting = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5), () {
+      if (mounted) {
+        setState(() {
+          showGreeting = false;
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -93,24 +107,6 @@ class _HomeViewState extends State<HomeView> {
               child: StreamBuilder(
                 stream: getConitnueListening('Albums'),
                 builder: (context, asyncSnapshot) {
-                  if (asyncSnapshot.connectionState ==
-                      ConnectionState.waiting) {
-                    return SizedBox(
-                      height: MediaQuery.of(context).size.height - 100,
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                    );
-                  } else if (asyncSnapshot.hasError) {
-                    return Center(
-                      child: Text(
-                        'Error: ${asyncSnapshot.error}',
-                        style: const TextStyle(color: Colors.red),
-                      ),
-                    );
-                  }
                   final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
                       .toList();
@@ -124,37 +120,16 @@ class _HomeViewState extends State<HomeView> {
                             backgroundImage: AssetImage(
                               'assets/images/random/Th3_D5_482.jpeg',
                             ),
-                            radius: 30,
+                            radius: 20,
                           ),
                           const SizedBox(width: 12),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                getGretting(),
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'Th3-D5-482',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.settings_sharp,
-                              color: Colors.grey,
+                          Text(
+                            showGreeting ? getGretting() : "SnowCone",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
                             ),
-                            onPressed: () {},
                           ),
                         ],
                       ),
