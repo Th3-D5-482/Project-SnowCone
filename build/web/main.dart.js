@@ -201573,7 +201573,7 @@
       t4 = A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, B.AlwaysStoppedAnimation_ErT, 1 / 0));
       t3 = t3.$index(topMix, "name");
       t3.toString;
-      return A.SizedBox$(new A.Padding(B.EdgeInsets_0_0_16_0, A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([t4, new A.Padding(B.EdgeInsets_16_16_16_16, A.Align$(B.Alignment_0_0, A.Text$(A._asString(t3), _null, _null, _null, B.TextStyle_uM5, _null, _null), _null, _null, _null), _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), _null), 130, 190);
+      return A.SizedBox$(new A.Padding(B.EdgeInsets_0_0_16_0, A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([t4, new A.Padding(B.EdgeInsets_16_16_16_16, A.Align$(B.Alignment_0_0, A.Text$(A._asString(t3), _null, _null, _null, B.TextStyle_uM5, _null, _null), _null, _null, _null), _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), _null), 130, 175);
     },
     $signature: 650
   };
@@ -201637,7 +201637,7 @@
       t2 = A.BorderRadius$circular(8);
       t3 = J.$index$asx(recentSong, "image");
       t3.toString;
-      return new A.Padding(new A.EdgeInsets(0, 0, 16, 0), A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t3), B.BoxFit_2, 1 / 0, null, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 180, 180), null);
+      return new A.Padding(new A.EdgeInsets(0, 0, 16, 0), A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t3), B.BoxFit_2, 1 / 0, null, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 180, 160), null);
     },
     $signature: 654
   };

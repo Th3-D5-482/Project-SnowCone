@@ -323,7 +323,7 @@ class _HomeViewState extends State<HomeView> {
                                         itemBuilder: (context, index) {
                                           final topMix = topMixes[index];
                                           return SizedBox(
-                                            width: 190,
+                                            width: 175,
                                             height: 130,
                                             child: Padding(
                                               padding: const EdgeInsets.only(
@@ -474,7 +474,7 @@ class _HomeViewState extends State<HomeView> {
                                           return Padding(
                                             padding: EdgeInsets.only(right: 16),
                                             child: SizedBox(
-                                              width: 180,
+                                              width: 160,
                                               height: 180,
                                               child: Card(
                                                 color: const Color.fromARGB(
