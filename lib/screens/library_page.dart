@@ -19,11 +19,11 @@ class _LibraryPageState extends State<LibraryPage> {
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
               bool isDesktop =
-                  kIsWeb ||
+                  kIsWeb &&
                   (defaultTargetPlatform == TargetPlatform.macOS ||
-                          defaultTargetPlatform == TargetPlatform.windows ||
-                          defaultTargetPlatform == TargetPlatform.linux) &&
-                      screenWidth > 1000;
+                      defaultTargetPlatform == TargetPlatform.windows ||
+                      defaultTargetPlatform == TargetPlatform.linux) &&
+                  screenWidth > 1000;
               double horizontalPadding = isDesktop ? 200 : 16;
               return Padding(
                 padding: EdgeInsets.symmetric(
@@ -61,7 +61,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.add_rounded,
-                            size: 34,
+                            size: 32,
                             color: Colors.grey,
                           ),
                         ),
@@ -75,7 +75,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
-                              radius: 80,
+                              radius: 60,
                               backgroundImage: AssetImage(
                                 'assets/images/random/library.png',
                               ),
@@ -84,7 +84,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Your library is empty!',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -93,7 +93,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Add music to make it yours.',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 14,
                                 color: Colors.grey,
                               ),
                             ),

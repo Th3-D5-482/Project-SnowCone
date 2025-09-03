@@ -92,11 +92,11 @@ class _HomeViewState extends State<HomeView> {
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
             bool isDesktop =
-                kIsWeb ||
+                kIsWeb &&
                 (defaultTargetPlatform == TargetPlatform.macOS ||
-                        defaultTargetPlatform == TargetPlatform.windows ||
-                        defaultTargetPlatform == TargetPlatform.linux) &&
-                    screenWidth > 1000;
+                    defaultTargetPlatform == TargetPlatform.windows ||
+                    defaultTargetPlatform == TargetPlatform.linux) &&
+                screenWidth > 1000;
             // ignore: unused_local_variable
             double horizontalPadding = isDesktop ? 200 : 16;
             return Padding(
@@ -133,7 +133,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 20),
                       LayoutBuilder(
                         builder: (context, constraints) {
                           double screenWidth = constraints.maxWidth;
@@ -155,7 +155,7 @@ class _HomeViewState extends State<HomeView> {
                               aspectRatio = 5;
                             } else {
                               crossAxisCount = 2;
-                              aspectRatio = 2.8;
+                              aspectRatio = 2.9;
                             }
                           }
 

@@ -41,11 +41,11 @@ class _SignUpState extends State<SignUp> {
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
               bool isDesktop =
-                  kIsWeb ||
+                  kIsWeb &&
                   (defaultTargetPlatform == TargetPlatform.macOS ||
-                          defaultTargetPlatform == TargetPlatform.windows ||
-                          defaultTargetPlatform == TargetPlatform.linux) &&
-                      screenWidth > 1000;
+                      defaultTargetPlatform == TargetPlatform.windows ||
+                      defaultTargetPlatform == TargetPlatform.linux) &&
+                  screenWidth > 1000;
               double horizontalPadding = screenWidth > 1000 && isDesktop
                   ? 200
                   : 16;
