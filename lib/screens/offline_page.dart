@@ -28,14 +28,14 @@ class OfflinePage extends StatelessWidget {
                           'assets/images/random/no_wifi.png',
                         ),
                         backgroundColor: Colors.transparent,
-                        radius: 110,
+                        radius: 90,
                       ),
                       SizedBox(height: 20),
                       Text(
                         'Sorry mate, you\'re offline!',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
