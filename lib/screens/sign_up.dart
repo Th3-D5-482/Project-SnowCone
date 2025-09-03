@@ -52,7 +52,7 @@ class _SignUpState extends State<SignUp> {
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: 8,
+                  vertical: kIsWeb ? 16 : 8,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

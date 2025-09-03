@@ -55,7 +55,7 @@ class _LogInState extends State<LogIn> {
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: 8,
+                  vertical: kIsWeb ? 16 : 8,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
