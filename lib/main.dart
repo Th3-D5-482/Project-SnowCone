@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.black,
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
             backgroundColor: Colors.transparent,
-            selectedItemColor: Colors.blueGrey,
+            selectedItemColor: Colors.white,
             unselectedItemColor: Colors.grey,
             showSelectedLabels: true,
             showUnselectedLabels: true,
@@ -89,7 +89,7 @@ class ConnectivityWrapper extends StatelessWidget {
     if (kIsWeb) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const MyApp(),  
+        home: const MyApp(),
       );
     } else {
       return StreamBuilder<List<ConnectivityResult>>(

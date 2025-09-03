@@ -133,15 +133,6 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20),
-                      const Text(
-                        'Continue listening',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
                       const SizedBox(height: 10),
                       LayoutBuilder(
                         builder: (context, constraints) {
@@ -192,11 +183,15 @@ class _HomeViewState extends State<HomeView> {
                                   padding: const EdgeInsets.only(right: 16),
                                   child: Row(
                                     children: [
-                                      Image.network(
-                                        song['image']!,
-                                        width: 60,
-                                        height: 100,
-                                        fit: BoxFit.cover,
+                                      ClipRRect(
+                                        borderRadius:
+                                            BorderRadiusGeometry.circular(8),
+                                        child: Image.network(
+                                          song['image']!,
+                                          width: 60,
+                                          height: 100,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                       const SizedBox(width: 10),
                                       Expanded(
