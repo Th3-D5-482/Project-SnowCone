@@ -89,7 +89,7 @@ class _SignUpState extends State<SignUp> {
                     Text(
                       'Sign Up',
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -240,7 +240,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                       child: Text('Sign Up'),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 8),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

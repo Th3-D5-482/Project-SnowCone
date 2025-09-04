@@ -93,7 +93,7 @@ class _LogInState extends State<LogIn> {
                     Text(
                       'Log In',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),

@@ -201708,7 +201708,7 @@
         t3 = A.SizedBox$(_null, 20, _null),
         t4 = A.Text$('"Songs. Anywhere. Anytime."', _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
         t5 = A.SizedBox$(_null, 20, _null),
-        t6 = A.Text$("Log In", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
+        t6 = A.Text$("Log In", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 26, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
         t7 = A.SizedBox$(_null, 30, _null),
         t8 = this.$this,
         t9 = t8.___LogInState_email_A;
@@ -202120,7 +202120,7 @@
         t3 = A.SizedBox$(_null, 20, _null),
         t4 = A.Text$('\u201cSongs. Anywhere. Anytime."', _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
         t5 = A.SizedBox$(_null, 20, _null),
-        t6 = A.Text$("Sign Up", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
+        t6 = A.Text$("Sign Up", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 26, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
         t7 = A.SizedBox$(_null, 30, _null),
         t8 = this.$this,
         t9 = t8.___SignUpState_email_A;
@@ -202140,7 +202140,7 @@
       t13 = A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
       t13 = A.ElevatedButton_styleFrom(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), B.Color_wst, _null, _null, _null, _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(16), B.BorderSide_Ah5), _null, _null, _null, t13, _null);
       t14 = type$.JSArray_Widget;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t1, t2, t3, t4, t5, t6, t7, t10, t9, t11, t12, A.ElevatedButton$(A.Text$("Sign Up", _null, _null, _null, _null, _null, _null), new A._SignUpState_build__closure2(t8, context), t13), A.SizedBox$(_null, 20, _null), A.Row$(A._setArrayType([A.Text$("Have an account?", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.TextButton$(A.Text$("Log In", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._SignUpState_build__closure3(context), _null)], t14), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0)], t14), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t1, t2, t3, t4, t5, t6, t7, t10, t9, t11, t12, A.ElevatedButton$(A.Text$("Sign Up", _null, _null, _null, _null, _null, _null), new A._SignUpState_build__closure2(t8, context), t13), A.SizedBox$(_null, 8, _null), A.Row$(A._setArrayType([A.Text$("Have an account?", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.TextButton$(A.Text$("Log In", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._SignUpState_build__closure3(context), _null)], t14), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0)], t14), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 67
   };
