@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           currentIndex: index,
-          selectedFontSize: 16,
+          selectedFontSize: 14,
           unselectedFontSize: 14,
           iconSize: 28,
           onTap: (value) => setState(() {
@@ -127,7 +127,7 @@ class _HomeViewState extends State<HomeView> {
                             showGreeting ? getGretting() : "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -180,7 +180,7 @@ class _HomeViewState extends State<HomeView> {
                                 ),
                                 color: const Color.fromARGB(255, 30, 30, 30),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(right: 16),
+                                  padding: const EdgeInsets.only(right: 8),
                                   child: Row(
                                     children: [
                                       ClipRRect(
@@ -200,7 +200,7 @@ class _HomeViewState extends State<HomeView> {
                                           style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                           maxLines: 2,
