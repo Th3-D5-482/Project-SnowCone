@@ -93,7 +93,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Add music to make it yours.',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 16,
                                 color: Colors.grey,
                               ),
                             ),
