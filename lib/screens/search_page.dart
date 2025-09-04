@@ -79,7 +79,7 @@ class _SearchPageState extends State<SearchPage> {
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Search songs, artists, chords or tabs',
-                        hintStyle: TextStyle(color: Colors.black, fontSize: 14),
+                        hintStyle: TextStyle(color: Colors.black),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide(color: Colors.black, width: 2),
@@ -103,7 +103,7 @@ class _SearchPageState extends State<SearchPage> {
                     Text(
                       'Your top genres',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -115,7 +115,7 @@ class _SearchPageState extends State<SearchPage> {
                         int crossAxisCount;
                         double aspectRatio;
                         final double topOffSet =
-                            (orientation == Orientation.landscape) ? 40 : 30;
+                            (orientation == Orientation.landscape) ? 30 : 15;
                         final double leftOffSet =
                             (orientation == Orientation.landscape)
                             ? kIsWeb
@@ -174,7 +174,7 @@ class _SearchPageState extends State<SearchPage> {
                                             child: Text(
                                               genres['name']!,
                                               style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: 16,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.white,
                                               ),
@@ -185,7 +185,7 @@ class _SearchPageState extends State<SearchPage> {
                                           top: topOffSet,
                                           left: leftOffSet,
                                           child: Transform.rotate(
-                                            angle: 0.5,
+                                            angle: 0.4,
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadiusGeometry.circular(
@@ -213,7 +213,7 @@ class _SearchPageState extends State<SearchPage> {
                     Text(
                       'Browse all',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -287,7 +287,7 @@ class _SearchPageState extends State<SearchPage> {
                                               child: Text(
                                                 browseAll['name'],
                                                 style: TextStyle(
-                                                  fontSize: 14,
+                                                  fontSize: 16,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white,
                                                 ),
