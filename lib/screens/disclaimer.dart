@@ -42,13 +42,13 @@ class _DisclaimerState extends State<Disclaimer> {
               SizedBox(height: 20),
               Text(
                 'Disclaimer',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
                 'This app is a personal learning project.\nNot for commercial use or distribution.\nAll content is curated respectfully.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.grey, height: 1.5),
+                style: TextStyle(fontSize: 18, color: Colors.grey, height: 1.5),
               ),
             ],
           ),
