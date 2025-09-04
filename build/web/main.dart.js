@@ -201419,7 +201419,7 @@
     },
     initState$0() {
       this.super$State$initState();
-      A.Future_Future$delayed(B.Duration_10000000, new A._HomeViewState_initState_closure(this), type$.Null);
+      A.Future_Future$delayed(B.Duration_8000000, new A._HomeViewState_initState_closure(this), type$.Null);
     },
     build$1(context) {
       return A.SafeArea$(true, A.SingleChildScrollView$(A.LayoutBuilder$(new A._HomeViewState_build_closure(this)), B.Axis_1), true);
@@ -209589,7 +209589,6 @@
     B.Duration_0 = new A.Duration(0);
     B.Duration_100000 = new A.Duration(100000);
     B.Duration_1000000 = new A.Duration(1000000);
-    B.Duration_10000000 = new A.Duration(10000000);
     B.Duration_120000 = new A.Duration(120000);
     B.Duration_1200000 = new A.Duration(1200000);
     B.Duration_125000 = new A.Duration(125000);
@@ -209619,6 +209618,7 @@
     B.Duration_70000 = new A.Duration(70000);
     B.Duration_75000 = new A.Duration(75000);
     B.Duration_800000 = new A.Duration(800000);
+    B.Duration_8000000 = new A.Duration(8000000);
     B.Duration_m38000 = new A.Duration(-38000);
     B.DynamicSchemeVariant_0 = new A.DynamicSchemeVariant(0, "tonalSpot");
     B.EdgeInsetsDirectional_0_4_0_4 = new A.EdgeInsetsDirectional(0, 4, 0, 4);

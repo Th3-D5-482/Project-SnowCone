@@ -35,7 +35,7 @@ class OfflinePage extends StatelessWidget {
                         'Sorry mate, you\'re offline!',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
