@@ -188,7 +188,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'Project',
                               style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 26,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -196,7 +196,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'SnowCone',
                               style: TextStyle(
-                                fontSize: 32,
+                                fontSize: 28,
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -210,7 +210,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'Explore your favorite',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.grey,
                               ),
                             ),
@@ -218,13 +218,14 @@ class Welcome extends StatelessWidget {
                             Text(
                               'songs',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 20,
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
+                        SizedBox(height: 5),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -232,7 +233,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'Master every',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.grey,
                               ),
                             ),
@@ -240,13 +241,14 @@ class Welcome extends StatelessWidget {
                             Text(
                               'chord',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 20,
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
+                        SizedBox(height: 5),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -254,7 +256,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'Play with',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.grey,
                               ),
                             ),
@@ -262,7 +264,7 @@ class Welcome extends StatelessWidget {
                             Text(
                               'confidence',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 20,
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.bold,
                               ),

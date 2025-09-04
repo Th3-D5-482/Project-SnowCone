@@ -201419,7 +201419,7 @@
     },
     initState$0() {
       this.super$State$initState();
-      A.Future_Future$delayed(B.Duration_5000000, new A._HomeViewState_initState_closure(this), type$.Null);
+      A.Future_Future$delayed(B.Duration_10000000, new A._HomeViewState_initState_closure(this), type$.Null);
     },
     build$1(context) {
       return A.SafeArea$(true, A.SingleChildScrollView$(A.LayoutBuilder$(new A._HomeViewState_build_closure(this)), B.Axis_1), true);
@@ -202423,14 +202423,16 @@
       } else {
         t1 = A.Image$asset("assets/images/random/welcome.png", _null, 1 / 0);
         t3 = A.SizedBox$(_null, 20, _null);
-        t4 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t4 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 26, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 28, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t5 = A.SizedBox$(_null, 30, _null);
-        t6 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-        t7 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-        t8 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-        t9 = A.SizedBox$(_null, 40, _null);
-        t10 = A.ElevatedButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
-        t2 = A.Column$(A._setArrayType([t1, t3, t4, t5, t6, t7, t8, t9, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure0(context), t10), _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        t6 = A.Row$(A._setArrayType([A.Text$(_s21_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("songs", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t7 = A.SizedBox$(_null, 5, _null);
+        t8 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s12_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$("chord", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t9 = A.SizedBox$(_null, 5, _null);
+        t10 = A.Row$(A._setArrayType([A.SizedBox$(_null, _null, 8), A.Text$(_s9_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s10_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
+        t11 = A.SizedBox$(_null, 40, _null);
+        t12 = A.ElevatedButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
+        t2 = A.Column$(A._setArrayType([t1, t3, t4, t5, t6, t7, t8, t9, t10, t11, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure0(context), t12), _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
         t1 = t2;
       }
       return t1;
@@ -209587,6 +209589,7 @@
     B.Duration_0 = new A.Duration(0);
     B.Duration_100000 = new A.Duration(100000);
     B.Duration_1000000 = new A.Duration(1000000);
+    B.Duration_10000000 = new A.Duration(10000000);
     B.Duration_120000 = new A.Duration(120000);
     B.Duration_1200000 = new A.Duration(1200000);
     B.Duration_125000 = new A.Duration(125000);
@@ -209612,7 +209615,6 @@
     B.Duration_45000 = new A.Duration(45000);
     B.Duration_50000 = new A.Duration(50000);
     B.Duration_500000 = new A.Duration(500000);
-    B.Duration_5000000 = new A.Duration(5000000);
     B.Duration_600000 = new A.Duration(600000);
     B.Duration_70000 = new A.Duration(70000);
     B.Duration_75000 = new A.Duration(75000);
