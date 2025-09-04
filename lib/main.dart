@@ -106,7 +106,7 @@ class ConnectivityWrapper extends StatelessWidget {
             ),
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: isConnected ? const MyApp() : OfflinePage(),
+              home: isConnected ? const OfflinePage() : OfflinePage(),
             ),
           );
         },
