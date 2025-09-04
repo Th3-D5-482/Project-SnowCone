@@ -47,13 +47,13 @@ class _SplashState extends State<Splash> {
                 children: [
                   Text(
                     'Project',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(width: 8.0),
                   Text(
                     'SnowCone',
                     style: TextStyle(
-                      fontSize: 32,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.blueGrey,
                     ),
@@ -64,7 +64,7 @@ class _SplashState extends State<Splash> {
               Text(
                 'The Last Project',
                 style: TextStyle(
-                  fontSize: 26,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
                 ),

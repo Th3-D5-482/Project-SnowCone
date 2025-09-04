@@ -42,7 +42,7 @@ class _DisclaimerState extends State<Disclaimer> {
               SizedBox(height: 20),
               Text(
                 'Disclaimer',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
