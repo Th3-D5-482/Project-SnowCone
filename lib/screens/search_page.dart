@@ -66,7 +66,7 @@ class _SearchPageState extends State<SearchPage> {
                         Text(
                           'Search',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -79,7 +79,7 @@ class _SearchPageState extends State<SearchPage> {
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Search songs, artists, chords or tabs',
-                        hintStyle: TextStyle(color: Colors.black),
+                        hintStyle: TextStyle(color: Colors.black, fontSize: 14),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide(
@@ -219,7 +219,7 @@ class _SearchPageState extends State<SearchPage> {
                     Text(
                       'Browse all',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -293,7 +293,7 @@ class _SearchPageState extends State<SearchPage> {
                                               child: Text(
                                                 browseAll['name'],
                                                 style: TextStyle(
-                                                  fontSize: 16,
+                                                  fontSize: 14,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white,
                                                 ),

@@ -49,7 +49,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Library',
                               style: TextStyle(
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -61,7 +61,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.add_rounded,
-                            size: 34,
+                            size: 32,
                             color: Colors.grey,
                           ),
                         ),
@@ -84,7 +84,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Your library is empty!',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -93,7 +93,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Add music to make it yours.',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 14,
                                 color: Colors.grey,
                               ),
                             ),
