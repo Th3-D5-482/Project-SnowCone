@@ -200,7 +200,7 @@ class _HomeViewState extends State<HomeView> {
                                           style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 14,
+                                            fontSize: 16,
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                           maxLines: 2,

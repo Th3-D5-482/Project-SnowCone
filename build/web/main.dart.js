@@ -201505,7 +201505,7 @@
       t4.toString;
       t4 = A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 100, _null, 60));
       t3 = t3.$index(song, "name");
-      return A.Card$(new A.Padding(B.EdgeInsets_0_0_16_0, A.Row$(A._setArrayType([t4, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t3 == null ? "" : t3), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
+      return A.Card$(new A.Padding(B.EdgeInsets_0_0_16_0, A.Row$(A._setArrayType([t4, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t3 == null ? "" : t3), 2, _null, _null, B.TextStyle_ari, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
     },
     $signature: 232
   };
@@ -211526,10 +211526,10 @@
     B.Shadow_eT9 = new A.Shadow(B.Color_vnR, B.Offset_0_0, 1);
     B.List_kDz = makeConstList([B.Shadow_eT9], type$.JSArray_Shadow);
     B.TextStyle_a5a = new A.TextStyle(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.List_kDz, null, null, null);
+    B.TextStyle_ari = new A.TextStyle(true, B.Color_wst, null, null, null, null, 16, B.FontWeight_6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.TextOverflow_2);
     B.TextStyle_c2P = new A.TextStyle(false, B.CupertinoDynamicColor_yWg, null, "CupertinoSystemText", null, null, 10, B.FontWeight_4, null, -0.24, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_dPI = new A.TextStyle(false, null, null, null, null, null, 14, B.FontWeight_3, null, -0.15, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_dXK = new A.TextStyle(false, B.CupertinoDynamicColor_b5s, null, "CupertinoSystemText", null, null, 17, null, null, -0.41, null, null, null, null, null, null, null, B.TextDecoration_0, null, null, null, null, null, null, null, null);
-    B.TextStyle_g9S = new A.TextStyle(true, B.Color_wst, null, null, null, null, 14, B.FontWeight_6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.TextOverflow_2);
     B.MaterialColor_nI1 = new A.MaterialColor(B.Map_tFKwC, 1, 0.9568627450980393, 0.2627450980392157, 0.21176470588235294, B.ColorSpace_0);
     B.TextStyle_njP = new A.TextStyle(true, B.MaterialColor_nI1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_pPb = new A.TextStyle(false, B.CupertinoDynamicColor_b5s, null, "CupertinoSystemText", null, null, 17, B.FontWeight_5, null, -0.41, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
