@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           currentIndex: index,
-          selectedFontSize: 14,
+          selectedFontSize: 16,
           unselectedFontSize: 14,
           iconSize: 28,
           onTap: (value) => setState(() {
@@ -127,7 +127,7 @@ class _HomeViewState extends State<HomeView> {
                             showGreeting ? getGretting() : "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

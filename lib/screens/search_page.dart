@@ -66,7 +66,7 @@ class _SearchPageState extends State<SearchPage> {
                         Text(
                           'Search',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),

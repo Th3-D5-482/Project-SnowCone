@@ -49,7 +49,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Library',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
