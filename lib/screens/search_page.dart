@@ -79,18 +79,24 @@ class _SearchPageState extends State<SearchPage> {
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Search songs, artists, chords or tabs',
-                        hintStyle: TextStyle(color: Colors.black),
+                        hintStyle: TextStyle(color: Colors.grey),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.black, width: 2),
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                            width: 2,
+                          ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.black, width: 2),
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                            width: 2,
+                          ),
                         ),
                         prefixIcon: Icon(
                           Icons.search_rounded,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                         filled: true,
                         fillColor: Colors.white,
