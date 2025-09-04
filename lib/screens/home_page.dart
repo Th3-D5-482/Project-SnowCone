@@ -122,7 +122,7 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             radius: 20,
                           ),
-                          const SizedBox(width: 8),
+                          const SizedBox(width: 12),
                           Text(
                             showGreeting ? getGretting() : "SnowCone",
                             style: TextStyle(

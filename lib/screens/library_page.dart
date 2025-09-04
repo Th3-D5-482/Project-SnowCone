@@ -61,7 +61,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.add_rounded,
-                            size: 32,
+                            size: 34,
                             color: Colors.grey,
                           ),
                         ),
@@ -75,7 +75,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
-                              radius: 60,
+                              radius: 80,
                               backgroundImage: AssetImage(
                                 'assets/images/random/library.png',
                               ),
@@ -84,7 +84,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Your library is empty!',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -93,7 +93,7 @@ class _LibraryPageState extends State<LibraryPage> {
                             Text(
                               'Add music to make it yours.',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 18,
                                 color: Colors.grey,
                               ),
                             ),

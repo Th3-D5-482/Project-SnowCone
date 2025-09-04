@@ -62,7 +62,7 @@ class _SearchPageState extends State<SearchPage> {
                           ),
                           radius: 20,
                         ),
-                        SizedBox(width: 8),
+                        SizedBox(width: 12),
                         Text(
                           'Search',
                           style: TextStyle(
