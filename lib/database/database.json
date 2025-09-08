@@ -100,33 +100,33 @@
   "TopMixes": [
     {
     "id": 0,
-    "name": "Praise & Power Mix",
+    "name": "Echo Praise",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/praise_and_power%20_mix.png?updatedAt=1755193009582"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1757359912115"
   },
   {
     "id": 1,
-    "name": "Worship & Wonder Mix",
+    "name": "Hearts United",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/worship_and_wonder_mix.png?updatedAt=1755193009580"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1757359057522"
   },
   {
     "id": 2,
-    "name": "Grace & Redemption Mix",
+    "name": "Upper Room",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/grace_and_redemption_mix.png?updatedAt=1755193009689"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1757359057275"
   },
   {
     "id": 3,
-    "name": "Revival & Fire Mix",
+    "name": "Kingdom Keys",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/revival_and_fire_mix.png?updatedAt=1755193009565"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1757359057614"
   },
   {
     "id": 4,
-    "name": "Reflect & Restore Mix",
+    "name": "Selah Sessions",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/reflection_and_surrender_mix.png?updatedAt=1755193009540"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1757359057215"
   }
   ],
   "TopGenres": [
