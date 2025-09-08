@@ -214,181 +214,126 @@ class _HomeViewState extends State<HomeView> {
                           );
                         },
                       ),
-                      // SizedBox(height: 20),
-                      // Text(
-                      //   'Your top mixes',
-                      //   style: TextStyle(
-                      //     color: Colors.white,
-                      //     fontSize: 20,
-                      //     fontWeight: FontWeight.bold,
-                      //   ),
-                      // ),
-                      // SizedBox(height: 10),
-                      // LayoutBuilder(
-                      //   builder: (context, constraints) {
-                      //     double screenWidth = constraints.maxWidth;
-                      //     return screenWidth > 1000 && kIsWeb && isDesktop
-                      //         ? FutureBuilder(
-                      //             future: getTopMixes('TopMixes'),
-                      //             builder: (context, asyncSnapshot) {
-                      //               final topMixes = asyncSnapshot.data ?? [];
-                      //               return Row(
-                      //                 mainAxisAlignment:
-                      //                     MainAxisAlignment.spaceBetween,
-                      //                 children: topMixes.map<Widget>((topMix) {
-                      //                   return SizedBox(
-                      //                     width: 190,
-                      //                     height: 130,
-                      //                     child: Card(
-                      //                       shape: RoundedRectangleBorder(
-                      //                         borderRadius:
-                      //                             BorderRadius.circular(8.0),
-                      //                       ),
-                      //                       color: const Color.fromARGB(
-                      //                         255,
-                      //                         30,
-                      //                         30,
-                      //                         30,
-                      //                       ),
-                      //                       child: Stack(
-                      //                         children: [
-                      //                           ClipRRect(
-                      //                             borderRadius:
-                      //                                 BorderRadiusGeometry.circular(
-                      //                                   8,
-                      //                                 ),
-                      //                             child: Image.network(
-                      //                               topMix['image']!,
-                      //                               fit: BoxFit.cover,
-                      //                               width: double.infinity,
-                      //                               height: double.infinity,
-                      //                               opacity:
-                      //                                   const AlwaysStoppedAnimation(
-                      //                                     0.5,
-                      //                                   ),
-                      //                             ),
-                      //                           ),
-                      //                           Padding(
-                      //                             padding: const EdgeInsets.all(
-                      //                               16.0,
-                      //                             ),
-                      //                             child: Align(
-                      //                               alignment: Alignment.center,
-                      //                               child: Text(
-                      //                                 topMix['name']!,
-                      //                                 style: const TextStyle(
-                      //                                   color: Colors.white,
-                      //                                   fontSize: 16,
-                      //                                   fontWeight:
-                      //                                       FontWeight.bold,
-                      //                                 ),
-                      //                               ),
-                      //                             ),
-                      //                           ),
-                      //                         ],
-                      //                       ),
-                      //                     ),
-                      //                   );
-                      //                 }).toList(),
-                      //               );
-                      //             },
-                      //           )
-                      //         : SizedBox(
-                      //             height: 130,
-                      //             width: double.infinity,
-                      //             child: FutureBuilder(
-                      //               future: getTopMixes('TopMixes'),
-                      //               builder: (context, asyncSnapshot) {
-                      //                 if (asyncSnapshot.hasError) {
-                      //                   return Center(
-                      //                     child: Text(
-                      //                       'Error: ${asyncSnapshot.error}',
-                      //                       style: const TextStyle(
-                      //                         color: Colors.red,
-                      //                       ),
-                      //                     ),
-                      //                   );
-                      //                 }
-                      //                 final topMixes = asyncSnapshot.data ?? [];
-                      //                 return ListView.builder(
-                      //                   itemCount: topMixes.length,
-                      //                   shrinkWrap: true,
-                      //                   physics: const BouncingScrollPhysics(),
-                      //                   scrollDirection: Axis.horizontal,
-                      //                   itemBuilder: (context, index) {
-                      //                     final topMix = topMixes[index];
-                      //                     return SizedBox(
-                      //                       width: 175,
-                      //                       height: 130,
-                      //                       child: Padding(
-                      //                         padding: const EdgeInsets.only(
-                      //                           right: 16.0,
-                      //                         ),
-                      //                         child: Card(
-                      //                           shape: RoundedRectangleBorder(
-                      //                             borderRadius:
-                      //                                 BorderRadius.circular(
-                      //                                   8.0,
-                      //                                 ),
-                      //                           ),
-                      //                           color: const Color.fromARGB(
-                      //                             255,
-                      //                             30,
-                      //                             30,
-                      //                             30,
-                      //                           ),
-                      //                           child: Stack(
-                      //                             children: [
-                      //                               ClipRRect(
-                      //                                 borderRadius:
-                      //                                     BorderRadiusGeometry.circular(
-                      //                                       8,
-                      //                                     ),
-                      //                                 child: Image.network(
-                      //                                   topMix['image']!,
-                      //                                   fit: BoxFit.cover,
-                      //                                   width: double.infinity,
-                      //                                   height: double.infinity,
-                      //                                   opacity:
-                      //                                       const AlwaysStoppedAnimation(
-                      //                                         0.5,
-                      //                                       ),
-                      //                                 ),
-                      //                               ),
-                      //                               Padding(
-                      //                                 padding:
-                      //                                     const EdgeInsets.all(
-                      //                                       16.0,
-                      //                                     ),
-                      //                                 child: Align(
-                      //                                   alignment:
-                      //                                       Alignment.center,
-                      //                                   child: Text(
-                      //                                     topMix['name']!,
-                      //                                     style:
-                      //                                         const TextStyle(
-                      //                                           color: Colors
-                      //                                               .white,
-                      //                                           fontSize: 16,
-                      //                                           fontWeight:
-                      //                                               FontWeight
-                      //                                                   .bold,
-                      //                                         ),
-                      //                                   ),
-                      //                                 ),
-                      //                               ),
-                      //                             ],
-                      //                           ),
-                      //                         ),
-                      //                       ),
-                      //                     );
-                      //                   },
-                      //                 );
-                      //               },
-                      //             ),
-                      //           );
-                      //   },
-                      // ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Your top mixes',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
+                          return screenWidth > 1000 && kIsWeb && isDesktop
+                              ? FutureBuilder(
+                                  future: getTopMixes('TopMixes'),
+                                  builder: (context, asyncSnapshot) {
+                                    final topMixes = asyncSnapshot.data ?? [];
+                                    return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: topMixes.map<Widget>((topMix) {
+                                        return SizedBox(
+                                          width: 190,
+                                          height: 130,
+                                          child: Card(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            color: const Color.fromARGB(
+                                              255,
+                                              30,
+                                              30,
+                                              30,
+                                            ),
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadiusGeometry.circular(
+                                                    8,
+                                                  ),
+                                              child: Image.network(
+                                                topMix['image']!,
+                                                fit: BoxFit.cover,
+                                                width: double.infinity,
+                                                height: double.infinity,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      }).toList(),
+                                    );
+                                  },
+                                )
+                              : SizedBox(
+                                  height: 170,
+                                  width: double.infinity,
+                                  child: FutureBuilder(
+                                    future: getTopMixes('TopMixes'),
+                                    builder: (context, asyncSnapshot) {
+                                      if (asyncSnapshot.hasError) {
+                                        return Center(
+                                          child: Text(
+                                            'Error: ${asyncSnapshot.error}',
+                                            style: const TextStyle(
+                                              color: Colors.red,
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      final topMixes = asyncSnapshot.data ?? [];
+                                      return ListView.builder(
+                                        itemCount: topMixes.length,
+                                        shrinkWrap: true,
+                                        physics: const BouncingScrollPhysics(),
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (context, index) {
+                                          final topMix = topMixes[index];
+                                          return SizedBox(
+                                            width: 170,
+                                            height: 170,
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                right: 8.0,
+                                              ),
+                                              child: Card(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    topMix['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                  ),
+                                );
+                        },
+                      ),
                       // SizedBox(height: 20),
                       // Text(
                       //   'Based on your recent listening',

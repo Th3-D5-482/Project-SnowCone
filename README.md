@@ -1,6 +1,6 @@
 # 🎵 Project SnowCone
 
-### 🔐 Code name: Project SnowCone (The Last Project)  
+### 🔐 Code name: Project SnowCone (The NextOfUs)  
 ### 👤 Created by: Th3_D5_482  
 
 ---
