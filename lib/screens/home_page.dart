@@ -71,17 +71,17 @@ class _HomeViewState extends State<HomeView> {
 
   bool showGreeting = true;
 
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 6), () {
-      if (mounted) {
-        setState(() {
-          showGreeting = false;
-        });
-      }
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   Future.delayed(const Duration(seconds: 8), () {
+  //     if (mounted) {
+  //       setState(() {
+  //         showGreeting = false;
+  //       });
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -107,6 +107,17 @@ class _HomeViewState extends State<HomeView> {
               child: StreamBuilder(
                 stream: getConitnueListening('Albums'),
                 builder: (context, asyncSnapshot) {
+                  if (asyncSnapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height - 150,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          color: Colors.blueGrey,
+                        ),
+                      ),
+                    );
+                  }
                   final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
                       .toList();
@@ -124,7 +135,8 @@ class _HomeViewState extends State<HomeView> {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            showGreeting ? getGretting() : "SnowCone",
+                            //showGreeting ? getGretting() : "SnowCone",
+                            "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -269,7 +281,7 @@ class _HomeViewState extends State<HomeView> {
                                   },
                                 )
                               : SizedBox(
-                                  height: 170,
+                                  height: 210,
                                   width: double.infinity,
                                   child: FutureBuilder(
                                     future: getTopMixes('TopMixes'),
@@ -292,39 +304,61 @@ class _HomeViewState extends State<HomeView> {
                                         scrollDirection: Axis.horizontal,
                                         itemBuilder: (context, index) {
                                           final topMix = topMixes[index];
-                                          return SizedBox(
-                                            width: 170,
-                                            height: 170,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                right: 8.0,
-                                              ),
-                                              child: Card(
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                        8.0,
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 8.0,
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                SizedBox(
+                                                  width: 170,
+                                                  height: 170,
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8.0,
+                                                          ),
+                                                    ),
+                                                    color: const Color.fromARGB(
+                                                      255,
+                                                      30,
+                                                      30,
+                                                      30,
+                                                    ),
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadiusGeometry.circular(
+                                                            8,
+                                                          ),
+                                                      child: Image.network(
+                                                        topMix['image']!,
+                                                        fit: BoxFit.cover,
+                                                        width: double.infinity,
+                                                        height: double.infinity,
                                                       ),
-                                                ),
-                                                color: const Color.fromARGB(
-                                                  255,
-                                                  30,
-                                                  30,
-                                                  30,
-                                                ),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadiusGeometry.circular(
-                                                        8,
-                                                      ),
-                                                  child: Image.network(
-                                                    topMix['image']!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.infinity,
-                                                    height: double.infinity,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                                SizedBox(height: 10),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                        left: 8.0,
+                                                      ),
+                                                  child: Text(
+                                                    topMix['name'],
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           );
                                         },
