@@ -74,7 +74,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 8), () {
+    Future.delayed(const Duration(seconds: 6), () {
       if (mounted) {
         setState(() {
           showGreeting = false;
