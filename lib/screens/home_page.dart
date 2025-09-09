@@ -310,7 +310,7 @@ class _HomeViewState extends State<HomeView> {
                                             ),
                                             child: Column(
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 SizedBox(
                                                   width: 170,
@@ -352,7 +352,7 @@ class _HomeViewState extends State<HomeView> {
                                                     topMix['name'],
                                                     style: TextStyle(
                                                       fontSize: 14,
-                                                      color: Colors.white,
+                                                      color: Colors.grey,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                     ),

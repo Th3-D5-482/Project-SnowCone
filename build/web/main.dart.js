@@ -201898,7 +201898,7 @@
       t3 = J.getInterceptor$asx(topMix);
       t4 = t3.$index(topMix, "image");
       t4.toString;
-      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 170, 170), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 170, 170), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 651
   };
