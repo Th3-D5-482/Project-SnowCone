@@ -69,20 +69,6 @@ class _HomeViewState extends State<HomeView> {
     return 'Good evening';
   }
 
-  bool showGreeting = true;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Future.delayed(const Duration(seconds: 8), () {
-  //     if (mounted) {
-  //       setState(() {
-  //         showGreeting = false;
-  //       });
-  //     }
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -135,7 +121,6 @@ class _HomeViewState extends State<HomeView> {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            //showGreeting ? getGretting() : "SnowCone",
                             "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
