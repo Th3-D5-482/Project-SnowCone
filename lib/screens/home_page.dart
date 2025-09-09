@@ -248,33 +248,55 @@ class _HomeViewState extends State<HomeView> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: topMixes.map<Widget>((topMix) {
-                                        return SizedBox(
-                                          width: 190,
-                                          height: 130,
-                                          child: Card(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                            color: const Color.fromARGB(
-                                              255,
-                                              30,
-                                              30,
-                                              30,
-                                            ),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadiusGeometry.circular(
-                                                    8,
+                                        return Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            SizedBox(
+                                              width: 190,
+                                              height: 130,
+                                              child: Card(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    topMix['image']!,
+                                                    fit: BoxFit.fill,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
                                                   ),
-                                              child: Image.network(
-                                                topMix['image']!,
-                                                fit: BoxFit.cover,
-                                                width: double.infinity,
-                                                height: double.infinity,
+                                                ),
                                               ),
                                             ),
-                                          ),
+                                            SizedBox(height: 10),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                left: 8.0,
+                                              ),
+                                              child: Text(
+                                                topMix['name'],
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         );
                                       }).toList(),
                                     );
