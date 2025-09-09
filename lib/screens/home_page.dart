@@ -187,7 +187,6 @@ class _HomeViewState extends State<HomeView> {
                                           song['image']!,
                                           width: 60,
                                           height: 100,
-                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                       const SizedBox(width: 10),
@@ -372,6 +371,93 @@ class _HomeViewState extends State<HomeView> {
                                       );
                                     },
                                   ),
+                                );
+                        },
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Artist',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          double screenWidth = constraints.maxWidth;
+                          return screenWidth > 1000 && kIsWeb && isDesktop
+                              ? StreamBuilder(
+                                  stream: getArtist('Artist'),
+                                  builder: (context, asyncSnapshot) {
+                                    final artists = asyncSnapshot.data ?? [];
+                                    return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: artists.map<Widget>((artist) {
+                                        return Column(
+                                          children: [
+                                            CircleAvatar(
+                                              radius: 80,
+                                              backgroundImage: NetworkImage(
+                                                artist['image'],
+                                              ),
+                                            ),
+                                            SizedBox(height: 10),
+                                            Text(
+                                              artist['name'],
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.grey,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        );
+                                      }).toList(),
+                                    );
+                                  },
+                                )
+                              : StreamBuilder(
+                                  stream: getArtist('Artist'),
+                                  builder: (context, asyncSnapshot) {
+                                    final artists = asyncSnapshot.data ?? [];
+                                    return SizedBox(
+                                      height: 210,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: artists.length,
+                                        itemBuilder: (context, index) {
+                                          final artist = artists[index];
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 16.0,
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                CircleAvatar(
+                                                  radius: 80,
+                                                  backgroundImage: NetworkImage(
+                                                    artist['image'],
+                                                  ),
+                                                ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  artist['name'],
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    );
+                                  },
                                 );
                         },
                       ),

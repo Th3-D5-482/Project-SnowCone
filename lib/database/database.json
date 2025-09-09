@@ -240,5 +240,32 @@
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
     "color": "#b2590d"
   }
+],
+"Artist" : [
+  {
+    "id": 0,
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
+    "name": "Hello World"
+  },
+  {
+    "id": 1,
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
+    "name": "Hello World"
+  },
+  {
+    "id": 2,
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
+    "name": "Hello World"
+  },
+  {
+    "id": 3,
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
+    "name": "Hello world"
+  },
+  {
+    "id": 4,
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
+    "name": "Hello world"
+  }
 ]
 }
