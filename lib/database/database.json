@@ -244,28 +244,28 @@
 "Artist" : [
   {
     "id": 0,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
-    "name": "Hello World"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/ethan_cole.png?updatedAt=1757447950108",
+    "name": "Ethan Cole"
   },
   {
     "id": 1,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
-    "name": "Hello World"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/lena_hart.png?updatedAt=1757447950200",
+    "name": "Lena Hart"
   },
   {
     "id": 2,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
-    "name": "Hello World"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/julian_marks.png?updatedAt=1757447949885",
+    "name": " Julian Marks"
   },
   {
     "id": 3,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
-    "name": "Hello world"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/sophie_vance.png?updatedAt=1757447949517",
+    "name": "Sophie Vance"
   },
   {
     "id": 4,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1757053777515",
-    "name": "Hello world"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/miles_bennett.png?updatedAt=1757447950095",
+    "name": "Miles Bennett"
   }
 ]
 }
