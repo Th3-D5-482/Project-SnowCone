@@ -69,6 +69,18 @@ class _HomeViewState extends State<HomeView> {
     return 'Good evening';
   }
 
+  bool isGreeting = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 8), () {
+      setState(() {
+        isGreeting = true;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -93,17 +105,6 @@ class _HomeViewState extends State<HomeView> {
               child: StreamBuilder(
                 stream: getConitnueListening('Albums'),
                 builder: (context, asyncSnapshot) {
-                  if (asyncSnapshot.connectionState ==
-                      ConnectionState.waiting) {
-                    return SizedBox(
-                      height: MediaQuery.of(context).size.height - 150,
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                    );
-                  }
                   final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
                       .toList();
@@ -121,7 +122,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            "SnowCone",
+                            isGreeting ? getGretting() : "SnowCone",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -137,7 +138,6 @@ class _HomeViewState extends State<HomeView> {
                           final orientation = MediaQuery.of(
                             context,
                           ).orientation;
-
                           int crossAxisCount;
                           double aspectRatio;
                           if (orientation == Orientation.landscape) {
@@ -424,7 +424,7 @@ class _HomeViewState extends State<HomeView> {
                                   builder: (context, asyncSnapshot) {
                                     final artists = asyncSnapshot.data ?? [];
                                     return SizedBox(
-                                      height: 200,
+                                      height: 190,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
                                         itemCount: artists.length,
@@ -437,7 +437,7 @@ class _HomeViewState extends State<HomeView> {
                                             child: Column(
                                               children: [
                                                 CircleAvatar(
-                                                  radius: 70,
+                                                  radius: 80,
                                                   backgroundImage: NetworkImage(
                                                     artist['image'],
                                                   ),
