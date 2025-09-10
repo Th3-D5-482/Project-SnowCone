@@ -432,7 +432,7 @@ class _HomeViewState extends State<HomeView> {
                                           final artist = artists[index];
                                           return Padding(
                                             padding: const EdgeInsets.only(
-                                              right: 16.0,
+                                              right: 8.0,
                                             ),
                                             child: Column(
                                               children: [
