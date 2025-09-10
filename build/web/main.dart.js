@@ -55127,38 +55127,80 @@
       return t1;
     },
     getTopMixes(encode) {
-      var $async$goto = 0,
-        $async$completer = A._makeAsyncAwaitCompleter(type$.List_dynamic),
-        $async$returnValue, decoded, respose;
       var $async$getTopMixes = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
-        if ($async$errorCode === 1)
-          return A._asyncRethrow($async$result, $async$completer);
+        switch ($async$errorCode) {
+          case 2:
+            $async$next = $async$nextWhenCanceled;
+            $async$goto = $async$next.pop();
+            break;
+          case 1:
+            $async$errorStack.push($async$result);
+            $async$goto = $async$handler;
+        }
         while (true)
           switch ($async$goto) {
             case 0:
               // Function start
-              $async$goto = 3;
-              return A._asyncAwait(A.get(A.Uri_parse(string$.https_ + encode + ".json")), $async$getTopMixes);
+              t1 = type$.dynamic, t2 = type$.List_dynamic, t3 = string$.https_ + encode + ".json";
             case 3:
+              // for condition
+              // trivial condition
+              $async$goto = 5;
+              return A._asyncStarHelper(A.get(A.Uri_parse(t3)), $async$getTopMixes, $async$controller);
+            case 5:
               // returning from await.
-              respose = $async$result;
-              if (respose.statusCode === 200) {
-                decoded = B.C_JsonCodec.decode$1(A.encodingForContentTypeHeader(A._contentTypeForHeaders(respose.headers)).decode$1(respose.bodyBytes));
-                if (type$.List_dynamic._is(decoded)) {
-                  $async$returnValue = decoded;
-                  // goto return
-                  $async$goto = 1;
-                  break;
-                } else
-                  throw A.wrapException(A.Exception_Exception("Failed to load data"));
-              } else
-                throw A.wrapException(A.Exception_Exception("Failed to load data"));
+              response = $async$result;
+              $async$goto = response.statusCode === 200 ? 6 : 8;
+              break;
+            case 6:
+              // then
+              decoded = B.C_JsonCodec.decode$1(A.encodingForContentTypeHeader(A._contentTypeForHeaders(response.headers)).decode$1(response.bodyBytes));
+              $async$goto = t2._is(decoded) ? 9 : 11;
+              break;
+            case 9:
+              // then
+              $async$goto = 12;
+              $async$nextWhenCanceled = [1];
+              return A._asyncStarHelper(A._IterationMarker_yieldSingle(decoded), $async$getTopMixes, $async$controller);
+            case 12:
+              // after yield
+              // goto join
+              $async$goto = 10;
+              break;
+            case 11:
+              // else
+              throw A.wrapException(A.Exception_Exception("Failed to load data"));
+            case 10:
+              // join
+              // goto join
+              $async$goto = 7;
+              break;
+            case 8:
+              // else
+              throw A.wrapException(A.Exception_Exception("Failed to load data"));
+            case 7:
+              // join
+              $async$goto = 13;
+              return A._asyncStarHelper(A.Future_Future$delayed(new A.Duration(1000000), null, t1), $async$getTopMixes, $async$controller);
+            case 13:
+              // returning from await.
+              // goto for condition
+              $async$goto = 3;
+              break;
+            case 4:
+              // after for
             case 1:
               // return
-              return A._asyncReturn($async$returnValue, $async$completer);
+              return A._asyncStarHelper(null, 0, $async$controller);
+            case 2:
+              // rethrow
+              return A._asyncStarHelper($async$errorStack.at(-1), 1, $async$controller);
           }
       });
-      return A._asyncStartSync($async$getTopMixes, $async$completer);
+      var $async$goto = 0,
+        $async$controller = A._makeAsyncStarStreamController($async$getTopMixes, type$.List_dynamic),
+        $async$nextWhenCanceled, $async$handler = 2, $async$errorStack = [], $async$next = [], t1, t2, t3, response, decoded;
+      return A._streamOfController($async$controller);
     },
     getConitnueListening(encode) {
       var $async$getConitnueListening = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
@@ -201959,14 +202001,15 @@
       else
         t1 = false;
       t2 = type$.List_dynamic;
-      return t1 ? A.FutureBuilder$(new A._HomeViewState_build____closure1(), A.getTopMixes(_s8_), t2) : A.SizedBox$(A.FutureBuilder$(new A._HomeViewState_build____closure2(), A.getTopMixes(_s8_), t2), 210, 1 / 0);
+      return t1 ? A.StreamBuilder$(new A._HomeViewState_build____closure1(), A.getTopMixes(_s8_), t2) : A.SizedBox$(A.StreamBuilder$(new A._HomeViewState_build____closure2(), A.getTopMixes(_s8_), t2), 200, 1 / 0);
     },
     $signature: 647
   };
   A._HomeViewState_build____closure1.prototype = {
     call$2(context, asyncSnapshot) {
-      var t1,
-        topMixes = type$.AsyncSnapshot_List_dynamic._as(asyncSnapshot).data;
+      var topMixes, t1;
+      type$.BuildContext._as(context);
+      topMixes = type$.AsyncSnapshot_List_dynamic._as(asyncSnapshot).data;
       if (topMixes == null)
         topMixes = [];
       t1 = J.map$1$1$ax(topMixes, new A._HomeViewState_build_____closure2(), type$.Widget);
@@ -201990,6 +202033,7 @@
   A._HomeViewState_build____closure2.prototype = {
     call$2(context, asyncSnapshot) {
       var t1, topMixes, _null = null;
+      type$.BuildContext._as(context);
       type$.AsyncSnapshot_List_dynamic._as(asyncSnapshot);
       t1 = asyncSnapshot.error;
       if (t1 != null)
@@ -202011,7 +202055,7 @@
       t3 = J.getInterceptor$asx(topMix);
       t4 = t3.$index(topMix, "image");
       t4.toString;
-      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 170, 170), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 160, 160), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 166
   };
@@ -202055,7 +202099,7 @@
       artists = type$.AsyncSnapshot_List_dynamic._as(asyncSnapshot).data;
       if (artists == null)
         artists = [];
-      return A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(artists), J.get$length$asx(artists), null, B.Axis_0, false), 210, null);
+      return A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(artists), J.get$length$asx(artists), null, B.Axis_0, false), 200, null);
     },
     $signature: 128
   };
@@ -202065,7 +202109,7 @@
       type$.BuildContext._as(context);
       artist = J.$index$asx(this.artists, A._asInt(index));
       t1 = J.getInterceptor$asx(artist);
-      return new A.Padding(B.EdgeInsets_0_0_16_0, A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.NetworkImage(A._asString(t1.$index(artist, "image")), 1, _null, B.WebHtmlElementStrategy_0), _null, 80), A.SizedBox$(_null, 10, _null), A.Text$(A._asString(t1.$index(artist, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_0_0_16_0, A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.NetworkImage(A._asString(t1.$index(artist, "image")), 1, _null, B.WebHtmlElementStrategy_0), _null, 70), A.SizedBox$(_null, 10, _null), A.Text$(A._asString(t1.$index(artist, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 166
   };

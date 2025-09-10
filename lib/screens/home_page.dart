@@ -224,8 +224,8 @@ class _HomeViewState extends State<HomeView> {
                         builder: (context, constraints) {
                           double screenWidth = constraints.maxWidth;
                           return screenWidth > 1000 && kIsWeb && isDesktop
-                              ? FutureBuilder(
-                                  future: getTopMixes('TopMixes'),
+                              ? StreamBuilder(
+                                  stream: getTopMixes('TopMixes'),
                                   builder: (context, asyncSnapshot) {
                                     final topMixes = asyncSnapshot.data ?? [];
                                     return Row(
@@ -287,10 +287,10 @@ class _HomeViewState extends State<HomeView> {
                                   },
                                 )
                               : SizedBox(
-                                  height: 210,
+                                  height: 200,
                                   width: double.infinity,
-                                  child: FutureBuilder(
-                                    future: getTopMixes('TopMixes'),
+                                  child: StreamBuilder(
+                                    stream: getTopMixes('TopMixes'),
                                     builder: (context, asyncSnapshot) {
                                       if (asyncSnapshot.hasError) {
                                         return Center(
@@ -319,8 +319,8 @@ class _HomeViewState extends State<HomeView> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 SizedBox(
-                                                  width: 170,
-                                                  height: 170,
+                                                  width: 160,
+                                                  height: 160,
                                                   child: Card(
                                                     shape: RoundedRectangleBorder(
                                                       borderRadius:
@@ -424,7 +424,7 @@ class _HomeViewState extends State<HomeView> {
                                   builder: (context, asyncSnapshot) {
                                     final artists = asyncSnapshot.data ?? [];
                                     return SizedBox(
-                                      height: 210,
+                                      height: 200,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
                                         itemCount: artists.length,
@@ -437,7 +437,7 @@ class _HomeViewState extends State<HomeView> {
                                             child: Column(
                                               children: [
                                                 CircleAvatar(
-                                                  radius: 80,
+                                                  radius: 70,
                                                   backgroundImage: NetworkImage(
                                                     artist['image'],
                                                   ),
