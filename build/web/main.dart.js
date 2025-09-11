@@ -53191,7 +53191,7 @@
     },
     _HomeViewState: function _HomeViewState(t0) {
       var _ = this;
-      _.isGreeting = false;
+      _.isGreeting = true;
       _._widget = null;
       _._debugLifecycleState = t0;
       _._framework$_element = null;
@@ -201439,7 +201439,7 @@
   };
   A._HomeViewState_initState__closure.prototype = {
     call$0() {
-      this.$this.isGreeting = true;
+      this.$this.isGreeting = false;
     },
     $signature: 1
   };

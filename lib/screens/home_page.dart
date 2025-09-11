@@ -69,14 +69,14 @@ class _HomeViewState extends State<HomeView> {
     return 'Good evening';
   }
 
-  bool isGreeting = false;
+  bool isGreeting = true;
 
   @override
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 8), () {
       setState(() {
-        isGreeting = true;
+        isGreeting = false;
       });
     });
   }
