@@ -132,28 +132,28 @@
   "TopGenres": [
   {
     "id": 0,
-    "name": "HipHop",
+    "name": "Worship",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
     "color": "#cc0088"
   },
   {
     "id": 1,
-    "name": "Pop",
+    "name": "Praise",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
     "color": "#096f50"
   },
   {
     "id": 2,
-    "name": "Latin",
+    "name": "Gospel",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
     "color": "#7c00e0"
   },
   {
     "id": 3,
-    "name": "EDM",
+    "name": "Pop",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
     "color": "#203062"
@@ -200,42 +200,42 @@
 "BrowseAll" :[
   {
     "id": 0,
-    "name": "R&B",
+    "name": "Hyms",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
     "color": "#8c5eaa"
   },
   {
     "id": 1,
-    "name": "K-Pop",
+    "name": "Rock",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
     "color": "#096f50"
   },
   {
     "id": 2,
-    "name": "Rock",
+    "name": "HipHop",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
     "color": "#628c0d"
   },
   {
     "id": 3,
-    "name": "Country",
+    "name": "Indie",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
     "color": "#4e8095"
   },
   {
     "id": 4,
-    "name": "Classical",
+    "name": "Folk",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
     "color": "#cc0088"
   },
   {
     "id": 5,
-    "name": "Jazz",
+    "name": "Country",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
     "color": "#b2590d"

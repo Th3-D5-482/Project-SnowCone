@@ -212,7 +212,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Your top mixes',
+                        'Top mixes',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,

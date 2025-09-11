@@ -107,7 +107,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Your top genres',
+                      'Top genres',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
