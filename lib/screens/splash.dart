@@ -62,7 +62,7 @@ class _SplashState extends State<Splash> {
               ),
               SizedBox(height: 10),
               Text(
-                'The NextOfUs',
+                'The Last Project',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
