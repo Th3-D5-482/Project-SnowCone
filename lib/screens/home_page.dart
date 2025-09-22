@@ -183,10 +183,9 @@ class _HomeViewState extends State<HomeView> {
                                       ClipRRect(
                                         borderRadius:
                                             BorderRadiusGeometry.circular(8),
-                                        child: Image.network(
-                                          song['image']!,
-                                          width: 60,
-                                          height: 100,
+                                        child: Image.asset(
+                                          'assets/images/album/demo.png',
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                       const SizedBox(width: 10),
