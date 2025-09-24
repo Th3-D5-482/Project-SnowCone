@@ -45423,10 +45423,10 @@
         t1 = A.ResizeImage_resizeIfNeeded(_null, _null, new A.NetworkImage(src, 1, _null, B.WebHtmlElementStrategy_0));
       return new A.Image(t1, width, height, fit, _null);
     },
-    Image$asset($name, fit, height, width) {
+    Image$asset($name, height, width) {
       var _null = null,
         t1 = A.ResizeImage_resizeIfNeeded(_null, _null, new A.AssetImage($name, _null, _null));
-      return new A.Image(t1, width, height, fit, _null);
+      return new A.Image(t1, width, height, _null, _null);
     },
     Image: function Image(t0, t1, t2, t3, t4) {
       var _ = this;
@@ -201680,9 +201680,10 @@
         return A.ioore(t1, index);
       song = t1[index];
       t1 = A.BorderRadius$circular(8);
-      t2 = A.ClipRRect$(A.BorderRadius$circular(8), A.Image$asset("assets/images/album/demo.png", B.BoxFit_2, _null, _null));
-      t3 = J.$index$asx(song, "name");
-      return A.Card$(new A.Padding(B.EdgeInsets_0_0_8_0, A.Row$(A._setArrayType([t2, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t3 == null ? "" : t3), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
+      t2 = J.getInterceptor$asx(song);
+      t3 = A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(song, "image")), B.BoxFit_2, _null, _null));
+      t2 = t2.$index(song, "name");
+      return A.Card$(new A.Padding(B.EdgeInsets_0_0_8_0, A.Row$(A._setArrayType([t3, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t2 == null ? "" : t2), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
     },
     $signature: 233
   };
@@ -202560,7 +202561,7 @@
       if (constraints.maxWidth > 1000) {
         A.debugCheckHasMediaQuery(context);
         t2 = A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data;
-        t3 = A.ClipRRect$(A.BorderRadius$circular(32), A.Image$asset("assets/images/random/welcome2.png", _null, 450, _null));
+        t3 = A.ClipRRect$(A.BorderRadius$circular(32), A.Image$asset("assets/images/random/welcome2.png", 450, _null));
         t4 = A.SizedBox$(_null, _null, 50);
         t5 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 30, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 32, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t6 = A.SizedBox$(_null, 50, _null);
@@ -202574,7 +202575,7 @@
         t2 = A.SizedBox$(A.Row$(A._setArrayType([t3, t4, A.Column$(A._setArrayType([t5, t6, t7, t8, t9, t10, t11, t12, new A.Padding(B.EdgeInsets_0_0_0_24, A.ElevatedButton$(A.Text$(_s11_, _null, _null, _null, _null, _null, _null), new A.Welcome_build__closure(context), t13), _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0), t2.size._dy, _null);
         t1 = t2;
       } else {
-        t2 = A.Image$asset("assets/images/random/welcome.png", _null, _null, 1 / 0);
+        t2 = A.Image$asset("assets/images/random/welcome.png", _null, 1 / 0);
         t3 = A.SizedBox$(_null, 20, _null);
         t4 = A.Row$(A._setArrayType([A.Text$("Project", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 26, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, _null, 8), A.Text$(_s8_, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 28, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
         t5 = A.SizedBox$(_null, 30, _null);

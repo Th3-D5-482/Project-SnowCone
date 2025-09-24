@@ -183,8 +183,8 @@ class _HomeViewState extends State<HomeView> {
                                       ClipRRect(
                                         borderRadius:
                                             BorderRadiusGeometry.circular(8),
-                                        child: Image.asset(
-                                          'assets/images/album/demo.png',
+                                        child: Image.network(
+                                          song['image'],
                                           fit: BoxFit.cover,
                                         ),
                                       ),
