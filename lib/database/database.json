@@ -244,27 +244,27 @@
 "Artist" : [
   {
     "id": 0,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_music.png?updatedAt=1758823002325",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
     "name": "Elevant Worship"
   },
   {
     "id": 1,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758823002664",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
     "name": "Hillsong United"
   },
   {
     "id": 2,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758823002460",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
     "name": "Bethel Music"
   },
   {
     "id": 3,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758823002849",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
     "name": "Hillsong Worship"
   },
   {
     "id": 4,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetdshakers.png?updatedAt=1758823002462",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758826282029",
     "name": "Platnetshakers"
   }
 ]

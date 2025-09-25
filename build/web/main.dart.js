@@ -201641,7 +201641,7 @@
       t1 = t1.isGreeting ? t1.getGretting$0() : "SnowCone";
       t2 = type$.JSArray_Widget;
       t3 = this.isDesktop;
-      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_m7o, B.SizedBox_12_null_null_null, A.Text$(t1, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure0(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure1(t3)), A.SizedBox$(_null, 20, _null), A.Text$("Artist", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 20, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure2(t3))], t2), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
+      return A.Column$(A._setArrayType([A.Row$(A._setArrayType([B.CircleAvatar_m7o, B.SizedBox_12_null_null_null, A.Text$(t1, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), B.SizedBox_null_20_null_null, A.LayoutBuilder$(new A._HomeViewState_build___closure0(musica)), A.SizedBox$(_null, 20, _null), A.Text$("Top mixes", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 10, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure1(t3)), A.SizedBox$(_null, 20, _null), A.Text$("Artists", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.SizedBox$(_null, 20, _null), A.LayoutBuilder$(new A._HomeViewState_build___closure2(t3))], t2), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
     $signature: 642
   };
@@ -201804,7 +201804,7 @@
       type$.BuildContext._as(context);
       artist = J.$index$asx(this.artists, A._asInt(index));
       t1 = J.getInterceptor$asx(artist);
-      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.NetworkImage(A._asString(t1.$index(artist, "image")), 1, _null, B.WebHtmlElementStrategy_0), _null, 80), A.SizedBox$(_null, 10, _null), A.Text$(A._asString(t1.$index(artist, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_0_0_16_0, A.Column$(A._setArrayType([A.CircleAvatar$(_null, new A.NetworkImage(A._asString(t1.$index(artist, "image")), 1, _null, B.WebHtmlElementStrategy_0), _null, 80), A.SizedBox$(_null, 10, _null), A.Text$(A._asString(t1.$index(artist, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 236
   };
@@ -209783,6 +209783,7 @@
     B.EdgeInsets_0_0_0_0 = new A.EdgeInsets(0, 0, 0, 0);
     B.EdgeInsets_0_0_0_14 = new A.EdgeInsets(0, 0, 0, 14);
     B.EdgeInsets_0_0_0_24 = new A.EdgeInsets(0, 0, 0, 24);
+    B.EdgeInsets_0_0_16_0 = new A.EdgeInsets(0, 0, 16, 0);
     B.EdgeInsets_0_0_8_0 = new A.EdgeInsets(0, 0, 8, 0);
     B.EdgeInsets_0_14_0_14 = new A.EdgeInsets(0, 14, 0, 14);
     B.EdgeInsets_12_8_12_8 = new A.EdgeInsets(12, 8, 12, 8);

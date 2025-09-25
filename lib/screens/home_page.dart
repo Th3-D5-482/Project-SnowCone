@@ -375,7 +375,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Artist',
+                        'Artists',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -431,7 +431,7 @@ class _HomeViewState extends State<HomeView> {
                                           final artist = artists[index];
                                           return Padding(
                                             padding: const EdgeInsets.only(
-                                              right: 8.0,
+                                              right: 16.0,
                                             ),
                                             child: Column(
                                               children: [
