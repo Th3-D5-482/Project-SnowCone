@@ -102,3 +102,5 @@ Special thanks to [Chandrama](https://www.figma.com/@chandrama), whose design ar
 Project SnowCone is built for the modern musician. With its sleek interface, intelligent features, and creative flexibility, it transforms how artists engage with music. Whether you're composing, rehearsing, or performing live, SnowCone is there to guide, support, and inspire.
 
 > _Want to see SnowCone in action? [Try it now](https://th3d5482snowcone.netlify.app) or [view screenshots](screenshots.md) to get a taste of the experience._
+
+<!-- A vast mountain range under a twilight sky, peaks outlined in soft silver moonlight. The lake below reflects muted indigo and faint golden shimmer. A small figure stands at the shore, arms lifted. Overlay text in elegant serif font: “How Great Is Our God” — subtitle: “Majesty revealed”. Palette: deep blues, charcoal, muted gold accents. -->
