@@ -244,28 +244,28 @@
 "Artist" : [
   {
     "id": 0,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/ethan_cole.png?updatedAt=1757447950108",
-    "name": "Ethan Cole"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_music.png?updatedAt=1758823002325",
+    "name": "Elevant Worship"
   },
   {
     "id": 1,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/lena_hart.png?updatedAt=1757447950200",
-    "name": "Lena Hart"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758823002664",
+    "name": "Hillsong United"
   },
   {
     "id": 2,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/julian_marks.png?updatedAt=1757447949885",
-    "name": " Julian Marks"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758823002460",
+    "name": "Bethel Music"
   },
   {
     "id": 3,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/sophie_vance.png?updatedAt=1757447949517",
-    "name": "Sophie Vance"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758823002849",
+    "name": "Hillsong Worship"
   },
   {
     "id": 4,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/miles_bennett.png?updatedAt=1757451294621",
-    "name": "Miles Bennett"
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetdshakers.png?updatedAt=1758823002462",
+    "name": "Platnetshakers"
   }
 ]
 }
