@@ -45,7 +45,7 @@ class _LibraryPageState extends State<LibraryPage> {
                               ),
                               radius: 20,
                             ),
-                            SizedBox(width: 8),
+                            SizedBox(width: 12),
                             Text(
                               'Library',
                               style: TextStyle(

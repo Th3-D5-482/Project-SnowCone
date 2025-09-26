@@ -375,7 +375,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Artists',
+                        'Artists: Worship bands',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -437,6 +437,7 @@ class _HomeViewState extends State<HomeView> {
                                               children: [
                                                 CircleAvatar(
                                                   radius: 80,
+
                                                   backgroundImage: NetworkImage(
                                                     artist['image'],
                                                   ),
