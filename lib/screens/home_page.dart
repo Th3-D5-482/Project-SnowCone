@@ -547,7 +547,7 @@ class _HomeViewState extends State<HomeView> {
                                     )
                                   : SizedBox(
                                       width: double.infinity,
-                                      height: 210,
+                                      height: 200,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
                                         itemCount: recentMusica.length,
@@ -563,7 +563,7 @@ class _HomeViewState extends State<HomeView> {
                                               children: [
                                                 SizedBox(
                                                   width: 160,
-                                                  height: 180,
+                                                  height: 160,
                                                   child: Card(
                                                     color: const Color.fromARGB(
                                                       255,
