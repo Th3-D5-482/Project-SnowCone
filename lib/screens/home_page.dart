@@ -461,123 +461,123 @@ class _HomeViewState extends State<HomeView> {
                                 );
                         },
                       ),
-                      // SizedBox(height: 20),
-                      // Text(
-                      //   'Based on your recent listening',
-                      //   style: TextStyle(
-                      //     color: Colors.white,
-                      //     fontSize: 20,
-                      //     fontWeight: FontWeight.bold,
-                      //   ),
-                      // ),
-                      // SizedBox(height: 10),
-                      // StreamBuilder(
-                      //   stream: getMusic('Music'),
-                      //   builder: (context, asyncSnapshot) {
-                      //     final recentMusica = (asyncSnapshot.data ?? [])
-                      //         .where(
-                      //           (item) => item['isRecentlyListened'] == true,
-                      //         )
-                      //         .toList();
-                      //     return LayoutBuilder(
-                      //       builder: (context, constraints) {
-                      //         double screenWidth = constraints.maxWidth;
-                      //         return screenWidth > 1000 && kIsWeb && isDesktop
-                      //             ? SizedBox(
-                      //                 width: double.infinity,
-                      //                 height: 180,
-                      //                 child: Row(
-                      //                   mainAxisAlignment:
-                      //                       MainAxisAlignment.spaceBetween,
-                      //                   children: List.generate(
-                      //                     recentMusica.length,
-                      //                     (index) {
-                      //                       final recentSong =
-                      //                           recentMusica[index];
-                      //                       return SizedBox(
-                      //                         width: 180,
-                      //                         height: 180,
-                      //                         child: Card(
-                      //                           color: const Color.fromARGB(
-                      //                             255,
-                      //                             30,
-                      //                             30,
-                      //                             30,
-                      //                           ),
-                      //                           shape: RoundedRectangleBorder(
-                      //                             borderRadius:
-                      //                                 BorderRadius.circular(
-                      //                                   8.0,
-                      //                                 ),
-                      //                           ),
-                      //                           child: ClipRRect(
-                      //                             borderRadius:
-                      //                                 BorderRadiusGeometry.circular(
-                      //                                   8,
-                      //                                 ),
-                      //                             child: Image.network(
-                      //                               recentSong['image']!,
-                      //                               fit: BoxFit.cover,
-                      //                               width: double.infinity,
-                      //                               height: double.infinity,
-                      //                             ),
-                      //                           ),
-                      //                         ),
-                      //                       );
-                      //                     },
-                      //                   ),
-                      //                 ),
-                      //               )
-                      //             : SizedBox(
-                      //                 width: double.infinity,
-                      //                 height: 180,
-                      //                 child: ListView.builder(
-                      //                   scrollDirection: Axis.horizontal,
-                      //                   itemCount: recentMusica.length,
-                      //                   physics: const BouncingScrollPhysics(),
-                      //                   itemBuilder: (context, index) {
-                      //                     final recentSong =
-                      //                         recentMusica[index];
-                      //                     return Padding(
-                      //                       padding: EdgeInsets.only(right: 16),
-                      //                       child: SizedBox(
-                      //                         width: 160,
-                      //                         height: 180,
-                      //                         child: Card(
-                      //                           color: const Color.fromARGB(
-                      //                             255,
-                      //                             30,
-                      //                             30,
-                      //                             30,
-                      //                           ),
-                      //                           shape: RoundedRectangleBorder(
-                      //                             borderRadius:
-                      //                                 BorderRadius.circular(
-                      //                                   8.0,
-                      //                                 ),
-                      //                           ),
-                      //                           child: ClipRRect(
-                      //                             borderRadius:
-                      //                                 BorderRadiusGeometry.circular(
-                      //                                   8,
-                      //                                 ),
-                      //                             child: Image.network(
-                      //                               recentSong['image']!,
-                      //                               fit: BoxFit.cover,
-                      //                               width: double.infinity,
-                      //                               height: double.infinity,
-                      //                             ),
-                      //                           ),
-                      //                         ),
-                      //                       ),
-                      //                     );
-                      //                   },
-                      //                 ),
-                      //               );
-                      //       },
-                      //     );
-                      //   },
-                      // ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Because you listened',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      StreamBuilder(
+                        stream: getMusic('Music'),
+                        builder: (context, asyncSnapshot) {
+                          final recentMusica = (asyncSnapshot.data ?? [])
+                              .where(
+                                (item) => item['isRecentlyListened'] == true,
+                              )
+                              .toList();
+                          return LayoutBuilder(
+                            builder: (context, constraints) {
+                              double screenWidth = constraints.maxWidth;
+                              return screenWidth > 1000 && kIsWeb && isDesktop
+                                  ? SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: List.generate(
+                                          recentMusica.length,
+                                          (index) {
+                                            final recentSong =
+                                                recentMusica[index];
+                                            return SizedBox(
+                                              width: 180,
+                                              height: 180,
+                                              child: Card(
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    recentSong['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    )
+                                  : SizedBox(
+                                      width: double.infinity,
+                                      height: 180,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: recentMusica.length,
+                                        physics: const BouncingScrollPhysics(),
+                                        itemBuilder: (context, index) {
+                                          final recentSong =
+                                              recentMusica[index];
+                                          return Padding(
+                                            padding: EdgeInsets.only(right: 16),
+                                            child: SizedBox(
+                                              width: 160,
+                                              height: 180,
+                                              child: Card(
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  30,
+                                                  30,
+                                                  30,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        8.0,
+                                                      ),
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    recentSong['image']!,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    );
+                            },
+                          );
+                        },
+                      ),
                     ],
                   );
                 },
