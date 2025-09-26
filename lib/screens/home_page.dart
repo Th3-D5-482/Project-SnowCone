@@ -494,35 +494,52 @@ class _HomeViewState extends State<HomeView> {
                                           (index) {
                                             final recentSong =
                                                 recentMusica[index];
-                                            return SizedBox(
-                                              width: 180,
-                                              height: 180,
-                                              child: Card(
-                                                color: const Color.fromARGB(
-                                                  255,
-                                                  30,
-                                                  30,
-                                                  30,
-                                                ),
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                        8.0,
+                                            return Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                SizedBox(
+                                                  width: 180,
+                                                  height: 180,
+                                                  child: Card(
+                                                    color: const Color.fromARGB(
+                                                      255,
+                                                      30,
+                                                      30,
+                                                      30,
+                                                    ),
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8.0,
+                                                          ),
+                                                    ),
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadiusGeometry.circular(
+                                                            8,
+                                                          ),
+                                                      child: Image.network(
+                                                        recentSong['image']!,
+                                                        fit: BoxFit.cover,
+                                                        width: double.infinity,
+                                                        height: double.infinity,
                                                       ),
-                                                ),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadiusGeometry.circular(
-                                                        8,
-                                                      ),
-                                                  child: Image.network(
-                                                    recentSong['image']!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.infinity,
-                                                    height: double.infinity,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  recentSong['name'],
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                ),
+                                              ],
                                             );
                                           },
                                         ),
@@ -530,7 +547,7 @@ class _HomeViewState extends State<HomeView> {
                                     )
                                   : SizedBox(
                                       width: double.infinity,
-                                      height: 180,
+                                      height: 210,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
                                         itemCount: recentMusica.length,
@@ -540,35 +557,59 @@ class _HomeViewState extends State<HomeView> {
                                               recentMusica[index];
                                           return Padding(
                                             padding: EdgeInsets.only(right: 16),
-                                            child: SizedBox(
-                                              width: 160,
-                                              height: 180,
-                                              child: Card(
-                                                color: const Color.fromARGB(
-                                                  255,
-                                                  30,
-                                                  30,
-                                                  30,
-                                                ),
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                        8.0,
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                SizedBox(
+                                                  width: 160,
+                                                  height: 180,
+                                                  child: Card(
+                                                    color: const Color.fromARGB(
+                                                      255,
+                                                      30,
+                                                      30,
+                                                      30,
+                                                    ),
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8.0,
+                                                          ),
+                                                    ),
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadiusGeometry.circular(
+                                                            8,
+                                                          ),
+                                                      child: Image.network(
+                                                        recentSong['image']!,
+                                                        fit: BoxFit.cover,
+                                                        width: double.infinity,
+                                                        height: double.infinity,
                                                       ),
-                                                ),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadiusGeometry.circular(
-                                                        8,
-                                                      ),
-                                                  child: Image.network(
-                                                    recentSong['image']!,
-                                                    fit: BoxFit.cover,
-                                                    width: double.infinity,
-                                                    height: double.infinity,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                                SizedBox(height: 10),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                        left: 8.0,
+                                                      ),
+                                                  child: Text(
+                                                    recentSong['name'],
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           );
                                         },
