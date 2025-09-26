@@ -556,7 +556,7 @@ class _HomeViewState extends State<HomeView> {
                                           final recentSong =
                                               recentMusica[index];
                                           return Padding(
-                                            padding: EdgeInsets.only(right: 16),
+                                            padding: EdgeInsets.only(right: 8),
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
