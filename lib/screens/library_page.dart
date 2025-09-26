@@ -28,7 +28,7 @@ class _LibraryPageState extends State<LibraryPage> {
               return Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: horizontalPadding,
-                  vertical: kIsWeb ? 16 : 8,
+                  vertical: kIsWeb ? 16 : 4,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
