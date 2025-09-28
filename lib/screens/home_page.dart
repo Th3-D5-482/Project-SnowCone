@@ -142,7 +142,7 @@ class _HomeViewState extends State<HomeView> {
                           double aspectRatio;
                           if (orientation == Orientation.landscape) {
                             crossAxisCount = 3;
-                            aspectRatio = kIsWeb ? 5 : 4;
+                            aspectRatio = 4;
                           } else {
                             if (screenWidth >= 1200) {
                               crossAxisCount = 3;
@@ -163,8 +163,8 @@ class _HomeViewState extends State<HomeView> {
                                 SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: crossAxisCount,
                                   childAspectRatio: aspectRatio,
-                                  crossAxisSpacing: 1,
-                                  mainAxisSpacing: 1,
+                                  crossAxisSpacing: kIsWeb ? 5 : 1,
+                                  mainAxisSpacing: kIsWeb ? 5 : 1,
                                 ),
                             itemCount: musica.length,
                             itemBuilder: (context, index) {
@@ -227,61 +227,66 @@ class _HomeViewState extends State<HomeView> {
                                   stream: getTopMixes('TopMixes'),
                                   builder: (context, asyncSnapshot) {
                                     final topMixes = asyncSnapshot.data ?? [];
-                                    return Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: topMixes.map<Widget>((topMix) {
-                                        return Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            SizedBox(
-                                              width: 190,
-                                              height: 130,
-                                              child: Card(
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                        8.0,
-                                                      ),
-                                                ),
-                                                color: const Color.fromARGB(
-                                                  255,
-                                                  30,
-                                                  30,
-                                                  30,
-                                                ),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadiusGeometry.circular(
-                                                        8,
-                                                      ),
-                                                  child: Image.network(
-                                                    topMix['image']!,
-                                                    fit: BoxFit.fill,
-                                                    width: double.infinity,
-                                                    height: double.infinity,
+                                    return SizedBox(
+                                      height: 220,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: topMixes.map<Widget>((
+                                          topMix,
+                                        ) {
+                                          return Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(
+                                                width: 180,
+                                                height: 180,
+                                                child: Card(
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          8.0,
+                                                        ),
+                                                  ),
+                                                  color: const Color.fromARGB(
+                                                    255,
+                                                    30,
+                                                    30,
+                                                    30,
+                                                  ),
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadiusGeometry.circular(
+                                                          8,
+                                                        ),
+                                                    child: Image.network(
+                                                      topMix['image']!,
+                                                      fit: BoxFit.fill,
+                                                      width: double.infinity,
+                                                      height: double.infinity,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                            SizedBox(height: 10),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                left: 8.0,
-                                              ),
-                                              child: Text(
-                                                topMix['name'],
-                                                style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.bold,
+                                              SizedBox(height: 10),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                  left: 8.0,
+                                                ),
+                                                child: Text(
+                                                  topMix['name'],
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        );
-                                      }).toList(),
+                                            ],
+                                          );
+                                        }).toList(),
+                                      ),
                                     );
                                   },
                                 )
@@ -383,15 +388,15 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          double screenWidth = constraints.maxWidth;
-                          return screenWidth > 1000 && kIsWeb && isDesktop
-                              ? StreamBuilder(
-                                  stream: getArtist('Artist'),
-                                  builder: (context, asyncSnapshot) {
-                                    final artists = asyncSnapshot.data ?? [];
-                                    return Row(
+                      StreamBuilder(
+                        stream: getArtist('Artist'),
+                        builder: (context, asyncSnapshot) {
+                          final artists = asyncSnapshot.data ?? [];
+                          return LayoutBuilder(
+                            builder: (context, constraints) {
+                              double screenWidth = constraints.maxWidth;
+                              return screenWidth > 1000 && kIsWeb && isDesktop
+                                  ? Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: artists.map<Widget>((artist) {
@@ -415,14 +420,8 @@ class _HomeViewState extends State<HomeView> {
                                           ],
                                         );
                                       }).toList(),
-                                    );
-                                  },
-                                )
-                              : StreamBuilder(
-                                  stream: getArtist('Artist'),
-                                  builder: (context, asyncSnapshot) {
-                                    final artists = asyncSnapshot.data ?? [];
-                                    return SizedBox(
+                                    )
+                                  : SizedBox(
                                       height: 190,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
@@ -457,8 +456,8 @@ class _HomeViewState extends State<HomeView> {
                                         },
                                       ),
                                     );
-                                  },
-                                );
+                            },
+                          );
                         },
                       ),
                       SizedBox(height: 20),
@@ -485,7 +484,7 @@ class _HomeViewState extends State<HomeView> {
                               return screenWidth > 1000 && kIsWeb && isDesktop
                                   ? SizedBox(
                                       width: double.infinity,
-                                      height: 180,
+                                      height: 220,
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,

@@ -25,8 +25,10 @@ Stream<List<dynamic>> getMusic(String encode) async* {
     } on TimeoutException catch (e) {
       ('TimeoutException: ${e.message}');
       // Handle timeout gracefully
+    } on HandshakeException catch (e) {
+      ('HankshakeException: ${e.message}');
     }
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(Duration(seconds: 5));
   }
 }
 
@@ -50,6 +52,8 @@ Stream<List<dynamic>> getTopMixes(String encode) async* {
     } on TimeoutException catch (e) {
       ('TimeoutException: ${e.message}');
       // Handle timeout gracefully
+    } on HandshakeException catch (e) {
+      ('HankshakeException: ${e.message}');
     }
     await Future.delayed(Duration(seconds: 5));
   }
@@ -75,8 +79,10 @@ Stream<List<dynamic>> getConitnueListening(String encode) async* {
     } on TimeoutException catch (e) {
       ('TimeoutException: ${e.message}');
       // Handle timeout gracefully
+    } on HandshakeException catch (e) {
+      ('HankshakeException: ${e.message}');
     }
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(Duration(seconds: 5));
   }
 }
 
