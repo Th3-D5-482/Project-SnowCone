@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "3079bdffd1e25d7138c33962384f0b20",
-"assets/AssetManifest.bin.json": "e37ecb66046e0804ecf2175b02ec1ce8",
-"assets/AssetManifest.json": "b4c05f7c8d86dc3d41673a75fa6bbe30",
+const RESOURCES = {"assets/AssetManifest.bin": "dc735510cece09d01fe0e5461522296b",
+"assets/AssetManifest.bin.json": "21b5b88619beaccd51a8d6f49efc3b4b",
+"assets/AssetManifest.json": "ca90c73228b94cc46d1bba320a1c9aaa",
 "assets/assets/images/album/10,000_reasons.png": "572932d10d4d97ec64c2da1fc13bf359",
 "assets/assets/images/album/all_sons_and_daughters.png": "b84af681cea379b4cbfebdc87f9fe86b",
 "assets/assets/images/album/always.png": "52d9c64e156d6a894312c50acdd72568",
@@ -14,6 +14,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "3079bdffd1e25d7138c33962384f0b20
 "assets/assets/images/album/way_maker.png": "1548cf88fcf641e384f3317f05541ccd",
 "assets/assets/images/artist/bethel_music.png": "458bf12ede2998c22ea978c541ece588",
 "assets/assets/images/artist/elevation_worship.png": "a8c769a2b0824f3a5182b779b38c6de7",
+"assets/assets/images/artist/for_kings_and_country.png": "3fa73f62a6f407a030dc0841f176ab7f",
 "assets/assets/images/artist/hillsong_united.png": "6bb55685c432a5f5146054129cbbc002",
 "assets/assets/images/artist/hillsong_worship.png": "b093eef92151b4c6bf9c0b247cde7b05",
 "assets/assets/images/artist/planetshakers.png": "877fecd7503ce9e47ca66e6a31389131",
@@ -30,6 +31,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "3079bdffd1e25d7138c33962384f0b20
 "assets/assets/images/random/warning.png": "10d3d0329303a95f9e19f32dee590228",
 "assets/assets/images/random/welcome.png": "c2e6b80ef83528eda3501511449ea3e7",
 "assets/assets/images/random/welcome2.png": "6d04f0f0e9c6dc45fe929fc5725d7814",
+"assets/assets/images/top_mixes/alter_fire.png": "9db26516c630aeae4e86de6eac8bc041",
 "assets/assets/images/top_mixes/echo_praise.png": "1c5d0e86f840cd6a00d8d8af6fa842c5",
 "assets/assets/images/top_mixes/hearts_united.png": "a02bb4727d0cde77d1ac67d69861e06b",
 "assets/assets/images/top_mixes/kingdom_keys.png": "cdf59d718401700ffab5ba3f7b77d6bc",
@@ -57,14 +59,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "3079bdffd1e25d7138c33962384f0b20
 "canvaskit/skwasm_heavy.wasm": "8034ad26ba2485dab2fd49bdd786837b",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
-"flutter_bootstrap.js": "cd5ba675e7fecef60627628be49756c0",
+"flutter_bootstrap.js": "b60672b0b96a55dbc86b82e1f6c56671",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "6050ecd400596b6ec56121843dc6e750",
 "/": "6050ecd400596b6ec56121843dc6e750",
-"main.dart.js": "3ade97668e01e350f0aa16f3284989a4",
+"main.dart.js": "fa2e68a1481f595895fc76c42bdb850e",
 "manifest.json": "6858a767bc61f44ddcf96ba3905fea09",
 "version.json": "794af03ad599eb48d29243c1d69873a8"};
 // The application shell files that are downloaded before a service worker can

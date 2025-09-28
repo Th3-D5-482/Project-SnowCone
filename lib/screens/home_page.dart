@@ -473,7 +473,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Because you listened',
+                        'Based on your recent listening',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,

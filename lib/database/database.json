@@ -130,9 +130,9 @@
   },
   {
     "id": 5,
-    "name": "Selah Sessions",
+    "name": "Altar Fire",
     "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871"
+        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871"
   }
   ],
   "TopGenres": [
@@ -275,7 +275,7 @@
   },
   {
     "id": 5,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
+    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
     "name": "For Kings & Country"
   }
 ]
