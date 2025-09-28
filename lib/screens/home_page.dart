@@ -219,15 +219,15 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 10),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          double screenWidth = constraints.maxWidth;
-                          return screenWidth > 1000 && kIsWeb && isDesktop
-                              ? StreamBuilder(
-                                  stream: getTopMixes('TopMixes'),
-                                  builder: (context, asyncSnapshot) {
-                                    final topMixes = asyncSnapshot.data ?? [];
-                                    return SizedBox(
+                      StreamBuilder(
+                        stream: getTopMixes('TopMixes'),
+                        builder: (context, asyncSnapshot) {
+                          final topMixes = asyncSnapshot.data ?? [];
+                          return LayoutBuilder(
+                            builder: (context, constraints) {
+                              double screenWidth = constraints.maxWidth;
+                              return screenWidth > 1000 && kIsWeb && isDesktop
+                                  ? SizedBox(
                                       height: 220,
                                       child: Row(
                                         mainAxisAlignment:
@@ -287,95 +287,100 @@ class _HomeViewState extends State<HomeView> {
                                           );
                                         }).toList(),
                                       ),
-                                    );
-                                  },
-                                )
-                              : SizedBox(
-                                  height: 200,
-                                  width: double.infinity,
-                                  child: StreamBuilder(
-                                    stream: getTopMixes('TopMixes'),
-                                    builder: (context, asyncSnapshot) {
-                                      if (asyncSnapshot.hasError) {
-                                        return Center(
-                                          child: Text(
-                                            'Error: ${asyncSnapshot.error}',
-                                            style: const TextStyle(
-                                              color: Colors.red,
-                                            ),
-                                          ),
-                                        );
-                                      }
-                                      final topMixes = asyncSnapshot.data ?? [];
-                                      return ListView.builder(
-                                        itemCount: topMixes.length,
-                                        shrinkWrap: true,
-                                        physics: const BouncingScrollPhysics(),
-                                        scrollDirection: Axis.horizontal,
-                                        itemBuilder: (context, index) {
-                                          final topMix = topMixes[index];
-                                          return Padding(
-                                            padding: const EdgeInsets.only(
-                                              right: 8.0,
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                SizedBox(
-                                                  width: 160,
-                                                  height: 160,
-                                                  child: Card(
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            8.0,
+                                    )
+                                  : SizedBox(
+                                      height: 200,
+                                      width: double.infinity,
+                                      child: StreamBuilder(
+                                        stream: getTopMixes('TopMixes'),
+                                        builder: (context, asyncSnapshot) {
+                                          if (asyncSnapshot.hasError) {
+                                            return Center(
+                                              child: Text(
+                                                'Error: ${asyncSnapshot.error}',
+                                                style: const TextStyle(
+                                                  color: Colors.red,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          final topMixes =
+                                              asyncSnapshot.data ?? [];
+                                          return ListView.builder(
+                                            itemCount: topMixes.length,
+                                            shrinkWrap: true,
+                                            physics:
+                                                const BouncingScrollPhysics(),
+                                            scrollDirection: Axis.horizontal,
+                                            itemBuilder: (context, index) {
+                                              final topMix = topMixes[index];
+                                              return Padding(
+                                                padding: const EdgeInsets.only(
+                                                  right: 8.0,
+                                                ),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    SizedBox(
+                                                      width: 160,
+                                                      height: 160,
+                                                      child: Card(
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                8.0,
+                                                              ),
+                                                        ),
+                                                        color:
+                                                            const Color.fromARGB(
+                                                              255,
+                                                              30,
+                                                              30,
+                                                              30,
+                                                            ),
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadiusGeometry.circular(
+                                                                8,
+                                                              ),
+                                                          child: Image.network(
+                                                            topMix['image']!,
+                                                            fit: BoxFit.cover,
+                                                            width:
+                                                                double.infinity,
+                                                            height:
+                                                                double.infinity,
                                                           ),
-                                                    ),
-                                                    color: const Color.fromARGB(
-                                                      255,
-                                                      30,
-                                                      30,
-                                                      30,
-                                                    ),
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadiusGeometry.circular(
-                                                            8,
-                                                          ),
-                                                      child: Image.network(
-                                                        topMix['image']!,
-                                                        fit: BoxFit.cover,
-                                                        width: double.infinity,
-                                                        height: double.infinity,
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                        left: 8.0,
+                                                    SizedBox(height: 10),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                            left: 8.0,
+                                                          ),
+                                                      child: Text(
+                                                        topMix['name'],
+                                                        style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.grey,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                                       ),
-                                                  child: Text(
-                                                    topMix['name'],
-                                                    style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.grey,
-                                                      fontWeight:
-                                                          FontWeight.bold,
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
+                                              );
+                                            },
                                           );
                                         },
-                                      );
-                                    },
-                                  ),
-                                );
+                                      ),
+                                    );
+                            },
+                          );
                         },
                       ),
                       SizedBox(height: 20),
