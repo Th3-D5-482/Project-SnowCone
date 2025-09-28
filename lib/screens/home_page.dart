@@ -232,9 +232,10 @@ class _HomeViewState extends State<HomeView> {
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
-                                        children: topMixes.map<Widget>((
-                                          topMix,
+                                        children: List.generate(topMixes.length, (
+                                          index,
                                         ) {
+                                          final topMix = topMixes[index];
                                           return Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -257,7 +258,7 @@ class _HomeViewState extends State<HomeView> {
                                                   ),
                                                   child: ClipRRect(
                                                     borderRadius:
-                                                        BorderRadiusGeometry.circular(
+                                                        BorderRadius.circular(
                                                           8,
                                                         ),
                                                     child: Image.network(
@@ -281,11 +282,13 @@ class _HomeViewState extends State<HomeView> {
                                                     color: Colors.grey,
                                                     fontWeight: FontWeight.bold,
                                                   ),
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
                                                 ),
                                               ),
                                             ],
                                           );
-                                        }).toList(),
+                                        }),
                                       ),
                                     )
                                   : SizedBox(
@@ -385,7 +388,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Artists: Worship bands',
+                        'Praise & Worship bands',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -404,7 +407,10 @@ class _HomeViewState extends State<HomeView> {
                                   ? Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
-                                      children: artists.map<Widget>((artist) {
+                                      children: List.generate(artists.length, (
+                                        index,
+                                      ) {
+                                        final artist = artists[index];
                                         return Column(
                                           children: [
                                             CircleAvatar(
@@ -424,7 +430,7 @@ class _HomeViewState extends State<HomeView> {
                                             ),
                                           ],
                                         );
-                                      }).toList(),
+                                      }),
                                     )
                                   : SizedBox(
                                       height: 190,
