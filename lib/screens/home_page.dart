@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -89,12 +91,7 @@ class _HomeViewState extends State<HomeView> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
-            bool isDesktop =
-                kIsWeb &&
-                (defaultTargetPlatform == TargetPlatform.macOS ||
-                    defaultTargetPlatform == TargetPlatform.windows ||
-                    defaultTargetPlatform == TargetPlatform.linux) &&
-                screenWidth > 1000;
+            bool isDesktop = kIsWeb || Platform.isWindows && screenWidth > 1000;
             // ignore: unused_local_variable
             double horizontalPadding = isDesktop ? 200 : 16;
             return Padding(
@@ -217,7 +214,7 @@ class _HomeViewState extends State<HomeView> {
                           return LayoutBuilder(
                             builder: (context, constraints) {
                               double screenWidth = constraints.maxWidth;
-                              return screenWidth > 1000 && kIsWeb && isDesktop
+                              return screenWidth > 1000 && kIsWeb || isDesktop
                                   ? SizedBox(
                                       height: 220,
                                       child: Row(
@@ -394,7 +391,7 @@ class _HomeViewState extends State<HomeView> {
                           return LayoutBuilder(
                             builder: (context, constraints) {
                               double screenWidth = constraints.maxWidth;
-                              return screenWidth > 1000 && kIsWeb && isDesktop
+                              return screenWidth > 1000 && kIsWeb || isDesktop
                                   ? Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -483,7 +480,7 @@ class _HomeViewState extends State<HomeView> {
                           return LayoutBuilder(
                             builder: (context, constraints) {
                               double screenWidth = constraints.maxWidth;
-                              return screenWidth > 1000 && kIsWeb && isDesktop
+                              return screenWidth > 1000 && kIsWeb || isDesktop
                                   ? SizedBox(
                                       width: double.infinity,
                                       height: 220,
