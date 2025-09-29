@@ -53389,37 +53389,30 @@
     _SearchPageState_build__closure: function _SearchPageState_build__closure(t0) {
       this.$this = t0;
     },
-    _SearchPageState_build___closure0: function _SearchPageState_build___closure0(t0, t1, t2, t3, t4) {
+    _SearchPageState_build___closure0: function _SearchPageState_build___closure0(t0, t1, t2, t3) {
       var _ = this;
       _._box_0 = t0;
       _.$this = t1;
       _.screenWidth = t2;
       _.topOffSet = t3;
-      _.leftOffSet = t4;
     },
-    _SearchPageState_build____closure0: function _SearchPageState_build____closure0(t0, t1, t2, t3) {
-      var _ = this;
-      _.$this = t0;
-      _.topGenres = t1;
-      _.topOffSet = t2;
-      _.leftOffSet = t3;
+    _SearchPageState_build____closure0: function _SearchPageState_build____closure0(t0, t1, t2) {
+      this.$this = t0;
+      this.topGenres = t1;
+      this.topOffSet = t2;
     },
     _SearchPageState_build__closure0: function _SearchPageState_build__closure0(t0) {
       this.$this = t0;
     },
-    _SearchPageState_build___closure: function _SearchPageState_build___closure(t0, t1, t2, t3) {
-      var _ = this;
-      _._box_1 = t0;
-      _.$this = t1;
-      _.topOffSet = t2;
-      _.leftOffSet = t3;
+    _SearchPageState_build___closure: function _SearchPageState_build___closure(t0, t1, t2) {
+      this._box_1 = t0;
+      this.$this = t1;
+      this.topOffSet = t2;
     },
-    _SearchPageState_build____closure: function _SearchPageState_build____closure(t0, t1, t2, t3) {
-      var _ = this;
-      _.$this = t0;
-      _.browseAlls = t1;
-      _.topOffSet = t2;
-      _.leftOffSet = t3;
+    _SearchPageState_build____closure: function _SearchPageState_build____closure(t0, t1, t2) {
+      this.$this = t0;
+      this.browseAlls = t1;
+      this.topOffSet = t2;
     },
     SignUp: function SignUp(t0) {
       this.key = t0;
@@ -202373,9 +202366,10 @@
   };
   A._SearchPageState_build__closure.prototype = {
     call$2(context, constraints) {
-      var t1 = {},
+      var topOffSet, t1 = {},
         screenWidth = constraints.maxWidth;
       t1.aspectRatio = t1.crossAxisCount = null;
+      topOffSet = screenWidth > 1000 ? 30 : 15;
       if (screenWidth >= 1200) {
         t1.crossAxisCount = 4;
         t1.aspectRatio = 2;
@@ -202384,7 +202378,7 @@
         t1.aspectRatio = 5;
       } else
         t1.aspectRatio = t1.crossAxisCount = 2;
-      return A.FutureBuilder$(new A._SearchPageState_build___closure0(t1, this.$this, screenWidth, 30, 480), A.getTopGeneres("TopGenres"), type$.List_dynamic);
+      return A.FutureBuilder$(new A._SearchPageState_build___closure0(t1, this.$this, screenWidth, topOffSet), A.getTopGeneres("TopGenres"), type$.List_dynamic);
     },
     $signature: 155
   };
@@ -202397,29 +202391,30 @@
       t1 = _this.screenWidth > 800 ? 240 : 200;
       t2 = _this._box_0;
       t3 = t2.crossAxisCount;
-      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t2.aspectRatio, t3, 10, 10), new A._SearchPageState_build____closure0(_this.$this, topGenres, _this.topOffSet, _this.leftOffSet), J.get$length$asx(topGenres), new A.NeverScrollableScrollPhysics(null), false), t1, 1 / 0);
+      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t2.aspectRatio, t3, 10, 10), new A._SearchPageState_build____closure0(_this.$this, topGenres, _this.topOffSet), J.get$length$asx(topGenres), new A.NeverScrollableScrollPhysics(null), false), t1, 1 / 0);
     },
     $signature: 150
   };
   A._SearchPageState_build____closure0.prototype = {
     call$2(context, index) {
-      var genres, t1, t2, t3, t4, _this = this, _null = null;
+      var genres, t1, t2, t3, t4, _null = null;
       type$.BuildContext._as(context);
-      genres = J.$index$asx(_this.topGenres, A._asInt(index));
+      genres = J.$index$asx(this.topGenres, A._asInt(index));
       t1 = A.BorderRadius$circular(8);
       t2 = J.getInterceptor$asx(genres);
-      t3 = t2.$index(genres, "color") != null ? _this.$this.hexToColor$1(A._asString(t2.$index(genres, "color"))) : A.Color$(4291611852);
+      t3 = t2.$index(genres, "color") != null ? this.$this.hexToColor$1(A._asString(t2.$index(genres, "color"))) : A.Color$(4291611852);
       t4 = t2.$index(genres, "name");
       t4.toString;
-      return A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t4), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(genres, "image")), _null, 80, 80))), _null, _null, _this.leftOffSet, _null, _this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t3, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
+      return A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t4), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(genres, "image")), _null, 80, 80))), _null, _null, _null, -10, this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t3, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5));
     },
     $signature: 162
   };
   A._SearchPageState_build__closure0.prototype = {
     call$2(context, constraints) {
-      var t1 = {},
+      var topOffSet, t1 = {},
         screenWidth = constraints.maxWidth;
       t1.aspectRatio = t1.crossAxisCount = null;
+      topOffSet = screenWidth > 1000 ? 40 : 30;
       if (screenWidth >= 1200) {
         t1.crossAxisCount = 3;
         t1.aspectRatio = 2;
@@ -202430,32 +202425,32 @@
         t1.crossAxisCount = 2;
         t1.aspectRatio = 1.7;
       }
-      return A.FutureBuilder$(new A._SearchPageState_build___closure(t1, this.$this, 40, 480), A.getBrowseAll("BrowseAll"), type$.List_dynamic);
+      return A.FutureBuilder$(new A._SearchPageState_build___closure(t1, this.$this, topOffSet), A.getBrowseAll("BrowseAll"), type$.List_dynamic);
     },
     $signature: 155
   };
   A._SearchPageState_build___closure.prototype = {
     call$2(context, asyncSnapshot) {
-      var t1, t2, _this = this,
+      var t1, t2,
         browseAlls = type$.AsyncSnapshot_List_dynamic._as(asyncSnapshot).data;
       if (browseAlls == null)
         browseAlls = [];
-      t1 = _this._box_1;
+      t1 = this._box_1;
       t2 = t1.crossAxisCount;
-      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t1.aspectRatio, t2, 10, 10), new A._SearchPageState_build____closure(_this.$this, browseAlls, _this.topOffSet, _this.leftOffSet), J.get$length$asx(browseAlls), new A.NeverScrollableScrollPhysics(null), true), null, 1 / 0);
+      return A.SizedBox$(A.GridView$builder(A.SliverGridDelegateWithFixedCrossAxisCount$(t1.aspectRatio, t2, 10, 10), new A._SearchPageState_build____closure(this.$this, browseAlls, this.topOffSet), J.get$length$asx(browseAlls), new A.NeverScrollableScrollPhysics(null), true), null, 1 / 0);
     },
     $signature: 150
   };
   A._SearchPageState_build____closure.prototype = {
     call$2(context, index) {
-      var browseAll, t1, t2, t3, t4, _this = this, _null = null;
+      var browseAll, t1, t2, t3, t4, _null = null;
       type$.BuildContext._as(context);
-      browseAll = J.$index$asx(_this.browseAlls, A._asInt(index));
+      browseAll = J.$index$asx(this.browseAlls, A._asInt(index));
       t1 = A.BorderRadius$circular(8);
       t2 = J.getInterceptor$asx(browseAll);
-      t3 = t2.$index(browseAll, "color") != null ? _this.$this.hexToColor$1(A._asString(t2.$index(browseAll, "color"))) : A.Color$(4291611852);
+      t3 = t2.$index(browseAll, "color") != null ? this.$this.hexToColor$1(A._asString(t2.$index(browseAll, "color"))) : A.Color$(4291611852);
       t4 = A.BorderRadius$circular(8);
-      return A.ClipRRect$(t1, A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t2.$index(browseAll, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(browseAll, "image")), _null, 80, 80))), _null, _null, _this.leftOffSet, _null, _this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t3, new A.RoundedRectangleBorder(t4, B.BorderSide_Ah5)));
+      return A.ClipRRect$(t1, A.Card$(A.Stack$(B.AlignmentDirectional_m1_m1, A._setArrayType([new A.Padding(B.EdgeInsets_8_8_8_8, A.Align$(B.Alignment_m1_m1, A.Text$(A._asString(t2.$index(browseAll, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null), _null), A.Positioned$(_null, A.Transform$rotate(0.4, A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(browseAll, "image")), _null, 80, 80))), _null, _null, _null, -10, this.topOffSet, _null)], type$.JSArray_Widget), B.Clip_1, B.StackFit_0, _null), t3, new A.RoundedRectangleBorder(t4, B.BorderSide_Ah5)));
     },
     $signature: 658
   };

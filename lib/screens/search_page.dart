@@ -119,8 +119,9 @@ class _SearchPageState extends State<SearchPage> {
                         double screenWidth = constraints.maxWidth;
                         int crossAxisCount;
                         double aspectRatio;
-                        final double topOffSet = kIsWeb ? 30 : 15;
-                        final double leftOffSet = kIsWeb ? 480 : 105;
+                        final double topOffSet = screenWidth > 1000 && kIsWeb
+                            ? 30
+                            : 15;
                         if (screenWidth >= 1200) {
                           crossAxisCount = 4;
                           aspectRatio = 2;
@@ -176,7 +177,7 @@ class _SearchPageState extends State<SearchPage> {
                                         ),
                                         Positioned(
                                           top: topOffSet,
-                                          left: leftOffSet,
+                                          right: -10,
                                           child: Transform.rotate(
                                             angle: 0.4,
                                             child: ClipRRect(
@@ -216,8 +217,9 @@ class _SearchPageState extends State<SearchPage> {
                         double screenWidth = constraints.maxWidth;
                         int crossAxisCount;
                         double aspectRatio;
-                        final double topOffSet = kIsWeb ? 40 : 30;
-                        final double leftOffSet = kIsWeb ? 480 : 105;
+                        final double topOffSet = screenWidth > 1000 && kIsWeb
+                            ? 40
+                            : 30;
                         if (screenWidth >= 1200) {
                           crossAxisCount = 3;
                           aspectRatio = 2;
@@ -277,7 +279,7 @@ class _SearchPageState extends State<SearchPage> {
                                           ),
                                           Positioned(
                                             top: topOffSet,
-                                            left: leftOffSet,
+                                            right: -10,
                                             child: Transform.rotate(
                                               angle: 0.4,
                                               child: ClipRRect(
