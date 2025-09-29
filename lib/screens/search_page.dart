@@ -117,32 +117,19 @@ class _SearchPageState extends State<SearchPage> {
                     LayoutBuilder(
                       builder: (context, constraints) {
                         double screenWidth = constraints.maxWidth;
-                        final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
-                        final double topOffSet =
-                            (orientation == Orientation.landscape) ? 30 : 15;
-                        final double leftOffSet =
-                            (orientation == Orientation.landscape)
-                            ? kIsWeb
-                                  ? 480
-                                  : 355
-                            : 105;
-                        (orientation == Orientation.landscape);
-                        if (orientation == Orientation.landscape) {
+                        final double topOffSet = kIsWeb ? 30 : 15;
+                        final double leftOffSet = kIsWeb ? 480 : 105;
+                        if (screenWidth >= 1200) {
+                          crossAxisCount = 4;
+                          aspectRatio = 2;
+                        } else if (screenWidth >= 800) {
                           crossAxisCount = 2;
-                          aspectRatio = kIsWeb ? 5 : 4;
+                          aspectRatio = 5;
                         } else {
-                          if (screenWidth >= 1200) {
-                            crossAxisCount = 4;
-                            aspectRatio = 2;
-                          } else if (screenWidth >= 800) {
-                            crossAxisCount = 2;
-                            aspectRatio = 5;
-                          } else {
-                            crossAxisCount = 2;
-                            aspectRatio = 2;
-                          }
+                          crossAxisCount = 2;
+                          aspectRatio = 2;
                         }
                         return FutureBuilder(
                           future: getTopGeneres('TopGenres'),
@@ -227,31 +214,19 @@ class _SearchPageState extends State<SearchPage> {
                     LayoutBuilder(
                       builder: (context, constraints) {
                         double screenWidth = constraints.maxWidth;
-                        final orientation = MediaQuery.of(context).orientation;
                         int crossAxisCount;
                         double aspectRatio;
-                        final double topOffSet =
-                            (orientation == Orientation.landscape) ? 40 : 30;
-                        final double leftOffSet =
-                            (orientation == Orientation.landscape)
-                            ? kIsWeb
-                                  ? 480
-                                  : 355
-                            : 105;
-                        if (orientation == Orientation.landscape) {
+                        final double topOffSet = kIsWeb ? 40 : 30;
+                        final double leftOffSet = kIsWeb ? 480 : 105;
+                        if (screenWidth >= 1200) {
+                          crossAxisCount = 3;
+                          aspectRatio = 2;
+                        } else if (screenWidth >= 800) {
                           crossAxisCount = 2;
-                          aspectRatio = kIsWeb ? 4.7 : 3.7;
+                          aspectRatio = 4.7;
                         } else {
-                          if (screenWidth >= 1200) {
-                            crossAxisCount = 3;
-                            aspectRatio = 2;
-                          } else if (screenWidth >= 800) {
-                            crossAxisCount = 2;
-                            aspectRatio = 4.7;
-                          } else {
-                            crossAxisCount = 2;
-                            aspectRatio = 1.7;
-                          }
+                          crossAxisCount = 2;
+                          aspectRatio = 1.7;
                         }
                         return FutureBuilder(
                           future: getBrowseAll('BrowseAll'),
