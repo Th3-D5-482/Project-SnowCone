@@ -135,27 +135,18 @@ class _HomeViewState extends State<HomeView> {
                       LayoutBuilder(
                         builder: (context, constraints) {
                           double screenWidth = constraints.maxWidth;
-                          final orientation = MediaQuery.of(
-                            context,
-                          ).orientation;
                           int crossAxisCount;
                           double aspectRatio;
-                          if (orientation == Orientation.landscape) {
+                          if (screenWidth >= 1200) {
+                            crossAxisCount = 3;
+                            aspectRatio = 5;
+                          } else if (screenWidth >= 800) {
                             crossAxisCount = 3;
                             aspectRatio = 4;
                           } else {
-                            if (screenWidth >= 1200) {
-                              crossAxisCount = 3;
-                              aspectRatio = 6;
-                            } else if (screenWidth >= 800) {
-                              crossAxisCount = 3;
-                              aspectRatio = 5;
-                            } else {
-                              crossAxisCount = 2;
-                              aspectRatio = 2.9;
-                            }
+                            crossAxisCount = 2;
+                            aspectRatio = 2.9;
                           }
-
                           return GridView.builder(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),

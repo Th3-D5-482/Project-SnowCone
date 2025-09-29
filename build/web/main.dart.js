@@ -201815,16 +201815,13 @@
   };
   A._HomeViewState_build___closure0.prototype = {
     call$2(context, constraints) {
-      var crossAxisCount, aspectRatio, t1,
-        screenWidth = constraints.maxWidth;
-      A.debugCheckHasMediaQuery(context);
-      crossAxisCount = 3;
-      if (A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data.get$orientation() === B.Orientation_1)
-        aspectRatio = 4;
-      else if (screenWidth >= 1200)
-        aspectRatio = 6;
-      else if (screenWidth >= 800)
+      var aspectRatio, t1,
+        screenWidth = constraints.maxWidth,
+        crossAxisCount = 3;
+      if (screenWidth >= 1200)
         aspectRatio = 5;
+      else if (screenWidth >= 800)
+        aspectRatio = 4;
       else {
         crossAxisCount = 2;
         aspectRatio = 2.9;
