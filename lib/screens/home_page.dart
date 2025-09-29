@@ -217,66 +217,71 @@ class _HomeViewState extends State<HomeView> {
                               return screenWidth > 1000 && kIsWeb || isDesktop
                                   ? SizedBox(
                                       height: 220,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: List.generate(topMixes.length, (
-                                          index,
-                                        ) {
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: topMixes.length,
+                                        itemBuilder: (context, index) {
                                           final topMix = topMixes[index];
-                                          return Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(
-                                                width: 180,
-                                                height: 180,
-                                                child: Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                          8.0,
-                                                        ),
-                                                  ),
-                                                  color: const Color.fromARGB(
-                                                    255,
-                                                    30,
-                                                    30,
-                                                    30,
-                                                  ),
-                                                  child: ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                          8,
-                                                        ),
-                                                    child: Image.network(
-                                                      topMix['image']!,
-                                                      fit: BoxFit.fill,
-                                                      width: double.infinity,
-                                                      height: double.infinity,
+                                          return Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 8.0,
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                SizedBox(
+                                                  width: 180,
+                                                  height: 180,
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8.0,
+                                                          ),
+                                                    ),
+                                                    color: const Color.fromARGB(
+                                                      255,
+                                                      30,
+                                                      30,
+                                                      30,
+                                                    ),
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            8,
+                                                          ),
+                                                      child: Image.network(
+                                                        topMix['image']!,
+                                                        fit: BoxFit.fill,
+                                                        width: double.infinity,
+                                                        height: double.infinity,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              SizedBox(height: 10),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                  left: 8.0,
-                                                ),
-                                                child: Text(
-                                                  topMix['name'],
-                                                  style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.grey,
-                                                    fontWeight: FontWeight.bold,
+                                                SizedBox(height: 10),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                        left: 8.0,
+                                                      ),
+                                                  child: Text(
+                                                    topMix['name']!,
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
                                                   ),
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           );
-                                        }),
+                                        },
                                       ),
                                     )
                                   : SizedBox(
@@ -392,33 +397,40 @@ class _HomeViewState extends State<HomeView> {
                             builder: (context, constraints) {
                               double screenWidth = constraints.maxWidth;
                               return screenWidth > 1000 && kIsWeb || isDesktop
-                                  ? Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: List.generate(artists.length, (
-                                        index,
-                                      ) {
-                                        final artist = artists[index];
-                                        return Column(
-                                          children: [
-                                            CircleAvatar(
-                                              radius: 80,
-                                              backgroundImage: NetworkImage(
-                                                artist['image'],
-                                              ),
+                                  ? SizedBox(
+                                      width: double.infinity,
+                                      height: 220,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: artists.length,
+                                        itemBuilder: (context, index) {
+                                          final artist = artists[index];
+                                          return Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 15.0,
                                             ),
-                                            SizedBox(height: 10),
-                                            Text(
-                                              artist['name'],
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey,
-                                                fontWeight: FontWeight.bold,
-                                              ),
+                                            child: Column(
+                                              children: [
+                                                CircleAvatar(
+                                                  radius: 80,
+                                                  backgroundImage: NetworkImage(
+                                                    artist['image']!,
+                                                  ),
+                                                ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  artist['name']!,
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
                                             ),
-                                          ],
-                                        );
-                                      }),
+                                          );
+                                        },
+                                      ),
                                     )
                                   : SizedBox(
                                       height: 190,
@@ -484,15 +496,17 @@ class _HomeViewState extends State<HomeView> {
                                   ? SizedBox(
                                       width: double.infinity,
                                       height: 220,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: List.generate(
-                                          recentMusica.length,
-                                          (index) {
-                                            final recentSong =
-                                                recentMusica[index];
-                                            return Column(
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: recentMusica.length,
+                                        itemBuilder: (context, index) {
+                                          final recentSong =
+                                              recentMusica[index];
+                                          return Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 8.0,
+                                            ),
+                                            child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
@@ -514,7 +528,7 @@ class _HomeViewState extends State<HomeView> {
                                                     ),
                                                     child: ClipRRect(
                                                       borderRadius:
-                                                          BorderRadiusGeometry.circular(
+                                                          BorderRadius.circular(
                                                             8,
                                                           ),
                                                       child: Image.network(
@@ -528,7 +542,7 @@ class _HomeViewState extends State<HomeView> {
                                                 ),
                                                 SizedBox(height: 10),
                                                 Text(
-                                                  recentSong['name'],
+                                                  recentSong['name']!,
                                                   style: TextStyle(
                                                     fontSize: 14,
                                                     color: Colors.grey,
@@ -538,9 +552,9 @@ class _HomeViewState extends State<HomeView> {
                                                       TextOverflow.ellipsis,
                                                 ),
                                               ],
-                                            );
-                                          },
-                                        ),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     )
                                   : SizedBox(
