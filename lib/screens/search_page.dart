@@ -42,7 +42,7 @@ class _SearchPageState extends State<SearchPage> {
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
               bool isDesktop =
-                  kIsWeb || Platform.isWindows && screenWidth > 1000;
+                  (kIsWeb || Platform.isWindows) && screenWidth > 1000;
               double horizontalPadding = isDesktop ? 200 : 16;
               return Padding(
                 padding: EdgeInsetsGeometry.symmetric(

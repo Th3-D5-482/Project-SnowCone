@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart'
     show FirebaseAuth, FirebaseAuthException;
 import 'package:flutter/foundation.dart';
@@ -44,11 +46,7 @@ class _LogInState extends State<LogIn> {
             builder: (context, constraints) {
               double screenWidth = constraints.maxWidth;
               bool isDesktop =
-                  kIsWeb ||
-                  (defaultTargetPlatform == TargetPlatform.macOS ||
-                          defaultTargetPlatform == TargetPlatform.windows ||
-                          defaultTargetPlatform == TargetPlatform.linux) &&
-                      screenWidth > 1000;
+                  (kIsWeb || Platform.isWindows) && screenWidth > 1000;
               double horizontalPadding = screenWidth > 1000 && isDesktop
                   ? 200
                   : 16;

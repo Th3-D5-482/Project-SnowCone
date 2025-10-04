@@ -91,7 +91,8 @@ class _HomeViewState extends State<HomeView> {
         child: LayoutBuilder(
           builder: (context, constraints) {
             double screenWidth = constraints.maxWidth;
-            bool isDesktop = kIsWeb || Platform.isWindows && screenWidth > 1000;
+            bool isDesktop =
+                (kIsWeb || Platform.isWindows) && screenWidth > 1000;
             // ignore: unused_local_variable
             double horizontalPadding = isDesktop ? 200 : 16;
             return Padding(
