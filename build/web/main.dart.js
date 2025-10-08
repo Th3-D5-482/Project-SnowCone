@@ -53464,9 +53464,10 @@
     },
     _SignUpState_build___closure0: function _SignUpState_build___closure0() {
     },
-    SongsList: function SongsList(t0, t1) {
+    SongsList: function SongsList(t0, t1, t2) {
       this.imageName = t0;
-      this.key = t1;
+      this.songTitle = t1;
+      this.key = t2;
     },
     _SongsListState: function _SongsListState(t0) {
       this._widget = null;
@@ -201881,12 +201882,14 @@
   };
   A._HomeViewState_build______closure0.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
-      return new A.SongsList(A._asString(J.$index$asx(this.song, "image")), null);
+      t1 = this.song;
+      t2 = J.getInterceptor$asx(t1);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), null);
     },
     $signature: 646
   };
@@ -202751,8 +202754,12 @@
   A._SongsListState_build_closure.prototype = {
     call$2(context, constraints) {
       var _null = null,
-        horizontalPadding = constraints.maxWidth > 1000 ? 200 : 16;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null), A.SizedBox$(_null, 20, _null), A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(this.$this._widget.imageName, _null, 230, 230))], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
+        horizontalPadding = constraints.maxWidth > 1000 ? 200 : 16,
+        t1 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null),
+        t2 = A.SizedBox$(_null, 20, _null),
+        t3 = A.BorderRadius$circular(8),
+        t4 = this.$this._widget;
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t1, t2, A.Align$(B.Alignment_0_0, A.ClipRRect$(t3, A.Image$network(t4.imageName, _null, 230, 230)), _null, _null, _null), A.SizedBox$(_null, 20, _null), A.Align$(B.Alignment_0_0, A.Text$(t4.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
     $signature: 64
   };

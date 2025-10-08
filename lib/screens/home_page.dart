@@ -170,6 +170,7 @@ class _HomeViewState extends State<HomeView> {
                                             secondaryAnimation,
                                           ) => SongsList(
                                             imageName: song['image'],
+                                            songTitle: song['name'],
                                           ),
                                       transitionsBuilder:
                                           (

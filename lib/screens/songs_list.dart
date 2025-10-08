@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 
 class SongsList extends StatefulWidget {
   final String imageName;
-  const SongsList({super.key, required this.imageName});
+  final String songTitle;
+  const SongsList({
+    super.key,
+    required this.imageName,
+    required this.songTitle,
+  });
 
   @override
   State<SongsList> createState() => _SongsListState();
@@ -30,6 +35,7 @@ class _SongsListState extends State<SongsList> {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
                       alignment: Alignment.topLeft,
@@ -45,12 +51,26 @@ class _SongsListState extends State<SongsList> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.network(
-                        widget.imageName,
-                        width: 230,
-                        height: 230,
+                    Align(
+                      alignment: Alignment.center,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.network(
+                          widget.imageName,
+                          width: 230,
+                          height: 230,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        widget.songTitle,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
