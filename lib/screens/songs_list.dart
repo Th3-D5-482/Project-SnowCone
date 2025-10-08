@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 class SongsList extends StatefulWidget {
   final String imageName;
   final String songTitle;
+  final bool isBand;
   const SongsList({
     super.key,
     required this.imageName,
     required this.songTitle,
+    required this.isBand,
   });
 
   @override
@@ -51,17 +53,25 @@ class _SongsListState extends State<SongsList> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    Align(
-                      alignment: Alignment.center,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Image.network(
-                          widget.imageName,
-                          width: 230,
-                          height: 230,
-                        ),
-                      ),
-                    ),
+                    widget.isBand
+                        ? Align(
+                            alignment: Alignment.center,
+                            child: CircleAvatar(
+                              radius: 115,
+                              backgroundImage: NetworkImage(widget.imageName),
+                            ),
+                          )
+                        : Align(
+                            alignment: Alignment.center,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.network(
+                                widget.imageName,
+                                width: 230,
+                                height: 230,
+                              ),
+                            ),
+                          ),
                     SizedBox(height: 20),
                     Align(
                       alignment: Alignment.center,

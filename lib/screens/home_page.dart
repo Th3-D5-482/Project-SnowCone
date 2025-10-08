@@ -171,6 +171,7 @@ class _HomeViewState extends State<HomeView> {
                                           ) => SongsList(
                                             imageName: song['image'],
                                             songTitle: song['name'],
+                                            isBand: false,
                                           ),
                                       transitionsBuilder:
                                           (
@@ -265,29 +266,70 @@ class _HomeViewState extends State<HomeView> {
                                                 SizedBox(
                                                   width: 180,
                                                   height: 180,
-                                                  child: Card(
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            8.0,
+                                                  child: GestureDetector(
+                                                    onTap: () {
+                                                      Navigator.of(
+                                                        context,
+                                                      ).push(
+                                                        PageRouteBuilder(
+                                                          pageBuilder:
+                                                              (
+                                                                context,
+                                                                animation,
+                                                                secondaryAnimation,
+                                                              ) => SongsList(
+                                                                imageName:
+                                                                    topMix['image'],
+                                                                songTitle:
+                                                                    topMix['name'],
+                                                                isBand: false,
+                                                              ),
+                                                          transitionsBuilder:
+                                                              (
+                                                                context,
+                                                                animation,
+                                                                secondaryAnimation,
+                                                                child,
+                                                              ) => FadeTransition(
+                                                                opacity:
+                                                                    animation,
+                                                                child: child,
+                                                              ),
+                                                          transitionDuration:
+                                                              Duration(
+                                                                milliseconds:
+                                                                    800,
+                                                              ),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Card(
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              8.0,
+                                                            ),
+                                                      ),
+                                                      color:
+                                                          const Color.fromARGB(
+                                                            255,
+                                                            30,
+                                                            30,
+                                                            30,
                                                           ),
-                                                    ),
-                                                    color: const Color.fromARGB(
-                                                      255,
-                                                      30,
-                                                      30,
-                                                      30,
-                                                    ),
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            8,
-                                                          ),
-                                                      child: Image.network(
-                                                        topMix['image']!,
-                                                        fit: BoxFit.fill,
-                                                        width: double.infinity,
-                                                        height: double.infinity,
+                                                      child: ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              8,
+                                                            ),
+                                                        child: Image.network(
+                                                          topMix['image']!,
+                                                          fit: BoxFit.fill,
+                                                          width:
+                                                              double.infinity,
+                                                          height:
+                                                              double.infinity,
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -353,32 +395,72 @@ class _HomeViewState extends State<HomeView> {
                                                     SizedBox(
                                                       width: 160,
                                                       height: 160,
-                                                      child: Card(
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius:
-                                                              BorderRadius.circular(
-                                                                8.0,
-                                                              ),
-                                                        ),
-                                                        color:
-                                                            const Color.fromARGB(
-                                                              255,
-                                                              30,
-                                                              30,
-                                                              30,
+                                                      child: GestureDetector(
+                                                        onTap: () {
+                                                          Navigator.of(
+                                                            context,
+                                                          ).push(
+                                                            PageRouteBuilder(
+                                                              pageBuilder:
+                                                                  (
+                                                                    context,
+                                                                    animation,
+                                                                    secondaryAnimation,
+                                                                  ) => SongsList(
+                                                                    imageName:
+                                                                        topMix['image'],
+                                                                    songTitle:
+                                                                        topMix['name'],
+                                                                    isBand:
+                                                                        false,
+                                                                  ),
+                                                              transitionsBuilder:
+                                                                  (
+                                                                    context,
+                                                                    animation,
+                                                                    secondaryAnimation,
+                                                                    child,
+                                                                  ) => FadeTransition(
+                                                                    opacity:
+                                                                        animation,
+                                                                    child:
+                                                                        child,
+                                                                  ),
+                                                              transitionDuration:
+                                                                  Duration(
+                                                                    milliseconds:
+                                                                        800,
+                                                                  ),
                                                             ),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadiusGeometry.circular(
-                                                                8,
+                                                          );
+                                                        },
+                                                        child: Card(
+                                                          shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius.circular(
+                                                                  8.0,
+                                                                ),
+                                                          ),
+                                                          color:
+                                                              const Color.fromARGB(
+                                                                255,
+                                                                30,
+                                                                30,
+                                                                30,
                                                               ),
-                                                          child: Image.network(
-                                                            topMix['image']!,
-                                                            fit: BoxFit.cover,
-                                                            width:
-                                                                double.infinity,
-                                                            height:
-                                                                double.infinity,
+                                                          child: ClipRRect(
+                                                            borderRadius:
+                                                                BorderRadiusGeometry.circular(
+                                                                  8,
+                                                                ),
+                                                            child: Image.network(
+                                                              topMix['image']!,
+                                                              fit: BoxFit.cover,
+                                                              width: double
+                                                                  .infinity,
+                                                              height: double
+                                                                  .infinity,
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
@@ -441,24 +523,60 @@ class _HomeViewState extends State<HomeView> {
                                             padding: const EdgeInsets.symmetric(
                                               horizontal: 15.0,
                                             ),
-                                            child: Column(
-                                              children: [
-                                                CircleAvatar(
-                                                  radius: 80,
-                                                  backgroundImage: NetworkImage(
-                                                    artist['image']!,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                        ) => SongsList(
+                                                          imageName:
+                                                              artist['image']!,
+                                                          songTitle:
+                                                              artist['name']!,
+                                                          isBand: true,
+                                                        ),
+                                                    transitionsBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                          child,
+                                                        ) => FadeTransition(
+                                                          opacity: animation,
+                                                          child: child,
+                                                        ),
+                                                    transitionDuration:
+                                                        Duration(
+                                                          milliseconds: 800,
+                                                        ),
                                                   ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                Text(
-                                                  artist['name']!,
-                                                  style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.grey,
-                                                    fontWeight: FontWeight.bold,
+                                                );
+                                              },
+                                              child: Column(
+                                                children: [
+                                                  CircleAvatar(
+                                                    radius: 80,
+                                                    backgroundImage:
+                                                        NetworkImage(
+                                                          artist['image']!,
+                                                        ),
                                                   ),
-                                                ),
-                                              ],
+                                                  SizedBox(height: 10),
+                                                  Text(
+                                                    artist['name']!,
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           );
                                         },
@@ -475,25 +593,61 @@ class _HomeViewState extends State<HomeView> {
                                             padding: const EdgeInsets.only(
                                               right: 16.0,
                                             ),
-                                            child: Column(
-                                              children: [
-                                                CircleAvatar(
-                                                  radius: 80,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                        ) => SongsList(
+                                                          imageName:
+                                                              artist['image'],
+                                                          songTitle:
+                                                              artist['name'],
+                                                          isBand: true,
+                                                        ),
+                                                    transitionsBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                          child,
+                                                        ) => FadeTransition(
+                                                          opacity: animation,
+                                                          child: child,
+                                                        ),
+                                                    transitionDuration:
+                                                        Duration(
+                                                          milliseconds: 800,
+                                                        ),
+                                                  ),
+                                                );
+                                              },
+                                              child: Column(
+                                                children: [
+                                                  CircleAvatar(
+                                                    radius: 80,
 
-                                                  backgroundImage: NetworkImage(
-                                                    artist['image'],
+                                                    backgroundImage:
+                                                        NetworkImage(
+                                                          artist['image'],
+                                                        ),
                                                   ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                Text(
-                                                  artist['name'],
-                                                  style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.grey,
-                                                    fontWeight: FontWeight.bold,
+                                                  SizedBox(height: 10),
+                                                  Text(
+                                                    artist['name'],
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.grey,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           );
                                         },
