@@ -64,7 +64,7 @@ class _SignUpState extends State<SignUp> {
                         icon: Icon(
                           Icons.arrow_back_rounded,
                           color: Colors.grey,
-                          size: 30,
+                          size: 28,
                         ),
                       ),
                     ),

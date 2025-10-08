@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:snowcone/database/home_page_db.dart';
 import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/search_page.dart';
+import 'package:snowcone/screens/songs_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -158,39 +159,66 @@ class _HomeViewState extends State<HomeView> {
                             itemCount: musica.length,
                             itemBuilder: (context, index) {
                               final song = musica[index];
-                              return Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadiusGeometry.circular(
-                                    8,
-                                  ),
-                                ),
-                                color: const Color.fromARGB(255, 30, 30, 30),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right: 8),
-                                  child: Row(
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius:
-                                            BorderRadiusGeometry.circular(8),
-                                        child: Image.network(
-                                          song['image'],
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 10),
-                                      Expanded(
-                                        child: Text(
-                                          song['name'] ?? '',
-                                          style: const TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14,
-                                            overflow: TextOverflow.ellipsis,
+                              return GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    PageRouteBuilder(
+                                      pageBuilder:
+                                          (
+                                            context,
+                                            animation,
+                                            secondaryAnimation,
+                                          ) => SongsList(),
+                                      transitionsBuilder:
+                                          (
+                                            context,
+                                            animation,
+                                            secondaryAnimation,
+                                            child,
+                                          ) => FadeTransition(
+                                            opacity: animation,
+                                            child: child,
                                           ),
-                                          maxLines: 2,
-                                        ),
+                                      transitionDuration: Duration(
+                                        milliseconds: 800,
                                       ),
-                                    ],
+                                    ),
+                                  );
+                                },
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadiusGeometry.circular(
+                                      8,
+                                    ),
+                                  ),
+                                  color: const Color.fromARGB(255, 30, 30, 30),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right: 8),
+                                    child: Row(
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadiusGeometry.circular(8),
+                                          child: Image.network(
+                                            song['image'],
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Expanded(
+                                          child: Text(
+                                            song['name'] ?? '',
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                            maxLines: 2,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               );

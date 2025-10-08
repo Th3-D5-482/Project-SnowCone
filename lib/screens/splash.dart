@@ -40,6 +40,7 @@ class _SplashState extends State<Splash> {
               CircleAvatar(
                 radius: 100,
                 backgroundImage: AssetImage('assets/images/random/logo2.png'),
+                backgroundColor: Colors.transparent,
               ),
               SizedBox(height: 20),
               Row(
