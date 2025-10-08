@@ -53269,10 +53269,12 @@
     _HomeViewState_build____closure3: function _HomeViewState_build____closure3(t0) {
       this.musica = t0;
     },
-    _HomeViewState_build_____closure5: function _HomeViewState_build_____closure5(t0) {
+    _HomeViewState_build_____closure5: function _HomeViewState_build_____closure5(t0, t1) {
       this.context = t0;
+      this.song = t1;
     },
-    _HomeViewState_build______closure0: function _HomeViewState_build______closure0() {
+    _HomeViewState_build______closure0: function _HomeViewState_build______closure0(t0) {
+      this.song = t0;
     },
     _HomeViewState_build______closure1: function _HomeViewState_build______closure1() {
     },
@@ -53462,15 +53464,17 @@
     },
     _SignUpState_build___closure0: function _SignUpState_build___closure0() {
     },
-    SongsList: function SongsList(t0) {
-      this.key = t0;
+    SongsList: function SongsList(t0, t1) {
+      this.imageName = t0;
+      this.key = t1;
     },
     _SongsListState: function _SongsListState(t0) {
       this._widget = null;
       this._debugLifecycleState = t0;
       this._framework$_element = null;
     },
-    _SongsListState_build_closure: function _SongsListState_build_closure() {
+    _SongsListState_build_closure: function _SongsListState_build_closure(t0) {
+      this.$this = t0;
     },
     _SongsListState_build__closure: function _SongsListState_build__closure(t0) {
       this.context = t0;
@@ -201864,14 +201868,14 @@
       t2 = J.getInterceptor$asx(song);
       t3 = A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(A._asString(t2.$index(song, "image")), B.BoxFit_2, _null, _null));
       t2 = t2.$index(song, "name");
-      return A.GestureDetector$(_null, A.Card$(new A.Padding(B.EdgeInsets_0_0_8_0, A.Row$(A._setArrayType([t3, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t2 == null ? "" : t2), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build_____closure5(context), _null, _null, _null, _null, _null, _null);
+      return A.GestureDetector$(_null, A.Card$(new A.Padding(B.EdgeInsets_0_0_8_0, A.Row$(A._setArrayType([t3, B.SizedBox_10_null_null_null, A.Expanded$(A.Text$(A._asString(t2 == null ? "" : t2), 2, _null, _null, B.TextStyle_g9S, _null, _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), _null), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build_____closure5(context, song), _null, _null, _null, _null, _null, _null);
     },
     $signature: 645
   };
   A._HomeViewState_build_____closure5.prototype = {
     call$0() {
       var t1 = type$.dynamic;
-      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._HomeViewState_build______closure0(), A.Duration$(0, 800, 0), new A._HomeViewState_build______closure1(), t1), t1);
+      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._HomeViewState_build______closure0(this.song), A.Duration$(0, 800, 0), new A._HomeViewState_build______closure1(), t1), t1);
     },
     $signature: 1
   };
@@ -201882,7 +201886,7 @@
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
-      return new A.SongsList(null);
+      return new A.SongsList(A._asString(J.$index$asx(this.song, "image")), null);
     },
     $signature: 646
   };
@@ -202741,14 +202745,14 @@
   };
   A._SongsListState.prototype = {
     build$1(context) {
-      return A.Scaffold$(A.SafeArea$(true, A.SingleChildScrollView$(A.LayoutBuilder$(new A._SongsListState_build_closure()), B.Axis_1), true), null);
+      return A.Scaffold$(A.SafeArea$(true, A.SingleChildScrollView$(A.LayoutBuilder$(new A._SongsListState_build_closure(this)), B.Axis_1), true), null);
     }
   };
   A._SongsListState_build_closure.prototype = {
     call$2(context, constraints) {
       var _null = null,
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 16;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null), A.SizedBox$(_null, 20, _null), A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(this.$this._widget.imageName, _null, 230, 230))], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
     $signature: 64
   };

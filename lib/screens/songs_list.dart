@@ -4,7 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class SongsList extends StatefulWidget {
-  const SongsList({super.key});
+  final String imageName;
+  const SongsList({super.key, required this.imageName});
 
   @override
   State<SongsList> createState() => _SongsListState();
@@ -41,6 +42,15 @@ class _SongsListState extends State<SongsList> {
                           color: Colors.grey,
                           size: 28,
                         ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.network(
+                        widget.imageName,
+                        width: 230,
+                        height: 230,
                       ),
                     ),
                   ],
