@@ -84540,11 +84540,11 @@
     call$2$exception$stack($0, $1) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$2$exception$stack", 0, [$0, $1], ["exception", "stack"], 0));
     },
-    call$5($0, $1, $2, $3, $4) {
-      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$5", 0, [$0, $1, $2, $3, $4], [], 0));
-    },
     call$1$2$arguments($0, $1, $T1) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$2$arguments", 0, [$0, $1, $T1], ["arguments"], 1));
+    },
+    call$5($0, $1, $2, $3, $4) {
+      return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$5", 0, [$0, $1, $2, $3, $4], [], 0));
     },
     call$1$reversed($0) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("call", "call$1$reversed", 0, [$0], ["reversed"], 0));
@@ -103567,10 +103567,10 @@
       t1 = t1.title;
       t3 = _this.get$_localizationsDelegates();
       _this._widget.toString;
-      t4 = B.Map_empty5.containsKey$1("/");
+      t4 = B.Map_empty4.containsKey$1("/");
       if (A.assertTest(!t4))
         A.assertThrow('If the home property is specified, the routes table cannot include an entry for "/", since it would be redundant.');
-      return new A.WidgetsApp(_null, _null, _null, new A._MaterialAppState__buildWidgetApp_closure(), _null, _null, _null, _null, _null, t2, B.Map_empty5, _null, _null, _null, B.List_empty10, _this.get$_materialBuilder(), t1, _null, B.TextStyle_L1b, materialColor, _null, t3, _null, _null, B.List_Locale_en_US, false, false, _this.get$_exitWidgetSelectionButtonBuilder(), _this.get$_moveExitWidgetSelectionButtonBuilder(), _this.get$_tapBehaviorButtonBuilder(), false, _null, _null, _null, new A.GlobalObjectKey(_this, type$.GlobalObjectKey_State_StatefulWidget));
+      return new A.WidgetsApp(_null, _null, _null, new A._MaterialAppState__buildWidgetApp_closure(), _null, _null, _null, _null, _null, t2, B.Map_empty4, _null, _null, _null, B.List_empty9, _this.get$_materialBuilder(), t1, _null, B.TextStyle_L1b, materialColor, _null, t3, _null, _null, B.List_Locale_en_US, false, false, _this.get$_exitWidgetSelectionButtonBuilder(), _this.get$_moveExitWidgetSelectionButtonBuilder(), _this.get$_tapBehaviorButtonBuilder(), false, _null, _null, _null, new A.GlobalObjectKey(_this, type$.GlobalObjectKey_State_StatefulWidget));
     },
     build$1(context) {
       var t2, _this = this, _null = null, t1 = {},
@@ -173164,9 +173164,9 @@
       A.assertHelper(navigatorRenderObject._box$_size != null);
       t2 = type$.WidgetsBinding;
       fromSubtreeContext = A.BindingBase_checkInstance($.WidgetsBinding__instance, t2).WidgetsBinding__buildOwner._globalKeyRegistry.$index(0, from._subtreeKey);
-      fromHeroes = fromSubtreeContext != null ? A.Hero__allHeroesFor(fromSubtreeContext, isUserGestureTransition, t1) : B.Map_empty4;
+      fromHeroes = fromSubtreeContext != null ? A.Hero__allHeroesFor(fromSubtreeContext, isUserGestureTransition, t1) : B.Map_empty5;
       toSubtreeContext = A.BindingBase_checkInstance($.WidgetsBinding__instance, t2).WidgetsBinding__buildOwner._globalKeyRegistry.$index(0, to._subtreeKey);
-      toHeroes = toSubtreeContext != null ? A.Hero__allHeroesFor(toSubtreeContext, isUserGestureTransition, t1) : B.Map_empty4;
+      toHeroes = toSubtreeContext != null ? A.Hero__allHeroesFor(toSubtreeContext, isUserGestureTransition, t1) : B.Map_empty5;
       for (t1 = fromHeroes.get$entries(), t1 = t1.get$iterator(t1), t2 = _this.get$_defaultHeroFlightShuttleBuilder(), t3 = _this.createRectTween, t4 = _this._flights, t5 = flightType == null, t6 = type$.void_Function_AnimationStatus, t7 = _this.get$_handleFlightEnded(), t8 = type$.JSArray_of_void_Function_AnimationStatus, t9 = type$.ObserverList_of_void_Function_AnimationStatus, t10 = type$.void_Function, t11 = type$.int, t12 = type$.HashedObserverList_of_void_Function, t13 = type$.Animation_double, t14 = type$.Tween_nullable_Rect, t15 = type$.Tween_double, t16 = type$.Animatable_double, t17 = t15._eval$1("_AnimatedEvaluation<Animatable.T>"), t18 = type$.ReverseTween_nullable_Rect; t1.moveNext$0();) {
         t19 = t1.get$current();
         tag = t19.key;
@@ -177860,7 +177860,7 @@
       newRoutesForCurrentPage = A._setArrayType([], t1);
       oldRoutesForCurrentPage = _this._pageToPagelessRoutes.$index(0, _null);
       if (oldRoutesForCurrentPage == null)
-        oldRoutesForCurrentPage = B.List_empty9;
+        oldRoutesForCurrentPage = B.List_empty10;
       newMap = A.LinkedHashMap_LinkedHashMap$_empty(type$.nullable_String, type$.List_Object);
       t2 = _this._pageToPagelessRoutes.get$keys();
       removedPages = t2.toSet$0(t2);
@@ -177887,10 +177887,10 @@
             t4.toString;
             oldRoutesForCurrentPage = t4.$index(0, currentPage0.get$restorationId());
             if (oldRoutesForCurrentPage == null)
-              oldRoutesForCurrentPage = B.List_empty9;
+              oldRoutesForCurrentPage = B.List_empty10;
           } else {
-            newRoutesForCurrentPage = B.List_empty9;
-            oldRoutesForCurrentPage = B.List_empty9;
+            newRoutesForCurrentPage = B.List_empty10;
+            oldRoutesForCurrentPage = B.List_empty10;
           }
           currentPage = currentPage0;
           continue;
@@ -196665,7 +196665,7 @@
       var t1, t2,
         node = A.WidgetInspectorService_objectToDiagnosticsNode(this.toObject$1(diagnosticableId));
       if (node == null)
-        return B.List_empty9;
+        return B.List_empty10;
       t1 = node.get$builder().properties;
       t2 = A._setArrayType([], type$.JSArray_DiagnosticsNode);
       return A.DiagnosticsNode_toJsonList(type$.List_DiagnosticsNode._as(t1), node, new A.InspectorSerializationDelegate(this, groupName, false, -1, false, 1, true, false, null, t2));
@@ -202934,7 +202934,7 @@
   };
   A._SongsListState_build__closure.prototype = {
     call$0() {
-      A.Navigator_of(this.context).pop$1$1(null, type$.nullable_Object);
+      A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
     },
     $signature: 1
   };
@@ -210631,8 +210631,8 @@
     B.List_empty7 = makeConstList([], type$.JSArray_InheritedTheme);
     B.List_empty6 = makeConstList([], type$.JSArray_LineMetrics);
     B.List_empty19 = makeConstList([], type$.JSArray_Locale);
-    B.List_empty10 = makeConstList([], type$.JSArray_NavigatorObserver);
-    B.List_empty9 = makeConstList([], type$.JSArray_Object);
+    B.List_empty9 = makeConstList([], type$.JSArray_NavigatorObserver);
+    B.List_empty10 = makeConstList([], type$.JSArray_Object);
     B.List_empty11 = makeConstList([], type$.JSArray_OverlayEntry);
     B.List_empty12 = makeConstList([], A.findType("JSArray<Page<@>>"));
     B.List_empty5 = makeConstList([], type$.JSArray_Rect);
@@ -211214,9 +211214,9 @@
     B.Map_eXhGW = new A.ConstantStringMap(B.Object_type_0, ["line"], type$.ConstantStringMap_String_String);
     B.Object_empty = {};
     B.Map_empty3 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<DismissDirection,double>"));
-    B.Map_empty4 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<Object,_HeroState>"));
+    B.Map_empty5 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<Object,_HeroState>"));
     B.Map_empty6 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<ShortcutActivator,Intent>"));
-    B.Map_empty5 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<String,Widget(BuildContext)>"));
+    B.Map_empty4 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<String,Widget(BuildContext)>"));
     B.Map_empty = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<String,List<String>>"));
     B.Map_empty8 = new A.ConstantStringMap(B.Object_empty, [], A.findType("ConstantStringMap<String,Object>"));
     B.Map_empty9 = new A.ConstantStringMap(B.Object_empty, [], type$.ConstantStringMap_String_String);

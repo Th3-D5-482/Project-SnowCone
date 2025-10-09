@@ -43,7 +43,7 @@ class _SongsListState extends State<SongsList> {
                       alignment: Alignment.topLeft,
                       child: IconButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.of(context).pop();
                         },
                         icon: Icon(
                           Icons.arrow_back_rounded,
