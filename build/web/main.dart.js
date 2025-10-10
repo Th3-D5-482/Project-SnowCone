@@ -203165,7 +203165,7 @@
       var t6, t7, _null = null,
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 0,
         t1 = this.$this,
-        t2 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(0, 0, 0, 0.8), A.Color$(A.int_parse(t1._widget.backgroundColor, _null)), A.Color$fromRGBO(0, 0, 0, 0.8)], type$.JSArray_Color), A._setArrayType([0, 0.5, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
+        t2 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(0, 0, 0, 0.8), A.Color$(A.int_parse(t1._widget.backgroundColor, _null)), A.Color$fromRGBO(0, 0, 0, 0.8)], type$.JSArray_Color), A._setArrayType([0, 0.4, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
         t3 = A.SizedBox$(_null, 40, _null),
         t4 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null),
         t5 = A.SizedBox$(_null, 10, _null);

@@ -177,42 +177,42 @@
     "name": "Arriving",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1758744215984",
     "isContinueListening": true,
-   "backgroundColor":"0xFFF0F4F8"
+   "backgroundColor":"0xFFF3F1ED"
   },
   {
     "id": 1,
     "name": "Way Maker",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1758744216128",
     "isContinueListening": true,
-   "backgroundColor":"0xFFE0EDF5"
+   "backgroundColor":"0xFFE0F2F1"
   },
   {
     "id": 2,
     "name": "10,000 Reasons",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1758744216273",
     "isContinueListening": true,
-    "backgroundColor":"0xFFF2EDE6"
+    "backgroundColor":"0xFFFBE9E7"
   },
   {
     "id": 3,
     "name": "Reckless Love",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1758744215664",
     "isContinueListening": true,
-    "backgroundColor":"0xFFF4EDEB"
+    "backgroundColor":"0xFFE8F5E9"
   },
   {
     "id": 4,
     "name": "Always",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1758744216255",
     "isContinueListening": true,
-     "backgroundColor":"0xFFF3EDE8"
+     "backgroundColor":"0xFFF3E5F5"
   },
   {
     "id": 5,
     "name": "All Sons & Daughters",
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1758744215263",
     "isContinueListening": true,
-    "backgroundColor":"0xFFF5EAE9"
+    "backgroundColor":"0xFFFFF9C4"
   }
 ],
 "BrowseAll" :[

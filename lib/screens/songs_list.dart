@@ -50,7 +50,7 @@ class _SongsListState extends State<SongsList> {
                           Color(int.parse(widget.backgroundColor)),
                           Color.fromRGBO(0, 0, 0, 0.8),
                         ],
-                        stops: [0.0, 0.5, 1.0],
+                        stops: [0.0, 0.4, 1.0],
                       ),
                     ),
                     child: SizedBox(
