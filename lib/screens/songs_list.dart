@@ -50,11 +50,11 @@ class _SongsListState extends State<SongsList> {
                           Color(int.parse(widget.backgroundColor)),
                           Color.fromRGBO(0, 0, 0, 0.8),
                         ],
-                        stops: [0.0, 0.4, 1.0],
+                        stops: [0.0, 0.5, 1.0],
                       ),
                     ),
                     child: SizedBox(
-                      height: 490,
+                      height: 550,
                       child: Column(
                         children: [
                           SizedBox(height: 40),
@@ -93,6 +93,16 @@ class _SongsListState extends State<SongsList> {
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "Light in the darkness,\npromise in the silence.",
+                            style: TextStyle(
+                              fontSize: 20,
+                              // ignore: deprecated_member_use
+                              color: Colors.white.withOpacity(0.7),
+                              fontStyle: FontStyle.italic,
                             ),
                           ),
                         ],
