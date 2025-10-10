@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/search_page_db.dart';
+import 'package:snowcone/screens/songs_list.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -149,49 +150,82 @@ class _SearchPageState extends State<SearchPage> {
                                 physics: NeverScrollableScrollPhysics(),
                                 itemBuilder: (context, index) {
                                   final genres = topGenres[index];
-                                  return Card(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadiusGeometry.circular(8),
-                                    ),
-                                    color: (genres['color'] != null)
-                                        ? hexToColor(genres['color'])
-                                        : Color(0xFFCCCCCC),
-                                    child: Stack(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: Text(
-                                              genres['name']!,
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white,
+                                  return GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        PageRouteBuilder(
+                                          pageBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                              ) => SongsList(
+                                                imageName: genres['image'],
+                                                songTitle: genres['name'],
+                                                isBand: false,
+                                                backgroundColor:
+                                                    genres['backgroundColor'],
+                                              ),
+                                          transitionsBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                                child,
+                                              ) => FadeTransition(
+                                                opacity: animation,
+                                                child: child,
+                                              ),
+                                          transitionDuration: Duration(
+                                            milliseconds: 800,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                    child: Card(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadiusGeometry.circular(8),
+                                      ),
+                                      color: (genres['color'] != null)
+                                          ? hexToColor(genres['color'])
+                                          : Color(0xFFCCCCCC),
+                                      child: Stack(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Align(
+                                              alignment: Alignment.topLeft,
+                                              child: Text(
+                                                genres['name']!,
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        Positioned(
-                                          top: topOffSet,
-                                          right: -10,
-                                          child: Transform.rotate(
-                                            angle: 0.4,
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadiusGeometry.circular(
-                                                    8,
-                                                  ),
-                                              child: Image.network(
-                                                genres['image'],
-                                                width: 80,
-                                                height: 80,
+                                          Positioned(
+                                            top: topOffSet,
+                                            right: -10,
+                                            child: Transform.rotate(
+                                              angle: 0.4,
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadiusGeometry.circular(
+                                                      8,
+                                                    ),
+                                                child: Image.network(
+                                                  genres['image'],
+                                                  width: 80,
+                                                  height: 80,
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   );
                                 },
@@ -251,49 +285,84 @@ class _SearchPageState extends State<SearchPage> {
                                     borderRadius: BorderRadiusGeometry.circular(
                                       8,
                                     ),
-                                    child: Card(
-                                      color: (browseAll['color'] != null)
-                                          ? hexToColor(browseAll['color'])
-                                          : Color(0xFFCCCCCC),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadiusGeometry.circular(8),
-                                      ),
-                                      child: Stack(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Align(
-                                              alignment: Alignment.topLeft,
-                                              child: Text(
-                                                browseAll['name'],
-                                                style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          PageRouteBuilder(
+                                            pageBuilder:
+                                                (
+                                                  context,
+                                                  animation,
+                                                  secondaryAnimation,
+                                                ) => SongsList(
+                                                  imageName: browseAll['image'],
+                                                  songTitle: browseAll['name'],
+                                                  isBand: false,
+                                                  backgroundColor:
+                                                      browseAll['backgroundColor'],
+                                                ),
+                                            transitionsBuilder:
+                                                (
+                                                  context,
+                                                  animation,
+                                                  secondaryAnimation,
+                                                  child,
+                                                ) => FadeTransition(
+                                                  opacity: animation,
+                                                  child: child,
+                                                ),
+                                            transitionDuration: Duration(
+                                              milliseconds: 800,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: Card(
+                                        color: (browseAll['color'] != null)
+                                            ? hexToColor(browseAll['color'])
+                                            : Color(0xFFCCCCCC),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadiusGeometry.circular(8),
+                                        ),
+                                        child: Stack(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(
+                                                8.0,
+                                              ),
+                                              child: Align(
+                                                alignment: Alignment.topLeft,
+                                                child: Text(
+                                                  browseAll['name'],
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.white,
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          Positioned(
-                                            top: topOffSet,
-                                            right: -10,
-                                            child: Transform.rotate(
-                                              angle: 0.4,
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadiusGeometry.circular(
-                                                      8,
-                                                    ),
-                                                child: Image.network(
-                                                  browseAll['image'],
-                                                  width: 80,
-                                                  height: 80,
+                                            Positioned(
+                                              top: topOffSet,
+                                              right: -10,
+                                              child: Transform.rotate(
+                                                angle: 0.4,
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadiusGeometry.circular(
+                                                        8,
+                                                      ),
+                                                  child: Image.network(
+                                                    browseAll['image'],
+                                                    width: 80,
+                                                    height: 80,
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   );

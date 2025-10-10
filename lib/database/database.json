@@ -103,42 +103,42 @@
     "name": "Echo Praise",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFB8AFC4"
   },
   {
     "id": 1,
     "name": "Hearts United",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1758813029740",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFF2D6E3"
   },
   {
     "id": 2,
     "name": "Upper Room",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFD8D4C8"
   },
   {
     "id": 3,
     "name": "Kingdom Keys",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFCFCBBE"
   },
   {
     "id": 4,
     "name": "Selah Sessions",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFCAD8E1"
   },
   {
     "id": 5,
     "name": "Altar Fire",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFE4CBB4"
   }
   ],
   "TopGenres": [
@@ -147,28 +147,32 @@
     "name": "Worship",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
-    "color": "#cc0088"
+    "color": "#cc0088",
+     "backgroundColor":"0xFFF2BBD7"
   },
   {
     "id": 1,
     "name": "Praise",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
-    "color": "#096f50"
+    "color": "#096f50",
+     "backgroundColor":"0xFFB7D3C9"
   },
   {
     "id": 2,
     "name": "Gospel",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
-    "color": "#7c00e0"
+    "color": "#7c00e0",
+     "backgroundColor":"0xFFD9C3F3"
   },
   {
     "id": 3,
     "name": "Pop",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
-    "color": "#203062"
+    "color": "#203062",
+     "backgroundColor":"0xFFBDC5D9"
   }
 ],
 "Albums": [
@@ -221,42 +225,48 @@
     "name": "Hyms",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
-    "color": "#8c5eaa"
+    "color": "#8c5eaa",
+    "backgroundColor":"0xFFD9CDE6"
   },
   {
     "id": 1,
     "name": "Rock",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
-    "color": "#096f50"
+    "color": "#096f50",
+    "backgroundColor":"0xFFAFCFC3"
   },
   {
     "id": 2,
     "name": "HipHop",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
-    "color": "#628c0d"
+    "color": "#628c0d",
+    "backgroundColor":"0xFFD3DBB9"
   },
   {
     "id": 3,
     "name": "Indie",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
-    "color": "#4e8095"
+    "color": "#4e8095",
+    "backgroundColor":"0xFFC3D6DC"
   },
   {
     "id": 4,
     "name": "Folk",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
-    "color": "#cc0088"
+    "color": "#cc0088",
+    "backgroundColor":"0xFFF6CCE4"
   },
   {
     "id": 5,
     "name": "Country",
     "image":
         "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
-    "color": "#b2590d"
+    "color": "#b2590d",
+    "backgroundColor":"0xFFE6CDB9"
   }
 ],
 "Artist" : [
@@ -264,37 +274,37 @@
     "id": 0,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
     "name": "Elevantion Worship",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFF6E3C9"
   },
   {
     "id": 1,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
     "name": "Hillsong United",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFCBD6DD"
   },
   {
     "id": 2,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
     "name": "Bethel Music",
-     "backgroundColor":"#E6EDF2"
+     "backgroundColor":"0xFFD5DCD6"
   },
   {
     "id": 3,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
     "name": "Hillsong Worship",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFF3E7D2"
   },
   {
     "id": 4,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
     "name": "Platnetshakers",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFF1D9C5"
   },
   {
     "id": 5,
     "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
     "name": "For Kings & Country",
-    "backgroundColor":"#E6EDF2"
+    "backgroundColor":"0xFFD6CFC7"
   }
 ]
 }
