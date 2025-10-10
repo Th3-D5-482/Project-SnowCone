@@ -172,6 +172,8 @@ class _HomeViewState extends State<HomeView> {
                                             imageName: song['image'],
                                             songTitle: song['name'],
                                             isBand: false,
+                                            backgroundColor:
+                                                song['backgroundColor'],
                                           ),
                                       transitionsBuilder:
                                           (
@@ -283,6 +285,8 @@ class _HomeViewState extends State<HomeView> {
                                                                 songTitle:
                                                                     topMix['name'],
                                                                 isBand: false,
+                                                                backgroundColor:
+                                                                    topMix['backgroundColor'],
                                                               ),
                                                           transitionsBuilder:
                                                               (
@@ -413,6 +417,8 @@ class _HomeViewState extends State<HomeView> {
                                                                         topMix['name'],
                                                                     isBand:
                                                                         false,
+                                                                    backgroundColor:
+                                                                        topMix['backgroundColor'],
                                                                   ),
                                                               transitionsBuilder:
                                                                   (
@@ -538,6 +544,8 @@ class _HomeViewState extends State<HomeView> {
                                                           songTitle:
                                                               artist['name']!,
                                                           isBand: true,
+                                                          backgroundColor:
+                                                              artist['backgroundColor']!,
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -608,6 +616,8 @@ class _HomeViewState extends State<HomeView> {
                                                           songTitle:
                                                               artist['name'],
                                                           isBand: true,
+                                                          backgroundColor:
+                                                              artist['backgroundColor'],
                                                         ),
                                                     transitionsBuilder:
                                                         (

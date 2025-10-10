@@ -7,11 +7,13 @@ class SongsList extends StatefulWidget {
   final String imageName;
   final String songTitle;
   final bool isBand;
+  final String backgroundColor;
   const SongsList({
     super.key,
     required this.imageName,
     required this.songTitle,
     required this.isBand,
+    required this.backgroundColor,
   });
 
   @override
@@ -44,9 +46,9 @@ class _SongsListState extends State<SongsList> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          Color.fromRGBO(255, 235, 190, 0.0),
-                          Color(0xFFDDE2EA),
-                          Color.fromRGBO(255, 235, 190, 0.0),
+                          Color.fromRGBO(0, 0, 0, 0.8),
+                          Color(int.parse(widget.backgroundColor)),
+                          Color.fromRGBO(0, 0, 0, 0.8),
                         ],
                         stops: [0.0, 0.5, 1.0],
                       ),
@@ -69,7 +71,7 @@ class _SongsListState extends State<SongsList> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: 10),
                           widget.isBand
                               ? CircleAvatar(
                                   radius: 115,
@@ -81,8 +83,8 @@ class _SongsListState extends State<SongsList> {
                                   borderRadius: BorderRadius.circular(8),
                                   child: Image.network(
                                     widget.imageName,
-                                    width: 230,
-                                    height: 230,
+                                    width: 240,
+                                    height: 240,
                                   ),
                                 ),
                           SizedBox(height: 20),

@@ -53607,12 +53607,13 @@
     },
     _SignUpState_build___closure0: function _SignUpState_build___closure0() {
     },
-    SongsList: function SongsList(t0, t1, t2, t3) {
+    SongsList: function SongsList(t0, t1, t2, t3, t4) {
       var _ = this;
       _.imageName = t0;
       _.songTitle = t1;
       _.isBand = t2;
-      _.key = t3;
+      _.backgroundColor = t3;
+      _.key = t4;
     },
     _SongsListState: function _SongsListState(t0) {
       this._widget = null;
@@ -202165,7 +202166,7 @@
       t1._as(secondaryAnimation);
       t1 = this.song;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), null);
     },
     $signature: 69
   };
@@ -202237,7 +202238,7 @@
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), null);
     },
     $signature: 69
   };
@@ -202297,7 +202298,7 @@
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), null);
     },
     $signature: 69
   };
@@ -202357,7 +202358,7 @@
   };
   A._HomeViewState_build_______closure1.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3;
+      var t1, t2, t3, t4;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
@@ -202367,9 +202368,12 @@
       t3 = t2.$index(t1, "image");
       t3.toString;
       A._asString(t3);
-      t1 = t2.$index(t1, "name");
+      t4 = t2.$index(t1, "name");
+      t4.toString;
+      A._asString(t4);
+      t1 = t2.$index(t1, "backgroundColor");
       t1.toString;
-      return new A.SongsList(t3, A._asString(t1), true, null);
+      return new A.SongsList(t3, t4, true, A._asString(t1), null);
     },
     $signature: 69
   };
@@ -202410,7 +202414,7 @@
       t1._as(secondaryAnimation);
       t1 = this.artist;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), true, null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), true, A._asString(t2.$index(t1, "backgroundColor")), null);
     },
     $signature: 69
   };
@@ -203158,18 +203162,19 @@
   };
   A._SongsListState_build_closure.prototype = {
     call$2(context, constraints) {
-      var _null = null,
+      var t6, t7, _null = null,
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 0,
-        t1 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(255, 235, 190, 0), A.Color$(4292731626), A.Color$fromRGBO(255, 235, 190, 0)], type$.JSArray_Color), A._setArrayType([0, 0.5, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
-        t2 = A.SizedBox$(_null, 40, _null),
-        t3 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null),
-        t4 = A.SizedBox$(_null, 20, _null),
-        t5 = this.$this._widget,
-        t6 = t5.isBand,
-        t7 = t5.imageName;
-      t6 = t6 ? A.CircleAvatar$(_null, new A.NetworkImage(t7, 1, _null, B.WebHtmlElementStrategy_0), _null, 115) : A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(t7, _null, 230, 230));
+        t1 = this.$this,
+        t2 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(0, 0, 0, 0.8), A.Color$(A.int_parse(t1._widget.backgroundColor, _null)), A.Color$fromRGBO(0, 0, 0, 0.8)], type$.JSArray_Color), A._setArrayType([0, 0.5, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
+        t3 = A.SizedBox$(_null, 40, _null),
+        t4 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null),
+        t5 = A.SizedBox$(_null, 10, _null);
+      t1 = t1._widget;
+      t6 = t1.isBand;
+      t7 = t1.imageName;
+      t6 = t6 ? A.CircleAvatar$(_null, new A.NetworkImage(t7, 1, _null, B.WebHtmlElementStrategy_0), _null, 115) : A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(t7, _null, 240, 240));
       t7 = type$.JSArray_Widget;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t2, t3, t4, t6, A.SizedBox$(_null, 20, _null), A.Text$(t5.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 490, _null), B.Clip_0, _null, t1, _null, _null, _null, _null, _null, _null, _null)], t7), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t3, t4, t5, t6, A.SizedBox$(_null, 20, _null), A.Text$(t1.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 490, _null), B.Clip_0, _null, t2, _null, _null, _null, _null, _null, _null, _null)], t7), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
     $signature: 66
   };
