@@ -165,6 +165,7 @@ class _SearchPageState extends State<SearchPage> {
                                                 isBand: false,
                                                 backgroundColor:
                                                     genres['backgroundColor'],
+                                                albumID: genres['id'],
                                               ),
                                           transitionsBuilder:
                                               (
@@ -300,6 +301,7 @@ class _SearchPageState extends State<SearchPage> {
                                                   isBand: false,
                                                   backgroundColor:
                                                       browseAll['backgroundColor'],
+                                                  albumID: browseAll['id'],
                                                 ),
                                             transitionsBuilder:
                                                 (

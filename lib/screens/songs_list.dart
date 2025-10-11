@@ -2,18 +2,21 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:snowcone/database/home_page_db.dart';
 
 class SongsList extends StatefulWidget {
   final String imageName;
   final String songTitle;
   final bool isBand;
   final String backgroundColor;
+  final int albumID;
   const SongsList({
     super.key,
     required this.imageName,
     required this.songTitle,
     required this.isBand,
     required this.backgroundColor,
+    required this.albumID,
   });
 
   @override
@@ -98,6 +101,49 @@ class _SongsListState extends State<SongsList> {
                         ],
                       ),
                     ),
+                  ),
+                  StreamBuilder(
+                    stream: getMusic("Music"),
+                    builder: (context, asyncSnapshot) {
+                      final songLists = (asyncSnapshot.data ?? [])
+                          .where((item) => item['albumID'] == widget.albumID)
+                          .toList();
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: SizedBox(
+                          height: 480,
+                          child: ListView.builder(
+                            itemCount: songLists.length,
+                            physics: NeverScrollableScrollPhysics(),
+                            scrollDirection: Axis.vertical,
+                            itemBuilder: (context, index) {
+                              final songList = songLists[index];
+                              return Padding(
+                                padding: const EdgeInsets.only(top: 8),
+                                child: Card(
+                                  child: ListTile(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    tileColor: const Color.fromARGB(
+                                      255,
+                                      30,
+                                      30,
+                                      30,
+                                    ),
+                                    leading: Icon(Icons.music_note),
+                                    title: Text(
+                                      songList['name'],
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
