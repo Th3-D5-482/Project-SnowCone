@@ -54,7 +54,7 @@ class _SongsListState extends State<SongsList> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 480,
+                      height: 460,
                       child: Column(
                         children: [
                           SizedBox(height: 40),
