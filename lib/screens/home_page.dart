@@ -262,54 +262,49 @@ class _HomeViewState extends State<HomeView> {
                                             padding: const EdgeInsets.symmetric(
                                               horizontal: 8.0,
                                             ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                SizedBox(
-                                                  width: 180,
-                                                  height: 180,
-                                                  child: GestureDetector(
-                                                    onTap: () {
-                                                      Navigator.of(
-                                                        context,
-                                                      ).push(
-                                                        PageRouteBuilder(
-                                                          pageBuilder:
-                                                              (
-                                                                context,
-                                                                animation,
-                                                                secondaryAnimation,
-                                                              ) => SongsList(
-                                                                imageName:
-                                                                    topMix['image'],
-                                                                songTitle:
-                                                                    topMix['name'],
-                                                                isBand: false,
-                                                                backgroundColor:
-                                                                    topMix['backgroundColor'],
-                                                                albumID:
-                                                                    topMix['id'],
-                                                              ),
-                                                          transitionsBuilder:
-                                                              (
-                                                                context,
-                                                                animation,
-                                                                secondaryAnimation,
-                                                                child,
-                                                              ) => FadeTransition(
-                                                                opacity:
-                                                                    animation,
-                                                                child: child,
-                                                              ),
-                                                          transitionDuration:
-                                                              Duration(
-                                                                milliseconds:
-                                                                    800,
-                                                              ),
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                        ) => SongsList(
+                                                          imageName:
+                                                              topMix['image'],
+                                                          songTitle:
+                                                              topMix['name'],
+                                                          isBand: false,
+                                                          backgroundColor:
+                                                              topMix['backgroundColor'],
+                                                          albumID: topMix['id'],
                                                         ),
-                                                      );
-                                                    },
+                                                    transitionsBuilder:
+                                                        (
+                                                          context,
+                                                          animation,
+                                                          secondaryAnimation,
+                                                          child,
+                                                        ) => FadeTransition(
+                                                          opacity: animation,
+                                                          child: child,
+                                                        ),
+                                                    transitionDuration:
+                                                        Duration(
+                                                          milliseconds: 800,
+                                                        ),
+                                                  ),
+                                                );
+                                              },
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  SizedBox(
+                                                    width: 180,
+                                                    height: 180,
                                                     child: Card(
                                                       shape: RoundedRectangleBorder(
                                                         borderRadius:
@@ -340,26 +335,26 @@ class _HomeViewState extends State<HomeView> {
                                                       ),
                                                     ),
                                                   ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                        left: 8.0,
+                                                  SizedBox(height: 10),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                          left: 8.0,
+                                                        ),
+                                                    child: Text(
+                                                      topMix['name']!,
+                                                      style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.grey,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
-                                                  child: Text(
-                                                    topMix['name']!,
-                                                    style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.grey,
-                                                      fontWeight:
-                                                          FontWeight.bold,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
                                                     ),
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           );
                                         },
@@ -395,56 +390,52 @@ class _HomeViewState extends State<HomeView> {
                                                 padding: const EdgeInsets.only(
                                                   right: 8.0,
                                                 ),
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    SizedBox(
-                                                      width: 160,
-                                                      height: 160,
-                                                      child: GestureDetector(
-                                                        onTap: () {
-                                                          Navigator.of(
-                                                            context,
-                                                          ).push(
-                                                            PageRouteBuilder(
-                                                              pageBuilder:
-                                                                  (
-                                                                    context,
-                                                                    animation,
-                                                                    secondaryAnimation,
-                                                                  ) => SongsList(
-                                                                    imageName:
-                                                                        topMix['image'],
-                                                                    songTitle:
-                                                                        topMix['name'],
-                                                                    isBand:
-                                                                        false,
-                                                                    backgroundColor:
-                                                                        topMix['backgroundColor'],
-                                                                    albumID:
-                                                                        topMix['id'],
-                                                                  ),
-                                                              transitionsBuilder:
-                                                                  (
-                                                                    context,
-                                                                    animation,
-                                                                    secondaryAnimation,
-                                                                    child,
-                                                                  ) => FadeTransition(
-                                                                    opacity:
-                                                                        animation,
-                                                                    child:
-                                                                        child,
-                                                                  ),
-                                                              transitionDuration:
-                                                                  Duration(
-                                                                    milliseconds:
-                                                                        800,
-                                                                  ),
+                                                child: GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.of(context).push(
+                                                      PageRouteBuilder(
+                                                        pageBuilder:
+                                                            (
+                                                              context,
+                                                              animation,
+                                                              secondaryAnimation,
+                                                            ) => SongsList(
+                                                              imageName:
+                                                                  topMix['image'],
+                                                              songTitle:
+                                                                  topMix['name'],
+                                                              isBand: false,
+                                                              backgroundColor:
+                                                                  topMix['backgroundColor'],
+                                                              albumID:
+                                                                  topMix['id'],
                                                             ),
-                                                          );
-                                                        },
+                                                        transitionsBuilder:
+                                                            (
+                                                              context,
+                                                              animation,
+                                                              secondaryAnimation,
+                                                              child,
+                                                            ) => FadeTransition(
+                                                              opacity:
+                                                                  animation,
+                                                              child: child,
+                                                            ),
+                                                        transitionDuration:
+                                                            Duration(
+                                                              milliseconds: 800,
+                                                            ),
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      SizedBox(
+                                                        width: 160,
+                                                        height: 160,
                                                         child: Card(
                                                           shape: RoundedRectangleBorder(
                                                             borderRadius:
@@ -475,24 +466,24 @@ class _HomeViewState extends State<HomeView> {
                                                           ),
                                                         ),
                                                       ),
-                                                    ),
-                                                    SizedBox(height: 10),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                            left: 8.0,
+                                                      SizedBox(height: 10),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets.only(
+                                                              left: 8.0,
+                                                            ),
+                                                        child: Text(
+                                                          topMix['name'],
+                                                          style: TextStyle(
+                                                            fontSize: 14,
+                                                            color: Colors.grey,
+                                                            fontWeight:
+                                                                FontWeight.bold,
                                                           ),
-                                                      child: Text(
-                                                        topMix['name'],
-                                                        style: TextStyle(
-                                                          fontSize: 14,
-                                                          color: Colors.grey,
-                                                          fontWeight:
-                                                              FontWeight.bold,
                                                         ),
                                                       ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               );
                                             },

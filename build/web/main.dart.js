@@ -90978,7 +90978,7 @@
               overridedWebSDKVersion = A._asStringQ(t1.flutterfire_web_sdk_version);
               if (overridedWebSDKVersion == null)
                 overridedWebSDKVersion = null;
-              version = overridedWebSDKVersion == null ? "12.0.0" : overridedWebSDKVersion;
+              version = overridedWebSDKVersion == null ? "12.2.1" : overridedWebSDKVersion;
               ignored = $async$self.get$_ignoredServiceScripts();
               t1 = $.$get$FirebaseCoreWeb__services();
               t2 = A._instanceType(t1)._eval$1("LinkedHashMapValuesIterable<2>");
@@ -91155,8 +91155,8 @@
   A.FirebaseCoreWeb_initializeApp_closure0.prototype = {
     call$0() {
       var t1 = init.G;
-      if (A._asString(t1.firebase_core.SDK_VERSION) !== "12.0.0")
-        A.print('            WARNING: FlutterFire for Web is explicitly tested against Firebase JS SDK version "12.0.0"\n            but your currently specifying "' + A._asString(t1.firebase_core.SDK_VERSION) + '" by either the imported Firebase JS SDKs in your web/index.html\n            file or by providing an override - this may lead to unexpected issues in your application. It is recommended that you change all of the versions of the\n            Firebase JS SDK version "12.0.0":\n\n            If you override the version manually:\n              change:\n                <script>window.flutterfire_web_sdk_version = \'' + A._asString(t1.firebase_core.SDK_VERSION) + "';</script>\n              to:\n                <script>window.flutterfire_web_sdk_version = '12.0.0';</script>\n\n            If you import the Firebase scripts in index.html, instead allow FlutterFire to manage this for you by removing\n            any Firebase scripts in your web/index.html file:\n                e.g. remove: <script src=\"https://www.gstatic.com/firebasejs/" + A._asString(t1.firebase_core.SDK_VERSION) + '/firebase-app.js"></script>\n          ');
+      if (A._asString(t1.firebase_core.SDK_VERSION) !== "12.2.1")
+        A.print('            WARNING: FlutterFire for Web is explicitly tested against Firebase JS SDK version "12.2.1"\n            but your currently specifying "' + A._asString(t1.firebase_core.SDK_VERSION) + '" by either the imported Firebase JS SDKs in your web/index.html\n            file or by providing an override - this may lead to unexpected issues in your application. It is recommended that you change all of the versions of the\n            Firebase JS SDK version "12.2.1":\n\n            If you override the version manually:\n              change:\n                <script>window.flutterfire_web_sdk_version = \'' + A._asString(t1.firebase_core.SDK_VERSION) + "';</script>\n              to:\n                <script>window.flutterfire_web_sdk_version = '12.2.1';</script>\n\n            If you import the Firebase scripts in index.html, instead allow FlutterFire to manage this for you by removing\n            any Firebase scripts in your web/index.html file:\n                e.g. remove: <script src=\"https://www.gstatic.com/firebasejs/" + A._asString(t1.firebase_core.SDK_VERSION) + '/firebase-app.js"></script>\n          ');
       return true;
     },
     $signature: 0
@@ -203341,11 +203341,11 @@
       t3 = J.getInterceptor$asx(topMix);
       t4 = t3.$index(topMix, "image");
       t4.toString;
-      t1 = A.SizedBox$(A.GestureDetector$(_null, A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_0, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build______closure2(context, topMix), _null, _null, _null, _null, _null, _null), 180, 180);
+      t1 = A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_0, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 180, 180);
       t4 = A.SizedBox$(_null, 10, _null);
       t3 = t3.$index(topMix, "name");
       t3.toString;
-      return new A.Padding(B.EdgeInsets_8_0_8_0, A.Column$(A._setArrayType([t1, t4, new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3), _null, B.TextOverflow_2, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_8_0_8_0, A.GestureDetector$(_null, A.Column$(A._setArrayType([t1, t4, new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3), _null, B.TextOverflow_2, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build______closure2(context, topMix), _null, _null, _null, _null, _null, _null), _null);
     },
     $signature: 56
   };
@@ -203405,7 +203405,7 @@
       t3 = J.getInterceptor$asx(topMix);
       t4 = t3.$index(topMix, "image");
       t4.toString;
-      return new A.Padding(B.EdgeInsets_0_0_8_0, A.Column$(A._setArrayType([A.SizedBox$(A.GestureDetector$(_null, A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build_______closure3(context, topMix), _null, _null, _null, _null, _null, _null), 160, 160), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(B.EdgeInsets_0_0_8_0, A.GestureDetector$(_null, A.Column$(A._setArrayType([A.SizedBox$(A.Card$(A.ClipRRect$(t2, A.Image$network(A._asString(t4), B.BoxFit_2, 1 / 0, 1 / 0)), B.Color_lW6, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5)), 160, 160), A.SizedBox$(_null, 10, _null), new A.Padding(B.EdgeInsets_8_0_0_0, A.Text$(A._asString(t3.$index(topMix, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HomeViewState_build_______closure3(context, topMix), _null, _null, _null, _null, _null, _null), _null);
     },
     $signature: 56
   };
