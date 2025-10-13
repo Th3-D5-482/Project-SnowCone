@@ -26559,13 +26559,14 @@
       this.index = t0;
       this._name = t1;
     },
-    ListTile: function ListTile(t0, t1, t2, t3, t4) {
+    ListTile: function ListTile(t0, t1, t2, t3, t4, t5) {
       var _ = this;
       _.leading = t0;
       _.title = t1;
-      _.shape = t2;
-      _.tileColor = t3;
-      _.key = t4;
+      _.trailing = t2;
+      _.shape = t3;
+      _.tileColor = t4;
+      _.key = t5;
     },
     ListTile_build_resolveColor: function ListTile_build_resolveColor(t0) {
       this.states = t0;
@@ -48618,7 +48619,7 @@
       this.$this = t0;
       this.distance = t1;
     },
-    ListView$builder(itemBuilder, itemCount, physics, scrollDirection, shrinkWrap) {
+    ListView$builder(itemBuilder, itemCount, padding, physics, scrollDirection, shrinkWrap) {
       var _null = null,
         t1 = itemCount >= 0;
       A.assertHelper(t1);
@@ -48628,7 +48629,7 @@
         t1 = t1 ? B.AlwaysScrollableScrollPhysics_null : _null;
       } else
         t1 = physics;
-      return new A.ListView(new A.SliverChildBuilderDelegate(itemBuilder, itemCount, true, true, true, _null), _null, scrollDirection, false, _null, _null, t1, shrinkWrap, _null, itemCount, B.DragStartBehavior_1, _null, _null, B.Clip_1, B.HitTestBehavior_1, _null);
+      return new A.ListView(new A.SliverChildBuilderDelegate(itemBuilder, itemCount, true, true, true, _null), padding, scrollDirection, false, _null, _null, t1, shrinkWrap, _null, itemCount, B.DragStartBehavior_1, _null, _null, B.Clip_1, B.HitTestBehavior_1, _null);
     },
     GridView$builder(gridDelegate, itemBuilder, itemCount, physics, shrinkWrap) {
       var _null = null;
@@ -113708,7 +113709,7 @@
       return false;
     },
     build$1(context) {
-      var theme, iconButtonTheme, tileTheme, defaults, t1, t2, t3, t4, effectiveIconColor, t5, defaultEffectiveIconColor, t6, effectiveIconButtonColor, effectiveColor, iconThemeData, leadingAndTrailingStyle, leadingIcon, titleStyle, titleText, textDirection, resolvedContentPadding, effectiveMouseCursor, color, t7, t8, _this = this, _null = null;
+      var theme, iconButtonTheme, tileTheme, defaults, t1, t2, t3, t4, effectiveIconColor, t5, defaultEffectiveIconColor, t6, effectiveIconButtonColor, effectiveColor, iconThemeData, leadingAndTrailingStyle, leadingIcon, titleStyle, titleText, trailingIcon, textDirection, resolvedContentPadding, effectiveMouseCursor, color, t7, t8, _this = this, _null = null;
       A.debugCheckHasMaterial(context);
       theme = A.Theme_of(context);
       iconButtonTheme = A.IconButtonTheme_of(context);
@@ -113776,6 +113777,7 @@
       _this._isDenseLayout$2(theme, tileTheme);
       titleStyle = titleStyle.copyWith$2$color$fontSize(effectiveColor, _null);
       titleText = A.AnimatedDefaultTextStyle$(_this.title, B.C__Linear, B.Duration_200000, titleStyle);
+      trailingIcon = A.AnimatedDefaultTextStyle$(_this.trailing, B.C__Linear, B.Duration_200000, leadingAndTrailingStyle);
       textDirection = A.Directionality_of(context);
       t3 = tileTheme.contentPadding;
       t3 = t3 == null ? _null : t3.resolve$1(textDirection);
@@ -113811,7 +113813,7 @@
       t8 = tileTheme.minLeadingWidth;
       if (t8 == null)
         t8 = 24;
-      t2 = A.SafeArea$(false, A.IconTheme_merge(A.IconButtonTheme$(new A._ListTile(leadingIcon, titleText, _null, _null, false, false, theme.visualDensity, textDirection, t4, t5, t6, t7, t8, tileTheme.minTileHeight, B.ListTileTitleAlignment_0, _null), new A.IconButtonThemeData(t2)), iconThemeData), resolvedContentPadding, false);
+      t2 = A.SafeArea$(false, A.IconTheme_merge(A.IconButtonTheme$(new A._ListTile(leadingIcon, titleText, _null, trailingIcon, false, false, theme.visualDensity, textDirection, t4, t5, t6, t7, t8, tileTheme.minTileHeight, B.ListTileTitleAlignment_0, _null), new A.IconButtonThemeData(t2)), iconThemeData), resolvedContentPadding, false);
       return A.InkWell$(false, true, A.Semantics$(false, _null, new A.Ink(t2, t3, _null), false, _null, true, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, false, _null, _null, _null, _null, B.SemanticsValidationResult_0), t1, true, _null, _null, _null, _null, effectiveMouseCursor, _null, _null, _null, _null, _null, _null, _null, _null);
     },
     debugFillProperties$1(properties) {
@@ -186488,17 +186490,19 @@
       return A.Viewport$(0, axisDirection, _this.cacheExtent, null, _this.clipBehavior, offset, B.SliverPaintOrder_0, slivers);
     },
     build$1(context) {
-      var t1, mediaQueryHorizontalPadding, mediaQueryVerticalPadding, slivers, axisDirection, effectivePrimary, scrollController, scrollable, scrollableResult, _this = this, _null = null,
+      var mediaQuery, t1, mediaQueryHorizontalPadding, mediaQueryVerticalPadding, slivers, axisDirection, effectivePrimary, scrollController, scrollable, scrollableResult, _this = this, _null = null,
         sliver = _this.buildChildLayout$1(context),
-        effectivePadding = _this.padding,
+        effectivePadding = _this.padding;
+      if (effectivePadding == null) {
         mediaQuery = A.MediaQuery__maybeOf(context, _null);
-      if (mediaQuery != null) {
-        t1 = mediaQuery.padding;
-        mediaQueryHorizontalPadding = t1.copyWith$2$bottom$top(0, 0);
-        mediaQueryVerticalPadding = t1.copyWith$2$left$right(0, 0);
-        t1 = _this.scrollDirection === B.Axis_1;
-        effectivePadding = t1 ? mediaQueryVerticalPadding : mediaQueryHorizontalPadding;
-        sliver = A.MediaQuery$(sliver, mediaQuery.copyWith$1$padding(t1 ? mediaQueryHorizontalPadding : mediaQueryVerticalPadding));
+        if (mediaQuery != null) {
+          t1 = mediaQuery.padding;
+          mediaQueryHorizontalPadding = t1.copyWith$2$bottom$top(0, 0);
+          mediaQueryVerticalPadding = t1.copyWith$2$left$right(0, 0);
+          t1 = _this.scrollDirection === B.Axis_1;
+          effectivePadding = t1 ? mediaQueryVerticalPadding : mediaQueryHorizontalPadding;
+          sliver = A.MediaQuery$(sliver, mediaQuery.copyWith$1$padding(t1 ? mediaQueryHorizontalPadding : mediaQueryVerticalPadding));
+        }
       }
       slivers = A._setArrayType([effectivePadding != null ? new A.SliverPadding(effectivePadding, sliver, _null) : sliver], type$.JSArray_Widget);
       t1 = _this.scrollDirection;
@@ -203324,7 +203328,7 @@
       var t1;
       if (constraints.maxWidth > 1000 || this.isDesktop) {
         t1 = this.topMixes;
-        t1 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure3(t1), J.get$length$asx(t1), null, B.Axis_0, false), 220, null);
+        t1 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure3(t1), J.get$length$asx(t1), null, null, B.Axis_0, false), 220, null);
       } else
         t1 = A.SizedBox$(A.StreamBuilder$(new A._HomeViewState_build_____closure4(), A.getTopMixes("TopMixes"), type$.List_dynamic), 200, 1 / 0);
       return t1;
@@ -203391,7 +203395,7 @@
       topMixes = asyncSnapshot.data;
       if (topMixes == null)
         topMixes = [];
-      return A.ListView$builder(new A._HomeViewState_build______closure1(topMixes), J.get$length$asx(topMixes), B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, true);
+      return A.ListView$builder(new A._HomeViewState_build______closure1(topMixes), J.get$length$asx(topMixes), _null, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, true);
     },
     $signature: 652
   };
@@ -203453,10 +203457,11 @@
   };
   A._HomeViewState_build____closure1.prototype = {
     call$2(context, constraints) {
-      var t1 = constraints.maxWidth > 1000 || this.isDesktop,
+      var _null = null,
+        t1 = constraints.maxWidth > 1000 || this.isDesktop,
         t2 = this.artists,
         t3 = J.getInterceptor$asx(t2);
-      return t1 ? A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure1(t2), t3.get$length(t2), null, B.Axis_0, false), 220, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure2(t2), t3.get$length(t2), null, B.Axis_0, false), 190, null);
+      return t1 ? A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure1(t2), t3.get$length(t2), _null, _null, B.Axis_0, false), 220, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure2(t2), t3.get$length(t2), _null, _null, B.Axis_0, false), 190, _null);
     },
     $signature: 134
   };
@@ -203583,7 +203588,7 @@
       var t1 = constraints.maxWidth > 1000 || this.isDesktop,
         t2 = this.recentMusica,
         t3 = t2.length;
-      return t1 ? A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(t2), t3, null, B.Axis_0, false), 220, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t2), t3, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 200, 1 / 0);
+      return t1 ? A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(t2), t3, null, null, B.Axis_0, false), 220, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t2), t3, null, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 200, 1 / 0);
     },
     $signature: 134
   };
@@ -204385,7 +204390,7 @@
         t1 = [];
       t1 = J.where$1$ax(t1, new A._SongsListState_build___closure(this.$this));
       songLists = A.List_List$_of(t1, t1.$ti._eval$1("Iterable.E"));
-      return new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.ListView$builder(new A._SongsListState_build___closure0(songLists), songLists.length, new A.NeverScrollableScrollPhysics(null), B.Axis_1, false), 480, null), null);
+      return new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Expanded$(A.ListView$builder(new A._SongsListState_build___closure0(songLists), songLists.length, B.EdgeInsets_0_0_0_0, new A.NeverScrollableScrollPhysics(null), B.Axis_1, false), 1), 480, null), null);
     },
     $signature: 661
   };
@@ -204397,7 +204402,7 @@
   };
   A._SongsListState_build___closure0.prototype = {
     call$2(context, index) {
-      var t1, songList, t2, t3, _null = null;
+      var t1, songList, t2, t3, t4, _null = null;
       type$.BuildContext._as(context);
       A._asInt(index);
       t1 = this.songLists;
@@ -204407,7 +204412,8 @@
       t1 = A.BorderRadius$circular(12);
       t2 = A.Icon$(B.IconData_58389_MaterialIcons_false, _null, _null, _null);
       t3 = A.Text$(A._asString(J.$index$asx(songList, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
-      return new A.Padding(B.EdgeInsets_0_8_0_0, A.Card$(new A.ListTile(t2, t3, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5), B.Color_lW6, _null), _null, _null), _null);
+      t4 = A.Icon$(B.IconData_983200_MaterialIcons_false, _null, _null, _null);
+      return new A.Padding(B.EdgeInsets_0_8_0_0, A.Card$(new A.ListTile(t2, t3, t4, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5), B.Color_lW6, _null), _null, _null), _null);
     },
     $signature: 56
   };
@@ -211907,6 +211913,7 @@
     B.IconData_59083_MaterialIcons_false = new A.IconData(59083, "MaterialIcons", false);
     B.IconData_62775_MaterialIcons_false = new A.IconData(62775, "MaterialIcons", false);
     B.IconData_62834_MaterialIcons_true = new A.IconData(62834, "MaterialIcons", true);
+    B.IconData_983200_MaterialIcons_false = new A.IconData(983200, "MaterialIcons", false);
     B.IconData_983357_MaterialIcons_false = new A.IconData(983357, "MaterialIcons", false);
     B.IconThemeData_HCh = new A.IconThemeData(24, 0, 400, 0, 48, B.Color_vnR, 1, null, false);
     B.IconThemeData_diR = new A.IconThemeData(null, null, null, null, null, B.Color_wst, null, null, null);

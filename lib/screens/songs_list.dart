@@ -112,34 +112,41 @@ class _SongsListState extends State<SongsList> {
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: SizedBox(
                           height: 480,
-                          child: ListView.builder(
-                            itemCount: songLists.length,
-                            physics: NeverScrollableScrollPhysics(),
-                            scrollDirection: Axis.vertical,
-                            itemBuilder: (context, index) {
-                              final songList = songLists[index];
-                              return Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Card(
-                                  child: ListTile(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    tileColor: const Color.fromARGB(
-                                      255,
-                                      30,
-                                      30,
-                                      30,
-                                    ),
-                                    leading: Icon(Icons.music_note),
-                                    title: Text(
-                                      songList['name'],
-                                      style: TextStyle(color: Colors.white),
+                          child: Expanded(
+                            child: ListView.builder(
+                              padding: EdgeInsets.zero,
+                              itemCount: songLists.length,
+                              physics: NeverScrollableScrollPhysics(),
+                              scrollDirection: Axis.vertical,
+                              itemBuilder: (context, index) {
+                                final songList = songLists[index];
+                                return Padding(
+                                  padding: const EdgeInsets.only(top: 8),
+                                  child: Card(
+                                    child: ListTile(
+                                      //contentPadding: EdgeInsets.all(8),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          12.0,
+                                        ),
+                                      ),
+                                      tileColor: const Color.fromARGB(
+                                        255,
+                                        30,
+                                        30,
+                                        30,
+                                      ),
+                                      leading: Icon(Icons.music_note),
+                                      title: Text(
+                                        songList['name'],
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      trailing: Icon(Icons.play_arrow_rounded),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
+                                );
+                              },
+                            ),
                           ),
                         ),
                       );
