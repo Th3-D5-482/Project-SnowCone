@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:snowcone/database/search_page_db.dart';
+import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
 class SearchPage extends StatefulWidget {
