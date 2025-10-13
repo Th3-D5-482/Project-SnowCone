@@ -124,7 +124,6 @@ class _SongsListState extends State<SongsList> {
                                   padding: const EdgeInsets.only(top: 8),
                                   child: Card(
                                     child: ListTile(
-                                      //contentPadding: EdgeInsets.all(8),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(
                                           12.0,
