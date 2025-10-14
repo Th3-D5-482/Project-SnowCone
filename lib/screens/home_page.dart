@@ -639,7 +639,6 @@ class _HomeViewState extends State<HomeView> {
                                                 children: [
                                                   CircleAvatar(
                                                     radius: 80,
-
                                                     backgroundImage:
                                                         NetworkImage(
                                                           artist['image'],

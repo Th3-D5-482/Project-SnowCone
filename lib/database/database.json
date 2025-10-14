@@ -18,6 +18,22 @@
     },
     {
       "id": 1,
+      "name": "Holy Is the Lord",
+      "artist": "Chris Tomlin",
+      "releaseYear": 2004,
+      "duration": "4:13",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066",
+      "audio": "assets/audio/holy_is_the_lord.mp3",
+      "genre": "Worship",
+      "key": "D",
+      "bpm": 72,
+      "keyTheme": "Holiness, Glory",
+      "description": "A powerful declaration of God's holiness and presence.",
+      "isRecentlyListened": false,
+      "albumID": 0
+    },
+    {
+      "id": 2,
       "name": "Way Maker",
       "artist": "Sinach / Leeland",
       "releaseYear": 2015,
@@ -33,7 +49,23 @@
       "albumID": 1
     },
     {
-      "id": 2,
+      "id": 3,
+      "name": "Goodness of God",
+      "artist": "Bethel Music",
+      "releaseYear": 2019,
+      "duration": "4:46",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066",
+      "audio": "assets/audio/goodness_of_god.mp3",
+      "genre": "Worship",
+      "key": "A",
+      "bpm": 63,
+      "keyTheme": "Faithfulness, Gratitude",
+      "description": "A heartfelt song of thanksgiving for God's enduring goodness.",
+      "isRecentlyListened": false,
+      "albumID": 1
+    },
+    {
+      "id": 4,
       "name": "10,000 Reasons",
       "artist": "Matt Redman",
       "releaseYear": 2011,
@@ -49,7 +81,23 @@
       "albumID": 2
     },
     {
-      "id": 3,
+      "id": 5,
+      "name": "Never Once",
+      "artist": "Matt Redman",
+      "releaseYear": 2011,
+      "duration": "4:32",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/10,000_reasons.png?updatedAt=1758811877863",
+      "audio": "assets/audio/never_once.mp3",
+      "genre": "Worship",
+      "key": "Bb",
+      "bpm": 76,
+      "keyTheme": "Faithfulness, Trust",
+      "description": "A powerful reminder of God's constant presence through every trial.",
+      "isRecentlyListened": false,
+      "albumID": 2
+    },
+    {
+      "id": 6,
       "name": "Reckless Love",
       "artist": "Cory Asbury",
       "releaseYear": 2017,
@@ -65,7 +113,23 @@
       "albumID": 3
     },
     {
-      "id": 4,
+      "id": 7,
+      "name": "Water and Dust",
+      "artist": "Cory Asbury",
+      "releaseYear": 2018,
+      "duration": "4:14",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/reckless_love.png?updatedAt=1758811885566",
+      "audio": "assets/audio/water_and_dust.mp3",
+      "genre": "Worship",
+      "key": "D",
+      "bpm": 78,
+      "keyTheme": "Surrender, Identity",
+      "description": "A reflective song about human frailty and divine purpose.",
+      "isRecentlyListened": false,
+      "albumID": 3
+    },
+    {
+      "id": 8,
       "name": "Holy Forever",
       "artist": "Chris Tomlin",
       "releaseYear": 2022,
@@ -81,7 +145,23 @@
       "albumID": 4
     },
     {
-      "id": 5,
+      "id": 9,
+      "name": "Always",
+      "artist": "Chris Tomlin",
+      "releaseYear": 2022,
+      "duration": "4:45",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_forever.png?updatedAt=1758811885397",
+      "audio": "assets/audio/always.mp3",
+      "genre": "Worship",
+      "key": "G",
+      "bpm": 70,
+      "keyTheme": "Faithfulness, Presence",
+      "description": "A comforting declaration of God's unchanging nature and nearness.",
+      "isRecentlyListened": false,
+      "albumID": 4
+    },
+    {
+      "id": 10,
       "name": "Great Are You Lord",
       "artist": "All Sons & Daughters",
       "releaseYear": 2014,
@@ -95,216 +175,216 @@
       "description": "A humble yet profound invitation to worship, declaring God's restorative power.",
       "isRecentlyListened": true,
       "albumID": 5
+    },
+    {
+      "id": 11,
+      "name": "Christ Be All Around Me",
+      "artist": "All Sons & Daughters",
+      "releaseYear": 2014,
+      "duration": "5:29",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
+      "audio": "assets/audio/christ_be_all_around_me.mp3",
+      "genre": "Worship",
+      "key": "G",
+      "bpm": 68,
+      "keyTheme": "Protection, Presence",
+      "description": "A prayerful anthem inviting Christ’s presence to surround every moment.",
+      "isRecentlyListened": false,
+      "albumID": 5
     }
   ],
   "TopMixes": [
     {
-    "id": 0,
-    "name": "Echo Praise",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
-    "backgroundColor":"0xFFB8AFC4"
-  },
-  {
-    "id": 1,
-    "name": "Hearts United",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1758813029740",
-    "backgroundColor":"0xFFF2D6E3"
-  },
-  {
-    "id": 2,
-    "name": "Upper Room",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
-    "backgroundColor":"0xFFD8D4C8"
-  },
-  {
-    "id": 3,
-    "name": "Kingdom Keys",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
-     "backgroundColor":"0xFFCFCBBE"
-  },
-  {
-    "id": 4,
-    "name": "Selah Sessions",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
-     "backgroundColor":"0xFFCAD8E1"
-  },
-  {
-    "id": 5,
-    "name": "Altar Fire",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
-     "backgroundColor":"0xFFE4CBB4"
-  }
+      "id": 0,
+      "name": "Echo Praise",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
+      "backgroundColor": "0xFFB8AFC4"
+    },
+    {
+      "id": 1,
+      "name": "Hearts United",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1758813029740",
+      "backgroundColor": "0xFFF2D6E3"
+    },
+    {
+      "id": 2,
+      "name": "Upper Room",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
+      "backgroundColor": "0xFFD8D4C8"
+    },
+    {
+      "id": 3,
+      "name": "Kingdom Keys",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
+      "backgroundColor": "0xFFCFCBBE"
+    },
+    {
+      "id": 4,
+      "name": "Selah Sessions",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
+      "backgroundColor": "0xFFCAD8E1"
+    },
+    {
+      "id": 5,
+      "name": "Altar Fire",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
+      "backgroundColor": "0xFFE4CBB4"
+    }
   ],
   "TopGenres": [
-  {
-    "id": 0,
-    "name": "Worship",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
-    "color": "#cc0088",
-     "backgroundColor":"0xFFF2BBD7"
-  },
-  {
-    "id": 1,
-    "name": "Praise",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
-    "color": "#096f50",
-     "backgroundColor":"0xFFB7D3C9"
-  },
-  {
-    "id": 2,
-    "name": "Gospel",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
-    "color": "#7c00e0",
-     "backgroundColor":"0xFFD9C3F3"
-  },
-  {
-    "id": 3,
-    "name": "Pop",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
-    "color": "#203062",
-     "backgroundColor":"0xFFBDC5D9"
-  }
-],
-"Albums": [
-  {
-    "id": 0,
-    "name": "Arriving",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1758744215984",
-    "isContinueListening": true,
-   "backgroundColor":"0xFFF3F1ED"
-  },
-  {
-    "id": 1,
-    "name": "Way Maker",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1758744216128",
-    "isContinueListening": true,
-   "backgroundColor":"0xFFE0F2F1"
-  },
-  {
-    "id": 2,
-    "name": "10,000 Reasons",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1758744216273",
-    "isContinueListening": true,
-    "backgroundColor":"0xFFFBE9E7"
-  },
-  {
-    "id": 3,
-    "name": "Reckless Love",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1758744215664",
-    "isContinueListening": true,
-    "backgroundColor":"0xFFE8F5E9"
-  },
-  {
-    "id": 4,
-    "name": "Always",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1758744216255",
-    "isContinueListening": true,
-     "backgroundColor":"0xFFF3E5F5"
-  },
-  {
-    "id": 5,
-    "name": "All Sons & Daughters",
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1758744215263",
-    "isContinueListening": true,
-    "backgroundColor":"0xFFFFF9C4"
-  }
-],
-"BrowseAll" :[
-  {
-    "id": 0,
-    "name": "Hyms",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
-    "color": "#8c5eaa",
-    "backgroundColor":"0xFFD9CDE6"
-  },
-  {
-    "id": 1,
-    "name": "Rock",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
-    "color": "#096f50",
-    "backgroundColor":"0xFFAFCFC3"
-  },
-  {
-    "id": 2,
-    "name": "HipHop",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
-    "color": "#628c0d",
-    "backgroundColor":"0xFFD3DBB9"
-  },
-  {
-    "id": 3,
-    "name": "Indie",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
-    "color": "#4e8095",
-    "backgroundColor":"0xFFC3D6DC"
-  },
-  {
-    "id": 4,
-    "name": "Folk",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
-    "color": "#cc0088",
-    "backgroundColor":"0xFFF6CCE4"
-  },
-  {
-    "id": 5,
-    "name": "Country",
-    "image":
-        "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
-    "color": "#b2590d",
-    "backgroundColor":"0xFFE6CDB9"
-  }
-],
-"Artist" : [
-  {
-    "id": 0,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
-    "name": "Elevantion Worship",
-     "backgroundColor":"0xFFF6E3C9"
-  },
-  {
-    "id": 1,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
-    "name": "Hillsong United",
-     "backgroundColor":"0xFFCBD6DD"
-  },
-  {
-    "id": 2,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
-    "name": "Bethel Music",
-     "backgroundColor":"0xFFD5DCD6"
-  },
-  {
-    "id": 3,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
-    "name": "Hillsong Worship",
-    "backgroundColor":"0xFFF3E7D2"
-  },
-  {
-    "id": 4,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
-    "name": "Platnetshakers",
-    "backgroundColor":"0xFFF1D9C5"
-  },
-  {
-    "id": 5,
-    "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
-    "name": "For Kings & Country",
-    "backgroundColor":"0xFFD6CFC7"
-  }
-]
+    {
+      "id": 0,
+      "name": "Worship",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
+      "color": "#cc0088",
+      "backgroundColor": "0xFFF2BBD7"
+    },
+    {
+      "id": 1,
+      "name": "Praise",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
+      "color": "#096f50",
+      "backgroundColor": "0xFFB7D3C9"
+    },
+    {
+      "id": 2,
+      "name": "Gospel",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
+      "color": "#7c00e0",
+      "backgroundColor": "0xFFD9C3F3"
+    },
+    {
+      "id": 3,
+      "name": "Pop",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
+      "color": "#203062",
+      "backgroundColor": "0xFFBDC5D9"
+    }
+  ],
+  "Albums": [
+    {
+      "id": 0,
+      "name": "Arriving",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1758744215984",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFF3F1ED"
+    },
+    {
+      "id": 1,
+      "name": "Way Maker",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1758744216128",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFE0F2F1"
+    },
+    {
+      "id": 2,
+      "name": "10,000 Reasons",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1758744216273",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFFBE9E7"
+    },
+    {
+      "id": 3,
+      "name": "Reckless Love",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1758744215664",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFE8F5E9"
+    },
+    {
+      "id": 4,
+      "name": "Always",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1758744216255",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFF3E5F5"
+    },
+    {
+      "id": 5,
+      "name": "All Sons & Daughters",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1758744215263",
+      "isContinueListening": true,
+      "backgroundColor": "0xFFFFF9C4"
+    }
+  ],
+  "BrowseAll": [
+    {
+      "id": 0,
+      "name": "Hyms",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
+      "color": "#8c5eaa",
+      "backgroundColor": "0xFFD9CDE6"
+    },
+    {
+      "id": 1,
+      "name": "Rock",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
+      "color": "#096f50",
+      "backgroundColor": "0xFFAFCFC3"
+    },
+    {
+      "id": 2,
+      "name": "HipHop",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
+      "color": "#628c0d",
+      "backgroundColor": "0xFFD3DBB9"
+    },
+    {
+      "id": 3,
+      "name": "Indie",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
+      "color": "#4e8095",
+      "backgroundColor": "0xFFC3D6DC"
+    },
+    {
+      "id": 4,
+      "name": "Folk",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
+      "color": "#cc0088",
+      "backgroundColor": "0xFFF6CCE4"
+    },
+    {
+      "id": 5,
+      "name": "Country",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
+      "color": "#b2590d",
+      "backgroundColor": "0xFFE6CDB9"
+    }
+  ],
+  "Artist": [
+    {
+      "id": 0,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
+      "name": "Elevantion Worship",
+      "backgroundColor": "0xFFF6E3C9"
+    },
+    {
+      "id": 1,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
+      "name": "Hillsong United",
+      "backgroundColor": "0xFFCBD6DD"
+    },
+    {
+      "id": 2,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
+      "name": "Bethel Music",
+      "backgroundColor": "0xFFD5DCD6"
+    },
+    {
+      "id": 3,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
+      "name": "Hillsong Worship",
+      "backgroundColor": "0xFFF3E7D2"
+    },
+    {
+      "id": 4,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
+      "name": "Platnetshakers",
+      "backgroundColor": "0xFFF1D9C5"
+    },
+    {
+      "id": 5,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
+      "name": "For Kings & Country",
+      "backgroundColor": "0xFFD6CFC7"
+    }
+  ]
 }
