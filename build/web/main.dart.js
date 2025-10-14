@@ -204358,7 +204358,7 @@
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 0,
         t1 = this.$this,
         t2 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(0, 0, 0, 0.8), A.Color$(A.int_parse(t1._widget.backgroundColor, _null)), A.Color$fromRGBO(0, 0, 0, 0.8)], type$.JSArray_Color), A._setArrayType([0, 0.5, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
-        t3 = A.SizedBox$(_null, 40, _null),
+        t3 = A.SizedBox$(_null, 0, _null),
         t4 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._SongsListState_build__closure(context), _null, _null, _null), _null, _null, _null),
         t5 = A.SizedBox$(_null, 10, _null),
         t6 = t1._widget,
@@ -204366,7 +204366,7 @@
         t8 = t6.imageName;
       t7 = t7 ? A.CircleAvatar$(_null, new A.NetworkImage(t8, 1, _null, B.WebHtmlElementStrategy_0), _null, 115) : A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(t8, _null, 240, 240));
       t8 = type$.JSArray_Widget;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t3, t4, t5, t7, A.SizedBox$(_null, 20, _null), A.Text$(t6.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t8), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 460, _null), B.Clip_0, _null, t2, _null, _null, _null, _null, _null, _null, _null), A.StreamBuilder$(new A._SongsListState_build__closure0(t1), A.getMusic("Music"), type$.List_dynamic)], t8), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t3, new A.Padding(B.EdgeInsets_8_0_0_0, t4, _null), t5, t7, A.SizedBox$(_null, 20, _null), A.Text$(t6.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t8), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 460, _null), B.Clip_0, _null, t2, _null, _null, _null, _null, _null, _null, _null), A.StreamBuilder$(new A._SongsListState_build__closure0(t1), A.getMusic("Music"), type$.List_dynamic)], t8), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
     $signature: 63
   };

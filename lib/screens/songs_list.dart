@@ -60,17 +60,20 @@ class _SongsListState extends State<SongsList> {
                       height: 460,
                       child: Column(
                         children: [
-                          SizedBox(height: 40),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              icon: Icon(
-                                Icons.arrow_back_rounded,
-                                color: Colors.grey,
-                                size: 28,
+                          kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                icon: Icon(
+                                  Icons.arrow_back_rounded,
+                                  color: Colors.grey,
+                                  size: 28,
+                                ),
                               ),
                             ),
                           ),
