@@ -14,7 +14,7 @@
       "keyTheme": "Majesty, Praise",
       "description": "A timeless anthem glorifying God's greatness.",
       "isRecentlyListened": true,
-      "albumID": 0
+      "groupID": 0
     },
     {
       "id": 1,
@@ -30,7 +30,7 @@
       "keyTheme": "Holiness, Glory",
       "description": "A powerful declaration of God's holiness and presence.",
       "isRecentlyListened": false,
-      "albumID": 0
+      "groupID": 0
     },
     {
       "id": 2,
@@ -46,7 +46,7 @@
       "keyTheme": "Miracles, Presence",
       "description": "A global worship movement declaring God as miracle worker and light in the darkness.",
       "isRecentlyListened": true,
-      "albumID": 1
+      "groupID": 1
     },
     {
       "id": 3,
@@ -62,7 +62,7 @@
       "keyTheme": "Faithfulness, Gratitude",
       "description": "A heartfelt song of thanksgiving for God's enduring goodness.",
       "isRecentlyListened": false,
-      "albumID": 1
+      "groupID": 1
     },
     {
       "id": 4,
@@ -78,7 +78,7 @@
       "keyTheme": "Gratitude, Faithfulness",
       "description": "A stirring song reflecting a life of thankful worship inspired by Psalm 103.",
       "isRecentlyListened": true,
-      "albumID": 2
+      "groupID": 2
     },
     {
       "id": 5,
@@ -94,7 +94,7 @@
       "keyTheme": "Faithfulness, Trust",
       "description": "A powerful reminder of God's constant presence through every trial.",
       "isRecentlyListened": false,
-      "albumID": 2
+      "groupID": 2
     },
     {
       "id": 6,
@@ -110,7 +110,7 @@
       "keyTheme": "God's Pursuit, Grace",
       "description": "A powerful narrative of God's unrelenting love, inspired by Luke 15.",
       "isRecentlyListened": true,
-      "albumID": 3
+      "groupID": 3
     },
     {
       "id": 7,
@@ -126,7 +126,7 @@
       "keyTheme": "Surrender, Identity",
       "description": "A reflective song about human frailty and divine purpose.",
       "isRecentlyListened": false,
-      "albumID": 3
+      "groupID": 3
     },
     {
       "id": 8,
@@ -142,7 +142,7 @@
       "keyTheme": "Eternity, Holiness",
       "description": "A majestic anthem celebrating God's eternal holiness and glory.",
       "isRecentlyListened": true,
-      "albumID": 4
+      "groupID": 4
     },
     {
       "id": 9,
@@ -158,7 +158,7 @@
       "keyTheme": "Faithfulness, Presence",
       "description": "A comforting declaration of God's unchanging nature and nearness.",
       "isRecentlyListened": false,
-      "albumID": 4
+      "groupID": 4
     },
     {
       "id": 10,
@@ -174,7 +174,7 @@
       "keyTheme": "Breath, Praise",
       "description": "A humble yet profound invitation to worship, declaring God's restorative power.",
       "isRecentlyListened": true,
-      "albumID": 5
+      "groupID": 5
     },
     {
       "id": 11,
@@ -190,7 +190,7 @@
       "keyTheme": "Protection, Presence",
       "description": "A prayerful anthem inviting Christ’s presence to surround every moment.",
       "isRecentlyListened": false,
-      "albumID": 5
+      "groupID": 5
     }
   ],
   "TopMixes": [
@@ -198,37 +198,43 @@
       "id": 0,
       "name": "Echo Praise",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
-      "backgroundColor": "0xFFB8AFC4"
+      "backgroundColor": "0xFFB8AFC4",
+      "topMixID": 6
     },
     {
       "id": 1,
       "name": "Hearts United",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1758813029740",
-      "backgroundColor": "0xFFF2D6E3"
+      "backgroundColor": "0xFFF2D6E3",
+      "topMixID": 7
     },
     {
       "id": 2,
       "name": "Upper Room",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
-      "backgroundColor": "0xFFD8D4C8"
+      "backgroundColor": "0xFFD8D4C8",
+      "topMixID": 8
     },
     {
       "id": 3,
       "name": "Kingdom Keys",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
-      "backgroundColor": "0xFFCFCBBE"
+      "backgroundColor": "0xFFCFCBBE",
+      "topMixID": 9
     },
     {
       "id": 4,
       "name": "Selah Sessions",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
-      "backgroundColor": "0xFFCAD8E1"
+      "backgroundColor": "0xFFCAD8E1",
+      "topMixID": 10
     },
     {
       "id": 5,
       "name": "Altar Fire",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
-      "backgroundColor": "0xFFE4CBB4"
+      "backgroundColor": "0xFFE4CBB4",
+      "topMixID": 11
     }
   ],
   "TopGenres": [
@@ -237,28 +243,32 @@
       "name": "Worship",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
       "color": "#cc0088",
-      "backgroundColor": "0xFFF2BBD7"
+      "backgroundColor": "0xFFF2BBD7",
+      "genresID": 18
     },
     {
       "id": 1,
       "name": "Praise",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
       "color": "#096f50",
-      "backgroundColor": "0xFFB7D3C9"
+      "backgroundColor": "0xFFB7D3C9",
+      "genresID": 19
     },
     {
       "id": 2,
       "name": "Gospel",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
       "color": "#7c00e0",
-      "backgroundColor": "0xFFD9C3F3"
+      "backgroundColor": "0xFFD9C3F3",
+      "genresID": 20
     },
     {
       "id": 3,
       "name": "Pop",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
       "color": "#203062",
-      "backgroundColor": "0xFFBDC5D9"
+      "backgroundColor": "0xFFBDC5D9",
+      "genresID": 21
     }
   ],
   "Albums": [
@@ -267,42 +277,48 @@
       "name": "Arriving",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1758744215984",
       "isContinueListening": true,
-      "backgroundColor": "0xFFF3F1ED"
+      "backgroundColor": "0xFFF3F1ED",
+      "albumID": 0
     },
     {
       "id": 1,
       "name": "Way Maker",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1758744216128",
       "isContinueListening": true,
-      "backgroundColor": "0xFFE0F2F1"
+      "backgroundColor": "0xFFE0F2F1",
+      "albumID": 1
     },
     {
       "id": 2,
       "name": "10,000 Reasons",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1758744216273",
       "isContinueListening": true,
-      "backgroundColor": "0xFFFBE9E7"
+      "backgroundColor": "0xFFFBE9E7",
+      "albumID": 2
     },
     {
       "id": 3,
       "name": "Reckless Love",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1758744215664",
       "isContinueListening": true,
-      "backgroundColor": "0xFFE8F5E9"
+      "backgroundColor": "0xFFE8F5E9",
+      "albumID": 3
     },
     {
       "id": 4,
       "name": "Always",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1758744216255",
       "isContinueListening": true,
-      "backgroundColor": "0xFFF3E5F5"
+      "backgroundColor": "0xFFF3E5F5",
+      "albumID": 4
     },
     {
       "id": 5,
       "name": "All Sons & Daughters",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1758744215263",
       "isContinueListening": true,
-      "backgroundColor": "0xFFFFF9C4"
+      "backgroundColor": "0xFFFFF9C4",
+      "albumID": 5
     }
   ],
   "BrowseAll": [
@@ -311,42 +327,48 @@
       "name": "Hyms",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
       "color": "#8c5eaa",
-      "backgroundColor": "0xFFD9CDE6"
+      "backgroundColor": "0xFFD9CDE6",
+      "browseAllID": 22
     },
     {
       "id": 1,
       "name": "Rock",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
       "color": "#096f50",
-      "backgroundColor": "0xFFAFCFC3"
+      "backgroundColor": "0xFFAFCFC3",
+      "browseAllID": 23
     },
     {
       "id": 2,
       "name": "HipHop",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
       "color": "#628c0d",
-      "backgroundColor": "0xFFD3DBB9"
+      "backgroundColor": "0xFFD3DBB9",
+      "browseAllID": 24
     },
     {
       "id": 3,
       "name": "Indie",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
       "color": "#4e8095",
-      "backgroundColor": "0xFFC3D6DC"
+      "backgroundColor": "0xFFC3D6DC",
+      "browseAllID": 25
     },
     {
       "id": 4,
       "name": "Folk",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
       "color": "#cc0088",
-      "backgroundColor": "0xFFF6CCE4"
+      "backgroundColor": "0xFFF6CCE4",
+      "browseAllID": 26
     },
     {
       "id": 5,
       "name": "Country",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
       "color": "#b2590d",
-      "backgroundColor": "0xFFE6CDB9"
+      "backgroundColor": "0xFFE6CDB9",
+      "browseAllID": 27
     }
   ],
   "Artist": [
@@ -354,37 +376,43 @@
       "id": 0,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
       "name": "Elevantion Worship",
-      "backgroundColor": "0xFFF6E3C9"
+      "backgroundColor": "0xFFF6E3C9",
+      "artistID": 12
     },
     {
       "id": 1,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
       "name": "Hillsong United",
-      "backgroundColor": "0xFFCBD6DD"
+      "backgroundColor": "0xFFCBD6DD",
+      "artistID": 13
     },
     {
       "id": 2,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
       "name": "Bethel Music",
-      "backgroundColor": "0xFFD5DCD6"
+      "backgroundColor": "0xFFD5DCD6",
+      "artistID": 14
     },
     {
       "id": 3,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
       "name": "Hillsong Worship",
-      "backgroundColor": "0xFFF3E7D2"
+      "backgroundColor": "0xFFF3E7D2",
+      "artistID": 15
     },
     {
       "id": 4,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
       "name": "Platnetshakers",
-      "backgroundColor": "0xFFF1D9C5"
+      "backgroundColor": "0xFFF1D9C5",
+      "artistID": 16
     },
     {
       "id": 5,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
       "name": "For Kings & Country",
-      "backgroundColor": "0xFFD6CFC7"
+      "backgroundColor": "0xFFD6CFC7",
+      "artistID": 17
     }
   ]
 }

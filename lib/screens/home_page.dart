@@ -174,7 +174,7 @@ class _HomeViewState extends State<HomeView> {
                                             isBand: false,
                                             backgroundColor:
                                                 song['backgroundColor'],
-                                            albumID: song['id'],
+                                            groupID: song['albumID'],
                                           ),
                                       transitionsBuilder:
                                           (
@@ -279,7 +279,8 @@ class _HomeViewState extends State<HomeView> {
                                                           isBand: false,
                                                           backgroundColor:
                                                               topMix['backgroundColor'],
-                                                          albumID: topMix['id'],
+                                                          groupID:
+                                                              topMix['topMixID'],
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -407,8 +408,8 @@ class _HomeViewState extends State<HomeView> {
                                                               isBand: false,
                                                               backgroundColor:
                                                                   topMix['backgroundColor'],
-                                                              albumID:
-                                                                  topMix['id'],
+                                                              groupID:
+                                                                  topMix['topMixID'],
                                                             ),
                                                         transitionsBuilder:
                                                             (
@@ -542,8 +543,8 @@ class _HomeViewState extends State<HomeView> {
                                                           isBand: true,
                                                           backgroundColor:
                                                               artist['backgroundColor']!,
-                                                          albumID:
-                                                              artist['id']!,
+                                                          groupID:
+                                                              artist['artistID']!,
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -616,7 +617,8 @@ class _HomeViewState extends State<HomeView> {
                                                           isBand: true,
                                                           backgroundColor:
                                                               artist['backgroundColor'],
-                                                          albumID: artist['id'],
+                                                          groupID:
+                                                              artist['artistID'],
                                                         ),
                                                     transitionsBuilder:
                                                         (

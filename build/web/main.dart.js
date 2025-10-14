@@ -53834,7 +53834,7 @@
       _.songTitle = t1;
       _.isBand = t2;
       _.backgroundColor = t3;
-      _.albumID = t4;
+      _.groupID = t4;
       _.key = t5;
     },
     _SongsListState: function _SongsListState(t0) {
@@ -203292,7 +203292,7 @@
       t1._as(secondaryAnimation);
       t1 = this.song;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "albumID")), null);
     },
     $signature: 54
   };
@@ -203364,7 +203364,7 @@
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "topMixID")), null);
     },
     $signature: 54
   };
@@ -203424,7 +203424,7 @@
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "topMixID")), null);
     },
     $signature: 54
   };
@@ -203501,7 +203501,7 @@
       t5 = t2.$index(t1, "backgroundColor");
       t5.toString;
       A._asString(t5);
-      t1 = t2.$index(t1, "id");
+      t1 = t2.$index(t1, "artistID");
       t1.toString;
       return new A.SongsList(t3, t4, true, t5, A._asInt(t1), null);
     },
@@ -203544,7 +203544,7 @@
       t1._as(secondaryAnimation);
       t1 = this.artist;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), true, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), true, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "artistID")), null);
     },
     $signature: 54
   };
@@ -204022,7 +204022,7 @@
       t1._as(secondaryAnimation);
       t1 = this.genres;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "genresID")), null);
     },
     $signature: 54
   };
@@ -204098,7 +204098,7 @@
       t1._as(secondaryAnimation);
       t1 = this.browseAll;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "id")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), A._asInt(t2.$index(t1, "browseAllID")), null);
     },
     $signature: 54
   };
@@ -204391,7 +204391,7 @@
   };
   A._SongsListState_build___closure.prototype = {
     call$1(item) {
-      return J.$eq$(J.$index$asx(item, "albumID"), this.$this._widget.albumID);
+      return J.$eq$(J.$index$asx(item, "groupID"), this.$this._widget.groupID);
     },
     $signature: 131
   };

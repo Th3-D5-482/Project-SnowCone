@@ -9,14 +9,14 @@ class SongsList extends StatefulWidget {
   final String songTitle;
   final bool isBand;
   final String backgroundColor;
-  final int albumID;
+  final int groupID;
   const SongsList({
     super.key,
     required this.imageName,
     required this.songTitle,
     required this.isBand,
     required this.backgroundColor,
-    required this.albumID,
+    required this.groupID,
   });
 
   @override
@@ -109,7 +109,7 @@ class _SongsListState extends State<SongsList> {
                     stream: getMusic("Music"),
                     builder: (context, asyncSnapshot) {
                       final songLists = (asyncSnapshot.data ?? [])
-                          .where((item) => item['albumID'] == widget.albumID)
+                          .where((item) => item['groupID'] == widget.groupID)
                           .toList();
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
