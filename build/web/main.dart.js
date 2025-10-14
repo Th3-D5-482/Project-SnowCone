@@ -26559,14 +26559,15 @@
       this.index = t0;
       this._name = t1;
     },
-    ListTile: function ListTile(t0, t1, t2, t3, t4, t5) {
+    ListTile: function ListTile(t0, t1, t2, t3, t4, t5, t6) {
       var _ = this;
       _.leading = t0;
       _.title = t1;
       _.trailing = t2;
       _.shape = t3;
-      _.tileColor = t4;
-      _.key = t5;
+      _.contentPadding = t4;
+      _.tileColor = t5;
+      _.key = t6;
     },
     ListTile_build_resolveColor: function ListTile_build_resolveColor(t0) {
       this.states = t0;
@@ -113709,7 +113710,7 @@
       return false;
     },
     build$1(context) {
-      var theme, iconButtonTheme, tileTheme, defaults, t1, t2, t3, t4, effectiveIconColor, t5, defaultEffectiveIconColor, t6, effectiveIconButtonColor, effectiveColor, iconThemeData, leadingAndTrailingStyle, leadingIcon, titleStyle, titleText, trailingIcon, textDirection, resolvedContentPadding, effectiveMouseCursor, color, t7, t8, _this = this, _null = null;
+      var theme, iconButtonTheme, tileTheme, defaults, t1, t2, t3, t4, effectiveIconColor, t5, defaultEffectiveIconColor, t6, effectiveIconButtonColor, effectiveColor, iconThemeData, leadingAndTrailingStyle, leadingIcon, titleStyle, titleText, trailingIcon, textDirection, effectiveMouseCursor, t7, t8, _this = this, _null = null;
       A.debugCheckHasMaterial(context);
       theme = A.Theme_of(context);
       iconButtonTheme = A.IconButtonTheme_of(context);
@@ -113779,11 +113780,6 @@
       titleText = A.AnimatedDefaultTextStyle$(_this.title, B.C__Linear, B.Duration_200000, titleStyle);
       trailingIcon = A.AnimatedDefaultTextStyle$(_this.trailing, B.C__Linear, B.Duration_200000, leadingAndTrailingStyle);
       textDirection = A.Directionality_of(context);
-      t3 = tileTheme.contentPadding;
-      t3 = t3 == null ? _null : t3.resolve$1(textDirection);
-      resolvedContentPadding = t3;
-      if (resolvedContentPadding == null)
-        resolvedContentPadding = B.EdgeInsetsDirectional_16_0_24_0.resolve$1(textDirection);
       t1 = A.LinkedHashSet_LinkedHashSet$_empty(t1);
       t1.add$1(0, B.WidgetState_6);
       t3 = A.WidgetStateProperty_resolveAs(_null, t1, type$.nullable_MouseCursor);
@@ -113794,8 +113790,7 @@
       if (effectiveMouseCursor == null)
         effectiveMouseCursor = A.WidgetStateMouseCursor__clickable(type$.Set_WidgetState._as(t1));
       t1 = _this.shape;
-      color = _this.tileColor;
-      t3 = A.ShapeDecoration$(color, _null, _null, _null, t1);
+      t3 = A.ShapeDecoration$(_this.tileColor, _null, _null, _null, t1);
       _this._isDenseLayout$2(theme, tileTheme);
       t4 = titleStyle.textBaseline;
       if (t4 == null) {
@@ -113813,16 +113808,16 @@
       t8 = tileTheme.minLeadingWidth;
       if (t8 == null)
         t8 = 24;
-      t2 = A.SafeArea$(false, A.IconTheme_merge(A.IconButtonTheme$(new A._ListTile(leadingIcon, titleText, _null, trailingIcon, false, false, theme.visualDensity, textDirection, t4, t5, t6, t7, t8, tileTheme.minTileHeight, B.ListTileTitleAlignment_0, _null), new A.IconButtonThemeData(t2)), iconThemeData), resolvedContentPadding, false);
+      t2 = A.SafeArea$(false, A.IconTheme_merge(A.IconButtonTheme$(new A._ListTile(leadingIcon, titleText, _null, trailingIcon, false, false, theme.visualDensity, textDirection, t4, t5, t6, t7, t8, tileTheme.minTileHeight, B.ListTileTitleAlignment_0, _null), new A.IconButtonThemeData(t2)), iconThemeData), _this.contentPadding, false);
       return A.InkWell$(false, true, A.Semantics$(false, _null, new A.Ink(t2, t3, _null), false, _null, true, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, false, _null, _null, _null, _null, B.SemanticsValidationResult_0), t1, true, _null, _null, _null, _null, effectiveMouseCursor, _null, _null, _null, _null, _null, _null, _null, _null);
     },
     debugFillProperties$1(properties) {
-      var t1, _null = null, _s4_ = "true", _s5_ = "false";
-      this.super$Widget$debugFillProperties(properties);
+      var t1, _this = this, _null = null, _s4_ = "true", _s5_ = "false";
+      _this.super$Widget$debugFillProperties(properties);
       properties.add$1(0, A.FlagProperty$("isThreeLine", _null, "TWO_LINE", "THREE_LINE", B.DiagnosticLevel_3, true, _null));
       properties.add$1(0, A.FlagProperty$("dense", _null, _s5_, _s4_, B.DiagnosticLevel_3, true, _null));
       properties.add$1(0, A.DiagnosticsProperty$("visualDensity", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.VisualDensity));
-      properties.add$1(0, A.DiagnosticsProperty$("shape", this.shape, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.ShapeBorder));
+      properties.add$1(0, A.DiagnosticsProperty$("shape", _this.shape, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.ShapeBorder));
       properties.add$1(0, A.DiagnosticsProperty$("style", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.ListTileStyle));
       properties.add$1(0, A.ColorProperty$("selectedColor", _null, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
       properties.add$1(0, A.ColorProperty$("iconColor", _null, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
@@ -113831,7 +113826,7 @@
       properties.add$1(0, A.DiagnosticsProperty$("titleTextStyle", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, t1));
       properties.add$1(0, A.DiagnosticsProperty$("subtitleTextStyle", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, t1));
       properties.add$1(0, A.DiagnosticsProperty$("leadingAndTrailingTextStyle", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, t1));
-      properties.add$1(0, A.DiagnosticsProperty$("contentPadding", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.EdgeInsetsGeometry));
+      properties.add$1(0, A.DiagnosticsProperty$("contentPadding", _this.contentPadding, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.EdgeInsetsGeometry));
       properties.add$1(0, A.FlagProperty$("enabled", true, _s5_, _s4_, B.DiagnosticLevel_3, true, true));
       t1 = type$.Function;
       properties.add$1(0, A.DiagnosticsProperty$("onTap", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, t1));
@@ -113842,7 +113837,7 @@
       properties.add$1(0, A.ColorProperty$("hoverColor", _null, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
       properties.add$1(0, A.DiagnosticsProperty$("focusNode", _null, true, _null, _null, false, _null, _null, B.DiagnosticLevel_3, _null, false, true, true, B.DiagnosticsTreeStyle_8, _null, type$.FocusNode));
       properties.add$1(0, A.FlagProperty$("autofocus", false, _s5_, _s4_, B.DiagnosticLevel_3, true, false));
-      properties.add$1(0, A.ColorProperty$("tileColor", this.tileColor, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
+      properties.add$1(0, A.ColorProperty$("tileColor", _this.tileColor, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
       properties.add$1(0, A.ColorProperty$("selectedTileColor", _null, _null, B.DiagnosticLevel_3, true, B.DiagnosticsTreeStyle_8));
       properties.add$1(0, A.FlagProperty$("enableFeedback", _null, _s5_, _s4_, B.DiagnosticLevel_3, true, _null));
       properties.add$1(0, A.DoubleProperty$("horizontalTitleGap", _null, _null, _null, B.DiagnosticLevel_3, true, _null, _null));
@@ -204410,10 +204405,11 @@
         return A.ioore(t1, index);
       songList = t1[index];
       t1 = A.BorderRadius$circular(12);
-      t2 = A.Icon$(B.IconData_58389_MaterialIcons_false, _null, _null, _null);
-      t3 = A.Text$(A._asString(J.$index$asx(songList, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
+      t2 = J.getInterceptor$asx(songList);
+      t3 = A.Image$network(A._asString(t2.$index(songList, "image")), B.BoxFit_2, _null, _null);
+      t2 = A.Text$(A._asString(t2.$index(songList, "name")), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
       t4 = A.Icon$(B.IconData_983200_MaterialIcons_false, _null, _null, _null);
-      return new A.Padding(B.EdgeInsets_0_8_0_0, A.Card$(new A.ListTile(t2, t3, t4, new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5), B.Color_lW6, _null), _null, _null), _null);
+      return new A.Padding(B.EdgeInsets_0_8_0_0, A.Card$(new A.ListTile(t3, t2, new A.Padding(B.EdgeInsets_0_0_8_0, t4, _null), new A.RoundedRectangleBorder(t1, B.BorderSide_Ah5), B.EdgeInsets_0_0_0_0, B.Color_vnR, _null), _null, _null), _null);
     },
     $signature: 56
   };
@@ -211907,7 +211903,6 @@
     B.IconData_57898_MaterialIcons_false = new A.IconData(57898, "MaterialIcons", false);
     B.IconData_58286_MaterialIcons_false = new A.IconData(58286, "MaterialIcons", false);
     B.IconData_58372_MaterialIcons_false = new A.IconData(58372, "MaterialIcons", false);
-    B.IconData_58389_MaterialIcons_false = new A.IconData(58389, "MaterialIcons", false);
     B.IconData_59069_MaterialIcons_false = new A.IconData(59069, "MaterialIcons", false);
     B.IconData_59070_MaterialIcons_false = new A.IconData(59070, "MaterialIcons", false);
     B.IconData_59083_MaterialIcons_false = new A.IconData(59083, "MaterialIcons", false);

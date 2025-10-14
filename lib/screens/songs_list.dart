@@ -124,23 +124,27 @@ class _SongsListState extends State<SongsList> {
                                   padding: const EdgeInsets.only(top: 8),
                                   child: Card(
                                     child: ListTile(
+                                      contentPadding: EdgeInsets.zero,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(
                                           12.0,
                                         ),
                                       ),
-                                      tileColor: const Color.fromARGB(
-                                        255,
-                                        30,
-                                        30,
-                                        30,
+                                      tileColor: Colors.black,
+                                      leading: Image.network(
+                                        songList['image'],
+                                        fit: BoxFit.cover,
                                       ),
-                                      leading: Icon(Icons.music_note),
                                       title: Text(
                                         songList['name'],
                                         style: TextStyle(color: Colors.white),
                                       ),
-                                      trailing: Icon(Icons.play_arrow_rounded),
+                                      trailing: Padding(
+                                        padding: const EdgeInsets.only(
+                                          right: 8.0,
+                                        ),
+                                        child: Icon(Icons.play_arrow_rounded),
+                                      ),
                                     ),
                                   ),
                                 );
