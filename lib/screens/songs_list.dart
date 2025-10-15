@@ -5,18 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:snowcone/database/database.dart';
 
 class SongsList extends StatefulWidget {
+  final int id;
   final String imageName;
   final String songTitle;
   final bool isBand;
   final String backgroundColor;
   final int groupID;
+  final bool isTopMixes;
   const SongsList({
     super.key,
+    required this.id,
     required this.imageName,
     required this.songTitle,
     required this.isBand,
     required this.backgroundColor,
     required this.groupID,
+    required this.isTopMixes,
   });
 
   @override
@@ -24,6 +28,18 @@ class SongsList extends StatefulWidget {
 }
 
 class _SongsListState extends State<SongsList> {
+  List<int> getMixIDs(int mixName) {
+    const mixes = {
+      0: [8, 1],
+      1: [2, 4],
+      2: [1, 1],
+      3: [1, 4],
+      4: [3, 2],
+      5: [2, 3],
+    };
+    return mixes[mixName] ?? [];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,9 +124,17 @@ class _SongsListState extends State<SongsList> {
                   StreamBuilder(
                     stream: getMusic("Music"),
                     builder: (context, asyncSnapshot) {
-                      final songLists = (asyncSnapshot.data ?? [])
-                          .where((item) => item['groupID'] == widget.groupID)
-                          .toList();
+                      List<dynamic> songLists = [];
+                      final selectedIDs = getMixIDs(widget.id);
+                      if (widget.isTopMixes) {
+                        songLists = (asyncSnapshot.data ?? [])
+                            .where((item) => selectedIDs.contains(item['id']))
+                            .toList();
+                      } else {
+                        songLists = (asyncSnapshot.data ?? [])
+                            .where((item) => item['groupID'] == widget.groupID)
+                            .toList();
+                      }
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: SizedBox(
