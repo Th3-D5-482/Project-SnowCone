@@ -758,7 +758,9 @@ class _HomeViewState extends State<HomeView> {
                                       height: 200,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
-                                        itemCount: 6,
+                                        itemCount: recentMusica.length >= 6
+                                            ? 6
+                                            : recentMusica.length,
                                         physics: const BouncingScrollPhysics(),
                                         itemBuilder: (context, index) {
                                           final recentSong =

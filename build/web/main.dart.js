@@ -203580,9 +203580,18 @@
   };
   A._HomeViewState_build____closure0.prototype = {
     call$2(context, constraints) {
-      var t1 = constraints.maxWidth > 1000 || this.isDesktop,
-        t2 = this.recentMusica;
-      return t1 ? A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(t2), 6, null, null, B.Axis_0, false), 220, 1 / 0) : A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t2), 6, null, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 200, 1 / 0);
+      var t1, t2;
+      if (constraints.maxWidth > 1000 || this.isDesktop)
+        t1 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(this.recentMusica), 6, null, null, B.Axis_0, false), 220, 1 / 0);
+      else {
+        t1 = this.recentMusica;
+        t2 = t1.length;
+        if (t2 >= 6)
+          t2 = 6;
+        t2 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure0(t1), t2, null, B.BouncingScrollPhysics_ScrollDecelerationRate_0_null, B.Axis_0, false), 200, 1 / 0);
+        t1 = t2;
+      }
+      return t1;
     },
     $signature: 134
   };
