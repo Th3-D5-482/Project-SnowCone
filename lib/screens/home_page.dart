@@ -101,8 +101,8 @@ class _HomeViewState extends State<HomeView> {
                 horizontal: horizontalPadding,
                 vertical: kIsWeb ? 16 : 8,
               ),
-              child: StreamBuilder(
-                stream: getConitnueListening('Albums'),
+              child: FutureBuilder(
+                future: getConitnueListening('Albums'),
                 builder: (context, asyncSnapshot) {
                   final musica = (asyncSnapshot.data ?? [])
                       .where((item) => item['isContinueListening'] == true)
@@ -245,8 +245,8 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 10),
-                      StreamBuilder(
-                        stream: getTopMixes('TopMixes'),
+                      FutureBuilder(
+                        future: getTopMixes('TopMixes'),
                         builder: (context, asyncSnapshot) {
                           final topMixes = asyncSnapshot.data ?? [];
                           return LayoutBuilder(
@@ -367,8 +367,8 @@ class _HomeViewState extends State<HomeView> {
                                   : SizedBox(
                                       height: 200,
                                       width: double.infinity,
-                                      child: StreamBuilder(
-                                        stream: getTopMixes('TopMixes'),
+                                      child: FutureBuilder(
+                                        future: getTopMixes('TopMixes'),
                                         builder: (context, asyncSnapshot) {
                                           if (asyncSnapshot.hasError) {
                                             return Center(
@@ -511,8 +511,8 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      StreamBuilder(
-                        stream: getArtist('Artist'),
+                      FutureBuilder(
+                        future: getArtist('Artist'),
                         builder: (context, asyncSnapshot) {
                           final artists = asyncSnapshot.data ?? [];
                           return LayoutBuilder(
@@ -686,8 +686,8 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       SizedBox(height: 10),
-                      StreamBuilder(
-                        stream: getMusic('Music'),
+                      FutureBuilder(
+                        future: getMusic('Music'),
                         builder: (context, asyncSnapshot) {
                           final recentMusica = (asyncSnapshot.data ?? [])
                               .where(

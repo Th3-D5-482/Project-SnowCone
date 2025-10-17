@@ -121,8 +121,8 @@ class _SongsListState extends State<SongsList> {
                       ),
                     ),
                   ),
-                  StreamBuilder(
-                    stream: getMusic("Music"),
+                  FutureBuilder(
+                    future: getMusic("Music"),
                     builder: (context, asyncSnapshot) {
                       List<dynamic> songLists = [];
                       final selectedIDs = getMixIDs(widget.id);
