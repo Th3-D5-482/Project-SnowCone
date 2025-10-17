@@ -267,28 +267,32 @@
       "name": "Worship",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
       "color": "#cc0088",
-      "backgroundColor": "0xFFF2BBD7"
+      "backgroundColor": "0xFFF2BBD7",
+      "groupID": [0,0]
     },
     {
       "id": 1,
       "name": "Praise",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
       "color": "#096f50",
-      "backgroundColor": "0xFFB7D3C9"
+      "backgroundColor": "0xFFB7D3C9",
+      "groupID": [0,0]
     },
     {
       "id": 2,
       "name": "Gospel",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
       "color": "#7c00e0",
-      "backgroundColor": "0xFFD9C3F3"
+      "backgroundColor": "0xFFD9C3F3",
+      "groupID": [0,0]
     },
     {
       "id": 3,
       "name": "Pop",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
       "color": "#203062",
-      "backgroundColor": "0xFFBDC5D9"
+      "backgroundColor": "0xFFBDC5D9",
+      "groupID": [0,0]
     }
   ],
   "Albums": [
@@ -347,42 +351,48 @@
       "name": "Hyms",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
       "color": "#8c5eaa",
-      "backgroundColor": "0xFFD9CDE6"
+      "backgroundColor": "0xFFD9CDE6",
+      "groupID": [0,0]
     },
     {
       "id": 1,
       "name": "Rock",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
       "color": "#096f50",
-      "backgroundColor": "0xFFAFCFC3"
+      "backgroundColor": "0xFFAFCFC3",
+      "groupID": [0,0]
     },
     {
       "id": 2,
       "name": "HipHop",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
       "color": "#628c0d",
-      "backgroundColor": "0xFFD3DBB9"
+      "backgroundColor": "0xFFD3DBB9",
+      "groupID": [0,0]
     },
     {
       "id": 3,
       "name": "Indie",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
       "color": "#4e8095",
-      "backgroundColor": "0xFFC3D6DC"
+      "backgroundColor": "0xFFC3D6DC",
+      "groupID": [0,0]
     },
     {
       "id": 4,
       "name": "Folk",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
       "color": "#cc0088",
-      "backgroundColor": "0xFFF6CCE4"
+      "backgroundColor": "0xFFF6CCE4",
+      "groupID": [0,0]
     },
     {
       "id": 5,
       "name": "Country",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
       "color": "#b2590d",
-      "backgroundColor": "0xFFE6CDB9"
+      "backgroundColor": "0xFFE6CDB9",
+      "groupID": [0,0]
     }
   ],
   "Artist": [

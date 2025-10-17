@@ -203610,7 +203610,7 @@
       t1._as(secondaryAnimation);
       t1 = this.genres;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "genresID")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), null);
     },
     $signature: 50
   };
@@ -203686,7 +203686,7 @@
       t1._as(secondaryAnimation);
       t1 = this.browseAll;
       t2 = J.getInterceptor$asx(t1);
-      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "browseAllID")), null);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), null);
     },
     $signature: 50
   };
