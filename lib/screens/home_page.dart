@@ -169,14 +169,12 @@ class _HomeViewState extends State<HomeView> {
                                             animation,
                                             secondaryAnimation,
                                           ) => SongsList(
-                                            id: song['id'],
                                             imageName: song['image'],
                                             songTitle: song['name'],
                                             isBand: false,
                                             backgroundColor:
                                                 song['backgroundColor'],
-                                            groupID: song['albumID'],
-                                            isTopMixes: false,
+                                            groupID: song['groupID'],
                                           ),
                                       transitionsBuilder:
                                           (
@@ -274,7 +272,6 @@ class _HomeViewState extends State<HomeView> {
                                                           animation,
                                                           secondaryAnimation,
                                                         ) => SongsList(
-                                                          id: topMix['id'],
                                                           imageName:
                                                               topMix['image'],
                                                           songTitle:
@@ -282,8 +279,8 @@ class _HomeViewState extends State<HomeView> {
                                                           isBand: false,
                                                           backgroundColor:
                                                               topMix['backgroundColor'],
-                                                          groupID: topMix['id'],
-                                                          isTopMixes: true,
+                                                          groupID:
+                                                              topMix['groupID'],
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -404,7 +401,6 @@ class _HomeViewState extends State<HomeView> {
                                                               animation,
                                                               secondaryAnimation,
                                                             ) => SongsList(
-                                                              id: topMix['id'],
                                                               imageName:
                                                                   topMix['image'],
                                                               songTitle:
@@ -413,8 +409,7 @@ class _HomeViewState extends State<HomeView> {
                                                               backgroundColor:
                                                                   topMix['backgroundColor'],
                                                               groupID:
-                                                                  topMix['id'],
-                                                              isTopMixes: true,
+                                                                  topMix['groupID'],
                                                             ),
                                                         transitionsBuilder:
                                                             (
@@ -541,7 +536,6 @@ class _HomeViewState extends State<HomeView> {
                                                           animation,
                                                           secondaryAnimation,
                                                         ) => SongsList(
-                                                          id: artist['id'],
                                                           imageName:
                                                               artist['image']!,
                                                           songTitle:
@@ -550,8 +544,7 @@ class _HomeViewState extends State<HomeView> {
                                                           backgroundColor:
                                                               artist['backgroundColor']!,
                                                           groupID:
-                                                              artist['artistID']!,
-                                                          isTopMixes: false,
+                                                              artist['groupID']!,
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -617,7 +610,6 @@ class _HomeViewState extends State<HomeView> {
                                                           animation,
                                                           secondaryAnimation,
                                                         ) => SongsList(
-                                                          id: artist['id'],
                                                           imageName:
                                                               artist['image'],
                                                           songTitle:
@@ -626,8 +618,7 @@ class _HomeViewState extends State<HomeView> {
                                                           backgroundColor:
                                                               artist['backgroundColor'],
                                                           groupID:
-                                                              artist['artistID'],
-                                                          isTopMixes: false,
+                                                              artist['groupID'],
                                                         ),
                                                     transitionsBuilder:
                                                         (

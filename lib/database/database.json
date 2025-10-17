@@ -7,8 +7,7 @@
       "audio": "assets/audio/how_great_is_our_god.mp3",
       "key": "C",
       "bpm": 68,
-      "isRecentlyListened": true,
-      "groupID": 1
+      "isRecentlyListened": true
     },
     {
       "id": 1,
@@ -17,8 +16,7 @@
       "audio": "assets/audio/holy_is_the_lord.mp3",
       "key": "D",
       "bpm": 72,
-      "isRecentlyListened": false,
-      "groupID": 1
+      "isRecentlyListened": false
     },
     {
       "id": 2,
@@ -27,8 +25,7 @@
       "audio": "assets/audio/way_maker.mp3",
       "key": "E",
       "bpm": 70,
-      "isRecentlyListened": true,
-      "groupID": 2
+      "isRecentlyListened": true
     },
     {
       "id": 3,
@@ -37,8 +34,7 @@
       "audio": "assets/audio/goodness_of_god.mp3",
       "key": "A",
       "bpm": 63,
-      "isRecentlyListened": false,
-      "groupID": 2
+      "isRecentlyListened": false
     },
     {
       "id": 4,
@@ -47,8 +43,7 @@
       "audio": "assets/audio/10000_reasons.mp3",
       "key": "G",
       "bpm": 73,
-      "isRecentlyListened": true,
-      "groupID": 3
+      "isRecentlyListened": true
     },
     {
       "id": 5,
@@ -57,8 +52,7 @@
       "audio": "assets/audio/never_once.mp3",
       "key": "Bb",
       "bpm": 76,
-      "isRecentlyListened": false,
-      "groupID": 3
+      "isRecentlyListened": false
     },
     {
       "id": 6,
@@ -67,8 +61,7 @@
       "audio": "assets/audio/reckless_love.mp3",
       "key": "G♭",
       "bpm": 83,
-      "isRecentlyListened": true,
-      "groupID": 4
+      "isRecentlyListened": true
     },
     {
       "id": 7,
@@ -77,8 +70,7 @@
       "audio": "assets/audio/water_and_dust.mp3",
       "key": "D",
       "bpm": 78,
-      "isRecentlyListened": false,
-      "groupID": 4
+      "isRecentlyListened": false
     },
     {
       "id": 8,
@@ -87,8 +79,7 @@
       "audio": "assets/audio/holy_forever.mp3",
       "key": "D♭",
       "bpm": 72,
-      "isRecentlyListened": true,
-      "groupID": 5
+      "isRecentlyListened": true
     },
     {
       "id": 9,
@@ -97,8 +88,7 @@
       "audio": "assets/audio/always.mp3",
       "key": "G",
       "bpm": 70,
-      "isRecentlyListened": false,
-      "groupID": 5
+      "isRecentlyListened": false
     },
     {
       "id": 10,
@@ -107,8 +97,7 @@
       "audio": "assets/audio/great_are_you_lord.mp3",
       "key": "A",
       "bpm": 72,
-      "isRecentlyListened": true,
-      "groupID": 6
+      "isRecentlyListened": true
     },
     {
       "id": 11,
@@ -117,8 +106,7 @@
       "audio": "assets/audio/christ_be_all_around_me.mp3",
       "key": "G",
       "bpm": 68,
-      "isRecentlyListened": false,
-      "groupID": 6
+      "isRecentlyListened": false
     },
     {
       "id": 12,
@@ -127,8 +115,7 @@
       "audio": "assets/audio/o_come_to_the_altar.mp3",
       "key": "B",
       "bpm": 72,
-      "isRecentlyListened": true,
-      "groupID": 7
+      "isRecentlyListened": true
     },
     {
       "id": 13,
@@ -137,8 +124,7 @@
       "audio": "assets/audio/graves_into_gardens.mp3",
       "key": "B♭",
       "bpm": 74,
-      "isRecentlyListened": false,
-      "groupID": 7
+      "isRecentlyListened": false
     },
     {
       "id": 14,
@@ -147,8 +133,7 @@
       "audio": "assets/audio/oceans.mp3",
       "key": "D",
       "bpm": 70,
-      "isRecentlyListened": true,
-      "groupID": 8
+      "isRecentlyListened": true
     },
     {
       "id": 15,
@@ -157,8 +142,7 @@
       "audio": "assets/audio/so_will_i.mp3",
       "key": "E",
       "bpm": 68,
-      "isRecentlyListened": false,
-      "groupID": 8
+      "isRecentlyListened": false
     },
     {
       "id": 16,
@@ -167,8 +151,7 @@
       "audio": "assets/audio/goodness_of_god.mp3",
       "key": "A",
       "bpm": 63,
-      "isRecentlyListened": true,
-      "groupID": 9
+      "isRecentlyListened": true
     },
     {
       "id": 17,
@@ -177,8 +160,7 @@
       "audio": "assets/audio/no_longer_slaves.mp3",
       "key": "F",
       "bpm": 69,
-      "isRecentlyListened": false,
-      "groupID": 9
+      "isRecentlyListened": false
     },
     {
       "id": 18,
@@ -187,8 +169,7 @@
       "audio": "assets/audio/what_a_beautiful_name.mp3",
       "key": "D",
       "bpm": 68,
-      "isRecentlyListened": true,
-      "groupID": 10
+      "isRecentlyListened": true
     },
     {
       "id": 19,
@@ -197,8 +178,7 @@
       "audio": "assets/audio/cornerstone.mp3",
       "key": "C",
       "bpm": 72,
-      "isRecentlyListened": false,
-      "groupID": 10
+      "isRecentlyListened": false
     },
     {
       "id": 20,
@@ -207,8 +187,7 @@
       "audio": "assets/audio/nothing_is_impossible.mp3",
       "key": "C",
       "bpm": 76,
-      "isRecentlyListened": true,
-      "groupID": 11
+      "isRecentlyListened": true
     },
     {
       "id": 21,
@@ -217,8 +196,7 @@
       "audio": "assets/audio/endless_praise.mp3",
       "key": "D",
       "bpm": 130,
-      "isRecentlyListened": false,
-      "groupID": 11
+      "isRecentlyListened": false
     },
     {
       "id": 22,
@@ -227,8 +205,7 @@
       "audio": "assets/audio/god_only_knows.mp3",
       "key": "B♭",
       "bpm": 75,
-      "isRecentlyListened": true,
-      "groupID": 12
+      "isRecentlyListened": true
     },
     {
       "id": 23,
@@ -237,8 +214,7 @@
       "audio": "assets/audio/shoulders.mp3",
       "key": "C",
       "bpm": 72,
-      "isRecentlyListened": false,
-      "groupID": 12
+      "isRecentlyListened": false
     }
   ],
   "TopMixes": [
@@ -246,37 +222,43 @@
       "id": 0,
       "name": "Echo Praise",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
-      "backgroundColor": "0xFFB8AFC4"
+      "backgroundColor": "0xFFB8AFC4",
+      "groupID": [0,0]
     },
     {
       "id": 1,
       "name": "Hearts United",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/hearts_united.png?updatedAt=1758813029740",
-      "backgroundColor": "0xFFF2D6E3"
+      "backgroundColor": "0xFFF2D6E3",
+      "groupID": [0,0]
     },
     {
       "id": 2,
       "name": "Upper Room",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
-      "backgroundColor": "0xFFD8D4C8"
+      "backgroundColor": "0xFFD8D4C8",
+      "groupID": [0,0]
     },
     {
       "id": 3,
       "name": "Kingdom Keys",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
-      "backgroundColor": "0xFFCFCBBE"
+      "backgroundColor": "0xFFCFCBBE",
+      "groupID": [0,0]
     },
     {
       "id": 4,
       "name": "Selah Sessions",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
-      "backgroundColor": "0xFFCAD8E1"
+      "backgroundColor": "0xFFCAD8E1",
+      "groupID": [0,0]
     },
     {
       "id": 5,
       "name": "Altar Fire",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
-      "backgroundColor": "0xFFE4CBB4"
+      "backgroundColor": "0xFFE4CBB4",
+      "groupID": [0,0]
     }
   ],
   "TopGenres": [
@@ -316,7 +298,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/arriving.png?updatedAt=1758744215984",
       "isContinueListening": true,
       "backgroundColor": "0xFFF3F1ED",
-      "albumID": 1
+      "groupID": [0,1]
     },
     {
       "id": 1,
@@ -324,7 +306,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/way_maker.png?updatedAt=1758744216128",
       "isContinueListening": true,
       "backgroundColor": "0xFFE0F2F1",
-      "albumID": 2
+      "groupID": [2,3]
     },
     {
       "id": 2,
@@ -332,7 +314,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/10,000_reasons.png?updatedAt=1758744216273",
       "isContinueListening": true,
       "backgroundColor": "0xFFFBE9E7",
-      "albumID": 3
+      "groupID": [4,5]
     },
     {
       "id": 3,
@@ -340,7 +322,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/reckless_love.png?updatedAt=1758744215664",
       "isContinueListening": true,
       "backgroundColor": "0xFFE8F5E9",
-      "albumID": 4
+      "groupID": [6,7]
     },
     {
       "id": 4,
@@ -348,7 +330,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/always.png?updatedAt=1758744216255",
       "isContinueListening": true,
       "backgroundColor": "0xFFF3E5F5",
-      "albumID": 5
+      "groupID": [8,9]
     },
     {
       "id": 5,
@@ -356,7 +338,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/albums/all_sons_and_daughters.png?updatedAt=1758744215263",
       "isContinueListening": true,
       "backgroundColor": "0xFFFFF9C4",
-      "albumID": 6
+      "groupID": [10,11]
     }
   ],
   "BrowseAll": [
@@ -409,42 +391,42 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/elevation_worship.png?updatedAt=1758826281879",
       "name": "Elevantion Worship",
       "backgroundColor": "0xFFF6E3C9",
-      "artistID": 7
+      "groupID": [12,13]
     },
     {
       "id": 1,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_united.png?updatedAt=1758826281869",
       "name": "Hillsong United",
       "backgroundColor": "0xFFCBD6DD",
-      "artistID": 8
+      "groupID": [14,15]
     },
     {
       "id": 2,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/bethel_music.png?updatedAt=1758826281947",
       "name": "Bethel Music",
       "backgroundColor": "0xFFD5DCD6",
-      "artistID": 9
+      "groupID": [16,17]
     },
     {
       "id": 3,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/hillsong_worship.png?updatedAt=1758826281932",
       "name": "Hillsong Worship",
       "backgroundColor": "0xFFF3E7D2",
-      "artistID": 10
+      "groupID": [18,19]
     },
     {
       "id": 4,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/planetshakers.png?updatedAt=1758868283059",
       "name": "Platnetshakers",
       "backgroundColor": "0xFFF1D9C5",
-      "artistID": 11
+      "groupID": [20,21]
     },
     {
       "id": 5,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/artist/for_kings_and_country.png?updatedAt=1759085942397",
       "name": "For Kings & Country",
       "backgroundColor": "0xFFD6CFC7",
-      "artistID": 12
+      "groupID": [22,23]
     }
   ]
 }

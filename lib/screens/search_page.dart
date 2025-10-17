@@ -160,14 +160,12 @@ class _SearchPageState extends State<SearchPage> {
                                                 animation,
                                                 secondaryAnimation,
                                               ) => SongsList(
-                                                id: genres['id'],
                                                 imageName: genres['image'],
                                                 songTitle: genres['name'],
                                                 isBand: false,
                                                 backgroundColor:
                                                     genres['backgroundColor'],
                                                 groupID: genres['genresID'],
-                                                isTopMixes: false,
                                               ),
                                           transitionsBuilder:
                                               (
@@ -298,7 +296,6 @@ class _SearchPageState extends State<SearchPage> {
                                                   animation,
                                                   secondaryAnimation,
                                                 ) => SongsList(
-                                                  id: browseAll['id'],
                                                   imageName: browseAll['image'],
                                                   songTitle: browseAll['name'],
                                                   isBand: false,
@@ -306,7 +303,6 @@ class _SearchPageState extends State<SearchPage> {
                                                       browseAll['backgroundColor'],
                                                   groupID:
                                                       browseAll['browseAllID'],
-                                                  isTopMixes: false,
                                                 ),
                                             transitionsBuilder:
                                                 (
