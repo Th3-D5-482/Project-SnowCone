@@ -12,7 +12,7 @@
     {
       "id": 1,
       "name": "Holy Is the Lord",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_is_the_lord.png?updatedAt=1760988861991",
       "audio": "assets/audio/holy_is_the_lord.mp3",
       "key": "D",
       "bpm": 72,
@@ -30,7 +30,7 @@
     {
       "id": 3,
       "name": "Goodness of God",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/goodness_of_god.png?updatedAt=1760989004928",
       "audio": "assets/audio/goodness_of_god.mp3",
       "key": "A",
       "bpm": 63,
@@ -48,7 +48,7 @@
     {
       "id": 5,
       "name": "Never Once",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/10,000_reasons.png?updatedAt=1758811877863",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/never_once.png?updatedAt=1760989110345",
       "audio": "assets/audio/never_once.mp3",
       "key": "Bb",
       "bpm": 76,
@@ -66,7 +66,7 @@
     {
       "id": 7,
       "name": "Water and Dust",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/reckless_love.png?updatedAt=1758811885566",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/water_and_dust.png?updatedAt=1760989255640",
       "audio": "assets/audio/water_and_dust.mp3",
       "key": "D",
       "bpm": 78,
@@ -84,7 +84,7 @@
     {
       "id": 9,
       "name": "Always",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_forever.png?updatedAt=1758811885397",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/always.png?updatedAt=1760989508623",
       "audio": "assets/audio/always.mp3",
       "key": "G",
       "bpm": 70,
@@ -102,7 +102,7 @@
     {
       "id": 11,
       "name": "Christ Be All Around Me",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/christ_be_around_me.png?updatedAt=1760989656359",
       "audio": "assets/audio/christ_be_all_around_me.mp3",
       "key": "G",
       "bpm": 68,
@@ -111,7 +111,7 @@
     {
       "id": 12,
       "name": "O Come to the Altar",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oh_come_to_the_alter.png?updatedAt=1760989838191",
       "audio": "assets/audio/o_come_to_the_altar.mp3",
       "key": "B",
       "bpm": 72,
@@ -120,7 +120,7 @@
     {
       "id": 13,
       "name": "Graves Into Gardens",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/graves_into_the_garden.png?updatedAt=1760989984149",
       "audio": "assets/audio/graves_into_gardens.mp3",
       "key": "B♭",
       "bpm": 74,
@@ -129,7 +129,7 @@
     {
       "id": 14,
       "name": "Oceans (Where Feet May Fail)",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oceans.png?updatedAt=1760990107252",
       "audio": "assets/audio/oceans.mp3",
       "key": "D",
       "bpm": 70,
