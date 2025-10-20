@@ -146,15 +146,6 @@
     },
     {
       "id": 16,
-      "name": "Goodness of God",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
-      "audio": "assets/audio/goodness_of_god.mp3",
-      "key": "A",
-      "bpm": 63,
-      "isRecentlyListened": true
-    },
-    {
-      "id": 17,
       "name": "No Longer Slaves",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/no_longer_slaves.mp3",
@@ -163,7 +154,7 @@
       "isRecentlyListened": false
     },
     {
-      "id": 18,
+      "id": 17,
       "name": "What a Beautiful Name",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/what_a_beautiful_name.mp3",
@@ -172,7 +163,7 @@
       "isRecentlyListened": true
     },
     {
-      "id": 19,
+      "id": 18,
       "name": "Cornerstone",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/cornerstone.mp3",
@@ -181,7 +172,7 @@
       "isRecentlyListened": false
     },
     {
-      "id": 20,
+      "id": 19,
       "name": "Nothing Is Impossible",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/nothing_is_impossible.mp3",
@@ -190,7 +181,7 @@
       "isRecentlyListened": true
     },
     {
-      "id": 21,
+      "id": 20,
       "name": "Endless Praise",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/endless_praise.mp3",
@@ -199,7 +190,7 @@
       "isRecentlyListened": false
     },
     {
-      "id": 22,
+      "id": 21,
       "name": "God Only Knows",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/god_only_knows.mp3",
@@ -208,7 +199,7 @@
       "isRecentlyListened": true
     },
     {
-      "id": 23,
+      "id": 22,
       "name": "Shoulders",
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "audio": "assets/audio/shoulders.mp3",
@@ -623,7 +614,7 @@
       "name": "Bethel Music",
       "backgroundColor": "0xFFD5DCD6",
       "groupID": [
-        16,
+        3,
         17
       ]
     },
