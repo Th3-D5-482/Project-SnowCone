@@ -1,174 +1,191 @@
 {
    "Music": [
     {
-      "audio": "assets/audio/how_great_is_our_god.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20How%20Great%20Is%20Our%20God%20(Lyrics%20And%20Chords).mp3?updatedAt=1761163342198",
       "bpm": 68,
       "id": 0,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066",
       "isRecentlyListened": true,
       "key": "C",
       "name": "How Great Is Our God",
-      "backgroundColor": "0xFFBFC9D6"
+      "backgroundColor": "0xFFBFC9D6",
+      "lyrics":""
     },
     {
-      "audio": "assets/audio/holy_is_the_lord.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20Holy%20Is%20The%20Lord%20(Lyrics%20And%20Chords).mp3?updatedAt=1761163446150",
       "bpm": 72,
       "id": 1,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_is_the_lord.png?updatedAt=1760988861991",
       "isRecentlyListened": false,
       "key": "D",
       "name": "Holy Is the Lord",
-      "backgroundColor": "0xFFB9B2C1"
+      "backgroundColor": "0xFFB9B2C1",
+      "lyrics":""
     },
     {
-      "audio": "assets/audio/way_maker.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Leeland%20-%20Way%20Maker%20(Official%20Live%20Video).mp3?updatedAt=1761163537161",
       "bpm": 70,
       "id": 2,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/way_maker.png?updatedAt=1758811885546",
       "isRecentlyListened": true,
       "key": "E",
       "name": "Way Maker",
-      "backgroundColor": "0xFFD6CFC2"
+      "backgroundColor": "0xFFD6CFC2",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/goodness_of_god.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Goodness%20Of%20God%20(LIVE)%20-%20Jenn%20Johnson%20_%20VICTORY.mp3?updatedAt=1761163611509",
       "bpm": 63,
       "id": 3,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/goodness_of_god.png?updatedAt=1760989004928",
       "isRecentlyListened": false,
       "key": "A",
       "name": "Goodness of God",
-      "backgroundColor": "0xFFB7C6C3"
+      "backgroundColor": "0xFFB7C6C3",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/10000_reasons.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/10,000%20Reasons%20(Bless%20the%20Lord)%20-%20Matt%20Redman%20(Best%20Worship%20Song%20Ever)%20(with%20Lyrics).mp3?updatedAt=1761163682465",
       "bpm": 73,
       "id": 4,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/10,000_reasons.png?updatedAt=1758811877863",
       "isRecentlyListened": true,
       "key": "G",
       "name": "10,000 Reasons",
-      "backgroundColor": "0xFFE3C9D2"
+      "backgroundColor": "0xFFE3C9D2",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/never_once.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Matt%20Redman%20-%20Never%20Once%20(Live).mp3?updatedAt=1761163756758",
       "bpm": 76,
       "id": 5,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/never_once.png?updatedAt=1760989110345",
       "isRecentlyListened": false,
       "key": "Bb",
       "name": "Never Once",
-      "backgroundColor": "0xFFB4B9C5"
+      "backgroundColor": "0xFFB4B9C5",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/reckless_love.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Reckless%20Love%20(Official%20Lyric%20Video).mp3?updatedAt=1761163862329",
       "bpm": 83,
       "id": 6,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/reckless_love.png?updatedAt=1758811885566",
       "isRecentlyListened": true,
       "key": "G♭",
       "name": "Reckless Love",
-      "backgroundColor": "0xFFB4B9C5"
+      "backgroundColor": "0xFFB4B9C5",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/water_and_dust.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Water%20And%20Dust%20(Official%20Lyric%20Video).mp3?updatedAt=1761163949802",
       "bpm": 78,
       "id": 7,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/water_and_dust.png?updatedAt=1760989255640",
       "isRecentlyListened": false,
       "key": "D",
       "name": "Water and Dust",
-      "backgroundColor": "0xFFB2B1AE"
+      "backgroundColor": "0xFFB2B1AE",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/holy_forever.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20Holy%20Forever%20(Lyric%20Video).mp3?updatedAt=1761164004252",
       "bpm": 72,
       "id": 8,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_forever.png?updatedAt=1758811885397",
       "isRecentlyListened": true,
       "key": "D♭",
       "name": "Holy Forever",
-      "backgroundColor": "0xFFBFC7D4"
+      "backgroundColor": "0xFFBFC7D4",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/always.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20Always%20(Lyric%20Video).mp3?updatedAt=1761164073694",
       "bpm": 70,
       "id": 9,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/always.png?updatedAt=1760989508623",
       "isRecentlyListened": false,
       "key": "G",
       "name": "Always",
-      "backgroundColor": "0xFFBDB8B2"
+      "backgroundColor": "0xFFBDB8B2",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/great_are_you_lord.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Great%20Are%20You%20Lord%20-%20All%20Sons%20&%20Daughters%20(Official%20Live%20Concert).mp3?updatedAt=1761164155543",
       "bpm": 72,
       "id": 10,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "isRecentlyListened": true,
       "key": "A",
       "name": "Great Are You Lord",
-      "backgroundColor": "0xFFD7CFC3"
+      "backgroundColor": "0xFFD7CFC3",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/christ_be_all_around_me.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Michael%20W.%20Smith%20-%20Christ%20Be%20All%20Around%20Me%20(Live)%20ft.%20Leeland%20Mooring.mp3?updatedAt=1761164312993",
       "bpm": 68,
       "id": 11,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/christ_be_around_me.png?updatedAt=1760989656359",
       "isRecentlyListened": false,
       "key": "G",
       "name": "Christ Be All Around Me",
-      "backgroundColor": "0xFFB6BDC9"
+      "backgroundColor": "0xFFB6BDC9",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/o_come_to_the_altar.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/O%20Come%20to%20the%20Altar%20_%20Live%20_%20Elevation%20Worship.mp3?updatedAt=1761164404497",
       "bpm": 72,
       "id": 12,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oh_come_to_the_alter.png?updatedAt=1760989838191",
       "isRecentlyListened": true,
       "key": "B",
       "name": "O Come to the Altar",
-      "backgroundColor": "0xFFB8B2A9"
+      "backgroundColor": "0xFFB8B2A9",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/graves_into_gardens.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Graves%20Into%20Gardens%20ft.%20Brandon%20Lake%20_%20Live%20_%20Elevation%20Worship.mp3?updatedAt=1761164525287",
       "bpm": 74,
       "id": 13,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/graves_into_the_garden.png?updatedAt=1760989984149",
       "isRecentlyListened": false,
       "key": "B♭",
       "name": "Graves Into Gardens",
-      "backgroundColor": "0xFFD4C8C1"
+      "backgroundColor": "0xFFD4C8C1",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/oceans.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Oceans%20(Where%20Feet%20May%20Fail)%20Lyric%20Video%20-%20Hillsong%20UNITED.mp3?updatedAt=1761164612473",
       "bpm": 70,
       "id": 14,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oceans.png?updatedAt=1760990107252",
       "isRecentlyListened": true,
       "key": "D",
       "name": "Oceans (Where Feet May Fail)",
-      "backgroundColor": "0xFFB7C3CC"
+      "backgroundColor": "0xFFB7C3CC",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/so_will_i.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/So%20Will%20I%20(100%20Billion%20X)%20-%20Hillsong%20Worship.mp3?updatedAt=1761164697279",
       "bpm": 68,
       "id": 15,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/so_will_i.png?updatedAt=1761121037797",
       "isRecentlyListened": false,
       "key": "E",
       "name": "So Will I (100 Billion X)",
-      "backgroundColor": "0xFFB7C3CC"
+      "backgroundColor": "0xFFB7C3CC",
+      "lyrics": ""
     },
     {
-      "audio": "assets/audio/no_longer_slaves.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/No%20Longer%20Slaves%20(Official%20Lyric%20Video)%20-%20Jonathan%20David%20and%20Melissa%20Helser%20_%20We%20Will%20Not%20Be%20Shaken.mp3?updatedAt=1761164780450",
       "bpm": 69,
       "id": 16,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/no_longer_slaves.png?updatedAt=1761121156188",
       "isRecentlyListened": false,
       "key": "F",
       "name": "No Longer Slaves",
-      "backgroundColor": "0xFFB7C3CC"
+      "backgroundColor": "0xFFB7C3CC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/what_a_beautiful_name.mp3",
@@ -178,7 +195,8 @@
       "isRecentlyListened": true,
       "key": "D",
       "name": "What a Beautiful Name",
-      "backgroundColor": "0xFFB7C3CC"
+      "backgroundColor": "0xFFB7C3CC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/cornerstone.mp3",
@@ -188,7 +206,8 @@
       "isRecentlyListened": false,
       "key": "C",
       "name": "Cornerstone",
-      "backgroundColor": "0xFFB7B5B0"
+      "backgroundColor": "0xFFB7B5B0",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/nothing_is_impossible.mp3",
@@ -198,7 +217,8 @@
       "isRecentlyListened": true,
       "key": "C",
       "name": "Nothing Is Impossible",
-      "backgroundColor": "0xFFB5B9C3"
+      "backgroundColor": "0xFFB5B9C3",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/endless_praise.mp3",
@@ -208,7 +228,8 @@
       "isRecentlyListened": false,
       "key": "D",
       "name": "Endless Praise",
-      "backgroundColor": "0xFFD5CFC9"
+      "backgroundColor": "0xFFD5CFC9",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/god_only_knows.mp3",
@@ -218,7 +239,8 @@
       "isRecentlyListened": true,
       "key": "B♭",
       "name": "God Only Knows",
-      "backgroundColor": "0xFFCFCAC5"
+      "backgroundColor": "0xFFCFCAC5",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/shoulders.mp3",
@@ -228,7 +250,8 @@
       "isRecentlyListened": false,
       "key": "C",
       "name": "Shoulders",
-      "backgroundColor": "0xFFB9B4A9"
+      "backgroundColor": "0xFFB9B4A9",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/surrounded.mp3",
@@ -237,7 +260,9 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/surrounded.png?updatedAt=1761122437857",
       "isRecentlyListened": true,
       "key": "D",
-      "name": "Surrounded (Fight My Battles)"
+      "name": "Surrounded (Fight My Battles)",
+      "backgroundColor": "0xFFD1C8BC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/you_made_a_way.mp3",
@@ -247,7 +272,8 @@
       "isRecentlyListened": false,
       "key": "E",
       "name": "You Made a Way",
-      "backgroundColor": "0xFFD2C9C1"
+      "backgroundColor": "0xFFD2C9C1",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/lift_every_voice.mp3",
@@ -257,7 +283,8 @@
       "isRecentlyListened": true,
       "key": "F",
       "name": "Lift Every Voice",
-      "backgroundColor": "0xFFD0C8C1"
+      "backgroundColor": "0xFFD0C8C1",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/grace_walk.mp3",
@@ -267,7 +294,8 @@
       "isRecentlyListened": false,
       "key": "C",
       "name": "Grace Walk",
-      "backgroundColor": "0xFFBFB7AC"
+      "backgroundColor": "0xFFBFB7AC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/how_great_thou_art.mp3",
@@ -277,7 +305,8 @@
       "isRecentlyListened": true,
       "key": "A♭",
       "name": "How Great Thou Art",
-      "backgroundColor": "0xFFBAC0CB"
+      "backgroundColor": "0xFFBAC0CB",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/it_is_well.mp3",
@@ -287,7 +316,8 @@
       "isRecentlyListened": false,
       "key": "D",
       "name": "It Is Well With My Soul",
-      "backgroundColor": "0xFFCFC7C2"
+      "backgroundColor": "0xFFCFC7C2",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/gods_not_dead.mp3",
@@ -297,7 +327,8 @@
       "isRecentlyListened": true,
       "key": "E",
       "name": "God's Not Dead",
-      "backgroundColor": "0xFFBDB7B2"
+      "backgroundColor": "0xFFBDB7B2",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/rise_again.mp3",
@@ -307,7 +338,8 @@
       "isRecentlyListened": false,
       "key": "D",
       "name": "Rise Again",
-      "backgroundColor": "0xFFD1C8C1"
+      "backgroundColor": "0xFFD1C8C1",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/church_clap.mp3",
@@ -317,7 +349,8 @@
       "isRecentlyListened": true,
       "key": "C♯",
       "name": "Church Clap",
-      "backgroundColor": "0xFFCCC4BC"
+      "backgroundColor": "0xFFCCC4BC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/kingdom_bars.mp3",
@@ -327,7 +360,8 @@
       "isRecentlyListened": false,
       "key": "G",
       "name": "Kingdom Bars",
-      "backgroundColor": "0xFFCCC4BC"
+      "backgroundColor": "0xFFCCC4BC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/echoes_in_the_valley.mp3",
@@ -337,7 +371,8 @@
       "isRecentlyListened": false,
       "key": "A",
       "name": "Echoes in the Valley",
-      "backgroundColor": "0xFFBFC3C0"
+      "backgroundColor": "0xFFBFC3C0",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/the_river_beneath.mp3",
@@ -347,7 +382,8 @@
       "isRecentlyListened": true,
       "key": "E♭",
       "name": "The River Beneath",
-      "backgroundColor": "0xFFD1C8C0"
+      "backgroundColor": "0xFFD1C8C0",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/pilgrims_light.mp3",
@@ -357,7 +393,8 @@
       "isRecentlyListened": false,
       "key": "C",
       "name": "Pilgrim's Light",
-      "backgroundColor": "0xFFB9B4AC"
+      "backgroundColor": "0xFFB9B4AC",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/heavens_dirt_road.mp3",
@@ -367,7 +404,8 @@
       "isRecentlyListened": true,
       "key": "G",
       "name": "Heaven's Dirt Road",
-      "backgroundColor": "0xFFD0C4B4"
+      "backgroundColor": "0xFFD0C4B4",
+      "lyrics": ""
     },
     {
       "audio": "assets/audio/grace_and_gravel.mp3",
@@ -377,7 +415,8 @@
       "isRecentlyListened": false,
       "key": "D",
       "name": "Grace and Gravel",
-      "backgroundColor": "0xFFD2C6B6"
+      "backgroundColor": "0xFFD2C6B6",
+      "lyrics": ""
     }
   ],
   "TopMixes": [
