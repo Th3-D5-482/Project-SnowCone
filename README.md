@@ -8,14 +8,13 @@
 
 ## ⚠️ Disclaimer  
 
-This project is a personal initiative created for self-learning and development. I am a self-taught developer exploring faith-centered digital tools to grow in both skill and spirit. SnowCone is not intended for commercial use, distribution, or monetization. All content is curated respectfully, with no intent to infringe upon copyright or harm users.  
-This app is a reflection of my journey—built with purpose, not profit.
+SnowCone is a personal, faith-centered project created for self-learning and growth. It’s not intended for commercial use or distribution. All content is curated respectfully, with no intent to infringe on copyright. This app reflects a journey of purpose, not profit.
 
 ---
 
 ## 📘 Overview
 
-**Project SnowCone** is a dynamic tool crafted to enhance how musicians engage with their songs. More than just a player, it lets users view lyrics and chords, transpose keys effortlessly, and organize their musical flow with ease. Whether you're practicing, performing, or composing, SnowCone is your creative ally.
+**Project SnowCone** is a dynamic tool crafted to enhance how musicians engage with their songs. More than just a player, it lets users view lyrics, chords, and organize their musical flow with ease. Whether you're practicing, performing, or composing, SnowCone is your creative ally.
 
 ---
 
@@ -36,10 +35,7 @@ Users can sign up and log in using their email ID and password, enabling secure 
 
 ### 🏠 Main Dashboard
 
-The dashboard displays recent songs organized by album, mixes, worship and praise bands, and tailored suggestions based on listening history.
-
-- A search interface allows users to find songs and explore them by category.
-- A dedicated library section lets users view, manage, and create their own song collections.
+The dashboard showcases recent songs organized by album, mixes, worship and praise bands, and personalized suggestions based on listening history. It also features a dedicated library section where users can view, manage, and create their own song collections.
 
 ---
 
@@ -54,7 +50,6 @@ The dashboard displays recent songs organized by album, mixes, worship and prais
 
 - **Homepage** – Central hub showing the main dashboard with recent activity and suggestions.
 - **Search Page** – Interface for browsing songs by title, artist, or category.
-- **Library Page** – Space to access and curate personal song libraries.
 
 ---
 
