@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database/database.dart';
+import 'package:snowcone/screens/profile_page.dart';
 import 'package:snowcone/screens/search_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
@@ -105,11 +106,38 @@ class _HomeViewState extends State<HomeView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          const CircleAvatar(
-                            backgroundImage: AssetImage(
-                              'assets/images/random/Th3_D5_482.jpeg',
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                PageRouteBuilder(
+                                  pageBuilder:
+                                      (
+                                        context,
+                                        animation,
+                                        secondaryAnimation,
+                                      ) => ProfilePage(),
+                                  transitionsBuilder:
+                                      (
+                                        context,
+                                        animation,
+                                        secondaryAnimation,
+                                        child,
+                                      ) => FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      ),
+                                  transitionDuration: Duration(
+                                    milliseconds: 800,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: const CircleAvatar(
+                              backgroundImage: AssetImage(
+                                'assets/images/random/Th3_D5_482.jpeg',
+                              ),
+                              radius: 20,
                             ),
-                            radius: 20,
                           ),
                           const SizedBox(width: 12),
                           Text(
