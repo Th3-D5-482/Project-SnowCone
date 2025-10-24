@@ -6,10 +6,14 @@ import 'package:flutter/material.dart';
 class PlayChordsPage extends StatefulWidget {
   final String backgroundColor;
   final String imageName;
+  final String songName;
+  final String audio;
   const PlayChordsPage({
     super.key,
     required this.backgroundColor,
     required this.imageName,
+    required this.songName,
+    required this.audio,
   });
 
   @override
@@ -17,6 +21,7 @@ class PlayChordsPage extends StatefulWidget {
 }
 
 class _PlayChordsPageState extends State<PlayChordsPage> {
+  late bool isPlaying = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +55,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 460,
+                      height: 550,
                       child: Column(
                         children: [
                           kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
@@ -75,13 +80,63 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                             borderRadius: BorderRadiusGeometry.circular(8),
                             child: Image(
                               image: NetworkImage(widget.imageName),
-                              width: 240,
-                              height: 240,
+                              width: 350,
+                              height: 350,
                             ),
                           ),
                         ],
                       ),
                     ),
+                  ),
+                  Text(
+                    widget.songName,
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 80),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.fast_rewind_rounded,
+                          size: 40,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(width: 12),
+                      IconButton(
+                        onPressed: () {
+                          setState(() {
+                            isPlaying = !isPlaying;
+                          });
+                        },
+                        icon: isPlaying
+                            ? Icon(
+                                Icons.pause_circle_filled_rounded,
+                                size: 80,
+                                color: Colors.white,
+                              )
+                            : Icon(
+                                Icons.play_circle_rounded,
+                                size: 80,
+                                color: Colors.white,
+                              ),
+                      ),
+                      SizedBox(width: 12),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.fast_forward_rounded,
+                          size: 40,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

@@ -139,6 +139,8 @@ class _SongsListState extends State<SongsList> {
                                                 backgroundColor:
                                                     songList['backgroundColor'],
                                                 imageName: songList['image'],
+                                                songName: songList['name'],
+                                                audio: songList['audio'],
                                               ),
                                           transitionsBuilder:
                                               (

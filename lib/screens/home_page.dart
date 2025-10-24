@@ -737,6 +737,10 @@ class _HomeViewState extends State<HomeView> {
                                                               recentSong['backgroundColor'],
                                                           imageName:
                                                               recentSong['image'],
+                                                          songName:
+                                                              recentSong['name'],
+                                                          audio:
+                                                              recentSong['audio'],
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -839,6 +843,10 @@ class _HomeViewState extends State<HomeView> {
                                                               recentSong['backgroundColor'],
                                                           imageName:
                                                               recentSong['image'],
+                                                          songName:
+                                                              recentSong['name'],
+                                                          audio:
+                                                              recentSong['audio'],
                                                         ),
                                                     transitionsBuilder:
                                                         (
