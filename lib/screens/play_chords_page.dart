@@ -89,7 +89,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 530,
+                      height: 540,
                       child: Column(
                         children: [
                           kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
@@ -130,7 +130,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 40),
+                  SizedBox(height: 30),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: StreamBuilder<Duration>(
