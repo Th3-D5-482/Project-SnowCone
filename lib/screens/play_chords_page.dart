@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 class PlayChordsPage extends StatefulWidget {
   final String backgroundColor;
@@ -21,7 +22,40 @@ class PlayChordsPage extends StatefulWidget {
 }
 
 class _PlayChordsPageState extends State<PlayChordsPage> {
+  final AudioPlayer player = AudioPlayer();
   late bool isPlaying = true;
+  Duration currentPosition = Duration.zero;
+  Duration totalDuration = Duration.zero;
+
+  @override
+  void initState() {
+    super.initState();
+    player.setUrl(widget.audio);
+    player.play();
+    player.durationStream.listen((duration) {
+      setState(() {
+        totalDuration = duration ?? Duration.zero;
+      });
+    });
+    player.positionStream.listen((position) {
+      setState(() {
+        currentPosition = position;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    player.dispose();
+  }
+
+  String formatDuration(Duration d) {
+    final minutes = d.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final seconds = d.inSeconds.remainder(60).toString().padLeft(2, '0');
+    return '$minutes:$seconds';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +130,49 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 80),
+                  SizedBox(height: 40),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: StreamBuilder<Duration>(
+                      stream: player.positionStream,
+                      builder: (context, snapshot) {
+                        final position = snapshot.data ?? Duration.zero;
+                        final duration = totalDuration;
+                        return Slider(
+                          min: 0,
+                          max: duration.inMilliseconds.toDouble(),
+                          value: position.inMilliseconds
+                              .clamp(0, duration.inMilliseconds)
+                              .toDouble(),
+                          onChanged: (value) async {
+                            final seekPosition = Duration(
+                              milliseconds: value.toInt(),
+                            );
+                            await player.seek(seekPosition);
+                          },
+                          activeColor: Colors.white,
+                          inactiveColor: Colors.grey.shade700,
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          formatDuration(currentPosition),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          formatDuration(totalDuration),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -112,7 +188,13 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       IconButton(
                         onPressed: () {
                           setState(() {
-                            isPlaying = !isPlaying;
+                            if (isPlaying) {
+                              isPlaying = !isPlaying;
+                              player.stop();
+                            } else {
+                              isPlaying = !isPlaying;
+                              player.play();
+                            }
                           });
                         },
                         icon: isPlaying
