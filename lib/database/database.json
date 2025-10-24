@@ -490,7 +490,7 @@
       "backgroundColor": "0xFFF2BBD7",
       "groupID": [
         8,
-        2
+        14
       ]
     },
     {
@@ -501,7 +501,7 @@
       "backgroundColor": "0xFFB7D3C9",
       "groupID": [
         20,
-        21
+        29
       ]
     },
     {
@@ -522,8 +522,8 @@
       "color": "#203062",
       "backgroundColor": "0xFFBDC5D9",
       "groupID": [
-        22,
-        23
+        21,
+        22
       ]
     }
   ],
@@ -569,7 +569,7 @@
       "backgroundColor": "0xFFE8F5E9",
       "groupID": [
         6,
-        7
+        27
       ]
     },
     {
@@ -691,7 +691,7 @@
       "backgroundColor": "0xFFD5DCD6",
       "groupID": [
         3,
-        17
+        27
       ]
     },
     {
@@ -700,8 +700,8 @@
       "name": "Hillsong Worship",
       "backgroundColor": "0xFFF3E7D2",
       "groupID": [
-        18,
-        19
+        17,
+        18
       ]
     },
     {
@@ -710,8 +710,8 @@
       "name": "Platnetshakers",
       "backgroundColor": "0xFFF1D9C5",
       "groupID": [
-        20,
-        21
+        19,
+        20
       ]
     },
     {
@@ -720,8 +720,8 @@
       "name": "For Kings & Country",
       "backgroundColor": "0xFFD6CFC7",
       "groupID": [
-        22,
-        23
+        21,
+        22
       ]
     }
   ]
