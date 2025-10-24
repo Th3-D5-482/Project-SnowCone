@@ -55,19 +55,7 @@ class _SignUpState extends State<SignUp> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        icon: Icon(
-                          Icons.arrow_back_rounded,
-                          color: Colors.grey,
-                          size: 28,
-                        ),
-                      ),
-                    ),
+                    SizedBox(height: 50),
                     CircleAvatar(
                       radius: 100,
                       backgroundImage: AssetImage(
