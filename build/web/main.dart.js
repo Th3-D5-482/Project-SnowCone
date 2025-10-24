@@ -94097,11 +94097,7 @@
               defaultApp = $.MethodChannelFirebase_appInstances.$index(0, "[DEFAULT]");
             case 7:
               // join
-              if (defaultApp != null)
-                t1 = !B.JSString_methods.startsWith$1(options.projectId, "demo-");
-              else
-                t1 = false;
-              if (t1) {
+              if (defaultApp != null) {
                 t1 = defaultApp.options;
                 t2 = true;
                 if (options.apiKey === t1.apiKey) {
@@ -94464,7 +94460,7 @@
               overridedWebSDKVersion = A._asStringQ(t1.flutterfire_web_sdk_version);
               if (overridedWebSDKVersion == null)
                 overridedWebSDKVersion = null;
-              version = overridedWebSDKVersion == null ? "12.2.1" : overridedWebSDKVersion;
+              version = overridedWebSDKVersion == null ? "12.3.0" : overridedWebSDKVersion;
               ignored = $async$self.get$_ignoredServiceScripts();
               t1 = $.$get$FirebaseCoreWeb__services();
               t2 = A._instanceType(t1)._eval$1("LinkedHashMapValuesIterable<2>");
@@ -94641,8 +94637,8 @@
   A.FirebaseCoreWeb_initializeApp_closure0.prototype = {
     call$0() {
       var t1 = init.G;
-      if (A._asString(t1.firebase_core.SDK_VERSION) !== "12.2.1")
-        A.print('            WARNING: FlutterFire for Web is explicitly tested against Firebase JS SDK version "12.2.1"\n            but your currently specifying "' + A._asString(t1.firebase_core.SDK_VERSION) + '" by either the imported Firebase JS SDKs in your web/index.html\n            file or by providing an override - this may lead to unexpected issues in your application. It is recommended that you change all of the versions of the\n            Firebase JS SDK version "12.2.1":\n\n            If you override the version manually:\n              change:\n                <script>window.flutterfire_web_sdk_version = \'' + A._asString(t1.firebase_core.SDK_VERSION) + "';</script>\n              to:\n                <script>window.flutterfire_web_sdk_version = '12.2.1';</script>\n\n            If you import the Firebase scripts in index.html, instead allow FlutterFire to manage this for you by removing\n            any Firebase scripts in your web/index.html file:\n                e.g. remove: <script src=\"https://www.gstatic.com/firebasejs/" + A._asString(t1.firebase_core.SDK_VERSION) + '/firebase-app.js"></script>\n          ');
+      if (A._asString(t1.firebase_core.SDK_VERSION) !== "12.3.0")
+        A.print('            WARNING: FlutterFire for Web is explicitly tested against Firebase JS SDK version "12.3.0"\n            but your currently specifying "' + A._asString(t1.firebase_core.SDK_VERSION) + '" by either the imported Firebase JS SDKs in your web/index.html\n            file or by providing an override - this may lead to unexpected issues in your application. It is recommended that you change all of the versions of the\n            Firebase JS SDK version "12.3.0":\n\n            If you override the version manually:\n              change:\n                <script>window.flutterfire_web_sdk_version = \'' + A._asString(t1.firebase_core.SDK_VERSION) + "';</script>\n              to:\n                <script>window.flutterfire_web_sdk_version = '12.3.0';</script>\n\n            If you import the Firebase scripts in index.html, instead allow FlutterFire to manage this for you by removing\n            any Firebase scripts in your web/index.html file:\n                e.g. remove: <script src=\"https://www.gstatic.com/firebasejs/" + A._asString(t1.firebase_core.SDK_VERSION) + '/firebase-app.js"></script>\n          ');
       return true;
     },
     $signature: 1
