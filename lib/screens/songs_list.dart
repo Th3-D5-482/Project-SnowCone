@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/database.dart';
+import 'package:snowcone/screens/play_chords_page.dart';
 
 class SongsList extends StatefulWidget {
   final String imageName;
@@ -125,28 +126,59 @@ class _SongsListState extends State<SongsList> {
                                 final songList = songLists[index];
                                 return Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: Card(
-                                    child: ListTile(
-                                      contentPadding: EdgeInsets.zero,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                          12.0,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        PageRouteBuilder(
+                                          pageBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                              ) => PlayChordsPage(
+                                                backgroundColor:
+                                                    songList['backgroundColor'],
+                                                imageName: songList['image'],
+                                              ),
+                                          transitionsBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                                child,
+                                              ) => FadeTransition(
+                                                opacity: animation,
+                                                child: child,
+                                              ),
+                                          transitionDuration: Duration(
+                                            milliseconds: 800,
+                                          ),
                                         ),
-                                      ),
-                                      tileColor: Colors.black,
-                                      leading: Image.network(
-                                        songList['image'],
-                                        fit: BoxFit.cover,
-                                      ),
-                                      title: Text(
-                                        songList['name'],
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      trailing: Padding(
-                                        padding: const EdgeInsets.only(
-                                          right: 8.0,
+                                      );
+                                    },
+                                    child: Card(
+                                      child: ListTile(
+                                        contentPadding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            12.0,
+                                          ),
                                         ),
-                                        child: Icon(Icons.play_arrow_rounded),
+                                        tileColor: Colors.black,
+                                        leading: Image.network(
+                                          songList['image'],
+                                          fit: BoxFit.cover,
+                                        ),
+                                        title: Text(
+                                          songList['name'],
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        trailing: Padding(
+                                          padding: const EdgeInsets.only(
+                                            right: 8.0,
+                                          ),
+                                          child: Icon(Icons.play_arrow_rounded),
+                                        ),
                                       ),
                                     ),
                                   ),
