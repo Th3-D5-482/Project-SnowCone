@@ -89,7 +89,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 550,
+                      height: 530,
                       child: Column(
                         children: [
                           kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
@@ -114,8 +114,8 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                             borderRadius: BorderRadiusGeometry.circular(8),
                             child: Image(
                               image: NetworkImage(widget.imageName),
-                              width: 350,
-                              height: 350,
+                              width: 340,
+                              height: 340,
                             ),
                           ),
                         ],
