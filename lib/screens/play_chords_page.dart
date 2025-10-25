@@ -27,8 +27,6 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
   String pdfText = '';
-  bool isLoading = true;
-
   final String textUrl =
       "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/Hello%20World.txt";
 
@@ -52,23 +50,10 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   }
 
   Future<void> fetchText() async {
-    try {
-      final response = await http.get(Uri.parse(textUrl));
-      if (response.statusCode == 200) {
-        setState(() {
-          pdfText = response.body;
-          isLoading = false;
-        });
-      } else {
-        setState(() {
-          pdfText = 'Failed to load text: ${response.statusCode}';
-          isLoading = false;
-        });
-      }
-    } catch (e) {
+    final response = await http.get(Uri.parse(textUrl));
+    if (response.statusCode == 200) {
       setState(() {
-        pdfText = 'Error: $e';
-        isLoading = false;
+        pdfText = response.body;
       });
     }
   }
@@ -249,7 +234,34 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ],
                   ),
-                  Text(pdfText),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: AlignmentGeometry.topLeft,
+                          child: Text(
+                            'Lyrics',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Text('Key: G'),
+                            Spacer(),
+                            Text('Tempo: 75'),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Text(pdfText, style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             );
