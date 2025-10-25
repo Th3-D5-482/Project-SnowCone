@@ -3,8 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:pdfx/pdfx.dart';
 
 class PlayChordsPage extends StatefulWidget {
   final String backgroundColor;
@@ -32,7 +30,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   bool isLoading = true;
 
   final String textUrl =
-      "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/Hello%20World.pdf";
+      "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/Hello%20World.txt";
 
   @override
   @override
