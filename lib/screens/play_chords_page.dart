@@ -252,9 +252,21 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                         SizedBox(height: 10),
                         Row(
                           children: [
-                            Text('Key: G'),
+                            Text(
+                              'Key: G',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
                             Spacer(),
-                            Text('Tempo: 75'),
+                            Text(
+                              'Tempo: 75',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
                           ],
                         ),
                         SizedBox(height: 20),
