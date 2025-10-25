@@ -1,7 +1,10 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:pdfx/pdfx.dart';
 
 class PlayChordsPage extends StatefulWidget {
   final String backgroundColor;
@@ -25,7 +28,13 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   late bool isPlaying = true;
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
+  String pdfText = '';
+  bool isLoading = true;
 
+  final String textUrl =
+      "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/Hello%20World.pdf";
+
+  @override
   @override
   void initState() {
     super.initState();
@@ -41,6 +50,29 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
         currentPosition = position;
       });
     });
+    fetchText();
+  }
+
+  Future<void> fetchText() async {
+    try {
+      final response = await http.get(Uri.parse(textUrl));
+      if (response.statusCode == 200) {
+        setState(() {
+          pdfText = response.body;
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          pdfText = 'Failed to load text: ${response.statusCode}';
+          isLoading = false;
+        });
+      }
+    } catch (e) {
+      setState(() {
+        pdfText = 'Error: $e';
+        isLoading = false;
+      });
+    }
   }
 
   @override
@@ -219,6 +251,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ],
                   ),
+                  Text(pdfText),
                 ],
               ),
             );
