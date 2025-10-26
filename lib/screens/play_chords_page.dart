@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 
 class PlayChordsPage extends StatefulWidget {
@@ -26,11 +25,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   late bool isPlaying = true;
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
-  String pdfText = '';
-  final String textUrl =
-      "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/Hello%20World.txt";
 
-  @override
   @override
   void initState() {
     super.initState();
@@ -46,16 +41,6 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
         currentPosition = position;
       });
     });
-    fetchText();
-  }
-
-  Future<void> fetchText() async {
-    final response = await http.get(Uri.parse(textUrl));
-    if (response.statusCode == 200) {
-      setState(() {
-        pdfText = response.body;
-      });
-    }
   }
 
   @override
@@ -233,46 +218,6 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                         ),
                       ),
                     ],
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: AlignmentGeometry.topLeft,
-                          child: Text(
-                            'Lyrics',
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Text(
-                              'Key: G',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              ),
-                            ),
-                            Spacer(),
-                            Text(
-                              'Tempo: 75',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Text(pdfText, style: TextStyle(fontSize: 16)),
-                      ],
-                    ),
                   ),
                 ],
               ),
