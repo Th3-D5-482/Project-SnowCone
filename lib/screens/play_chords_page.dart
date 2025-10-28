@@ -22,7 +22,7 @@ class PlayChordsPage extends StatefulWidget {
 
 class _PlayChordsPageState extends State<PlayChordsPage> {
   final AudioPlayer player = AudioPlayer();
-  late bool isPlaying = false;
+  late bool isPlaying = true;
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
 
@@ -131,7 +131,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                   ),
                   SizedBox(height: 30),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: StreamBuilder<Duration>(
                       stream: player.positionStream,
                       builder: (context, snapshot) {
@@ -156,7 +156,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 30.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -219,6 +219,69 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 30),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: SizedBox(
+                      height: 330,
+                      width: double.infinity,
+                      child: Card(
+                        //color: Color(int.parse(widget.backgroundColor)),
+                        color: Colors.grey.shade900,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Lyrics preview',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: 20),
+                              Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+                                'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                                'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                maxLines: 5,
+                              ),
+                              SizedBox(height: 20),
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  foregroundColor: Colors.black,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                    vertical: 12,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Show Lyrics',
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 30),
                 ],
               ),
             );
