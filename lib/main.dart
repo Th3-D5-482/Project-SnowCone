@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.light,
       ),
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
+        //debugShowCheckedModeBanner: false,
         title: "SnowCone",
         theme: ThemeData(
           primaryColor: Colors.blueGrey,

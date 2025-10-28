@@ -22,7 +22,7 @@ class PlayChordsPage extends StatefulWidget {
 
 class _PlayChordsPageState extends State<PlayChordsPage> {
   final AudioPlayer player = AudioPlayer();
-  late bool isPlaying = true;
+  late bool isPlaying = false;
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
 
