@@ -215629,7 +215629,7 @@
       t10 = A.SizedBox$(_null, _null, 12);
       t11 = t1.get$isPlaying() ? A.Icon$(B.IconData_983122_MaterialIcons_false, B.Color_wst, _null, 80) : A.Icon$(B.IconData_983203_MaterialIcons_false, B.Color_wst, _null, 80);
       t11 = A.Row$(A._setArrayType([t9, t10, A.IconButton$(_null, _null, t11, _null, _null, new A._PlayChordsPageState_build__closure1(t1), _null, _null, _null), A.SizedBox$(_null, _null, 12), A.IconButton$(_null, _null, A.Icon$(B.IconData_63284_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._PlayChordsPageState_build__closure2(), _null, _null, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, 0);
-      t10 = A.SizedBox$(_null, 30, _null);
+      t10 = A.SizedBox$(_null, 40, _null);
       t9 = B.Map_GGfjP.$index(0, type$.MaterialColor._eval$1("ColorSwatch.T")._as(900));
       t9.toString;
       t12 = A.Text$("Lyrics preview", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
