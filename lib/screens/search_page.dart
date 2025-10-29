@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/database.dart';
+import 'package:snowcone/screens/profile_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
 class SearchPage extends StatefulWidget {
@@ -55,11 +56,33 @@ class _SearchPageState extends State<SearchPage> {
                   children: [
                     Row(
                       children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'assets/images/random/Th3_D5_482.jpeg',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) =>
+                                        ProfilePage(),
+                                transitionsBuilder:
+                                    (
+                                      context,
+                                      animation,
+                                      secondaryAnimation,
+                                      child,
+                                    ) => FadeTransition(
+                                      opacity: animation,
+                                      child: child,
+                                    ),
+                                transitionDuration: Duration(milliseconds: 800),
+                              ),
+                            );
+                          },
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(
+                              'assets/images/random/Th3_D5_482.jpeg',
+                            ),
+                            radius: 20,
                           ),
-                          radius: 20,
                         ),
                         SizedBox(width: 12),
                         Text(

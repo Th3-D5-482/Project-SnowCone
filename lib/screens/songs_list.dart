@@ -141,6 +141,7 @@ class _SongsListState extends State<SongsList> {
                                                 imageName: songList['image'],
                                                 songName: songList['name'],
                                                 audio: songList['audio'],
+                                                lyrics: songList['lyrics'],
                                               ),
                                           transitionsBuilder:
                                               (

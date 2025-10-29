@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 import 'package:snowcone/screens/display_lyrics.dart';
 
@@ -9,12 +10,14 @@ class PlayChordsPage extends StatefulWidget {
   final String imageName;
   final String songName;
   final String audio;
+  final String lyrics;
   const PlayChordsPage({
     super.key,
     required this.backgroundColor,
     required this.imageName,
     required this.songName,
     required this.audio,
+    required this.lyrics,
   });
 
   @override
@@ -26,6 +29,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
   late bool isPlaying = true;
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
+  String lyricsContent = '';
 
   @override
   void initState() {
@@ -42,6 +46,16 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
         currentPosition = position;
       });
     });
+    loadLyrics();
+  }
+
+  Future<void> loadLyrics() async {
+    final respose = await http.get(Uri.parse(widget.lyrics));
+    if (respose.statusCode == 200) {
+      setState(() {
+        lyricsContent = respose.body;
+      });
+    }
   }
 
   @override
@@ -224,10 +238,9 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 330,
+                      height: 300,
                       width: double.infinity,
                       child: Card(
-                        //color: Color(int.parse(widget.backgroundColor)),
                         color: Colors.grey.shade900,
                         child: Padding(
                           padding: const EdgeInsets.all(16),
@@ -235,20 +248,19 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Lyrics preview',
+                                'Chords preview',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.white,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                               SizedBox(height: 20),
                               Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-                                'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-                                'Ut enim ad minim veniam, quis nostrud',
+                                lyricsContent,
                                 style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   overflow: TextOverflow.ellipsis,
@@ -267,6 +279,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                                             secondaryAnimation,
                                           ) => DisplayLyrics(
                                             audio: widget.audio,
+                                            lyrics: lyricsContent,
                                           ),
                                       transitionsBuilder:
                                           (
@@ -296,7 +309,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                                   ),
                                 ),
                                 child: Text(
-                                  'Show Lyrics',
+                                  'Show Chords',
                                   style: TextStyle(fontSize: 16),
                                 ),
                               ),
