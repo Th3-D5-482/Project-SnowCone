@@ -245,18 +245,16 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                               Text(
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                                 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-                                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-                                'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
-                                'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                'Ut enim ad minim veniam, quis nostrud',
                                 style: TextStyle(
-                                  fontSize: 24,
+                                  fontSize: 22,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                                 maxLines: 5,
                               ),
-                              SizedBox(height: 20),
+                              SizedBox(height: 30),
                               ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
