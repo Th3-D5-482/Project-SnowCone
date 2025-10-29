@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:snowcone/screens/display_lyrics.dart';
 
 class PlayChordsPage extends StatefulWidget {
   final String backgroundColor;
@@ -256,7 +257,33 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                               ),
                               SizedBox(height: 30),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    PageRouteBuilder(
+                                      pageBuilder:
+                                          (
+                                            context,
+                                            animation,
+                                            secondaryAnimation,
+                                          ) => DisplayLyrics(
+                                            audio: widget.audio,
+                                          ),
+                                      transitionsBuilder:
+                                          (
+                                            context,
+                                            animation,
+                                            secondaryAnimation,
+                                            child,
+                                          ) => FadeTransition(
+                                            opacity: animation,
+                                            child: child,
+                                          ),
+                                      transitionDuration: Duration(
+                                        milliseconds: 800,
+                                      ),
+                                    ),
+                                  );
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.white,
                                   foregroundColor: Colors.black,
