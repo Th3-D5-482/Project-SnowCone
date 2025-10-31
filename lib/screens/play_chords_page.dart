@@ -103,7 +103,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 520,
+                      height: 510,
                       child: Column(
                         children: [
                           kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
