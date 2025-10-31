@@ -103,7 +103,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                       ),
                     ),
                     child: SizedBox(
-                      height: 540,
+                      height: 520,
                       child: Column(
                         children: [
                           kIsWeb ? SizedBox(height: 0) : SizedBox(height: 40),
@@ -238,7 +238,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 300,
+                      height: 290,
                       width: double.infinity,
                       child: Card(
                         color: Colors.grey.shade900,
@@ -270,6 +270,8 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                               SizedBox(height: 30),
                               ElevatedButton(
                                 onPressed: () {
+                                  player.pause();
+                                  isPlaying = false;
                                   Navigator.of(context).push(
                                     PageRouteBuilder(
                                       pageBuilder:

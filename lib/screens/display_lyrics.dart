@@ -86,7 +86,7 @@ class _DisplayLyricsState extends State<DisplayLyrics> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 20),
+                            SizedBox(height: 10),
                             Padding(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,

@@ -100,7 +100,7 @@ class _SearchPageState extends State<SearchPage> {
                       controller: searchInput,
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
-                        hintText: 'Search songs, artists, chords or tabs',
+                        hintText: 'What are you looking for?',
                         hintStyle: TextStyle(color: Colors.black, fontSize: 14),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
