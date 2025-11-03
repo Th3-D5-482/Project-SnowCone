@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database/database.dart';
-import 'package:snowcone/screens/play_chords_page.dart';
+import 'package:snowcone/screens/play_page.dart';
 import 'package:snowcone/screens/profile_page.dart';
 import 'package:snowcone/screens/search_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
@@ -732,7 +732,7 @@ class _HomeViewState extends State<HomeView> {
                                                           context,
                                                           animation,
                                                           secondaryAnimation,
-                                                        ) => PlayChordsPage(
+                                                        ) => PlayPage(
                                                           backgroundColor:
                                                               recentSong['backgroundColor'],
                                                           imageName:
@@ -840,7 +840,7 @@ class _HomeViewState extends State<HomeView> {
                                                           context,
                                                           animation,
                                                           secondaryAnimation,
-                                                        ) => PlayChordsPage(
+                                                        ) => PlayPage(
                                                           backgroundColor:
                                                               recentSong['backgroundColor'],
                                                           imageName:

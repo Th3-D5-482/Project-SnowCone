@@ -5,13 +5,13 @@ import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 import 'package:snowcone/screens/display_lyrics.dart';
 
-class PlayChordsPage extends StatefulWidget {
+class PlayPage extends StatefulWidget {
   final String backgroundColor;
   final String imageName;
   final String songName;
   final String audio;
   final String lyrics;
-  const PlayChordsPage({
+  const PlayPage({
     super.key,
     required this.backgroundColor,
     required this.imageName,
@@ -21,10 +21,10 @@ class PlayChordsPage extends StatefulWidget {
   });
 
   @override
-  State<PlayChordsPage> createState() => _PlayChordsPageState();
+  State<PlayPage> createState() => _PlayPageState();
 }
 
-class _PlayChordsPageState extends State<PlayChordsPage> {
+class _PlayPageState extends State<PlayPage> {
   final AudioPlayer player = AudioPlayer();
   late bool isPlaying = true;
   Duration currentPosition = Duration.zero;
@@ -248,7 +248,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Chords preview',
+                                'Lyrics preview',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
@@ -311,7 +311,7 @@ class _PlayChordsPageState extends State<PlayChordsPage> {
                                   ),
                                 ),
                                 child: Text(
-                                  'Show Chords',
+                                  'Show lyrics',
                                   style: TextStyle(fontSize: 16),
                                 ),
                               ),

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/database.dart';
-import 'package:snowcone/screens/play_chords_page.dart';
+import 'package:snowcone/screens/play_page.dart';
 
 class SongsList extends StatefulWidget {
   final String imageName;
@@ -135,7 +135,7 @@ class _SongsListState extends State<SongsList> {
                                                 context,
                                                 animation,
                                                 secondaryAnimation,
-                                              ) => PlayChordsPage(
+                                              ) => PlayPage(
                                                 backgroundColor:
                                                     songList['backgroundColor'],
                                                 imageName: songList['image'],
