@@ -99,7 +99,6 @@ class _DisplayLyricsState extends State<DisplayLyrics> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 20),
                           ],
                         ),
                       );
