@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/play_page.dart';
 import 'package:snowcone/screens/profile_page.dart';
-import 'package:snowcone/screens/search_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int index = 0;
+  //int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,23 +26,7 @@ class _HomePageState extends State<HomePage> {
         SystemNavigator.pop();
         return Future.value(false);
       },
-      child: Scaffold(
-        body: IndexedStack(index: index, children: [HomeView(), SearchPage()]),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
-          currentIndex: index,
-          selectedFontSize: 14,
-          unselectedFontSize: 14,
-          iconSize: 28,
-          onTap: (value) => setState(() {
-            index = value;
-          }),
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          ],
-        ),
-      ),
+      child: Scaffold(body: HomeView()),
     );
   }
 }
@@ -587,6 +570,13 @@ class _HomeViewState extends State<HomeView> {
                                               child: Column(
                                                 children: [
                                                   CircleAvatar(
+                                                    backgroundColor:
+                                                        const Color.fromARGB(
+                                                          255,
+                                                          30,
+                                                          30,
+                                                          30,
+                                                        ),
                                                     radius: 75,
                                                     backgroundImage:
                                                         NetworkImage(
@@ -661,6 +651,13 @@ class _HomeViewState extends State<HomeView> {
                                               child: Column(
                                                 children: [
                                                   CircleAvatar(
+                                                    backgroundColor:
+                                                        const Color.fromARGB(
+                                                          255,
+                                                          30,
+                                                          30,
+                                                          30,
+                                                        ),
                                                     radius: 75,
                                                     backgroundImage:
                                                         NetworkImage(

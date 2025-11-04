@@ -64,17 +64,8 @@
       "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/reckless_love.txt"
     },
     {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Water%20And%20Dust%20(Official%20Lyric%20Video).mp3?updatedAt=1761163949802",
-      "id": 7,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/water_and_dust.png?updatedAt=1760989255640",
-      "isRecentlyListened": false,
-      "name": "Water and Dust",
-      "backgroundColor": "0xFFB2B1AE",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20Holy%20Forever%20(Lyric%20Video).mp3?updatedAt=1761164004252",
-      "id": 8,
+      "id": 7,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/holy_forever.png?updatedAt=1758811885397",
       "isRecentlyListened": true,
       "name": "Holy Forever",
@@ -83,7 +74,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Chris%20Tomlin%20-%20Always%20(Lyric%20Video).mp3?updatedAt=1761164073694",
-      "id": 9,
+      "id": 8,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/always.png?updatedAt=1760989508623",
       "isRecentlyListened": false,
       "name": "Always",
@@ -92,7 +83,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Great%20Are%20You%20Lord%20-%20All%20Sons%20&%20Daughters%20(Official%20Live%20Concert).mp3?updatedAt=1761164155543",
-      "id": 10,
+      "id": 9,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/great_are_you_lord.png?updatedAt=1758811885768",
       "isRecentlyListened": true,
       "name": "Great Are You Lord",
@@ -101,7 +92,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Michael%20W.%20Smith%20-%20Christ%20Be%20All%20Around%20Me%20(Live)%20ft.%20Leeland%20Mooring.mp3?updatedAt=1761164312993",
-      "id": 11,
+      "id": 10,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/christ_be_around_me.png?updatedAt=1760989656359",
       "isRecentlyListened": false,
       "name": "Christ Be All Around Me",
@@ -110,7 +101,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/O%20Come%20to%20the%20Altar%20_%20Live%20_%20Elevation%20Worship.mp3?updatedAt=1761164404497",
-      "id": 12,
+      "id": 11,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oh_come_to_the_alter.png?updatedAt=1760989838191",
       "isRecentlyListened": true,
       "name": "O Come to the Altar",
@@ -119,7 +110,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Graves%20Into%20Gardens%20ft.%20Brandon%20Lake%20_%20Live%20_%20Elevation%20Worship.mp3?updatedAt=1761164525287",
-      "id": 13,
+      "id": 12,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/graves_into_the_garden.png?updatedAt=1760989984149",
       "isRecentlyListened": false,
       "name": "Graves Into Gardens",
@@ -128,7 +119,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Oceans%20(Where%20Feet%20May%20Fail)%20Lyric%20Video%20-%20Hillsong%20UNITED.mp3?updatedAt=1761164612473",
-      "id": 14,
+      "id": 13,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/oceans.png?updatedAt=1760990107252",
       "isRecentlyListened": true,
       "name": "Oceans (Where Feet May Fail)",
@@ -137,7 +128,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/So%20Will%20I%20(100%20Billion%20X)%20-%20Hillsong%20Worship.mp3?updatedAt=1761164697279",
-      "id": 15,
+      "id": 14,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/so_will_i.png?updatedAt=1761121037797",
       "isRecentlyListened": false,
       "name": "So Will I (100 Billion X)",
@@ -145,17 +136,8 @@
       "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
     },
     {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/No%20Longer%20Slaves%20(Official%20Lyric%20Video)%20-%20Jonathan%20David%20and%20Melissa%20Helser%20_%20We%20Will%20Not%20Be%20Shaken.mp3?updatedAt=1761164780450",
-      "id": 16,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/no_longer_slaves.png?updatedAt=1761121156188",
-      "isRecentlyListened": false,
-      "name": "No Longer Slaves",
-      "backgroundColor": "0xFFB7C3CC",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/What%20A%20Beautiful%20Name%20-%20Hillsong%20Worship.mp3?updatedAt=1761211322814",
-      "id": 17,
+      "id": 15,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/what_a_beautiful_name.png?updatedAt=1761121367697",
       "isRecentlyListened": true,
       "name": "What a Beautiful Name",
@@ -164,7 +146,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Cornerstone%20-%20Live%20_%20Hillsong%20Worship.mp3?updatedAt=1761211197897",
-      "id": 18,
+      "id": 16,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/conerstone.png?updatedAt=1761121744665",
       "isRecentlyListened": false,
       "name": "Cornerstone",
@@ -173,7 +155,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Nothing%20is%20Impossible%20-%20Planetshakers%20Live%20-%20Bethel%20Church.mp3?updatedAt=1761211430983",
-      "id": 19,
+      "id": 17,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/nothing_is_impossible.png?updatedAt=1761121834850",
       "isRecentlyListened": true,
       "name": "Nothing Is Impossible",
@@ -182,7 +164,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/ENDLESS%20PRAISE%20_%20Planetshakers%20Official%20Video.mp3?updatedAt=1761211564450",
-      "id": 20,
+      "id": 18,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/endless_praise.png?updatedAt=1761121916967",
       "isRecentlyListened": false,
       "name": "Endless Praise",
@@ -191,7 +173,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/for%20KING%20+%20COUNTRY%20-%20God%20Only%20Knows%20(Official%20Music%20Video).mp3?updatedAt=1761211644666",
-      "id": 21,
+      "id": 19,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/god_only_knows.png?updatedAt=1761122228259",
       "isRecentlyListened": true,
       "name": "God Only Knows",
@@ -200,7 +182,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/for%20KING%20+%20COUNTRY%20-%20Shoulders%20(Official%20Music%20Video).mp3?updatedAt=1761211729741",
-      "id": 22,
+      "id": 20,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/shoulders.png?updatedAt=1761122319474",
       "isRecentlyListened": false,
       "name": "Shoulders",
@@ -209,7 +191,7 @@
     },
     {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Michael%20W.%20Smith%20-%20Surrounded%20(Fight%20My%20Battles).mp3?updatedAt=1761211830042",
-      "id": 23,
+      "id": 21,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/surrounded.png?updatedAt=1761122437857",
       "isRecentlyListened": true,
       "name": "Surrounded (Fight My Battles)",
@@ -217,129 +199,21 @@
       "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
     },
     {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Travis%20Greene%20-%20Made%20A%20Way%20(Official%20Music%20Video).mp3?updatedAt=1761211942079",
-      "id": 24,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/you_made_a_way.png?updatedAt=1761122557956",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Travis%20Greene%20-%20Made%20A%20Way%20(Official%20Music%20Video).mp3?updatedAt=1762259104075",
+      "id": 22,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/you_made_a_way.png?updatedAt=1762258988923",
       "isRecentlyListened": false,
       "name": "You Made a Way",
       "backgroundColor": "0xFFD2C9C1",
       "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
     },
     {
-      "audio": "assets/audio/lift_every_voice.mp3",
-      "id": 25,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/lift_every_voice.png?updatedAt=1761122659637",
-      "isRecentlyListened": true,
-      "name": "Lift Every Voice",
-      "backgroundColor": "0xFFD0C8C1",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/When%20Grace%20Walked%20In%20_%20Powerful%20Gospel%20Song%20-%20Ella%20Scott.mp3?updatedAt=1761212145407",
-      "id": 26,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/grace_walk.png?updatedAt=1761122750483s",
-      "isRecentlyListened": false,
-      "name": "Grace Walk",
-      "backgroundColor": "0xFFBFB7AC",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
       "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/How%20Great%20Thou%20Art%20(Live)%20-%20Bethel%20Music,%20Garett%20&%20Kate%20Serban.mp3?updatedAt=1761212246325",
-      "id": 27,
+      "id": 23,
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_thou_art.png?updatedAt=1761122872017",
       "isRecentlyListened": true,
       "name": "How Great Thou Art",
       "backgroundColor": "0xFFBAC0CB",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/It%20Is%20Well%20With%20My%20Soul%20-%20Audrey%20Assad.mp3?updatedAt=1761212386601",
-      "id": 28,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/it_is_well_with_my_soul.png?updatedAt=1761122978583",
-      "isRecentlyListened": false,
-      "name": "It Is Well With My Soul",
-      "backgroundColor": "0xFFCFC7C2",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Newsboys%20-%20God's%20Not%20Dead.mp3?updatedAt=1761212519295",
-      "id": 29,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/gods_not_dead.png?updatedAt=1761123184132",
-      "isRecentlyListened": true,
-      "name": "God's Not Dead",
-      "backgroundColor": "0xFFBDB7B2",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Rise%20Again%20-%20Dallas%20Holm%20-%20Lyric%20Video%20-%20Words%20of%20Hope%20and%20Comfort.mp3?updatedAt=1761240392118",
-      "id": 30,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/rise_again.png?updatedAt=1761123282312",
-      "isRecentlyListened": false,
-      "name": "Rise Again",
-      "backgroundColor": "0xFFD1C8C1",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/KB%20-%20Church%20Clap%20Ft.%20Lecrae%20-%20Lyric%20Video%20(Created%20By_%20Hart%20Jacquez).mp3?updatedAt=1761240527037",
-      "id": 31,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/church_clap.png?updatedAt=1761123392606",
-      "isRecentlyListened": true,
-      "name": "Church Clap",
-      "backgroundColor": "0xFFCCC4BC",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Jaz%20Donell%20-%20Kingdom%20Bars%20(Prod%20By%20Hans%20Solo).mp3?updatedAt=1761240765620",
-      "id": 32,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/kingdom_bars.png?updatedAt=1761123510749",
-      "isRecentlyListened": false,
-      "name": "Kingdom Bars",
-      "backgroundColor": "0xFFCCC4BC",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Echo%20(feat.%20Tauren%20Wells)%20_%20Live%20_%20Elevation%20Worship.mp3?updatedAt=1761240948495",
-      "id": 33,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/echos_in_the_valley.png?updatedAt=1761123650971",
-      "isRecentlyListened": false,
-      "name": "Echoes in the Valley",
-      "backgroundColor": "0xFFBFC3C0",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/The%20River%20Beneath%20_%20Worship%20Song%20Inspired%20by%20Ezekiel%2047%20_worshipmusic.mp3?updatedAt=1761241183543",
-      "id": 34,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/the_river_beneath.png?updatedAt=1761158423342",
-      "isRecentlyListened": true,
-      "name": "The River Beneath",
-      "backgroundColor": "0xFFD1C8C0",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Daniel%20Pratt%20-%20Pilgrims%20-%20(Official%20Music%20Video).mp3?updatedAt=1761241604800",
-      "id": 35,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/pilgrims_light.png?updatedAt=1761158660106",
-      "isRecentlyListened": false,
-      "name": "Pilgrim's Light",
-      "backgroundColor": "0xFFB9B4AC",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Anne%20Wilson%20-%20Dirt%20Roads%20In%20Heaven%20(Official%20Audio).mp3?updatedAt=1761241770119",
-      "id": 36,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/heavens_dirt_road.png?updatedAt=1761158777304",
-      "isRecentlyListened": true,
-      "name": "Heaven's Dirt Road",
-      "backgroundColor": "0xFFD0C4B4",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Country%20Gospel_%20Gravel%20&%20Grace%20(The%20Road%20Back%20to%20Faith).mp3?updatedAt=1761242025903",
-      "id": 37,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/grace_and_gravel.png?updatedAt=1761158865847",
-      "isRecentlyListened": false,
-      "name": "Grace and Gravel",
-      "backgroundColor": "0xFFD2C6B6",
       "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/how_great_is_our_god.txt"
     }
   ],
@@ -350,8 +224,8 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/echo_praise.png?updatedAt=1758813033985",
       "backgroundColor": "0xFFB8AFC4",
       "groupID": [
-        8,
-        14
+        7,
+        13
       ]
     },
     {
@@ -370,8 +244,8 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/upper_room.png?updatedAt=1758813033131",
       "backgroundColor": "0xFFD8D4C8",
       "groupID": [
-        23,
-        24
+        21,
+        22
       ]
     },
     {
@@ -380,8 +254,8 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/kingdom_keys.png?updatedAt=1758813034493",
       "backgroundColor": "0xFFCFCBBE",
       "groupID": [
-        17,
-        13
+        15,
+        12
       ]
     },
     {
@@ -390,7 +264,7 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/selah_sessions.png?updatedAt=1758813031871",
       "backgroundColor": "0xFFCAD8E1",
       "groupID": [
-        11,
+        10,
         4
       ]
     },
@@ -400,54 +274,8 @@
       "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/top_mixes/alter_fire.png?updatedAt=1759086427871",
       "backgroundColor": "0xFFE4CBB4",
       "groupID": [
-        12,
-        8
-      ]
-    }
-  ],
-  "TopGenres": [
-    {
-      "id": 0,
-      "name": "Worship",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/worship.png?updatedAt=1756239585321",
-      "color": "#cc0088",
-      "backgroundColor": "0xFFF2BBD7",
-      "groupID": [
-        8,
-        14
-      ]
-    },
-    {
-      "id": 1,
-      "name": "Praise",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/praise.png?updatedAt=1756239585905",
-      "color": "#096f50",
-      "backgroundColor": "0xFFB7D3C9",
-      "groupID": [
-        20,
-        29
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Gospel",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/gospel.png?updatedAt=1756239585659",
-      "color": "#7c00e0",
-      "backgroundColor": "0xFFD9C3F3",
-      "groupID": [
-        25,
-        26
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Pop",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/genres/pop.png?updatedAt=1756239585189",
-      "color": "#203062",
-      "backgroundColor": "0xFFBDC5D9",
-      "groupID": [
-        21,
-        22
+        11,
+        7
       ]
     }
   ],
@@ -493,7 +321,7 @@
       "backgroundColor": "0xFFE8F5E9",
       "groupID": [
         6,
-        27
+        23
       ]
     },
     {
@@ -503,8 +331,8 @@
       "isContinueListening": true,
       "backgroundColor": "0xFFF3E5F5",
       "groupID": [
-        8,
-        9
+        7,
+        8
       ]
     },
     {
@@ -514,76 +342,8 @@
       "isContinueListening": true,
       "backgroundColor": "0xFFFFF9C4",
       "groupID": [
-        10,
-        11
-      ]
-    }
-  ],
-  "BrowseAll": [
-    {
-      "id": 0,
-      "name": "Hyms",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hymns.png?updatedAt=1756242259314",
-      "color": "#8c5eaa",
-      "backgroundColor": "0xFFD9CDE6",
-      "groupID": [
-        27,
-        28
-      ]
-    },
-    {
-      "id": 1,
-      "name": "Rock",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/rock.png?updatedAt=1756244268118",
-      "color": "#096f50",
-      "backgroundColor": "0xFFAFCFC3",
-      "groupID": [
-        29,
-        30
-      ]
-    },
-    {
-      "id": 2,
-      "name": "HipHop",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/hiphop.png?updatedAt=1756244757342",
-      "color": "#628c0d",
-      "backgroundColor": "0xFFD3DBB9",
-      "groupID": [
-        31,
-        32
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Indie",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/indie.png?updatedAt=1756243498212",
-      "color": "#4e8095",
-      "backgroundColor": "0xFFC3D6DC",
-      "groupID": [
-        7,
-        33
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Folk",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/folk.png?updatedAt=1756243861650",
-      "color": "#cc0088",
-      "backgroundColor": "0xFFF6CCE4",
-      "groupID": [
-        34,
-        35
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Country",
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/browse_all/country.png?updatedAt=1756244119841",
-      "color": "#b2590d",
-      "backgroundColor": "0xFFE6CDB9",
-      "groupID": [
-        36,
-        37
+        9,
+        10
       ]
     }
   ],
@@ -594,8 +354,8 @@
       "name": "Elevantion Worship",
       "backgroundColor": "0xFFF6E3C9",
       "groupID": [
-        12,
-        13
+        11,
+        12
       ]
     },
     {
@@ -604,8 +364,8 @@
       "name": "Hillsong United",
       "backgroundColor": "0xFFCBD6DD",
       "groupID": [
-        14,
-        15
+        13,
+        14
       ]
     },
     {
@@ -615,7 +375,7 @@
       "backgroundColor": "0xFFD5DCD6",
       "groupID": [
         3,
-        27
+        23
       ]
     },
     {
@@ -624,8 +384,8 @@
       "name": "Hillsong Worship",
       "backgroundColor": "0xFFF3E7D2",
       "groupID": [
-        17,
-        18
+        15,
+        16
       ]
     },
     {
@@ -634,8 +394,8 @@
       "name": "Platnetshakers",
       "backgroundColor": "0xFFF1D9C5",
       "groupID": [
-        19,
-        20
+        17,
+        18
       ]
     },
     {
@@ -644,8 +404,8 @@
       "name": "For Kings & Country",
       "backgroundColor": "0xFFD6CFC7",
       "groupID": [
-        21,
-        22
+        19,
+        20
       ]
     }
   ]

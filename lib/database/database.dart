@@ -61,31 +61,3 @@ Future<List<dynamic>> getArtist(String encode) async {
     throw Exception('HTTP error: ${response.statusCode}');
   }
 }
-
-Future<List<dynamic>> getTopGeneres(String encode) async {
-  final respose = await http.get(Uri.parse('$baseUrl/$encode.json'));
-  if (respose.statusCode == 200) {
-    final decoded = json.decode(respose.body);
-    if (decoded is List) {
-      return decoded;
-    } else {
-      throw Exception('Failed to load data');
-    }
-  } else {
-    throw Exception('Failed to load data');
-  }
-}
-
-Future<List<dynamic>> getBrowseAll(String encode) async {
-  final respose = await http.get(Uri.parse('$baseUrl/$encode.json'));
-  if (respose.statusCode == 200) {
-    final decoded = json.decode(respose.body);
-    if (decoded is List) {
-      return decoded;
-    } else {
-      throw Exception('Failed to load data');
-    }
-  } else {
-    throw Exception('Failed to load data');
-  }
-}
