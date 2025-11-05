@@ -238,7 +238,7 @@ class _PlayPageState extends State<PlayPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 340,
+                      height: 370,
                       width: double.infinity,
                       child: Card(
                         color: Colors.grey.shade900,
@@ -268,6 +268,7 @@ class _PlayPageState extends State<PlayPage> {
                                 ),
                                 maxLines: 5,
                               ),
+                              SizedBox(height: 30),
                               ElevatedButton(
                                 onPressed: () {
                                   player.pause();

@@ -97,7 +97,7 @@ class _DisplayLyricsState extends State<DisplayLyrics> {
                                   color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  height: 2,
+                                  height: 2.5,
                                 ),
                               ),
                             ),
