@@ -71,7 +71,6 @@ flutter:
   assets:
   - assets/images/random/
   - assets/images/top_mixes/
-  - assets/images/genres/
   - assets/images/album/
   - assets/images/artist/
 
