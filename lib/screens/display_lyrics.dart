@@ -95,7 +95,9 @@ class _DisplayLyricsState extends State<DisplayLyrics> {
                                 widget.lyrics,
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 16,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  height: 2,
                                 ),
                               ),
                             ),

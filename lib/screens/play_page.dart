@@ -238,7 +238,7 @@ class _PlayPageState extends State<PlayPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 290,
+                      height: 340,
                       width: double.infinity,
                       child: Card(
                         color: Colors.grey.shade900,
@@ -260,14 +260,14 @@ class _PlayPageState extends State<PlayPage> {
                               Text(
                                 lyricsContent,
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   overflow: TextOverflow.ellipsis,
+                                  height: 2,
                                 ),
                                 maxLines: 5,
                               ),
-                              SizedBox(height: 30),
                               ElevatedButton(
                                 onPressed: () {
                                   player.pause();
