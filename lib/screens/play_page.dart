@@ -238,7 +238,7 @@ class _PlayPageState extends State<PlayPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 370,
+                      height: 380,
                       width: double.infinity,
                       child: Card(
                         color: Colors.grey.shade900,
@@ -269,52 +269,110 @@ class _PlayPageState extends State<PlayPage> {
                                 maxLines: 5,
                               ),
                               SizedBox(height: 30),
-                              ElevatedButton(
-                                onPressed: () {
-                                  player.pause();
-                                  isPlaying = false;
-                                  Navigator.of(context).push(
-                                    PageRouteBuilder(
-                                      pageBuilder:
-                                          (
-                                            context,
-                                            animation,
-                                            secondaryAnimation,
-                                          ) => DisplayLyrics(
-                                            audio: widget.audio,
-                                            lyrics: lyricsContent,
+                              Row(
+                                children: [
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      player.pause();
+                                      isPlaying = false;
+                                      Navigator.of(context).push(
+                                        PageRouteBuilder(
+                                          pageBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                              ) => DisplayLyrics(
+                                                audio: widget.audio,
+                                                lyrics: lyricsContent,
+                                              ),
+                                          transitionsBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                                child,
+                                              ) => FadeTransition(
+                                                opacity: animation,
+                                                child: child,
+                                              ),
+                                          transitionDuration: Duration(
+                                            milliseconds: 800,
                                           ),
-                                      transitionsBuilder:
-                                          (
-                                            context,
-                                            animation,
-                                            secondaryAnimation,
-                                            child,
-                                          ) => FadeTransition(
-                                            opacity: animation,
-                                            child: child,
-                                          ),
-                                      transitionDuration: Duration(
-                                        milliseconds: 800,
+                                        ),
+                                      );
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.grey.shade800,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 24,
+                                        vertical: 12,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          20.0,
+                                        ),
                                       ),
                                     ),
-                                  );
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white,
-                                  foregroundColor: Colors.black,
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                    vertical: 12,
+                                    child: Text(
+                                      'Chords',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0),
+                                  SizedBox(width: 20),
+                                  Expanded(
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        player.pause();
+                                        isPlaying = false;
+                                        Navigator.of(context).push(
+                                          PageRouteBuilder(
+                                            pageBuilder:
+                                                (
+                                                  context,
+                                                  animation,
+                                                  secondaryAnimation,
+                                                ) => DisplayLyrics(
+                                                  audio: widget.audio,
+                                                  lyrics: lyricsContent,
+                                                ),
+                                            transitionsBuilder:
+                                                (
+                                                  context,
+                                                  animation,
+                                                  secondaryAnimation,
+                                                  child,
+                                                ) => FadeTransition(
+                                                  opacity: animation,
+                                                  child: child,
+                                                ),
+                                            transitionDuration: Duration(
+                                              milliseconds: 800,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.white,
+                                        foregroundColor: Colors.black,
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 24,
+                                          vertical: 12,
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            20.0,
+                                          ),
+                                        ),
+                                      ),
+                                      child: Text(
+                                        'Show lyrics',
+                                        style: TextStyle(fontSize: 16),
+                                        textAlign: TextAlign.end,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                child: Text(
-                                  'Show lyrics',
-                                  style: TextStyle(fontSize: 16),
-                                ),
+                                ],
                               ),
                             ],
                           ),
