@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
-import 'package:snowcone/screens/display_lyrics.dart';
+import 'package:snowcone/screens/display_lyrics_chords.dart';
 
 class PlayPage extends StatefulWidget {
   final String backgroundColor;
@@ -282,7 +282,7 @@ class _PlayPageState extends State<PlayPage> {
                                                 context,
                                                 animation,
                                                 secondaryAnimation,
-                                              ) => DisplayLyrics(
+                                              ) => DisplayLyricsChords(
                                                 audio: widget.audio,
                                                 lyrics: lyricsContent,
                                               ),
@@ -332,7 +332,7 @@ class _PlayPageState extends State<PlayPage> {
                                                   context,
                                                   animation,
                                                   secondaryAnimation,
-                                                ) => DisplayLyrics(
+                                                ) => DisplayLyricsChords(
                                                   audio: widget.audio,
                                                   lyrics: lyricsContent,
                                                 ),

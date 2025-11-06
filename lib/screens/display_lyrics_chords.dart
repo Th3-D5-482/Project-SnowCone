@@ -3,16 +3,20 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
-class DisplayLyrics extends StatefulWidget {
+class DisplayLyricsChords extends StatefulWidget {
   final String audio;
   final String lyrics;
-  const DisplayLyrics({super.key, required this.audio, required this.lyrics});
+  const DisplayLyricsChords({
+    super.key,
+    required this.audio,
+    required this.lyrics,
+  });
 
   @override
-  State<DisplayLyrics> createState() => _DisplayLyricsState();
+  State<DisplayLyricsChords> createState() => _DisplayLyricsChordsState();
 }
 
-class _DisplayLyricsState extends State<DisplayLyrics> {
+class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   bool isPlaying = false;
   final AudioPlayer player = AudioPlayer();
   Duration currentPosition = Duration.zero;
