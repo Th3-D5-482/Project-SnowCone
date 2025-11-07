@@ -32,6 +32,7 @@ class _PlayPageState extends State<PlayPage> {
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
   String lyricsContent = '';
+  String chords = '';
 
   @override
   void initState() {
@@ -49,6 +50,7 @@ class _PlayPageState extends State<PlayPage> {
       });
     });
     loadLyrics();
+    getChords();
   }
 
   Future<void> loadLyrics() async {
@@ -56,6 +58,15 @@ class _PlayPageState extends State<PlayPage> {
     if (respose.statusCode == 200) {
       setState(() {
         lyricsContent = respose.body;
+      });
+    }
+  }
+
+  Future<void> getChords() async {
+    final response = await http.get(Uri.parse(widget.chords));
+    if (response.statusCode == 200) {
+      setState(() {
+        chords = response.body;
       });
     }
   }
@@ -289,7 +300,7 @@ class _PlayPageState extends State<PlayPage> {
                                                   audio: widget.audio,
                                                   lyrics: lyricsContent,
                                                   isChord: false,
-                                                  chords: widget.chords,
+                                                  chords: chords,
                                                 ),
                                             transitionsBuilder:
                                                 (
@@ -343,7 +354,7 @@ class _PlayPageState extends State<PlayPage> {
                                                 audio: widget.audio,
                                                 lyrics: lyricsContent,
                                                 isChord: true,
-                                                chords: widget.chords,
+                                                chords: chords,
                                               ),
                                           transitionsBuilder:
                                               (

@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 
 class DisplayLyricsChords extends StatefulWidget {
@@ -26,7 +25,6 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   final AudioPlayer player = AudioPlayer();
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
-  String chords = "";
   late bool showChorus;
 
   @override
@@ -44,17 +42,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     });
     //player.play();
     player.setUrl(widget.audio);
-    getChords();
     showChorus = widget.isChord;
-  }
-
-  Future<void> getChords() async {
-    final response = await http.get(Uri.parse(widget.chords));
-    if (response.statusCode == 200) {
-      setState(() {
-        chords = response.body;
-      });
-    }
   }
 
   @override
@@ -129,7 +117,6 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-
                                       Icon(
                                         Icons.music_note_rounded,
                                         color: Colors.blueGrey,
@@ -147,7 +134,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                               ),
                               // ignore: unrelated_type_equality_checks
                               child: Text(
-                                showChorus ? chords : widget.lyrics,
+                                showChorus ? widget.chords : widget.lyrics,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
