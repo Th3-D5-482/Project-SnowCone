@@ -271,55 +271,6 @@ class _PlayPageState extends State<PlayPage> {
                               SizedBox(height: 30),
                               Row(
                                 children: [
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      player.pause();
-                                      isPlaying = false;
-                                      Navigator.of(context).push(
-                                        PageRouteBuilder(
-                                          pageBuilder:
-                                              (
-                                                context,
-                                                animation,
-                                                secondaryAnimation,
-                                              ) => DisplayLyricsChords(
-                                                audio: widget.audio,
-                                                lyrics: lyricsContent,
-                                              ),
-                                          transitionsBuilder:
-                                              (
-                                                context,
-                                                animation,
-                                                secondaryAnimation,
-                                                child,
-                                              ) => FadeTransition(
-                                                opacity: animation,
-                                                child: child,
-                                              ),
-                                          transitionDuration: Duration(
-                                            milliseconds: 800,
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.grey.shade800,
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 24,
-                                        vertical: 12,
-                                      ),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                          20.0,
-                                        ),
-                                      ),
-                                    ),
-                                    child: Text(
-                                      'Chords',
-                                      style: TextStyle(fontSize: 16),
-                                    ),
-                                  ),
-                                  SizedBox(width: 20),
                                   Expanded(
                                     child: ElevatedButton(
                                       onPressed: () {
@@ -370,6 +321,55 @@ class _PlayPageState extends State<PlayPage> {
                                         style: TextStyle(fontSize: 16),
                                         textAlign: TextAlign.end,
                                       ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 20),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      player.pause();
+                                      isPlaying = false;
+                                      Navigator.of(context).push(
+                                        PageRouteBuilder(
+                                          pageBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                              ) => DisplayLyricsChords(
+                                                audio: widget.audio,
+                                                lyrics: lyricsContent,
+                                              ),
+                                          transitionsBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                                child,
+                                              ) => FadeTransition(
+                                                opacity: animation,
+                                                child: child,
+                                              ),
+                                          transitionDuration: Duration(
+                                            milliseconds: 800,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.grey.shade800,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 24,
+                                        vertical: 12,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          20.0,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      'Chords',
+                                      style: TextStyle(fontSize: 16),
                                     ),
                                   ),
                                 ],
