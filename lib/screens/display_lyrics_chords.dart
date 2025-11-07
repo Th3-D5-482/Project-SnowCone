@@ -27,6 +27,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
   String chords = "";
+  late bool showChorus;
 
   @override
   void initState() {
@@ -44,6 +45,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     //player.play();
     player.setUrl(widget.audio);
     getChords();
+    showChorus = widget.isChord;
   }
 
   Future<void> getChords() async {
@@ -93,18 +95,50 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: IconButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                icon: Icon(
-                                  Icons.arrow_back_rounded,
-                                  size: 28,
-                                  color: Colors.grey,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: IconButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_back_rounded,
+                                      size: 28,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      showChorus = !showChorus;
+                                    });
+                                  },
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        showChorus
+                                            ? 'View lyrics'
+                                            : 'View chords',
+                                        style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+
+                                      Icon(
+                                        Icons.music_note_rounded,
+                                        color: Colors.blueGrey,
+                                        size: 22,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                             SizedBox(height: 10),
                             Padding(
@@ -113,7 +147,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                               ),
                               // ignore: unrelated_type_equality_checks
                               child: Text(
-                                widget.isChord ? chords : widget.lyrics,
+                                showChorus ? chords : widget.lyrics,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
