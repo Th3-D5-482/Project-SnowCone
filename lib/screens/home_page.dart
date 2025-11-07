@@ -738,6 +738,8 @@ class _HomeViewState extends State<HomeView> {
                                                               recentSong['audio'],
                                                           lyrics:
                                                               recentSong['lyrics'],
+                                                          chords:
+                                                              recentSong['chords'],
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -846,6 +848,8 @@ class _HomeViewState extends State<HomeView> {
                                                               recentSong['audio'],
                                                           lyrics:
                                                               recentSong['lyrics'],
+                                                          chords:
+                                                              recentSong['chords'],
                                                         ),
                                                     transitionsBuilder:
                                                         (

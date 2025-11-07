@@ -11,6 +11,7 @@ class PlayPage extends StatefulWidget {
   final String songName;
   final String audio;
   final String lyrics;
+  final String chords;
   const PlayPage({
     super.key,
     required this.backgroundColor,
@@ -18,6 +19,7 @@ class PlayPage extends StatefulWidget {
     required this.songName,
     required this.audio,
     required this.lyrics,
+    required this.chords,
   });
 
   @override
@@ -286,6 +288,8 @@ class _PlayPageState extends State<PlayPage> {
                                                 ) => DisplayLyricsChords(
                                                   audio: widget.audio,
                                                   lyrics: lyricsContent,
+                                                  isChord: false,
+                                                  chords: widget.chords,
                                                 ),
                                             transitionsBuilder:
                                                 (
@@ -338,6 +342,8 @@ class _PlayPageState extends State<PlayPage> {
                                               ) => DisplayLyricsChords(
                                                 audio: widget.audio,
                                                 lyrics: lyricsContent,
+                                                isChord: true,
+                                                chords: widget.chords,
                                               ),
                                           transitionsBuilder:
                                               (

@@ -1,15 +1,20 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 
 class DisplayLyricsChords extends StatefulWidget {
   final String audio;
   final String lyrics;
+  final String chords;
+  final bool isChord;
   const DisplayLyricsChords({
     super.key,
     required this.audio,
     required this.lyrics,
+    required this.isChord,
+    required this.chords,
   });
 
   @override
@@ -21,6 +26,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   final AudioPlayer player = AudioPlayer();
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
+  String chords = "";
 
   @override
   void initState() {
@@ -37,6 +43,16 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     });
     //player.play();
     player.setUrl(widget.audio);
+    getChords();
+  }
+
+  Future<void> getChords() async {
+    final response = await http.get(Uri.parse(widget.chords));
+    if (response.statusCode == 200) {
+      setState(() {
+        chords = response.body;
+      });
+    }
   }
 
   @override
@@ -95,13 +111,14 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 16.0,
                               ),
+                              // ignore: unrelated_type_equality_checks
                               child: Text(
-                                widget.lyrics,
+                                widget.isChord ? chords : widget.lyrics,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  height: 2.5,
+                                  height: widget.isChord ? 2.0 : 2.0,
                                 ),
                               ),
                             ),
