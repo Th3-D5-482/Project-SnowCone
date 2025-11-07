@@ -127,39 +127,6 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                 ),
                               ],
                             ),
-                            Visibility(
-                              visible: showChorus ? true : false,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.blueGrey,
-                                      size: 28,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Transpose',
-                                    style: TextStyle(
-                                      color: Colors.blueGrey,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Icon(
-                                      Icons.remove,
-                                      color: Colors.blueGrey,
-                                      size: 28,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                             SizedBox(height: 10),
                             Padding(
                               padding: const EdgeInsets.symmetric(
