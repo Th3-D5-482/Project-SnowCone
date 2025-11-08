@@ -127,6 +127,53 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                 ),
                               ],
                             ),
+                            SizedBox(height: 5),
+                            Visibility(
+                              visible: showChorus ? true : false,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.zero,
+                                      minimumSize: Size(0, 0),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                    ),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.blueGrey,
+                                      size: 28,
+                                    ),
+                                  ),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Transpose',
+                                    style: TextStyle(
+                                      color: Colors.blueGrey,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 8),
+                                  TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.only(right: 5),
+                                      minimumSize: Size(0, 0),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                    ),
+                                    child: Icon(
+                                      Icons.remove,
+                                      color: Colors.blueGrey,
+                                      size: 28,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                             SizedBox(height: 10),
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -139,7 +186,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                   color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  height: widget.isChord ? 2.0 : 2.0,
+                                  height: 2.0,
                                 ),
                               ),
                             ),
