@@ -251,7 +251,7 @@ class _PlayPageState extends State<PlayPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: SizedBox(
-                      height: 380,
+                      height: 370,
                       width: double.infinity,
                       child: Card(
                         color: Colors.grey.shade900,

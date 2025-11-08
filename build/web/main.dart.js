@@ -213583,9 +213583,14 @@
   A._HomeViewState_build____closure0.prototype = {
     call$2(context, constraints) {
       var t1, t2;
-      if (constraints.maxWidth > 1000 || this.isDesktop)
-        t1 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(this.recentMusica), 6, null, null, B.Axis_0, false), 220, 1 / 0);
-      else {
+      if (constraints.maxWidth > 1000 || this.isDesktop) {
+        t1 = this.recentMusica;
+        t2 = t1.length;
+        if (t2 >= 6)
+          t2 = 6;
+        t2 = A.SizedBox$(A.ListView$builder(new A._HomeViewState_build_____closure(t1), t2, null, null, B.Axis_0, false), 220, 1 / 0);
+        t1 = t2;
+      } else {
         t1 = this.recentMusica;
         t2 = t1.length;
         if (t2 >= 6)
@@ -214144,7 +214149,7 @@
       t9 = B.Map_GGfjP.$index(0, t9._as(800));
       t9.toString;
       t9 = A.ElevatedButton_styleFrom(_null, _null, t9, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(24, 12, 24, 12), _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, _null, _null);
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t4, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t6, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t7, _null), t8, t11, t10, new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Card$(new A.Padding(B.EdgeInsets_16_16_16_16, A.Column$(A._setArrayType([t13, t14, t15, t16, A.Row$(A._setArrayType([t17, t18, A.ElevatedButton$(A.Text$("Chords", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._PlayPageState_build__closure5(t1, context), t9)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), t12, _null), 380, 1 / 0), _null), A.SizedBox$(_null, 30, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t4, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t6, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t7, _null), t8, t11, t10, new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Card$(new A.Padding(B.EdgeInsets_16_16_16_16, A.Column$(A._setArrayType([t13, t14, t15, t16, A.Row$(A._setArrayType([t17, t18, A.ElevatedButton$(A.Text$("Chords", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._PlayPageState_build__closure5(t1, context), t9)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), t12, _null), 370, 1 / 0), _null), A.SizedBox$(_null, 30, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 55
   };

@@ -710,7 +710,9 @@ class _HomeViewState extends State<HomeView> {
                                       height: 220,
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
-                                        itemCount: 6,
+                                        itemCount: recentMusica.length >= 6
+                                            ? 6
+                                            : recentMusica.length,
                                         itemBuilder: (context, index) {
                                           final recentSong =
                                               recentMusica[index];
