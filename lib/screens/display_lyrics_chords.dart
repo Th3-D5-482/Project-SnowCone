@@ -26,6 +26,8 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
   late bool showChorus;
+  int transposeValue = 0;
+  bool resetVisible = false;
 
   @override
   void initState() {
@@ -134,7 +136,41 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      setState(() {
+                                        transposeValue = 0;
+                                      });
+                                    },
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.zero,
+                                      minimumSize: Size(0, 0),
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                    ),
+                                    child: Visibility(
+                                      visible: transposeValue != 0
+                                          ? true
+                                          : false,
+                                      child: Text(
+                                        'Reset',
+                                        style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 16),
+                                  TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        resetVisible = true;
+                                        if (transposeValue < 12) {
+                                          transposeValue++;
+                                        }
+                                      });
+                                    },
                                     style: TextButton.styleFrom(
                                       padding: EdgeInsets.zero,
                                       minimumSize: Size(0, 0),
@@ -148,17 +184,31 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                     ),
                                   ),
                                   SizedBox(width: 8),
-                                  Text(
-                                    'Transpose',
-                                    style: TextStyle(
-                                      color: Colors.blueGrey,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                                  SizedBox(
+                                    width: 90,
+                                    child: Center(
+                                      child: Text(
+                                        transposeValue != 0
+                                            ? '$transposeValue'
+                                            : 'Transpose',
+                                        style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                   SizedBox(width: 8),
                                   TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      setState(() {
+                                        resetVisible = true;
+                                        if (transposeValue > -12) {
+                                          transposeValue--;
+                                        }
+                                      });
+                                    },
                                     style: TextButton.styleFrom(
                                       padding: EdgeInsets.only(right: 5),
                                       minimumSize: Size(0, 0),
