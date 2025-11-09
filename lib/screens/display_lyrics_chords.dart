@@ -25,7 +25,7 @@ class DisplayLyricsChords extends StatefulWidget {
 }
 
 class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
-  bool isPlaying = false;
+  bool isPlaying = true;
   final AudioPlayer player = AudioPlayer();
   Duration currentPosition = Duration.zero;
   Duration totalDuration = Duration.zero;
@@ -38,15 +38,15 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     super.initState();
     player.durationStream.listen((duration) {
       setState(() {
-        totalDuration = widget.duration;
+        totalDuration = duration ?? Duration.zero;
       });
     });
     player.positionStream.listen((position) {
       setState(() {
-        currentPosition = widget.position;
+        currentPosition = position;
       });
     });
-    //player.play();
+    player.play();
     player.setUrl(widget.audio).then((_) {
       player.seek(widget.position);
     });
@@ -98,6 +98,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                   alignment: Alignment.topLeft,
                                   child: IconButton(
                                     onPressed: () {
+                                      player.pause();
                                       Navigator.of(context).pop();
                                     },
                                     icon: Icon(

@@ -55201,7 +55201,7 @@
     },
     _DisplayLyricsChordsState: function _DisplayLyricsChordsState(t0, t1, t2, t3) {
       var _ = this;
-      _.isPlaying = false;
+      _.isPlaying = true;
       _.player = t0;
       _.currentPosition = t1;
       _.totalDuration = t2;
@@ -55214,14 +55214,16 @@
     _DisplayLyricsChordsState_initState_closure: function _DisplayLyricsChordsState_initState_closure(t0) {
       this.$this = t0;
     },
-    _DisplayLyricsChordsState_initState__closure0: function _DisplayLyricsChordsState_initState__closure0(t0) {
+    _DisplayLyricsChordsState_initState__closure0: function _DisplayLyricsChordsState_initState__closure0(t0, t1) {
       this.$this = t0;
+      this.duration = t1;
     },
     _DisplayLyricsChordsState_initState_closure0: function _DisplayLyricsChordsState_initState_closure0(t0) {
       this.$this = t0;
     },
-    _DisplayLyricsChordsState_initState__closure: function _DisplayLyricsChordsState_initState__closure(t0) {
+    _DisplayLyricsChordsState_initState__closure: function _DisplayLyricsChordsState_initState__closure(t0, t1) {
       this.$this = t0;
+      this.position = t1;
     },
     _DisplayLyricsChordsState_initState_closure1: function _DisplayLyricsChordsState_initState_closure1(t0) {
       this.$this = t0;
@@ -55229,8 +55231,9 @@
     _DisplayLyricsChordsState_build_closure: function _DisplayLyricsChordsState_build_closure(t0) {
       this.$this = t0;
     },
-    _DisplayLyricsChordsState_build__closure1: function _DisplayLyricsChordsState_build__closure1(t0) {
-      this.context = t0;
+    _DisplayLyricsChordsState_build__closure1: function _DisplayLyricsChordsState_build__closure1(t0, t1) {
+      this.$this = t0;
+      this.context = t1;
     },
     _DisplayLyricsChordsState_build__closure2: function _DisplayLyricsChordsState_build__closure2(t0) {
       this.$this = t0;
@@ -212946,6 +212949,7 @@
       t3 = t2.$ti._eval$1("_BehaviorSubjectStream<1>");
       new A._DistinctStream(null, new A._BehaviorSubjectStream(t2, t3), t3._eval$1("_DistinctStream<Stream.T>")).listen$1(new A._DisplayLyricsChordsState_initState_closure(_this));
       t1.get$positionStream().listen$1(new A._DisplayLyricsChordsState_initState_closure0(_this));
+      t1.play$0();
       t1.setUrl$1(_this._widget.audio).then$1$1(new A._DisplayLyricsChordsState_initState_closure1(_this), type$.Null);
       _this.___DisplayLyricsChordsState_showChorus_A = _this._widget.isChord;
     },
@@ -212973,33 +212977,30 @@
   };
   A._DisplayLyricsChordsState_initState_closure.prototype = {
     call$1(duration) {
-      var t1;
-      type$.nullable_Duration._as(duration);
-      t1 = this.$this;
-      t1.setState$1(new A._DisplayLyricsChordsState_initState__closure0(t1));
+      var t1 = this.$this;
+      t1.setState$1(new A._DisplayLyricsChordsState_initState__closure0(t1, type$.nullable_Duration._as(duration)));
     },
     $signature: 242
   };
   A._DisplayLyricsChordsState_initState__closure0.prototype = {
     call$0() {
-      var t1 = this.$this;
-      t1.totalDuration = t1._widget.duration;
+      var t1 = this.duration;
+      if (t1 == null)
+        t1 = B.Duration_0;
+      this.$this.totalDuration = t1;
     },
     $signature: 0
   };
   A._DisplayLyricsChordsState_initState_closure0.prototype = {
     call$1(position) {
-      var t1;
-      type$.Duration._as(position);
-      t1 = this.$this;
-      t1.setState$1(new A._DisplayLyricsChordsState_initState__closure(t1));
+      var t1 = this.$this;
+      t1.setState$1(new A._DisplayLyricsChordsState_initState__closure(t1, type$.Duration._as(position)));
     },
     $signature: 6
   };
   A._DisplayLyricsChordsState_initState__closure.prototype = {
     call$0() {
-      var t1 = this.$this;
-      t1.currentPosition = t1._widget.position;
+      this.$this.currentPosition = this.position;
     },
     $signature: 0
   };
@@ -213016,38 +213017,39 @@
     call$2(context, constraints) {
       var t4, t5, t6, t7, t8, t9, t10, t11, t12, _null = null,
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 8,
-        t1 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._DisplayLyricsChordsState_build__closure1(context), _null, _null, _null), _null, _null, _null),
-        t2 = this.$this,
-        t3 = t2.___DisplayLyricsChordsState_showChorus_A;
+        t1 = this.$this,
+        t2 = A.Align$(B.Alignment_m1_m1, A.IconButton$(_null, _null, A.Icon$(B.IconData_62834_MaterialIcons_true, B.MaterialColor_wdy, _null, 28), _null, _null, new A._DisplayLyricsChordsState_build__closure1(t1, context), _null, _null, _null), _null, _null, _null),
+        t3 = t1.___DisplayLyricsChordsState_showChorus_A;
       t3 === $ && A.throwLateFieldNI("showChorus");
       t3 = t3 ? "View lyrics" : "View chords";
       t4 = type$.JSArray_Widget;
-      t3 = A.Row$(A._setArrayType([t1, A.TextButton$(A.Row$(A._setArrayType([A.Text$(t3, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Icon$(B.IconData_63725_MaterialIcons_false, B.MaterialColor_M34, _null, 22)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0), new A._DisplayLyricsChordsState_build__closure2(t2), _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_3);
-      t1 = A.SizedBox$(_null, 5, _null);
-      t5 = t2.___DisplayLyricsChordsState_showChorus_A;
+      t3 = A.Row$(A._setArrayType([t2, A.TextButton$(A.Row$(A._setArrayType([A.Text$(t3, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Icon$(B.IconData_63725_MaterialIcons_false, B.MaterialColor_M34, _null, 22)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0), new A._DisplayLyricsChordsState_build__closure2(t1), _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_3);
+      t2 = A.SizedBox$(_null, 5, _null);
+      t5 = t1.___DisplayLyricsChordsState_showChorus_A;
       t6 = A.TextButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(0, 0), B.EdgeInsets_0_0_0_0, _null, _null, _null, _null, B.MaterialTapTargetSize_1, _null, _null);
-      t7 = t2.transposeValue;
-      t6 = A.TextButton$(A.Visibility$(A.Text$("Reset", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), t7 !== 0), new A._DisplayLyricsChordsState_build__closure3(t2), t6);
+      t7 = t1.transposeValue;
+      t6 = A.TextButton$(A.Visibility$(A.Text$("Reset", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), t7 !== 0), new A._DisplayLyricsChordsState_build__closure3(t1), t6);
       t7 = A.SizedBox$(_null, _null, 16);
       t8 = A.TextButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(0, 0), B.EdgeInsets_0_0_0_0, _null, _null, _null, _null, B.MaterialTapTargetSize_1, _null, _null);
-      t8 = A.TextButton$(A.Icon$(B.IconData_57415_MaterialIcons_false, B.MaterialColor_M34, _null, 28), new A._DisplayLyricsChordsState_build__closure4(t2), t8);
+      t8 = A.TextButton$(A.Icon$(B.IconData_57415_MaterialIcons_false, B.MaterialColor_M34, _null, 28), new A._DisplayLyricsChordsState_build__closure4(t1), t8);
       t9 = A.SizedBox$(_null, _null, 8);
-      t10 = t2.transposeValue;
+      t10 = t1.transposeValue;
       t10 = t10 !== 0 ? "" + t10 : "Transpose";
       t10 = A.SizedBox$(A.Center$(A.Text$(t10, _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_M34, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null), _null, 90);
       t11 = A.SizedBox$(_null, _null, 8);
       t12 = A.TextButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(0, 0), new A.EdgeInsets(0, 0, 5, 0), _null, _null, _null, _null, B.MaterialTapTargetSize_1, _null, _null);
-      t5 = A.Visibility$(A.Row$(A._setArrayType([t6, t7, t8, t9, t10, t11, A.TextButton$(A.Icon$(B.IconData_58646_MaterialIcons_false, B.MaterialColor_M34, _null, 28), new A._DisplayLyricsChordsState_build__closure5(t2), t12)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_1), t5);
+      t5 = A.Visibility$(A.Row$(A._setArrayType([t6, t7, t8, t9, t10, t11, A.TextButton$(A.Icon$(B.IconData_58646_MaterialIcons_false, B.MaterialColor_M34, _null, 28), new A._DisplayLyricsChordsState_build__closure5(t1), t12)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_1), t5);
       t12 = A.SizedBox$(_null, 10, _null);
-      t6 = t2.___DisplayLyricsChordsState_showChorus_A;
-      t2 = t2._widget;
-      t2 = t6 ? t2.chords : t2.lyrics;
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t3, t1, t5, t12, new A.Padding(B.EdgeInsets_16_0_16_0, A.Text$(t2, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, 2, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], t4), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      t6 = t1.___DisplayLyricsChordsState_showChorus_A;
+      t1 = t1._widget;
+      t1 = t6 ? t1.chords : t1.lyrics;
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t3, t2, t5, t12, new A.Padding(B.EdgeInsets_16_0_16_0, A.Text$(t1, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, 2, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null)], t4), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 55
   };
   A._DisplayLyricsChordsState_build__closure1.prototype = {
     call$0() {
+      this.$this.player.pause$0();
       A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
     },
     $signature: 0
