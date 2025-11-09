@@ -301,6 +301,8 @@ class _PlayPageState extends State<PlayPage> {
                                                   lyrics: lyricsContent,
                                                   isChord: false,
                                                   chords: chords,
+                                                  position: currentPosition,
+                                                  duration: totalDuration,
                                                 ),
                                             transitionsBuilder:
                                                 (
@@ -355,6 +357,8 @@ class _PlayPageState extends State<PlayPage> {
                                                 lyrics: lyricsContent,
                                                 isChord: true,
                                                 chords: chords,
+                                                position: currentPosition,
+                                                duration: totalDuration,
                                               ),
                                           transitionsBuilder:
                                               (

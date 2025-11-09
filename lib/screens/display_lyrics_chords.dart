@@ -8,12 +8,16 @@ class DisplayLyricsChords extends StatefulWidget {
   final String lyrics;
   final String chords;
   final bool isChord;
+  final Duration position;
+  final Duration duration;
   const DisplayLyricsChords({
     super.key,
     required this.audio,
     required this.lyrics,
     required this.isChord,
     required this.chords,
+    required this.position,
+    required this.duration,
   });
 
   @override
@@ -34,16 +38,18 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     super.initState();
     player.durationStream.listen((duration) {
       setState(() {
-        totalDuration = duration ?? Duration.zero;
+        totalDuration = widget.duration;
       });
     });
     player.positionStream.listen((position) {
       setState(() {
-        currentPosition = position;
+        currentPosition = widget.position;
       });
     });
     //player.play();
-    player.setUrl(widget.audio);
+    player.setUrl(widget.audio).then((_) {
+      player.seek(widget.position);
+    });
     showChorus = widget.isChord;
   }
 
