@@ -67,283 +67,292 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Container(
-          color: Colors.grey.shade900,
-          child: Column(
-            children: [
-              Flexible(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      final screenWidth = constraints.maxWidth;
-                      bool isDesktop =
-                          (kIsWeb || Platform.isWindows) && screenWidth > 1000;
-                      // ignore: unused_local_variable
-                      double horizontalPadding = isDesktop ? 200 : 8;
-                      return Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: horizontalPadding,
-                          vertical: kIsWeb ? 16 : 8,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: IconButton(
-                                    onPressed: () {
-                                      player.pause();
-                                      Navigator.of(context).pop();
-                                    },
-                                    icon: Icon(
-                                      Icons.arrow_back_rounded,
-                                      size: 28,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                                TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      showChorus = !showChorus;
-                                    });
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        showChorus
-                                            ? 'View lyrics'
-                                            : 'View chords',
-                                        style: TextStyle(
-                                          color: Colors.blueGrey,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      Icon(
-                                        Icons.music_note_rounded,
-                                        color: Colors.blueGrey,
-                                        size: 22,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 5),
-                            Visibility(
-                              visible: showChorus ? true : false,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
+    // ignore: deprecated_member_use
+    return WillPopScope(
+      onWillPop: () {
+        player.pause();
+        return Future.value(true);
+      },
+      child: Scaffold(
+        body: SafeArea(
+          child: Container(
+            color: Colors.grey.shade900,
+            child: Column(
+              children: [
+                Flexible(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        final screenWidth = constraints.maxWidth;
+                        bool isDesktop =
+                            (kIsWeb || Platform.isWindows) &&
+                            screenWidth > 1000;
+                        // ignore: unused_local_variable
+                        double horizontalPadding = isDesktop ? 200 : 8;
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: horizontalPadding,
+                            vertical: kIsWeb ? 16 : 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        transposeValue = 0;
-                                      });
-                                    },
-                                    style: TextButton.styleFrom(
-                                      padding: EdgeInsets.zero,
-                                      minimumSize: Size(0, 0),
-                                      tapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                    ),
-                                    child: Visibility(
-                                      visible: transposeValue != 0
-                                          ? true
-                                          : false,
-                                      child: Text(
-                                        'Reset',
-                                        style: TextStyle(
-                                          color: Colors.blueGrey,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        player.pause();
+                                        Navigator.of(context).pop();
+                                      },
+                                      icon: Icon(
+                                        Icons.arrow_back_rounded,
+                                        size: 28,
+                                        color: Colors.grey,
                                       ),
                                     ),
                                   ),
-                                  SizedBox(width: 16),
                                   TextButton(
                                     onPressed: () {
                                       setState(() {
-                                        resetVisible = true;
-                                        if (transposeValue < 12) {
-                                          transposeValue++;
-                                        }
+                                        showChorus = !showChorus;
                                       });
                                     },
-                                    style: TextButton.styleFrom(
-                                      padding: EdgeInsets.zero,
-                                      minimumSize: Size(0, 0),
-                                      tapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                    ),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.blueGrey,
-                                      size: 28,
-                                    ),
-                                  ),
-                                  SizedBox(width: 8),
-                                  SizedBox(
-                                    width: 90,
-                                    child: Center(
-                                      child: Text(
-                                        transposeValue != 0
-                                            ? '$transposeValue'
-                                            : 'Transpose',
-                                        style: TextStyle(
-                                          color: Colors.blueGrey,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          showChorus
+                                              ? 'View lyrics'
+                                              : 'View chords',
+                                          style: TextStyle(
+                                            color: Colors.blueGrey,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(width: 8),
-                                  TextButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        resetVisible = true;
-                                        if (transposeValue > -12) {
-                                          transposeValue--;
-                                        }
-                                      });
-                                    },
-                                    style: TextButton.styleFrom(
-                                      padding: EdgeInsets.only(right: 5),
-                                      minimumSize: Size(0, 0),
-                                      tapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                    ),
-                                    child: Icon(
-                                      Icons.remove,
-                                      color: Colors.blueGrey,
-                                      size: 28,
+                                        Icon(
+                                          Icons.music_note_rounded,
+                                          color: Colors.blueGrey,
+                                          size: 22,
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16.0,
-                              ),
-                              // ignore: unrelated_type_equality_checks
-                              child: Text(
-                                showChorus ? widget.chords : widget.lyrics,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  height: 2.0,
+                              SizedBox(height: 5),
+                              Visibility(
+                                visible: showChorus ? true : false,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          transposeValue = 0;
+                                        });
+                                      },
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        minimumSize: Size(0, 0),
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      child: Visibility(
+                                        visible: transposeValue != 0
+                                            ? true
+                                            : false,
+                                        child: Text(
+                                          'Reset',
+                                          style: TextStyle(
+                                            color: Colors.blueGrey,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 16),
+                                    TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          resetVisible = true;
+                                          if (transposeValue < 12) {
+                                            transposeValue++;
+                                          }
+                                        });
+                                      },
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        minimumSize: Size(0, 0),
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.blueGrey,
+                                        size: 28,
+                                      ),
+                                    ),
+                                    SizedBox(width: 8),
+                                    SizedBox(
+                                      width: 90,
+                                      child: Center(
+                                        child: Text(
+                                          transposeValue != 0
+                                              ? '$transposeValue'
+                                              : 'Transpose',
+                                          style: TextStyle(
+                                            color: Colors.blueGrey,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 8),
+                                    TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          resetVisible = true;
+                                          if (transposeValue > -12) {
+                                            transposeValue--;
+                                          }
+                                        });
+                                      },
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.only(right: 5),
+                                        minimumSize: Size(0, 0),
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      child: Icon(
+                                        Icons.remove,
+                                        color: Colors.blueGrey,
+                                        size: 28,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
+                              SizedBox(height: 10),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16.0,
+                                ),
+                                // ignore: unrelated_type_equality_checks
+                                child: Text(
+                                  showChorus ? widget.chords : widget.lyrics,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    height: 2.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: StreamBuilder<Duration>(
+                    stream: player.positionStream,
+                    builder: (context, snapshot) {
+                      final position = snapshot.data ?? Duration.zero;
+                      final duration = totalDuration;
+                      return Slider(
+                        min: 0,
+                        max: duration.inMilliseconds.toDouble(),
+                        value: position.inMilliseconds
+                            .clamp(0, duration.inMilliseconds)
+                            .toDouble(),
+                        onChanged: (value) async {
+                          final seekPosition = Duration(
+                            milliseconds: value.toInt(),
+                          );
+                          await player.seek(seekPosition);
+                        },
+                        activeColor: Colors.white,
+                        inactiveColor: Colors.grey.shade700,
                       );
                     },
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: StreamBuilder<Duration>(
-                  stream: player.positionStream,
-                  builder: (context, snapshot) {
-                    final position = snapshot.data ?? Duration.zero;
-                    final duration = totalDuration;
-                    return Slider(
-                      min: 0,
-                      max: duration.inMilliseconds.toDouble(),
-                      value: position.inMilliseconds
-                          .clamp(0, duration.inMilliseconds)
-                          .toDouble(),
-                      onChanged: (value) async {
-                        final seekPosition = Duration(
-                          milliseconds: value.toInt(),
-                        );
-                        await player.seek(seekPosition);
-                      },
-                      activeColor: Colors.white,
-                      inactiveColor: Colors.grey.shade700,
-                    );
-                  },
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        formatDuration(currentPosition),
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        formatDuration(totalDuration),
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      formatDuration(currentPosition),
-                      style: TextStyle(color: Colors.white),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.fast_rewind_rounded,
+                        size: 40,
+                        color: Colors.white,
+                      ),
                     ),
-                    Text(
-                      formatDuration(totalDuration),
-                      style: TextStyle(color: Colors.white),
+                    SizedBox(width: 12),
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          if (isPlaying) {
+                            isPlaying = !isPlaying;
+                            player.stop();
+                          } else {
+                            isPlaying = !isPlaying;
+                            player.play();
+                          }
+                        });
+                      },
+                      icon: isPlaying
+                          ? Icon(
+                              Icons.pause_circle_filled_rounded,
+                              size: 80,
+                              color: Colors.white,
+                            )
+                          : Icon(
+                              Icons.play_circle_rounded,
+                              size: 80,
+                              color: Colors.white,
+                            ),
+                    ),
+                    SizedBox(width: 12),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.fast_forward_rounded,
+                        size: 40,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.fast_rewind_rounded,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(width: 12),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        if (isPlaying) {
-                          isPlaying = !isPlaying;
-                          player.stop();
-                        } else {
-                          isPlaying = !isPlaying;
-                          player.play();
-                        }
-                      });
-                    },
-                    icon: isPlaying
-                        ? Icon(
-                            Icons.pause_circle_filled_rounded,
-                            size: 80,
-                            color: Colors.white,
-                          )
-                        : Icon(
-                            Icons.play_circle_rounded,
-                            size: 80,
-                            color: Colors.white,
-                          ),
-                  ),
-                  SizedBox(width: 12),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.fast_forward_rounded,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-            ],
+                SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),
