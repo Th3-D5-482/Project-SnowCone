@@ -294,6 +294,7 @@ class _PlayPageState extends State<PlayPage> {
                                     Expanded(
                                       child: ElevatedButton(
                                         onPressed: () {
+                                          bool wasPlaying = isPlaying;
                                           player.pause();
                                           isPlaying = false;
                                           Navigator.of(context).push(
@@ -310,6 +311,7 @@ class _PlayPageState extends State<PlayPage> {
                                                     chords: chords,
                                                     position: currentPosition,
                                                     duration: totalDuration,
+                                                    isPlaying: wasPlaying,
                                                   ),
                                               transitionsBuilder:
                                                   (
@@ -350,6 +352,7 @@ class _PlayPageState extends State<PlayPage> {
                                     SizedBox(width: 20),
                                     ElevatedButton(
                                       onPressed: () {
+                                        bool wasPlaying = isPlaying;
                                         player.pause();
                                         isPlaying = false;
                                         Navigator.of(context).push(
@@ -366,6 +369,7 @@ class _PlayPageState extends State<PlayPage> {
                                                   chords: chords,
                                                   position: currentPosition,
                                                   duration: totalDuration,
+                                                  isPlaying: wasPlaying,
                                                 ),
                                             transitionsBuilder:
                                                 (

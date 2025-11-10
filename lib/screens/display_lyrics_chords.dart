@@ -10,6 +10,7 @@ class DisplayLyricsChords extends StatefulWidget {
   final bool isChord;
   final Duration position;
   final Duration duration;
+  final bool isPlaying;
   const DisplayLyricsChords({
     super.key,
     required this.audio,
@@ -18,6 +19,7 @@ class DisplayLyricsChords extends StatefulWidget {
     required this.chords,
     required this.position,
     required this.duration,
+    required this.isPlaying,
   });
 
   @override
@@ -46,7 +48,11 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
         currentPosition = position;
       });
     });
-    player.play();
+    if (widget.isPlaying) {
+      player.play();
+    } else {
+      isPlaying = false;
+    }
     player.setUrl(widget.audio).then((_) {
       player.seek(widget.position);
     });

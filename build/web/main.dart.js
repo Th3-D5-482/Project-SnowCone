@@ -55186,10 +55186,10 @@
     },
     _DisclaimerState_initState__closure0: function _DisclaimerState_initState__closure0() {
     },
-    DisplayLyricsChords$(audio, chords, duration, isChord, lyrics, position) {
-      return new A.DisplayLyricsChords(audio, lyrics, chords, isChord, position, duration, null);
+    DisplayLyricsChords$(audio, chords, duration, isChord, isPlaying, lyrics, position) {
+      return new A.DisplayLyricsChords(audio, lyrics, chords, isChord, position, duration, isPlaying, null);
     },
-    DisplayLyricsChords: function DisplayLyricsChords(t0, t1, t2, t3, t4, t5, t6) {
+    DisplayLyricsChords: function DisplayLyricsChords(t0, t1, t2, t3, t4, t5, t6, t7) {
       var _ = this;
       _.audio = t0;
       _.lyrics = t1;
@@ -55197,7 +55197,8 @@
       _.isChord = t3;
       _.position = t4;
       _.duration = t5;
-      _.key = t6;
+      _.isPlaying = t6;
+      _.key = t7;
     },
     _DisplayLyricsChordsState: function _DisplayLyricsChordsState(t0, t1, t2, t3) {
       var _ = this;
@@ -55556,8 +55557,9 @@
       this.$this = t0;
       this.context = t1;
     },
-    _PlayPageState_build___closure1: function _PlayPageState_build___closure1(t0) {
+    _PlayPageState_build___closure1: function _PlayPageState_build___closure1(t0, t1) {
       this.$this = t0;
+      this.wasPlaying = t1;
     },
     _PlayPageState_build___closure2: function _PlayPageState_build___closure2() {
     },
@@ -55565,8 +55567,9 @@
       this.$this = t0;
       this.context = t1;
     },
-    _PlayPageState_build___closure: function _PlayPageState_build___closure(t0) {
+    _PlayPageState_build___closure: function _PlayPageState_build___closure(t0, t1) {
       this.$this = t0;
+      this.wasPlaying = t1;
     },
     _PlayPageState_build___closure0: function _PlayPageState_build___closure0() {
     },
@@ -212956,7 +212959,10 @@
       t3 = t2.$ti._eval$1("_BehaviorSubjectStream<1>");
       new A._DistinctStream(null, new A._BehaviorSubjectStream(t2, t3), t3._eval$1("_DistinctStream<Stream.T>")).listen$1(new A._DisplayLyricsChordsState_initState_closure(_this));
       t1.get$positionStream().listen$1(new A._DisplayLyricsChordsState_initState_closure0(_this));
-      t1.play$0();
+      if (_this._widget.isPlaying)
+        t1.play$0();
+      else
+        _this.isPlaying = false;
       t1.setUrl$1(_this._widget.audio).then$1$1(new A._DisplayLyricsChordsState_initState_closure1(_this), type$.Null);
       _this.___DisplayLyricsChordsState_showChorus_A = _this._widget.isChord;
     },
@@ -214337,11 +214343,12 @@
   A._PlayPageState_build__closure4.prototype = {
     call$0() {
       var t2,
-        t1 = this.$this;
+        t1 = this.$this,
+        wasPlaying = t1.get$isPlaying();
       t1.player.pause$0();
       t1.___PlayPageState_isPlaying_AI = false;
       t2 = type$.dynamic;
-      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._PlayPageState_build___closure1(t1), A.Duration$(0, 800, 0), new A._PlayPageState_build___closure2(), t2), t2);
+      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._PlayPageState_build___closure1(t1, wasPlaying), A.Duration$(0, 800, 0), new A._PlayPageState_build___closure2(), t2), t2);
     },
     $signature: 0
   };
@@ -214357,7 +214364,7 @@
       t3 = t1.lyricsContent;
       t4 = t1.chords;
       t5 = t1.currentPosition;
-      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, false, t3, t5);
+      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, false, this.wasPlaying, t3, t5);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -214379,11 +214386,12 @@
   A._PlayPageState_build__closure5.prototype = {
     call$0() {
       var t2,
-        t1 = this.$this;
+        t1 = this.$this,
+        wasPlaying = t1.get$isPlaying();
       t1.player.pause$0();
       t1.___PlayPageState_isPlaying_AI = false;
       t2 = type$.dynamic;
-      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._PlayPageState_build___closure(t1), A.Duration$(0, 800, 0), new A._PlayPageState_build___closure0(), t2), t2);
+      A.Navigator_of(this.context).push$1$1(A.PageRouteBuilder$(new A._PlayPageState_build___closure(t1, wasPlaying), A.Duration$(0, 800, 0), new A._PlayPageState_build___closure0(), t2), t2);
     },
     $signature: 0
   };
@@ -214399,7 +214407,7 @@
       t3 = t1.lyricsContent;
       t4 = t1.chords;
       t5 = t1.currentPosition;
-      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, true, t3, t5);
+      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, true, this.wasPlaying, t3, t5);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
