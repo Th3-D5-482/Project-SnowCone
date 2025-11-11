@@ -211,7 +211,15 @@ class _PlayPageState extends State<PlayPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            final newPosition =
+                                currentPosition - Duration(seconds: 10);
+                            player.seek(
+                              newPosition >= Duration.zero
+                                  ? newPosition
+                                  : Duration.zero,
+                            );
+                          },
                           icon: Icon(
                             Icons.replay_10_rounded,
                             size: 40,
@@ -245,7 +253,15 @@ class _PlayPageState extends State<PlayPage> {
                         ),
                         SizedBox(width: 12),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            final newPosition =
+                                currentPosition + Duration(seconds: 10);
+                            player.seek(
+                              newPosition <= totalDuration
+                                  ? newPosition
+                                  : totalDuration,
+                            );
+                          },
                           icon: Icon(
                             Icons.forward_10_rounded,
                             size: 40,

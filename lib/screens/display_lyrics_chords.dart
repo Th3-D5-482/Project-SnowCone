@@ -313,7 +313,15 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        final newPostion =
+                            currentPosition - Duration(seconds: 10);
+                        player.seek(
+                          newPostion >= Duration.zero
+                              ? newPostion
+                              : Duration.zero,
+                        );
+                      },
                       icon: Icon(
                         Icons.replay_10_rounded,
                         size: 40,
@@ -347,7 +355,15 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                     ),
                     SizedBox(width: 12),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        final newPostion =
+                            currentPosition + Duration(seconds: 10);
+                        player.seek(
+                          newPostion <= totalDuration
+                              ? newPostion
+                              : totalDuration,
+                        );
+                      },
                       icon: Icon(
                         Icons.forward_10_rounded,
                         size: 40,
