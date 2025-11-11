@@ -55186,19 +55186,18 @@
     },
     _DisclaimerState_initState__closure0: function _DisclaimerState_initState__closure0() {
     },
-    DisplayLyricsChords$(audio, chords, duration, isChord, isPlaying, lyrics, position) {
-      return new A.DisplayLyricsChords(audio, lyrics, chords, isChord, position, duration, isPlaying, null);
+    DisplayLyricsChords$(audio, chords, isChord, isPlaying, lyrics, position) {
+      return new A.DisplayLyricsChords(audio, lyrics, chords, isChord, position, isPlaying, null);
     },
-    DisplayLyricsChords: function DisplayLyricsChords(t0, t1, t2, t3, t4, t5, t6, t7) {
+    DisplayLyricsChords: function DisplayLyricsChords(t0, t1, t2, t3, t4, t5, t6) {
       var _ = this;
       _.audio = t0;
       _.lyrics = t1;
       _.chords = t2;
       _.isChord = t3;
       _.position = t4;
-      _.duration = t5;
-      _.isPlaying = t6;
-      _.key = t7;
+      _.isPlaying = t5;
+      _.key = t6;
     },
     _DisplayLyricsChordsState: function _DisplayLyricsChordsState(t0, t1, t2, t3) {
       var _ = this;
@@ -214380,7 +214379,7 @@
   };
   A._PlayPageState_build___closure1.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4, t5;
+      var t1, t2, t3;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
@@ -214388,9 +214387,7 @@
       t1 = this.$this;
       t2 = t1._widget.audio;
       t3 = t1.lyricsContent;
-      t4 = t1.chords;
-      t5 = t1.currentPosition;
-      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, false, this.wasPlaying, t3, t5);
+      return A.DisplayLyricsChords$(t2, t1.chords, false, this.wasPlaying, t3, t1.currentPosition);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -214423,7 +214420,7 @@
   };
   A._PlayPageState_build___closure.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4, t5;
+      var t1, t2, t3;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
@@ -214431,9 +214428,7 @@
       t1 = this.$this;
       t2 = t1._widget.audio;
       t3 = t1.lyricsContent;
-      t4 = t1.chords;
-      t5 = t1.currentPosition;
-      return A.DisplayLyricsChords$(t2, t4, t1.totalDuration, true, this.wasPlaying, t3, t5);
+      return A.DisplayLyricsChords$(t2, t1.chords, true, this.wasPlaying, t3, t1.currentPosition);
     },
     "call*": "call$3",
     $requiredArgCount: 3,

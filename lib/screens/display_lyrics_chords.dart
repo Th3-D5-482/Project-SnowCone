@@ -9,7 +9,6 @@ class DisplayLyricsChords extends StatefulWidget {
   final String chords;
   final bool isChord;
   final Duration position;
-  final Duration duration;
   final bool isPlaying;
   const DisplayLyricsChords({
     super.key,
@@ -18,7 +17,6 @@ class DisplayLyricsChords extends StatefulWidget {
     required this.isChord,
     required this.chords,
     required this.position,
-    required this.duration,
     required this.isPlaying,
   });
 

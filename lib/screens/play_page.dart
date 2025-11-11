@@ -326,7 +326,6 @@ class _PlayPageState extends State<PlayPage> {
                                                     isChord: false,
                                                     chords: chords,
                                                     position: currentPosition,
-                                                    duration: totalDuration,
                                                     isPlaying: wasPlaying,
                                                   ),
                                               transitionsBuilder:
@@ -384,7 +383,6 @@ class _PlayPageState extends State<PlayPage> {
                                                   isChord: true,
                                                   chords: chords,
                                                   position: currentPosition,
-                                                  duration: totalDuration,
                                                   isPlaying: wasPlaying,
                                                 ),
                                             transitionsBuilder:
