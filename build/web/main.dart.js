@@ -212982,10 +212982,10 @@
       t3 = A.StreamBuilder$(new A._DisplayLyricsChordsState_build_closure0(_this), _this.player.get$positionStream(), type$.Duration);
       t4 = type$.JSArray_Widget;
       t5 = A.Row$(A._setArrayType([A.Text$(_this.formatDuration$1(_this.currentPosition), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$(_this.formatDuration$1(_this.totalDuration), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_3);
-      t6 = A.IconButton$(_null, _null, A.Icon$(B.IconData_63285_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._DisplayLyricsChordsState_build_closure1(), _null, _null, _null);
+      t6 = A.IconButton$(_null, _null, A.Icon$(B.IconData_983288_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._DisplayLyricsChordsState_build_closure1(), _null, _null, _null);
       t7 = A.SizedBox$(_null, _null, 12);
       t8 = _this.isPlaying ? A.Icon$(B.IconData_983122_MaterialIcons_false, B.Color_wst, _null, 80) : A.Icon$(B.IconData_983203_MaterialIcons_false, B.Color_wst, _null, 80);
-      return new A.WillPopScope(A.Scaffold$(A.SafeArea$(true, A.Container$(_null, A.Column$(A._setArrayType([new A.Flexible(1, B.FlexFit_1, t2, _null), new A.Padding(B.EdgeInsets_8_0_8_0, t3, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t5, _null), A.Row$(A._setArrayType([t6, t7, A.IconButton$(_null, _null, t8, _null, _null, new A._DisplayLyricsChordsState_build_closure2(_this), _null, _null, _null), A.SizedBox$(_null, _null, 12), A.IconButton$(_null, _null, A.Icon$(B.IconData_63284_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._DisplayLyricsChordsState_build_closure3(), _null, _null, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_2), A.SizedBox$(_null, 20, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, t1, _null, _null, _null, _null, _null, _null, _null, _null, _null), B.EdgeInsets_0_0_0_0, true)), new A._DisplayLyricsChordsState_build_closure4(_this), _null);
+      return new A.WillPopScope(A.Scaffold$(A.SafeArea$(true, A.Container$(_null, A.Column$(A._setArrayType([new A.Flexible(1, B.FlexFit_1, t2, _null), new A.Padding(B.EdgeInsets_8_0_8_0, t3, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t5, _null), A.Row$(A._setArrayType([t6, t7, A.IconButton$(_null, _null, t8, _null, _null, new A._DisplayLyricsChordsState_build_closure2(_this), _null, _null, _null), A.SizedBox$(_null, _null, 12), A.IconButton$(_null, _null, A.Icon$(B.IconData_63390_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._DisplayLyricsChordsState_build_closure3(), _null, _null, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_2), A.SizedBox$(_null, 20, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, t1, _null, _null, _null, _null, _null, _null, _null, _null, _null), B.EdgeInsets_0_0_0_0, true)), new A._DisplayLyricsChordsState_build_closure4(_this), _null);
     }
   };
   A._DisplayLyricsChordsState_initState_closure.prototype = {
@@ -214237,10 +214237,10 @@
       t6 = A.StreamBuilder$(new A._PlayPageState_build__closure0(t1), t1.player.get$positionStream(), type$.Duration);
       t7 = A.Row$(A._setArrayType([A.Text$(t1.formatDuration$1(t1.currentPosition), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$(t1.formatDuration$1(t1.totalDuration), _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_3);
       t8 = A.SizedBox$(_null, 10, _null);
-      t9 = A.IconButton$(_null, _null, A.Icon$(B.IconData_63285_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._PlayPageState_build__closure1(), _null, _null, _null);
+      t9 = A.IconButton$(_null, _null, A.Icon$(B.IconData_983288_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._PlayPageState_build__closure1(), _null, _null, _null);
       t10 = A.SizedBox$(_null, _null, 12);
       t11 = t1.get$isPlaying() ? A.Icon$(B.IconData_983122_MaterialIcons_false, B.Color_wst, _null, 80) : A.Icon$(B.IconData_983203_MaterialIcons_false, B.Color_wst, _null, 80);
-      t11 = A.Row$(A._setArrayType([t9, t10, A.IconButton$(_null, _null, t11, _null, _null, new A._PlayPageState_build__closure2(t1), _null, _null, _null), A.SizedBox$(_null, _null, 12), A.IconButton$(_null, _null, A.Icon$(B.IconData_63284_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._PlayPageState_build__closure3(), _null, _null, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_2);
+      t11 = A.Row$(A._setArrayType([t9, t10, A.IconButton$(_null, _null, t11, _null, _null, new A._PlayPageState_build__closure2(t1), _null, _null, _null), A.SizedBox$(_null, _null, 12), A.IconButton$(_null, _null, A.Icon$(B.IconData_63390_MaterialIcons_false, B.Color_wst, _null, 40), _null, _null, new A._PlayPageState_build__closure3(), _null, _null, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_2);
       t10 = A.SizedBox$(_null, 40, _null);
       t9 = type$.MaterialColor._eval$1("ColorSwatch.T");
       t12 = B.Map_GGfjP.$index(0, t9._as(900));
@@ -222950,12 +222950,12 @@
     B.IconData_59070_MaterialIcons_false = new A.IconData(59070, "MaterialIcons", false);
     B.IconData_59083_MaterialIcons_false = new A.IconData(59083, "MaterialIcons", false);
     B.IconData_62834_MaterialIcons_true = new A.IconData(62834, "MaterialIcons", true);
-    B.IconData_63284_MaterialIcons_false = new A.IconData(63284, "MaterialIcons", false);
-    B.IconData_63285_MaterialIcons_false = new A.IconData(63285, "MaterialIcons", false);
+    B.IconData_63390_MaterialIcons_false = new A.IconData(63390, "MaterialIcons", false);
     B.IconData_63725_MaterialIcons_false = new A.IconData(63725, "MaterialIcons", false);
     B.IconData_983122_MaterialIcons_false = new A.IconData(983122, "MaterialIcons", false);
     B.IconData_983200_MaterialIcons_false = new A.IconData(983200, "MaterialIcons", false);
     B.IconData_983203_MaterialIcons_false = new A.IconData(983203, "MaterialIcons", false);
+    B.IconData_983288_MaterialIcons_false = new A.IconData(983288, "MaterialIcons", false);
     B.IconThemeData_HCh = new A.IconThemeData(24, 0, 400, 0, 48, B.Color_vnR, 1, null, false);
     B.IconThemeData_diR = new A.IconThemeData(null, null, null, null, null, B.Color_wst, null, null, null);
     B.IconThemeData_ku9 = new A.IconThemeData(null, null, null, null, null, B.Color_vnR, null, null, null);

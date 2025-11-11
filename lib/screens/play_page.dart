@@ -213,7 +213,7 @@ class _PlayPageState extends State<PlayPage> {
                         IconButton(
                           onPressed: () {},
                           icon: Icon(
-                            Icons.fast_rewind_rounded,
+                            Icons.replay_10_rounded,
                             size: 40,
                             color: Colors.white,
                           ),
@@ -247,7 +247,7 @@ class _PlayPageState extends State<PlayPage> {
                         IconButton(
                           onPressed: () {},
                           icon: Icon(
-                            Icons.fast_forward_rounded,
+                            Icons.forward_10_rounded,
                             size: 40,
                             color: Colors.white,
                           ),
