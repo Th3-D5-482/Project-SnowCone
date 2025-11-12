@@ -54,10 +54,10 @@ class _PlayPageState extends State<PlayPage> {
   }
 
   Future<void> loadLyrics() async {
-    final respose = await http.get(Uri.parse(widget.lyrics));
-    if (respose.statusCode == 200) {
+    final response = await http.get(Uri.parse(widget.lyrics));
+    if (response.statusCode == 200) {
       setState(() {
-        lyricsContent = respose.body;
+        lyricsContent = response.body;
       });
     }
   }

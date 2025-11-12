@@ -55522,7 +55522,7 @@
     },
     _PlayPageState_loadLyrics_closure: function _PlayPageState_loadLyrics_closure(t0, t1) {
       this.$this = t0;
-      this.respose = t1;
+      this.response = t1;
     },
     _PlayPageState_getChords_closure: function _PlayPageState_getChords_closure(t0, t1) {
       this.$this = t0;
@@ -213031,7 +213031,9 @@
   };
   A._DisplayLyricsChordsState_build_closure4.prototype = {
     call$0() {
-      this.$this.player.pause$0();
+      var t1 = this.$this;
+      t1.player.pause$0();
+      t1.isPlaying = false;
       return A.Future_Future$value(true, type$.bool);
     },
     $signature: 14
@@ -213072,8 +213074,10 @@
   };
   A._DisplayLyricsChordsState_build__closure1.prototype = {
     call$0() {
-      this.$this.player.pause$0();
+      var t1 = this.$this;
+      t1.player.pause$0();
       A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
+      t1.isPlaying = false;
     },
     $signature: 0
   };
@@ -214131,7 +214135,7 @@
     loadLyrics$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this, respose;
+        $async$self = this, response;
       var $async$loadLyrics$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -214143,9 +214147,9 @@
               return A._asyncAwait(A.get(A.Uri_parse($async$self._widget.lyrics)), $async$loadLyrics$0);
             case 2:
               // returning from await.
-              respose = $async$result;
-              if (respose.statusCode === 200)
-                $async$self.setState$1(new A._PlayPageState_loadLyrics_closure($async$self, respose));
+              response = $async$result;
+              if (response.statusCode === 200)
+                $async$self.setState$1(new A._PlayPageState_loadLyrics_closure($async$self, response));
               // implicit return
               return A._asyncReturn(null, $async$completer);
           }
@@ -214219,7 +214223,7 @@
   };
   A._PlayPageState_loadLyrics_closure.prototype = {
     call$0() {
-      var t1 = this.respose;
+      var t1 = this.response;
       this.$this.lyricsContent = A.encodingForContentTypeHeader(A._contentTypeForHeaders(t1.headers)).decode$1(t1.bodyBytes);
     },
     $signature: 0

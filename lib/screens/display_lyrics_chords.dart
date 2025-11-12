@@ -75,6 +75,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     return WillPopScope(
       onWillPop: () {
         player.pause();
+        isPlaying = false;
         return Future.value(true);
       },
       child: Scaffold(
@@ -112,6 +113,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                       onPressed: () {
                                         player.pause();
                                         Navigator.of(context).pop();
+                                        isPlaying = false;
                                       },
                                       icon: Icon(
                                         Icons.arrow_back_rounded,
