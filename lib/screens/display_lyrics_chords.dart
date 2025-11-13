@@ -112,8 +112,8 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                     child: IconButton(
                                       onPressed: () {
                                         player.pause();
-                                        Navigator.of(context).pop();
                                         isPlaying = false;
+                                        Navigator.of(context).pop();
                                       },
                                       icon: Icon(
                                         Icons.arrow_back_rounded,

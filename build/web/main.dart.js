@@ -213076,8 +213076,8 @@
     call$0() {
       var t1 = this.$this;
       t1.player.pause$0();
-      A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
       t1.isPlaying = false;
+      A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
     },
     $signature: 0
   };
