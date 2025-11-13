@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/screens/display_lyrics_chords.dart';
 
 class PlayPage extends StatefulWidget {
@@ -51,6 +52,14 @@ class _PlayPageState extends State<PlayPage> {
     });
     loadLyrics();
     getChords();
+    navigatingBackCode();
+  }
+
+  Future<void> navigatingBackCode() async {
+    SharedPreferences pref1 = await SharedPreferences.getInstance();
+    setState(() {
+      isPlaying = pref1.getBool('wasPlaying') ?? true;
+    });
   }
 
   Future<void> loadLyrics() async {
@@ -313,36 +322,41 @@ class _PlayPageState extends State<PlayPage> {
                                           bool wasPlaying = isPlaying;
                                           player.pause();
                                           isPlaying = false;
-                                          Navigator.of(context).push(
-                                            PageRouteBuilder(
-                                              pageBuilder:
-                                                  (
-                                                    context,
-                                                    animation,
-                                                    secondaryAnimation,
-                                                  ) => DisplayLyricsChords(
-                                                    audio: widget.audio,
-                                                    lyrics: lyricsContent,
-                                                    isChord: false,
-                                                    chords: chords,
-                                                    position: currentPosition,
-                                                    isPlaying: wasPlaying,
+                                          Navigator.of(context)
+                                              .push(
+                                                PageRouteBuilder(
+                                                  pageBuilder:
+                                                      (
+                                                        context,
+                                                        animation,
+                                                        secondaryAnimation,
+                                                      ) => DisplayLyricsChords(
+                                                        audio: widget.audio,
+                                                        lyrics: lyricsContent,
+                                                        isChord: false,
+                                                        chords: chords,
+                                                        position:
+                                                            currentPosition,
+                                                        isPlaying: wasPlaying,
+                                                      ),
+                                                  transitionsBuilder:
+                                                      (
+                                                        context,
+                                                        animation,
+                                                        secondaryAnimation,
+                                                        child,
+                                                      ) => FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      ),
+                                                  transitionDuration: Duration(
+                                                    milliseconds: 800,
                                                   ),
-                                              transitionsBuilder:
-                                                  (
-                                                    context,
-                                                    animation,
-                                                    secondaryAnimation,
-                                                    child,
-                                                  ) => FadeTransition(
-                                                    opacity: animation,
-                                                    child: child,
-                                                  ),
-                                              transitionDuration: Duration(
-                                                milliseconds: 800,
-                                              ),
-                                            ),
-                                          );
+                                                ),
+                                              )
+                                              .then((_) {
+                                                navigatingBackCode();
+                                              });
                                         },
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: Colors.white,
@@ -370,36 +384,40 @@ class _PlayPageState extends State<PlayPage> {
                                         bool wasPlaying = isPlaying;
                                         player.pause();
                                         isPlaying = false;
-                                        Navigator.of(context).push(
-                                          PageRouteBuilder(
-                                            pageBuilder:
-                                                (
-                                                  context,
-                                                  animation,
-                                                  secondaryAnimation,
-                                                ) => DisplayLyricsChords(
-                                                  audio: widget.audio,
-                                                  lyrics: lyricsContent,
-                                                  isChord: true,
-                                                  chords: chords,
-                                                  position: currentPosition,
-                                                  isPlaying: wasPlaying,
+                                        Navigator.of(context)
+                                            .push(
+                                              PageRouteBuilder(
+                                                pageBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                    ) => DisplayLyricsChords(
+                                                      audio: widget.audio,
+                                                      lyrics: lyricsContent,
+                                                      isChord: true,
+                                                      chords: chords,
+                                                      position: currentPosition,
+                                                      isPlaying: wasPlaying,
+                                                    ),
+                                                transitionsBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                      child,
+                                                    ) => FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    ),
+                                                transitionDuration: Duration(
+                                                  milliseconds: 800,
                                                 ),
-                                            transitionsBuilder:
-                                                (
-                                                  context,
-                                                  animation,
-                                                  secondaryAnimation,
-                                                  child,
-                                                ) => FadeTransition(
-                                                  opacity: animation,
-                                                  child: child,
-                                                ),
-                                            transitionDuration: Duration(
-                                              milliseconds: 800,
-                                            ),
-                                          ),
-                                        );
+                                              ),
+                                            )
+                                            .then((_) {
+                                              navigatingBackCode();
+                                            });
                                       },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.grey.shade800,

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DisplayLyricsChords extends StatefulWidget {
   final String audio;
@@ -73,9 +74,14 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
     return WillPopScope(
-      onWillPop: () {
+      onWillPop: () async {
+        bool wasPlaying = isPlaying;
+        SharedPreferences pref1 = await SharedPreferences.getInstance();
+        pref1.setBool('wasPlaying', wasPlaying);
         player.pause();
         isPlaying = false;
+        // ignore: use_build_context_synchronously
+        Navigator.pop(context);
         return Future.value(true);
       },
       child: Scaffold(
@@ -110,10 +116,15 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                   Align(
                                     alignment: Alignment.topLeft,
                                     child: IconButton(
-                                      onPressed: () {
+                                      onPressed: () async {
+                                        bool wasPlaying = isPlaying;
+                                        SharedPreferences pref1 =
+                                            await SharedPreferences.getInstance();
+                                        pref1.setBool('wasPlaying', wasPlaying);
                                         player.pause();
                                         isPlaying = false;
-                                        Navigator.of(context).pop();
+                                        // ignore: use_build_context_synchronously
+                                        Navigator.pop(context);
                                       },
                                       icon: Icon(
                                         Icons.arrow_back_rounded,
