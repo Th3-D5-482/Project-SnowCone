@@ -38,8 +38,10 @@ class _PlayPageState extends State<PlayPage> {
   @override
   void initState() {
     super.initState();
-    player.setUrl(widget.audio);
-    player.play();
+    navigatingBackCode();
+    player.setUrl(widget.audio).then((_) {
+      player.seek(currentPosition);
+    });
     player.durationStream.listen((duration) {
       setState(() {
         totalDuration = duration ?? Duration.zero;
@@ -52,14 +54,20 @@ class _PlayPageState extends State<PlayPage> {
     });
     loadLyrics();
     getChords();
-    navigatingBackCode();
   }
 
   Future<void> navigatingBackCode() async {
     SharedPreferences pref1 = await SharedPreferences.getInstance();
+    int millis = pref1.getInt('currentPostion') ?? 0;
     setState(() {
       isPlaying = pref1.getBool('wasPlaying') ?? true;
+      currentPosition = Duration(seconds: millis);
     });
+    if (isPlaying) {
+      player.play();
+    } else {
+      isPlaying = false;
+    }
   }
 
   Future<void> loadLyrics() async {
