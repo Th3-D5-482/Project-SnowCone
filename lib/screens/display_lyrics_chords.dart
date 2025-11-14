@@ -34,6 +34,20 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   int transposeValue = 0;
   bool resetVisible = false;
   late bool isRestart = false;
+  final List<String> scale = [
+    "C",
+    "C#",
+    "D",
+    "D#",
+    "E",
+    "F",
+    "F#",
+    "G",
+    "G#",
+    "A",
+    "A#",
+    "B",
+  ];
 
   @override
   void initState() {

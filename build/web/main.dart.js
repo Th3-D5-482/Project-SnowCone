@@ -55199,7 +55199,7 @@
       _.isPlaying = t5;
       _.key = t6;
     },
-    _DisplayLyricsChordsState: function _DisplayLyricsChordsState(t0, t1, t2, t3) {
+    _DisplayLyricsChordsState: function _DisplayLyricsChordsState(t0, t1, t2, t3, t4) {
       var _ = this;
       _.isPlaying = true;
       _.player = t0;
@@ -55208,8 +55208,9 @@
       _.___DisplayLyricsChordsState_showChorus_A = $;
       _.transposeValue = 0;
       _.___DisplayLyricsChordsState_isRestart_AI = $;
+      _.scale = t3;
       _._widget = null;
-      _._debugLifecycleState = t3;
+      _._debugLifecycleState = t4;
       _._framework$_element = null;
     },
     _DisplayLyricsChordsState_initState_closure: function _DisplayLyricsChordsState_initState_closure(t0) {
@@ -212973,7 +212974,7 @@
   };
   A.DisplayLyricsChords.prototype = {
     createState$0() {
-      return new A._DisplayLyricsChordsState(A.AudioPlayer$(), B.Duration_0, B.Duration_0, B._StateLifecycle_0);
+      return new A._DisplayLyricsChordsState(A.AudioPlayer$(), B.Duration_0, B.Duration_0, A._setArrayType(["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"], type$.JSArray_String), B._StateLifecycle_0);
     }
   };
   A._DisplayLyricsChordsState.prototype = {
