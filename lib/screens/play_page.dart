@@ -34,6 +34,7 @@ class _PlayPageState extends State<PlayPage> {
   Duration totalDuration = Duration.zero;
   String lyricsContent = '';
   String chords = '';
+  late bool isRestart = false;
 
   @override
   void initState() {
@@ -51,6 +52,12 @@ class _PlayPageState extends State<PlayPage> {
       setState(() {
         currentPosition = position;
       });
+      if (totalDuration != Duration.zero && currentPosition >= totalDuration) {
+        setState(() {
+          isRestart = true;
+        });
+        player.stop();
+      }
     });
     loadLyrics();
     getChords();
@@ -62,6 +69,7 @@ class _PlayPageState extends State<PlayPage> {
     setState(() {
       isPlaying = pref1.getBool('wasPlaying') ?? true;
       currentPosition = Duration(seconds: millis);
+      isRestart = pref1.getBool('isRestart') ?? false;
     });
     player.seek(currentPosition);
     if (isPlaying) {
@@ -190,6 +198,7 @@ class _PlayPageState extends State<PlayPage> {
                         builder: (context, snapshot) {
                           final position = snapshot.data ?? Duration.zero;
                           final duration = totalDuration;
+                          // ignore: unrelated_type_equality_checks
                           return Slider(
                             min: 0,
                             max: duration.inMilliseconds.toDouble(),
@@ -248,7 +257,12 @@ class _PlayPageState extends State<PlayPage> {
                         IconButton(
                           onPressed: () {
                             setState(() {
-                              if (isPlaying) {
+                              if (isRestart) {
+                                isPlaying = true;
+                                isRestart = false;
+                                player.seek(Duration.zero);
+                                player.play();
+                              } else if (isPlaying) {
                                 isPlaying = !isPlaying;
                                 player.stop();
                               } else {
@@ -257,7 +271,13 @@ class _PlayPageState extends State<PlayPage> {
                               }
                             });
                           },
-                          icon: isPlaying
+                          icon: isRestart
+                              ? Icon(
+                                  Icons.replay_circle_filled_rounded,
+                                  size: 80,
+                                  color: Colors.white,
+                                )
+                              : isPlaying
                               ? Icon(
                                   Icons.pause_circle_filled_rounded,
                                   size: 80,

@@ -33,6 +33,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   late bool showChorus;
   int transposeValue = 0;
   bool resetVisible = false;
+  late bool isRestart = false;
 
   @override
   void initState() {
@@ -46,6 +47,12 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
       setState(() {
         currentPosition = position;
       });
+      if (totalDuration != Duration.zero && currentPosition >= totalDuration) {
+        setState(() {
+          isRestart = true;
+        });
+        player.stop();
+      }
     });
     if (widget.isPlaying) {
       player.play();
@@ -79,6 +86,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
         SharedPreferences pref1 = await SharedPreferences.getInstance();
         pref1.setBool('wasPlaying', wasPlaying);
         pref1.setInt('currentPostion', currentPosition.inSeconds);
+        pref1.setBool('isRestart', isRestart);
         player.pause();
         isPlaying = false;
         // ignore: use_build_context_synchronously
@@ -126,6 +134,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                           'currentPostion',
                                           currentPosition.inSeconds,
                                         );
+                                        pref1.setBool('isRestart', isRestart);
                                         player.pause();
                                         isPlaying = false;
                                         // ignore: use_build_context_synchronously
@@ -348,7 +357,12 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                     IconButton(
                       onPressed: () {
                         setState(() {
-                          if (isPlaying) {
+                          if (isRestart) {
+                            isPlaying = true;
+                            isRestart = false;
+                            player.seek(Duration.zero);
+                            player.play();
+                          } else if (isPlaying) {
                             isPlaying = !isPlaying;
                             player.stop();
                           } else {
@@ -357,7 +371,13 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                           }
                         });
                       },
-                      icon: isPlaying
+                      icon: isRestart
+                          ? Icon(
+                              Icons.replay_circle_filled_rounded,
+                              size: 80,
+                              color: Colors.white,
+                            )
+                          : isPlaying
                           ? Icon(
                               Icons.pause_circle_filled_rounded,
                               size: 80,
