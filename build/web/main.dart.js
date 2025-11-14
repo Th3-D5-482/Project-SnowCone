@@ -213048,7 +213048,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.bool),
-        $async$returnValue, $async$self = this, t1, wasPlaying;
+        $async$returnValue, $async$self = this, t1, wasPlaying, pref1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -213062,7 +213062,9 @@
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 3:
               // returning from await.
-              $async$result._setValue$3("Bool", "wasPlaying", wasPlaying);
+              pref1 = $async$result;
+              pref1._setValue$3("Bool", "wasPlaying", wasPlaying);
+              pref1._setValue$3("Int", "currentPostion", B.JSInt_methods._tdivFast$1(t1.currentPosition._duration, 1000000));
               t1.player.pause$0();
               t1.isPlaying = false;
               A.Navigator_of($async$self.context).pop$1$1(null, type$.nullable_Object);
@@ -214199,7 +214201,7 @@
     navigatingBackCode$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this, pref1, millis;
+        $async$self = this, t1, pref1, millis;
       var $async$navigatingBackCode$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -214214,8 +214216,10 @@
               pref1 = $async$result;
               millis = A._asIntQ(pref1._preferenceCache.$index(0, "currentPostion"));
               $async$self.setState$1(new A._PlayPageState_navigatingBackCode_closure($async$self, pref1, millis == null ? 0 : millis));
+              t1 = $async$self.player;
+              t1.seek$1($async$self.currentPosition);
               if ($async$self.get$isPlaying())
-                $async$self.player.play$0();
+                t1.play$0();
               else
                 $async$self.___PlayPageState_isPlaying_AI = false;
               // implicit return

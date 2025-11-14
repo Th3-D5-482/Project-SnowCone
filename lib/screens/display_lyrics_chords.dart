@@ -78,6 +78,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
         bool wasPlaying = isPlaying;
         SharedPreferences pref1 = await SharedPreferences.getInstance();
         pref1.setBool('wasPlaying', wasPlaying);
+        pref1.setInt('currentPostion', currentPosition.inSeconds);
         player.pause();
         isPlaying = false;
         // ignore: use_build_context_synchronously

@@ -63,6 +63,7 @@ class _PlayPageState extends State<PlayPage> {
       isPlaying = pref1.getBool('wasPlaying') ?? true;
       currentPosition = Duration(seconds: millis);
     });
+    player.seek(currentPosition);
     if (isPlaying) {
       player.play();
     } else {
