@@ -34,20 +34,47 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
   int transposeValue = 0;
   bool resetVisible = false;
   late bool isRestart = false;
-  final List<String> scale = [
-    "C",
-    "C#",
-    "D",
-    "D#",
-    "E",
-    "F",
-    "F#",
-    "G",
-    "G#",
-    "A",
-    "A#",
-    "B",
+  String transposedChords = '';
+  List<String> chordList = [
+    'C',
+    'C#',
+    'D',
+    'D#',
+    'E',
+    'F',
+    'F#',
+    'G',
+    'G#',
+    'A',
+    'A#',
+    'B',
   ];
+
+  String transposeChord(String chord, int steps) {
+    final regex = RegExp(r'^([A-G][#b]?)(.*)$');
+    final match = regex.firstMatch(chord);
+    if (match == null) return chord;
+
+    String root = match.group(1)!;
+    String suffix = match.group(2)!;
+
+    int index = chordList.indexOf(root);
+    if (index == -1) return chord;
+
+    int newIndex = (index + steps) % 12;
+    if (newIndex < 0) newIndex += 12;
+
+    return chordList[newIndex] + suffix;
+  }
+
+  String transposeLyrics(String lyrics, int steps) {
+    final chordRegex = RegExp(r'\[([A-G][#b]?[^\]]*)\]');
+    return lyrics.replaceAllMapped(chordRegex, (match) {
+      String originalChord = match.group(1)!;
+      String transposed = transposeChord(originalChord, steps);
+      return '[$transposed]';
+    });
+  }
 
   @override
   void initState() {
@@ -77,6 +104,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
       player.seek(widget.position);
     });
     showChorus = widget.isChord;
+    transposedChords = transposeLyrics(widget.chords, transposeValue);
   }
 
   @override
@@ -200,6 +228,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                         setState(() {
                                           transposeValue = 0;
                                         });
+                                        transposedChords = widget.chords;
                                       },
                                       style: TextButton.styleFrom(
                                         padding: EdgeInsets.zero,
@@ -228,6 +257,11 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                           resetVisible = true;
                                           if (transposeValue < 12) {
                                             transposeValue++;
+                                            transposedChords = transposeLyrics(
+                                              widget.chords,
+                                              transposeValue,
+                                            );
+                                            resetVisible = true;
                                           }
                                         });
                                       },
@@ -266,6 +300,11 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                           resetVisible = true;
                                           if (transposeValue > -12) {
                                             transposeValue--;
+                                            transposedChords = transposeLyrics(
+                                              widget.chords,
+                                              transposeValue,
+                                            );
+                                            resetVisible = true;
                                           }
                                         });
                                       },
@@ -291,7 +330,7 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                                 ),
                                 // ignore: unrelated_type_equality_checks
                                 child: Text(
-                                  showChorus ? widget.chords : widget.lyrics,
+                                  showChorus ? transposedChords : widget.lyrics,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,

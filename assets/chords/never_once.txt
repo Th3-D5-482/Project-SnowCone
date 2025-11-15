@@ -1,74 +1,77 @@
-Intro
-| G / G / Gsus / G | D / / / | Em7 / / / | Gsus / / / |  
+Title: Never Once
+Key: [G]
 
-Verse
-G   G   Gsus  G  
+[Intro]
+| [G] / [G] / [Gsus] / [G] | [D] / / / | [Em7] / / / | [Gsus] / / / |
+
+[Verse 1]
+[G]   [G]   [Gsus]   [G]
 Standing on this mountaintop  
-D  
+[D]
 Looking just how far we've come  
-Em7  
+[Em7]
 Knowing that for every step  
-Gsus  
+[Gsus]
 You were with us  
 
-Verse 
-G   G   Gsus  G  
+[Verse 2]
+[G]   [G]   [Gsus]   [G]
 Kneeling on this battleground  
-D  
+[D]
 Seeing just how much You've done  
-Em7  
+[Em7]
 Knowing every victory  
-Gsus  
+[Gsus]
 Was Your power in us  
 
-Bridge 
-C  
+[Bridge]
+[C]
 Scars and struggles on the way  
-D  
+[D]
 But with joy our hearts can say  
-G/B  G   C2  
+[G/B]   [G]   [C2]
 Yes, our hearts can say  
 
-Chorus 
-G       Dsus   G  
+[Chorus 1]
+[G]        [Dsus]     [G]
 Never once did we ever walk alone  
-Em7     Dsus    G  
+[Em7]       [Dsus]        [G]
 Never once did You leave us on our own  
-C2   G   Em7  G/B  Dsus D  
+[C2]   [G]   [Em7]   [G/B]   [Dsus] [D]
 You are faithful, God, You are faithful  
 
-Mid Section  
-C  
+[Mid Section]
+[C]
 Scars and struggles on the way  
-D  
+[D]
 But with joy our hearts can say  
-Em7     Dsus  D  
+[Em7]       [Dsus]   [D]
 Never once did we ever walk alone  
-C  
+[C]
 Carried by Your constant grace  
-D  
+[D]
 Held within Your perfect peace  
-Em7     D/F#  
+[Em7]       [D/F#]
 Never once, no, we never walk alone  
 
-Chorus  
-G       Dsus   G  
+[Chorus 2]
+[G]        [Dsus]     [G]
 Every step we are breathing in Your grace  
-Em7     Dsus   G  
+[Em7]       [Dsus]        [G]
 Evermore we'll be breathing out Your praise  
-C2   G   Em7  G/B  Dsus D  
+[C2]   [G]   [Em7]   [G/B]   [Dsus] [D]
 You are faithful, God, You are faithful  
 
-Interlude  
-Dsus  
+[Interlude]
+[Dsus]
 And You will lead us all  
-Em7  
+[Em7]
 And we shall not be overcome  
-Em7  
+[Em7]
 We shall not be overcome  
-C2     Dsus D  
+[C2]       [Dsus] [D]
 (God, You are faithful)  
 
-Outro  
-C2   G   Em7  G/B  Dsus D  
-You are faithful, God, You are faithful  
+[Outro]
+[C2]   [G]   [Em7]   [G/B]   [Dsus] [D]
+You are faithful, God, You are faithful

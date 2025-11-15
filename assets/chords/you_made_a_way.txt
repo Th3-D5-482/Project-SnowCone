@@ -1,84 +1,87 @@
-Intro  
-G G/F# G C ×2  
+Title: You Made a Way
+Key: [G]
 
-Verse  
-G    G/F#      C G  
+[Intro]
+[G] [G/F#] [G] [C] ×2
+
+[Verse 1]
+[G]   [G/F#]   [C] [G]
 Standing here not knowing how we'll get through this test  
-C                         G  
+[C]                   [G]
 But holding onto faith You know best  
-C                         Em7  
+[C]                   [Em7]
 Nothing can catch You by surprise  
-D/F#    C                     G G/F#  
+[D/F#]   [C]                 [G] [G/F#]
 You've got this figured out and You're watching us now  
-C                    G  
+[C]                [G]
 When it looks as if we can't win  
-C                  G  
+[C]              [G]
 You wrap us in Your arms and step in  
-C            Em7  
+[C]          [Em7]
 And everything we need You supply  
-D/F#        C  
+[D/F#]      [C]
 You got this in control  
-C  
+[C]
 And now we know that  
 
-Chorus  
-G           C  
+[Chorus 1]
+[G]        [C]
 You made a way  
-Am7                     G/B  
+[Am7]                [G/B]
 When our backs were against the wall  
-Em7                D  
+[Em7]             [D]
 And it looked as if it was over  
-G          C  
+[G]        [C]
 You made a way  
-Am7       G/B  
+[Am7]     [G/B]
 And we're standing here  
-Em7              D  
+[Em7]            [D]
 Only because You made a way  
 
-Verse  
-G G/F# G  
+[Verse 2]
+[G] [G/F#] [G]
 Now we're here  
-C                    G G/F# G  
+[C]                [G] [G/F#] [G]
 Looking back on where we come from  
-C                  G G/F# G  
+[C]              [G] [G/F#] [G]
 Because of You and nothing we've done  
-C                Em7  
+[C]            [Em7]
 To deserve the love and mercy You've shown  
-D/F#            C  
+[D/F#]        [C]
 But Your grace was strong enough to pick us up  
 
-Bridge 
-C  
+[Bridge 1]
+[C]
 You move mountains  
-D       G  
+[D]     [G]
 You cause walls to fall  
-C  
+[C]
 With Your power  
-D    G  
+[D]   [G]
 You perform miracles  
-C      D/F# Em7  
+[C]     [D/F#] [Em7]
 There is nothing that's impossible  
-Am7     G/B  
+[Am7]   [G/B]
 And we're standing here  
-Em7      D     G  
+[Em7]    [D]   [G]
 Only because You made a way  
 
-Bridge  
-C  
+[Bridge 2]
+[C]
 You move mountains  
-D       G  
+[D]     [G]
 You cause walls to fall  
-C  
+[C]
 With Your power  
-D    G  
+[D]   [G]
 You perform miracles  
-C           F#dim Em7  
+[C]       [F#dim] [Em7]
 There is nothing that's impossible  
-Am7     G/B  
+[Am7]   [G/B]
 And we're standing here  
-Em7      D     G  
+[Em7]    [D]   [G]
 Only because You made a way  
 
-Bridge  
-G           C  
+[Bridge 3]
+[G]        [C]
 You made a way (repeat as desired)

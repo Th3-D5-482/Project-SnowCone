@@ -1,32 +1,35 @@
-Intro  
-C Em D  (×2)  
+Title: Great Are You Lord
+Key: [C]
 
-Verse  
-C      Em  
+[Intro]
+[C] [Em] [D] [C] [Em] [D]
+
+[Verse 1]
+[C]        [Em]
 You give life, You are love  
-    D  
+[D]
 You bring light to the darkness  
-C      Em  
+[C]        [Em]
 You give hope, You restore  
-    D  
+[D]
 Every heart that is broken  
-C  Em    D  
+[C] [Em]       [D]
 Great are You, Lord  
 
-Chorus  
-C      Em  
+[Chorus]
+[C]            [Em]
 It’s Your breath in our lungs  
-    D  
+[D]
 So we pour out our praise, we pour out our praise  
-C      Em  
+[C]            [Em]
 It’s Your breath in our lungs  
-    D  
+[D]
 So we pour out our praise to You only  
 
-Bridge  
-G  
+[Bridge]
+[G]
 All the earth will shout Your praise  
-Gsus4  
+[Gsus4]
 Our hearts will cry, these bones will sing  
-C2    G  
+[C2]        [G]
 Great are You, Lord

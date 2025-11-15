@@ -1,65 +1,68 @@
-Intro 
-D F#m Bm G  
+Title: Christ Be All Around Me
+Key: [D]
 
-Verse  
-D      F#m  
+[Intro]
+[D] [F#m] [Bm] [G]
+
+[Verse 1]
+[D]        [F#m]
 As I rise, strength of God  
-Bm     G  
+[Bm]        [G]
 Go before, lift me up  
-D      F#m  
+[D]        [F#m]
 As I wake, eyes of God  
-Bm     G  
+[Bm]        [G]
 Look upon, be my sight  
 
-Interlude  
-D F#m Bm G  
+[Interlude]
+[D] [F#m] [Bm] [G]
 
-Verse 
-D      F#m  
+[Verse 2]
+[D]        [F#m]
 As I wait, heart of God  
-Bm     G  
+[Bm]        [G]
 Satisfy and sustain  
-D      F#m  
+[D]        [F#m]
 As I hear, voice of God  
-Bm     G  
+[Bm]        [G]
 Lead me on, be my guide  
-      A  
+           [A]
 Be my guide  
 
-Chorus 
-G  
+[Chorus]
+[G]
 Above and below me  
-D  
+[D]
 Before and behind me  
-Bm  
+[Bm]
 In every eye that sees me  
-A  
+[A]
 Christ be all around me  
-G  
+[G]
 Yeah  
 
-Verse 
-D      F#m  
+[Verse 3]
+[D]        [F#m]
 As I go, Hand of God  
-Bm     G  
+[Bm]        [G]
 My defense, by my side  
-D      F#m  
+[D]        [F#m]
 As I rest, breath of God  
-Bm     G  
+[Bm]        [G]
 Fall upon, bring me peace  
-      A  
+           [A]
 Bring me peace  
 
-Post-Chorus  
-D Bm A       G  
+[Post-Chorus]
+[D] [Bm] [A]           [G]
 Ooh, ooh, Christ be all around me, yeah  
 
-Bridge 
-A  
+[Bridge]
+[A]
 Your life, Your death  
-Bm  
+[Bm]
 Your blood was shed  
-G  
+[G]
 For every moment  
-D  
+[D]
 Every moment

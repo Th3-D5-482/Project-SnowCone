@@ -1,79 +1,82 @@
-Intro 
-G C/G  
+Title: Graves Into Gardens
+Key: [G]
 
-Verse 
-C/G    G  
+[Intro]
+[G] [C/G]
+
+[Verse 1]
+[C/G]        [G]
 I searched the world  
-C/G    G  
+[C/G]        [G]
 But it couldn’t fill me  
-    Em  
+[Em]
 Man’s empty praise and treasures that fade  
-    D     C  
+[D]           [C]
 Are never enough  
 
-Verse  
-G  
+[Verse 2]
+[G]
 Then You came along  
-C/G    G  
+[C/G]        [G]
 And put me back together  
-    Em      D  
+[Em]              [D]
 And every desire is now satisfied  
-        C  
+[C]
 Here in Your love  
 
-Chorus  
-G  
+[Chorus]
+[G]
 Oh there’s nothing better than You  
-Em  
+[Em]
 There’s nothing better than You  
-C  
+[C]
 Lord there’s nothing  
-         G  
+              [G]
 Nothing is better than You  
 
-Verse  
-C/G    G  
+[Verse 3]
+[C/G]        [G]
 I’m not afraid  
-C/G    G  
+[C/G]        [G]
 To show You my weakness  
-    Em  
+[Em]
 My failures and flaws  
-        D  
+               [D]
 Lord You’ve seen them all  
-        C  
+[C]
 And You still call me friend  
 
-Verse  
-G  
+[Verse 4]
+[G]
 ‘Cause the God of the mountain  
-C/G    G  
+[C/G]        [G]
 Is the God of the valley  
-    Em  
+[Em]
 There’s not a place  
-        D  
+               [D]
 Your mercy and grace  
-        C  
+[C]
 Won’t find me again  
 
-Instrumental  
-G C  
+[Instrumental]
+[G] [C]
 
-Bridge  
-G  
+[Bridge 1]
+[G]
 You turn mourning to dancing  
-C    G  
+[C]        [G]
 You give beauty for ashes  
-C    G  
+[C]        [G]
 You turn shame into glory  
-    Em C    G  
+[Em] [C]        [G]
 You’re the only one who can  
 
-Bridge  
-G  
+[Bridge 2]
+[G]
 You turn graves into gardens  
-C    G  
+[C]        [G]
 You turn bones into armies  
-C    G  
+[C]        [G]
 You turn seas into highways  
-    Em C    G  
+[Em] [C]        [G]
 You’re the only one who can

@@ -1,59 +1,62 @@
-Intro  
-G C/G  
+Title: O Come to the Altar
+Key: [G]
 
-Verse  
-G      C/G      G  
+[Intro]
+[G] [C/G]
+
+[Verse 1]
+[G]        [C/G]        [G]
 Are you hurting and broken within?  
-C/G          Em  
+[C/G]                [Em]
 Overwhelmed by the weight of your sin?  
-        Cadd9  
+[Cadd9]
 Jesus is calling.  
-G      C/G      G  
+[G]        [C/G]        [G]
 Have you come to the end of yourself?  
-C/G          Em  
+[C/G]                [Em]
 Do you thirst for a drink from the well?  
-        Cadd9  
+[Cadd9]
 Jesus is calling.  
 
-Chorus  
-G      Am7  
+[Chorus]
+[G]        [Am7]
 O come to the altar  
-      Em  
+[Em]
 The Father's arms are open wide  
-        C    G  
+[C]        [G]
 Forgiveness was bought with  
-        Am7  
+[Am7]
 The precious blood of  
-        Em  
+[Em]
 Jesus Christ  
 
-Verse 
-G      C/G      G  
+[Verse 2]
+[G]        [C/G]        [G]
 Leave behind your regrets and mistakes  
-C/G          Em  
+[C/G]                [Em]
 Come today, there’s no reason to wait  
-        Cadd9  
+[Cadd9]
 Jesus is calling.  
-G      C/G      G  
+[G]        [C/G]        [G]
 Bring your sorrows and trade them for joy  
-C/G          Em  
+[C/G]                [Em]
 From the ashes a new life is born  
-        Cadd9  
+[Cadd9]
 Jesus is calling.  
 
-Instrumental  
-G Em C/G  
+[Instrumental]
+[G] [Em] [C/G]
 
-Bridge 
-Gsus4  G  
+[Bridge]
+[Gsus4]    [G]
 Oh what a Saviour  
-Em  
+[Em]
 Isn't He wonderful  
-Cadd9     G  
+[Cadd9]        [G]
 Sing hallelujah, Christ is risen  
-Gsus4  G  
+[Gsus4]    [G]
 Bow down before Him  
-Em  
+[Em]
 For He is Lord of all  
-Cadd9     G  
+[Cadd9]        [G]
 Sing hallelujah, Christ is risen
