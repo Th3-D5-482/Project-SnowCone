@@ -54,16 +54,12 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
     final regex = RegExp(r'^([A-G][#b]?)(.*)$');
     final match = regex.firstMatch(chord);
     if (match == null) return chord;
-
     String root = match.group(1)!;
     String suffix = match.group(2)!;
-
     int index = chordList.indexOf(root);
     if (index == -1) return chord;
-
     int newIndex = (index + steps) % 12;
     if (newIndex < 0) newIndex += 12;
-
     return chordList[newIndex] + suffix;
   }
 
