@@ -101,7 +101,11 @@ class _SearchPageState extends State<SearchPage> {
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'What are you looking for?',
-                        hintStyle: TextStyle(color: Colors.black, fontSize: 14),
+                        hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide(
