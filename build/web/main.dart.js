@@ -63486,7 +63486,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.FontFallbackManager_findFontsForMissingCodePoints_closure.prototype = {
     call$1(font) {
@@ -63662,7 +63662,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.FontAsset.prototype = {};
   A.FontFamily.prototype = {};
@@ -64336,7 +64336,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.initializeEngineUi_closure.prototype = {
     call$0() {
@@ -74795,7 +74795,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A.ViewPadding.prototype = {};
   A.ViewConstraints.prototype = {
@@ -76481,7 +76481,7 @@
     call$0() {
       return A.Future_Future$value(null, type$.void);
     },
-    $signature: 17
+    $signature: 14
   };
   A.SentinelValue.prototype = {};
   A.EfficientLengthIterable.prototype = {};
@@ -90831,7 +90831,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.BrowserPlatformLocation.prototype = {
     getOrCreateDomEventListener$1(fn) {
@@ -91175,7 +91175,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.AudioSession$__closure0.prototype = {
     call$1($call) {
@@ -99629,7 +99629,7 @@
     call$0() {
       return A.Future_Future$delayed(B.Duration_0, null, type$.void);
     },
-    $signature: 17
+    $signature: 14
   };
   A.Listenable.prototype = {};
   A.ChangeNotifier.prototype = {
@@ -154034,7 +154034,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.SchedulerBinding__handleDrawFrame_closure.prototype = {
     call$1(timeStamp) {
@@ -157054,7 +157054,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.ServicesBinding__generateStateTransitions_closure.prototype = {
     call$0() {
@@ -158725,7 +158725,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.EventChannel_receiveBroadcastStream__closure.prototype = {
     call$1(reply) {
@@ -158822,7 +158822,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.PlatformViewsRegistry.prototype = {};
   A.PlatformViewController.prototype = {};
@@ -163325,7 +163325,7 @@
     call$1(child) {
       this._box_0.childElement = child;
     },
-    $signature: 16
+    $signature: 17
   };
   A._AutomaticKeepAliveState__createCallback_closure.prototype = {
     call$0() {
@@ -163426,13 +163426,13 @@
       if (t1 === true)
         element.didChangeDependencies$0();
     },
-    $signature: 16
+    $signature: 17
   };
   A._UbiquitousInheritedElement__recurseChildren_closure.prototype = {
     call$1(child) {
       A._UbiquitousInheritedElement__recurseChildren(type$.Element._as(child), this.visitor);
     },
-    $signature: 16
+    $signature: 17
   };
   A._UbiquitousInheritedWidget.prototype = {
     createElement$0() {
@@ -164662,7 +164662,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure0.prototype = {
     call$1(value) {
@@ -164711,7 +164711,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure2.prototype = {
     call$1(value) {
@@ -164764,7 +164764,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure4.prototype = {
     call$1(value) {
@@ -164817,7 +164817,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure6.prototype = {
     call$1(value) {
@@ -164894,7 +164894,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure9.prototype = {
     call$1(value) {
@@ -164947,7 +164947,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure11.prototype = {
     call$1(value) {
@@ -165000,7 +165000,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions__closure13.prototype = {
     call$1(value) {
@@ -165137,7 +165137,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure4.prototype = {
     call$1(value) {
@@ -165183,7 +165183,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure6.prototype = {
     call$1(value) {
@@ -165371,7 +165371,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_initServiceExtensions_closure1.prototype = {
     call$1(value) {
@@ -165976,7 +165976,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure4.prototype = {
     call$1(value) {
@@ -166021,7 +166021,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure6.prototype = {
     call$1(value) {
@@ -166056,7 +166056,7 @@
     call$0() {
       return A.Future_Future$value($.WidgetsApp_debugAllowBannerOverride, type$.bool);
     },
-    $signature: 14
+    $signature: 15
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions__closure0.prototype = {
     call$1(value) {
@@ -170421,7 +170421,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.EditableTextState_initState_closure.prototype = {
     call$0() {
@@ -173955,7 +173955,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A._FormScope.prototype = {
     updateShouldNotify$1(old) {
@@ -174458,7 +174458,7 @@
       A.assertHelper(J.$eq$(child._framework$_parent, this.element));
       this.$this._unmount$1(child);
     },
-    $signature: 16
+    $signature: 17
   };
   A._InactiveElements__deactivateRecursively_closure.prototype = {
     call$0() {
@@ -174967,7 +174967,7 @@
       if (type$.Element._as(currentChild) === t1)
         this.older.forgetChild$1(t1);
     },
-    $signature: 16
+    $signature: 17
   };
   A.BuildOwner__debugVerifyGlobalKeyReservation____closure0.prototype = {
     call$1(currentChild) {
@@ -174975,7 +174975,7 @@
       if (type$.Element._as(currentChild) === t1)
         this.newer.forgetChild$1(t1);
     },
-    $signature: 16
+    $signature: 17
   };
   A.BuildOwner__debugVerifyIllFatedPopulation_closure.prototype = {
     call$0() {
@@ -176074,7 +176074,7 @@
     call$1(child) {
       type$.Element._as(child).reassemble$0();
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element_renderObjectAttachingChild_closure.prototype = {
     call$1(child) {
@@ -176084,7 +176084,7 @@
       A.assertHelper(t1.next == null);
       t1.next = child;
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element_describeMissingAncestor_closure.prototype = {
     call$1(element) {
@@ -176195,31 +176195,31 @@
       if (descendant != null)
         this.call$1(descendant);
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element__updateDepth_closure.prototype = {
     call$1(child) {
       type$.Element._as(child)._updateDepth$1(this.expectedDepth);
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element__updateBuildScopeRecursively_closure.prototype = {
     call$1(child) {
       type$.Element._as(child)._updateBuildScopeRecursively$0();
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element_detachRenderObject_closure.prototype = {
     call$1(child) {
       type$.Element._as(child).detachRenderObject$0();
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element_attachRenderObject_closure.prototype = {
     call$1(child) {
       type$.Element._as(child).attachRenderObject$1(this.newSlot);
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element__retakeInactiveElement_closure.prototype = {
     call$0() {
@@ -176371,7 +176371,7 @@
     call$1(child) {
       B.JSArray_methods.add$1(this.children, type$.Element._as(child).toDiagnosticsNode$0());
     },
-    $signature: 16
+    $signature: 17
   };
   A.Element_markNeedsBuild_closure.prototype = {
     call$0() {
@@ -176809,7 +176809,7 @@
         this.call$1(t1);
       }
     },
-    $signature: 16
+    $signature: 17
   };
   A.InheritedElement.prototype = {
     _updateInheritance$0() {
@@ -178141,7 +178141,7 @@
       }
       element.visitChildren$1(_this);
     },
-    $signature: 16
+    $signature: 17
   };
   A._HeroState.prototype = {
     startFlight$1$shouldIncludedChildInPlaceholder(shouldIncludedChildInPlaceholder) {
@@ -202632,7 +202632,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A.WidgetInspectorService_initServiceExtensions_closure1.prototype = {
     call$1(value) {
@@ -202664,7 +202664,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A.WidgetInspectorService_initServiceExtensions_closure3.prototype = {
     call$1(value) {
@@ -206744,7 +206744,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.AudioPlayer__setPlatformActive_wasInterrupted.prototype = {
     call$0() {
@@ -207832,7 +207832,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A.ConcatenatingAudioSource_sequence_closure.prototype = {
     call$1(s) {
@@ -213154,7 +213154,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._DisplayLyricsChordsState_build_closure.prototype = {
     call$2(context, constraints) {
@@ -213219,7 +213219,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A._DisplayLyricsChordsState_build__closure4.prototype = {
     call$0() {
@@ -213416,7 +213416,7 @@
       A.SystemNavigator_pop();
       return A.Future_Future$value(false, type$.bool);
     },
-    $signature: 14
+    $signature: 15
   };
   A.HomeView.prototype = {
     createState$0() {
@@ -214042,7 +214042,7 @@
       A.SystemNavigator_pop();
       return A.Future_Future$value(false, type$.bool);
     },
-    $signature: 14
+    $signature: 15
   };
   A._LogInState_build_closure.prototype = {
     call$2(context, constraints) {
@@ -214222,7 +214222,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A._LogInState_build___closure1.prototype = {
     call$3(context, animation, secondaryAnimation) {
@@ -214478,10 +214478,34 @@
   };
   A._PlayPageState_build_closure0.prototype = {
     call$0() {
-      this.$this.player.stop$0();
-      return A.Future_Future$value(true, type$.bool);
+      var $async$goto = 0,
+        $async$completer = A._makeAsyncAwaitCompleter(type$.bool),
+        $async$returnValue, $async$self = this;
+      var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return A._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              $async$self.$this.player.stop$0();
+              $async$goto = 3;
+              return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
+            case 3:
+              // returning from await.
+              $async$result._setValue$3("Bool", "wasPlaying", true);
+              $async$returnValue = A.Future_Future$value(true, type$.bool);
+              // goto return
+              $async$goto = 1;
+              break;
+            case 1:
+              // return
+              return A._asyncReturn($async$returnValue, $async$completer);
+          }
+      });
+      return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 14
+    $signature: 15
   };
   A._PlayPageState_build_closure.prototype = {
     call$2(context, constraints) {
@@ -214523,10 +214547,30 @@
   };
   A._PlayPageState_build__closure.prototype = {
     call$0() {
-      this.$this.player.stop$0();
-      A.Navigator_of(this.context).pop$1$0(type$.nullable_Object);
+      var $async$goto = 0,
+        $async$completer = A._makeAsyncAwaitCompleter(type$.void),
+        $async$self = this;
+      var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return A._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              $async$self.$this.player.stop$0();
+              $async$goto = 2;
+              return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
+            case 2:
+              // returning from await.
+              $async$result._setValue$3("Bool", "wasPlaying", true);
+              A.Navigator_of($async$self.context).pop$1$0(type$.nullable_Object);
+              // implicit return
+              return A._asyncReturn(null, $async$completer);
+          }
+      });
+      return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 0
+    $signature: 14
   };
   A._PlayPageState_build__closure0.prototype = {
     call$2(context, snapshot) {
@@ -214953,7 +214997,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 17
+    $signature: 14
   };
   A._SignUpState_build___closure1.prototype = {
     call$3(context, animation, secondaryAnimation) {
@@ -215203,7 +215247,7 @@
       A.SystemNavigator_pop();
       return A.Future_Future$value(false, type$.bool);
     },
-    $signature: 14
+    $signature: 15
   };
   A.Welcome_build_closure.prototype = {
     call$2(context, constraints) {
@@ -218391,7 +218435,7 @@
     _instance_1_u(_ = A.Surface.prototype, "get$_contextRestoredListener", "_contextRestoredListener$1", 3);
     _instance_1_u(_, "get$_contextLostListener", "_contextLostListener$1", 3);
     _instance_1_i(_ = A._FallbackFontDownloadQueue.prototype, "get$add", "add$1", 362);
-    _instance_0_u(_, "get$startDownloads", "startDownloads$0", 17);
+    _instance_0_u(_, "get$startDownloads", "startDownloads$0", 14);
     _instance_1_u(A.HighContrastSupport.prototype, "get$_onHighContrastChange", "_onHighContrastChange$1", 3);
     _instance_1_u(_ = A.KeyboardBinding.prototype, "get$_onKeyData", "_onKeyData$1", 117);
     _instance_0_u(_, "get$_reset", "_reset$0", 0);
@@ -218579,7 +218623,7 @@
       return A.FlutterError_dumpErrorToConsole(details, false);
     }], 752, 0);
     _static_1(A, "assertions_DiagnosticsStackTrace__createStackFrame$closure", "DiagnosticsStackTrace__createStackFrame", 753);
-    _instance_0_u(_ = A.BindingBase.prototype, "get$reassembleApplication", "reassembleApplication$0", 17);
+    _instance_0_u(_ = A.BindingBase.prototype, "get$reassembleApplication", "reassembleApplication$0", 14);
     _instance(_, "get$registerServiceExtension", 0, 0, null, ["call$2$callback$name"], ["registerServiceExtension$2$callback$name"], 438, 0, 0);
     _instance_1_u(_ = A.ChangeNotifier.prototype, "get$addListener", "addListener$1", 76);
     _instance_1_u(_, "get$removeListener", "removeListener$1", 76);
@@ -218880,27 +218924,27 @@
     _instance_0_u(_ = A.SemanticsBinding.prototype, "get$_didDisposeSemanticsHandle", "_didDisposeSemanticsHandle$0", 0);
     _instance_0_u(_, "get$_handleSemanticsEnabledChanged", "_handleSemanticsEnabledChanged$0", 0);
     _instance_1_u(_, "get$_handleSemanticsActionEvent", "_handleSemanticsActionEvent$1", 163);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__unimplemented$closure", "_DebugSemanticsRoleChecks__unimplemented", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__noCheckRequired$closure", "_DebugSemanticsRoleChecks__noCheckRequired", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTab$closure", "_DebugSemanticsRoleChecks__semanticsTab", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTabBar$closure", "_DebugSemanticsRoleChecks__semanticsTabBar", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTable$closure", "_DebugSemanticsRoleChecks__semanticsTable", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRow$closure", "_DebugSemanticsRoleChecks__semanticsRow", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsCell$closure", "_DebugSemanticsRoleChecks__semanticsCell", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsColumnHeader$closure", "_DebugSemanticsRoleChecks__semanticsColumnHeader", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRadioGroup$closure", "_DebugSemanticsRoleChecks__semanticsRadioGroup", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenu$closure", "_DebugSemanticsRoleChecks__semanticsMenu", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuBar$closure", "_DebugSemanticsRoleChecks__semanticsMenuBar", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItem$closure", "_DebugSemanticsRoleChecks__semanticsMenuItem", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItemCheckbox$closure", "_DebugSemanticsRoleChecks__semanticsMenuItemCheckbox", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItemRadio$closure", "_DebugSemanticsRoleChecks__semanticsMenuItemRadio", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__noLiveRegion$closure", "_DebugSemanticsRoleChecks__noLiveRegion", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsListItem$closure", "_DebugSemanticsRoleChecks__semanticsListItem", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsComplementary$closure", "_DebugSemanticsRoleChecks__semanticsComplementary", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsContentInfo$closure", "_DebugSemanticsRoleChecks__semanticsContentInfo", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMain$closure", "_DebugSemanticsRoleChecks__semanticsMain", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsNavigation$closure", "_DebugSemanticsRoleChecks__semanticsNavigation", 15);
-    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRegion$closure", "_DebugSemanticsRoleChecks__semanticsRegion", 15);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__unimplemented$closure", "_DebugSemanticsRoleChecks__unimplemented", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__noCheckRequired$closure", "_DebugSemanticsRoleChecks__noCheckRequired", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTab$closure", "_DebugSemanticsRoleChecks__semanticsTab", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTabBar$closure", "_DebugSemanticsRoleChecks__semanticsTabBar", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsTable$closure", "_DebugSemanticsRoleChecks__semanticsTable", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRow$closure", "_DebugSemanticsRoleChecks__semanticsRow", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsCell$closure", "_DebugSemanticsRoleChecks__semanticsCell", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsColumnHeader$closure", "_DebugSemanticsRoleChecks__semanticsColumnHeader", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRadioGroup$closure", "_DebugSemanticsRoleChecks__semanticsRadioGroup", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenu$closure", "_DebugSemanticsRoleChecks__semanticsMenu", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuBar$closure", "_DebugSemanticsRoleChecks__semanticsMenuBar", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItem$closure", "_DebugSemanticsRoleChecks__semanticsMenuItem", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItemCheckbox$closure", "_DebugSemanticsRoleChecks__semanticsMenuItemCheckbox", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMenuItemRadio$closure", "_DebugSemanticsRoleChecks__semanticsMenuItemRadio", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__noLiveRegion$closure", "_DebugSemanticsRoleChecks__noLiveRegion", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsListItem$closure", "_DebugSemanticsRoleChecks__semanticsListItem", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsComplementary$closure", "_DebugSemanticsRoleChecks__semanticsComplementary", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsContentInfo$closure", "_DebugSemanticsRoleChecks__semanticsContentInfo", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsMain$closure", "_DebugSemanticsRoleChecks__semanticsMain", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsNavigation$closure", "_DebugSemanticsRoleChecks__semanticsNavigation", 16);
+    _static_1(A, "semantics__DebugSemanticsRoleChecks__semanticsRegion$closure", "_DebugSemanticsRoleChecks__semanticsRegion", 16);
     _instance_1_u(_ = A.SemanticsNode.prototype, "get$_redepthChild", "_redepthChild$1", 164);
     _instance_1_u(_, "get$_updateChildMergeFlagRecursively", "_updateChildMergeFlagRecursively$1", 164);
     _instance_0_u(A.SemanticsOwner.prototype, "get$dispose", "dispose$0", 0);
@@ -218943,7 +218987,7 @@
     _instance_0_u(_, "get$handleTextScaleFactorChanged", "handleTextScaleFactorChanged$0", 0);
     _instance_0_u(_, "get$handlePlatformBrightnessChanged", "handlePlatformBrightnessChanged$0", 0);
     _instance_1_u(_, "get$handleViewFocusChanged", "handleViewFocusChanged$1", 247);
-    _instance_0_u(_, "get$performReassemble", "performReassemble$0", 17);
+    _instance_0_u(_, "get$performReassemble", "performReassemble$0", 14);
     _instance_1_u(_ = A._DismissibleState.prototype, "get$_dismissible$_handleDragStart", "_dismissible$_handleDragStart$1", 39);
     _instance_1_u(_, "get$_dismissible$_handleDragUpdate", "_dismissible$_handleDragUpdate$1", 24);
     _instance_0_u(_, "get$_handleDismissUpdateValueChanged", "_handleDismissUpdateValueChanged$0", 0);
@@ -218996,13 +219040,13 @@
     }, function(node, alignmentPolicy) {
       return A.FocusTraversalPolicy_defaultTraversalRequestFocusCallback(node, null, alignmentPolicy, null, null);
     }], 770, 0);
-    _static_1(A, "framework__InactiveElements__deactivateRecursively$closure", "_InactiveElements__deactivateRecursively", 16);
+    _static_1(A, "framework__InactiveElements__deactivateRecursively$closure", "_InactiveElements__deactivateRecursively", 17);
     _static_2(A, "framework_Element__sort$closure", "Element__sort", 771);
-    _static_1(A, "framework_Element__activateRecursively$closure", "Element__activateRecursively", 16);
-    _instance_1_u(_ = A._InactiveElements.prototype, "get$_unmount", "_unmount$1", 16);
+    _static_1(A, "framework_Element__activateRecursively$closure", "Element__activateRecursively", 17);
+    _instance_1_u(_ = A._InactiveElements.prototype, "get$_unmount", "_unmount$1", 17);
     _instance_0_u(_, "get$_unmountAll", "_unmountAll$0", 0);
-    _instance_1_u(_ = A.Element.prototype, "get$_debugRemoveGlobalKeyReservation", "_debugRemoveGlobalKeyReservation$1", 16);
-    _instance_1_u(_, "get$deactivateChild", "deactivateChild$1", 16);
+    _instance_1_u(_ = A.Element.prototype, "get$_debugRemoveGlobalKeyReservation", "_debugRemoveGlobalKeyReservation$1", 17);
+    _instance_1_u(_, "get$deactivateChild", "deactivateChild$1", 17);
     _instance_1_u(_ = A.RawGestureDetectorState.prototype, "get$_handlePointerDown", "_handlePointerDown$1", 72);
     _instance_1_u(_, "get$_handlePointerPanZoomStart", "_handlePointerPanZoomStart$1", 500);
     _instance_1_u(_, "get$_updateSemanticsForRenderObject", "_updateSemanticsForRenderObject$1", 501);
@@ -219059,7 +219103,7 @@
     _instance_1_u(A.RestorationMixin.prototype, "get$_updateProperty", "_updateProperty$1", 540);
     _instance_1_u(_ = A._RouterState.prototype, "get$_reportRouteInformation", "_reportRouteInformation$1", 6);
     _instance_0_u(_, "get$_handleRouteInformationProviderNotification", "_handleRouteInformationProviderNotification$0", 0);
-    _instance_0_u(_, "get$_handleBackButtonDispatcherNotification", "_handleBackButtonDispatcherNotification$0", 14);
+    _instance_0_u(_, "get$_handleBackButtonDispatcherNotification", "_handleBackButtonDispatcherNotification$0", 15);
     _instance_0_u(_, "get$_handleRouterDelegateNotification", "_handleRouterDelegateNotification$0", 0);
     _instance_1_u(A.TransitionRoute.prototype, "get$_routes$_handleStatusChanged", "_routes$_handleStatusChanged$1", 11);
     _instance_1_u(_ = A.ModalRoute.prototype, "get$_buildModalBarrier", "_buildModalBarrier$1", 22);
@@ -220443,7 +220487,7 @@
     typeUniverse: {eC: new Map(), tR: {}, eT: {}, tPV: {}, sEA: []},
     mangledGlobalNames: {int: "int", double: "double", num: "num", String: "String", bool: "bool", Null: "Null", List: "List", Object: "Object", Map: "Map", JSObject: "JSObject"},
     mangledNames: {},
-    types: ["~()", "bool()", "double(double)", "~(JSObject)", "double(DynamicScheme)", "TonalPalette(DynamicScheme)", "~(Duration)", "DynamicColor(DynamicScheme)", "String()", "List<DiagnosticsNode>()", "Color(Set<WidgetState>)", "~(AnimationStatus)", "~(Object?)", "~(RenderObject)", "Future<bool>()", "FlutterError?(SemanticsNode)", "~(Element)", "Future<~>()", "FadeTransition(BuildContext,Animation<double>,Animation<double>,Widget)", "~(bool)", "Null()", "bool(Element)", "Widget(BuildContext)", "~(PaintingContext,Offset)", "~(DragUpdateDetails)", "Null(JSObject)", "bool(BoxHitTestResult,Offset)", "Future<~>(bool)", "ToneDeltaPair(DynamicScheme)", "bool(Object?)", "~(PointerEvent)", "Future<Map<String,@>>(Map<String,String>)", "Null(Object,StackTrace)", "~(ByteData?)", "~(int)", "bool(SemanticsNode)", "~(DragEndDetails)", "~(TapDownDetails)", "Null(@)", "~(DragStartDetails)", "~(Object,StackTrace)", "~(@)", "~(Selectable0)", "bool(FocusNode)", "Null(~)", "bool(String)", "Tween<double>(@)", "String(String)", "Future<Map<String,Object?>>(Map<String,String>)", "int(int)", "Padding(BuildContext,BoxConstraints)", "bool(FlutterHtmlKeyboardEvent)", "double(RenderBox)", "~(PointerExitEvent)", "Size(RenderBox,BoxConstraints)", "int(FocusNode,FocusNode)", "Padding(BuildContext,int)", "bool(NotoFont)", "~(RestorableProperty<Object?>,~())", "TextStyle(Set<WidgetState>)", "~(PointerEnterEvent)", "~(String)", "~(SemanticsConfiguration)", "bool(DiagnosticsNode)", "int()", "Future<Null>(@)", "bool(ScrollNotification)", "SystemMouseCursor(Set<WidgetState>)", "Future<Map<String,Object>>(Map<String,String>)", "double(RenderBox,double)", "~(double)", "bool(int)", "~(PointerDownEvent)", "int(RenderObject,RenderObject)", "~(TapUpDetails)", "String(int)", "~(~())", "bool(_RouteEntry)", "bool(OverlayEntry)", "TextBoundary()", "SongsList(BuildContext,Animation<double>,Animation<double>)", "Future<@>(MethodCall)", "bool(InheritedElement)", "bool(Selectable0)", "List<Object>(String?,String)", "bool(InlineSpan)", "0&()", "Color(Color)", "Null(Object)", "Null(String)", "Future<String>()", "~(NavigatorObserver)", "Null(bool)", "bool(double)", "List<Object>()", "~(Object[StackTrace?])", "Set<0^>()<Object?>", "~(Object?,Object?)", "WidgetStateProperty<Color?>?(ButtonStyle?)", "Color?(Set<WidgetState>)", "Null(@,@)", "Offset(Offset)", "~(Object)", "JSObject()", "ColorTween(@)", "~(ForcePressDetails)", "~(TapDragDownDetails)", "~([Intent?])", "Future<~>(String)", "@(@)", "bool(@)", "LogIn(BuildContext,Animation<double>,Animation<double>)", "WidgetStateProperty<Size?>?(ButtonStyle?)", "~(DiagnosticsNode)", "~(Timer)", "SizedBox(BuildContext,BoxConstraints)", "BorderSide(Set<WidgetState>)", "bool(KeyData)", "MouseCursor(Set<WidgetState>)", "String(Match)", "Future<Null>(List<String>)", "TapGestureRecognizer()", "~(DragDownDetails)", "bool(ScrollMetricsNotification)", "~(TapGestureRecognizer)", "bool(_Highlight)", "Matrix4(double)", "int(Object?)", "String(Object?)", "int(String)", "PlayPage(BuildContext,Animation<double>,Animation<double>)", "bool(FocusableActionDetector)", "LayoutBuilder(BuildContext,AsyncSnapshot<List<@>>)", "int(@,@)", "Future<~>(double)", "int(SemanticsNode,SemanticsNode)", "~(List<FrameTiming>)", "~(ImageInfo,bool)", "JSObject(Object?)", "bool(RenderBox)", "Null(JSObject?)", "Future<Null>()", "~(~)", "TextBox(TextBox)", "~({curve:Curve,descendant:RenderObject?,duration:Duration,rect:Rect?})", "bool(Object?,Object?)", "JSObject?(int)", "~(@,@)", "Widget(BuildContext,Set<WidgetState>,Widget?)?(ButtonStyle?)", "~(SemanticsUpdate0)", "~(ImageStreamListener)", "ImageStreamCompleter()", "_SemanticsFragment(SemanticsConfiguration)", "~(_SelectableFragment)", "+boundaryEnd,boundaryStart(TextPosition,TextPosition)(TextPosition)", "bool(BoxHitTestResult)", "~(SliverConstraints)", "bool(ShapeBorder)", "double({from!double,to!double})", "~(Object,StackTrace?)", "~(Offset,RenderBox)", "Size(RenderBox)", "Future<ImageStreamCompleter>()", "~(SemanticsActionEvent)", "~(SemanticsNode)", "List<SemanticsNode>(_SemanticsSortGroup)", "Align(BuildContext,double,Widget?)", "List<String>()", "Future<ByteData?>(ByteData?)", "Future<~>(MethodCall)", "~(RestorationBucket)", "Map<Object?,Object?>()", "JSObject(int{params:Object?})", "double(Size)", "Size()", "_ZoomExitTransition(BuildContext,Animation<double>,Widget?)", "bool(NavigationNotification)", "~(RenderBox?)", "ChildSemanticsConfigurationsResult(List<SemanticsConfiguration>)", "~(FocusHighlightMode)", "Rect()", "Future<~>(@)", "~([Duration?])", "TextPosition(TextPosition,bool,TextBoundary)", "double(Set<WidgetState>)", "bool(RenderObject)", "WidgetStateProperty<double?>?(ButtonStyle?)", "Color?()", "double()", "KeyEventResult(FocusNode,KeyEvent)", "int(_ReadingOrderSortData,_ReadingOrderSortData)", "bool(ParentDataElement<ParentData>)", "LongPressGestureRecognizer()", "~(LongPressGestureRecognizer)", "VerticalDragGestureRecognizer()", "~(VerticalDragGestureRecognizer)", "HorizontalDragGestureRecognizer()", "~(HorizontalDragGestureRecognizer)", "PanGestureRecognizer()", "~(PanGestureRecognizer)", "Tween<@>?(Tween<@>?,@,Tween<@>(@))", "AlignmentGeometryTween(@)", "EdgeInsetsGeometryTween(@)", "DecorationTween(@)", "double?(RenderBox,BoxConstraints,TextBaseline)", "bool(Object)", "Widget(BuildContext,Widget?)", "PolynomialFit?()", "bool(~(ObjectEvent)?)", "~(Picture)", "VelocityTracker(PointerEvent)", "~(Image0)", "Color?(Color?)", "int(Selectable0,Selectable0)", "~(PointerSignalEvent)", "bool(Selectable0,double)", "Future<~>(FirebaseWebService)", "Future<UserCredential0>()", "_ZoomEnterTransition(BuildContext,Animation<double>,Widget?)", "~(TapDragUpDetails)", "~(LongPressStartDetails)", "~(LongPressMoveUpdateDetails)", "~(LongPressEndDetails)", "double?(+(BoxConstraints,TextBaseline))", "~(TapDragUpdateDetails)", "~(TapDragEndDetails)", "~(UserWeb?)", "UserWeb?(User0?)", "Map<String,Object?>?(String?,String)", "_Channel()", "~(String,String)", "Object?(Object?)", "~(String,@)", "Duration()", "Future<AudioPlayerPlatform>()", "Map<@,@>(AudioEffectMessage)", "@()", "@(String)", "String(double,double,String)", "~(SemanticsObject)", "~([~])", "bool(SemanticsObject)", "~(Duration?)", "Null(Duration?)", "~(GestureMode)", "Slider(BuildContext,AsyncSnapshot<Duration>)", "~(AppLifecycleState)", "~(ViewFocusEvent)", "DisposablePath()", "KeyData()", "JSObject([JSObject?])", "Future<ServiceExtensionResponse>(String,Map<String,String>)", "String?(String?)", "HomePage(BuildContext,Animation<double>,Animation<double>)", "DisplayLyricsChords(BuildContext,Animation<double>,Animation<double>)", "List<JSObject>()", "Set<String>()", "Future<JSObject>([JSObject?])", "Widget?(BuildContext,Animation<double>,Animation<double>,bool,Widget?)", "double(RenderBox,BoxConstraints)", "Widget(BuildContext,EditableTextState)", "~(TapDragStartDetails)", "FirebaseAuth()", "bool(LayoutChangedNotification)", "ByteBuffer(Object?)", "Null(JSArray<Object?>,JSObject)", "ShapeBorderTween(@)", "String?(String)", "MethodChannelFirebaseAuth()", "Widget(BuildContext,Animation<double>,Animation<double>,bool,Widget?)", "PageTransitionsBuilder?(TargetPlatform)", "ModalBarrier(BuildContext,Widget?)", "Actions(BuildContext,Widget?)", "MultiFactorInfo(PigeonMultiFactorInfo)", "bool(Set<WidgetState>)", "~(_AdjustSliderIntent)", "Future<~>(App)", "~(JSArray<Object?>,JSObject)", "~(DismissDirection)", "~(Surface)", "~(TextSelection,SelectionChangedCause?)", "InputDecorator(BuildContext,Widget?)", "Semantics(BuildContext,Widget?)", "UnmanagedRestorationScope(FormFieldState<String>)", "ThemeDataTween(@)", "AppBarThemeData()", "ThemeData()", "MapEntry<Object,ThemeExtension<@>>(Object,ThemeExtension<@>)", "bool(MapEntry<Object,ThemeExtension<@>>)", "bool(TooltipState)", "~(JSObject,List<PointerData>)", "Null(ImageStreamCompleter)", "Map<String,@>(UserInfo0<JSObject>)", "~(ImageChunkEvent)", "UserInfo0<JSObject>(@)", "Future<Codec0>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})", "Future<Codec0>(ImmutableBuffer{getTargetSize:TargetImageSize(int,int)?})", "~({allowPlatformDefault:bool})", "EdgeInsetsGeometry(EdgeInsetsGeometry,ShapeBorder)", "ShapeBorder(ShapeBorder)", "String(ShapeBorder)", "double(double,FlutterView)", "Color(double)", "_LiveImage()", "~(ImageInfo?,bool)", "Future<~>(Object,StackTrace?)", "0&(@,@)", "Null(AssetManifest)", "~(CoreInitializeResponse)", "~(ImageInfo)", "~(Object,StackTrace?)?(ImageStreamListener)", "~(ImageChunkEvent)?(ImageStreamListener)", "~(Codec0)", "bool(+(int,@))", "Paint(BoxShadow)", "Rect(BoxShadow)", "Path(BoxShadow)", "bool(Canvas,BoxShadow,Path)", "bool(Canvas,BoxShadow)", "bool(int,bool)", "GlyphInfo?()", "bool(MapEntry<Object?,Object?>)", "LineMetrics(LineMetrics)", "DiagnosticsNode(InlineSpan)", "FirebaseWebService()", "HitTestResult(Offset,int)", "double?()", "Size(BoxConstraints)", "String(@)", "DiagnosticsNode(RenderBox)", "~(TextSelection)", "bool(InlineSpanSemanticsInformation)", "Rect(Rect?,TextBox)", "String(String,String?)", "BoxConstraints(RenderBox)", "MouseCursor(MouseTrackerAnnotation)", "~(MouseTrackerAnnotation,Matrix4)", "bool(MouseTrackerAnnotation)", "_ButtonSanitizer()", "_PointerDeviceState()", "App()", "TickerFuture({from:double?})", "Surface()", "~(List<_SemanticsFragment>{isMergeUp:bool})", "~(_RenderObjectSemantics)", "SemanticsConfiguration?(_SemanticsFragment)", "~(CkCanvas)", "List<_SemanticsFragment>(List<_SemanticsFragment>)", "List<_RenderObjectSemantics>(_RenderObjectSemantics)", "Set<SemanticsTag>?(_SemanticsFragment)", "Set<SemanticsTag>(Set<SemanticsTag>)", "DiagnosticsNode(_RenderObjectSemantics)", "~(UniqueRef<JSObject>)", "bool(_SelectableFragment)", "bool(SemanticBehavior)", "+boundaryEnd,boundaryStart(TextPosition,TextPosition)(TextPosition,String)", "OneSequenceGestureRecognizer(Factory<OneSequenceGestureRecognizer>)", "TransformLayer?(PaintingContext,Offset)", "~(bool,String)", "~(double,String{mustBeNegative:bool,mustBePositive:bool})", "~(bool,String{details:List<DiagnosticsNode>?})", "bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})", "~(NotoFont)", "~(TapMoveDetails)", "DateTime()", "~(int?,SemanticsObject)", "~(List<Object?>)", "bool(RenderSliver)", "~(NativeUint8List)", "String(String,Color)", "~(String,JSObject)", "~(FrameTiming)", "~(int,_FrameCallbackEntry)", "~(EditingState?,TextEditingDeltaState?)", "String?(int)", "~(String?)", "SemanticsNode(_TraversalSortNode)", "String(SemanticsTag)", "String(SemanticsAction)", "String?(CustomSemanticsAction)", "DiagnosticsNode(SemanticsNode)", "double(@)", "~(List<JSObject>,JSObject)", "int(SemanticsNode)", "SemanticsNode(int)", "List<DiagnosticsNode>(SemanticsNode)", "~(SemanticsTag)", "~(SemanticsAction,~(Object?))", "ByteData(ByteData?)", "Future<_AssetManifestBin>(String)", "AssetMetadata(Map<Object?,Object?>)", "Stream<LicenseEntry>()", "Future<String?>(String?)", "Future<~>(ByteData?,~(ByteData?))", "FontFamily(@)", "Future<Map<String,@>>(@)", "~(RawKeyEvent)", "Set<LogicalKeyboardKey>(LogicalKeyboardKey)", "int(_PlatformChannelStats,_PlatformChannelStats)", "HotRestartCacheHandler?()", "Future<Null>(ByteData?)", "RawKeyEventData()", "Future<~>(~)", "~(Size?)", "Center(Widget)", "ErrorDescription(RestorationBucket)", "List<RestorationBucket>()", "List<RestorationBucket>(List<RestorationBucket>)", "double(num)", "List<@>(String)", "List<num>(SelectionRect)", "Map<String,@>(IOSSystemContextMenuItemData)", "PlatformViewSurface(BuildContext,PlatformViewController)", "_HtmlElementViewController(PlatformViewCreationParams)", "Future<~>(PointerEvent)", "Element(int)", "FontAsset(@)", "OffscreenCanvasViewRasterizer()", "~(Action<Intent>)", "RenderCanvas()", "bool(DiagnosticsNode?)", "Route<@>?(RouteSettings)", "Route<@>(RouteSettings)", "Widget(BuildContext,bool,Widget?)", "Localizations(BuildContext,Widget?)", "bool(KeepAliveNotification)", "bool(StackFrame)", "ClipPath(BuildContext)", "ErrorDescription(String)", "CkPath()", "Future<double>()", "CkCanvas(CkPictureRecorder)", "String(DiagnosticsNode)", "Future<bool>(MethodCall)", "DefaultSelectionStyle(BuildContext)", "Future<~>(AnimationStatus)", "~(ScrollNotification)", "~(Layer0)", "~({callback!Future<Map<String,@>>(Map<String,String>),name!String})", "@(@,String)", "Null(JavaScriptFunction,JavaScriptFunction)", "~(TransposeCharactersIntent)", "~(ReplaceTextIntent)", "~(ScrollToDocumentBoundaryIntent)", "~(ScrollIntent)", "~(ExtendSelectionByPageIntent)", "~(UpdateSelectionIntent)", "Object?(DismissIntent)", "TextEditingValue(TextEditingValue,TextInputFormatter)", "MapEntry<int,String>(MapEntry<String,String>)", "TextFieldTapRegion(BuildContext)", "~(PointerUpEvent)", "~(TextEditingValue)", "bool(TextEditingValue?,TextEditingValue)", "TextEditingValue(TextEditingValue)", "Null(~())", "CompositedTransformTarget(BuildContext,ViewportOffset)", "bool(HitTestEntry<HitTestTarget>)", "Null(Object?)", "~([FocusNode?])", "Map<String,Object?>(DiagnosticsNode)", "DiagnosticsNode(FocusNode)", "String(FocusNode)", "Set<FocusNode>()", "bool(KeyMessage)", "~(_FocusTraversalGroupInfo)", "bool(_DirectionalPolicyDataEntry)", "~(Map<String,Object?>)", "bool(TraversalDirection)", "Set<Directionality>(_ReadingOrderSortData)", "Null(@,StackTrace)", "List<Directionality>(BuildContext)", "Rect(_ReadingOrderSortData)", "int(_ReadingOrderDirectionalGroupData,_ReadingOrderDirectionalGroupData)", "String(_ReadingOrderSortData)", "List<_ReadingOrderSortData>(_ReadingOrderSortData,Iterable<_ReadingOrderSortData>)", "bool(_ReadingOrderSortData)", "bool(FormFieldState<@>)", "HashSet<GlobalKey<State<StatefulWidget>>>()", "~(Element,Map<Element,GlobalKey<State<StatefulWidget>>>)", "~(Element,GlobalKey<State<StatefulWidget>>)", "Set<Element>()", "String(GlobalKey<State<StatefulWidget>>)", "String(Element)", "DiagnosticsProperty<Element>(Element)", "Element?(Element)", "Object?(int,Element?)", "int(InheritedElement,InheritedElement)", "DiagnosticsNode(InheritedElement)", "~(int,@)", "DoubleTapGestureRecognizer()", "~(DoubleTapGestureRecognizer)", "_Future<@>?()", "Iterable<String>(String)", "String(GestureArenaMember)", "_GestureArena()", "~(PointerDataPacket)", "double?(int)", "ViewClipChain()", "bool(PointerData)", "~(PointerPanZoomStartEvent)", "~(RenderSemanticsGestureHandler)", "String(GestureRecognizer)", "~(StatefulElement,Object)", "Positioned(BuildContext,Widget?)", "~(_HeroFlight)", "Widget(BuildContext,Animation<double>,HeroFlightDirection,BuildContext,BuildContext)", "bool(_HeroFlight)", "MediaQuery(BuildContext,Widget?)", "IconTheme(BuildContext)", "_PointerEventDescription?(PointerData)", "Future<JSObject>()", "String(double)", "~(_TapTracker)", "BoxConstraintsTween(@)", "Matrix4Tween(@)", "TextStyleTween(@)", "BorderRadiusTween(@)", "~(Constraints)", "Future<@>(_Pending)", "Map<~(PointerEvent),Matrix4?>()", "bool(LocalizationsDelegate<@>)", "Map<Type,@>(Map<Type,@>)", "Null(Map<Type,@>)", "Type(LocalizationsDelegate<@>)", "MediaQuery(BuildContext)", "~(~(PointerEvent),Matrix4?)", "bool(Route<@>?)", "_CombiningGestureArenaMember()", "~(@,StackTrace)", "CupertinoTextSelectionToolbarButton(ContextMenuButtonItem)", "DesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "_RouteEntry(Route<@>)", "MapEntry<String?,List<Object>>(@,@)", "_RenderTheaterMarker()", "RenderBox(int)", "~(BoxConstraints)", "ClipRect(BuildContext,Widget?)", "~(Size,Offset)", "Null(RestorationBucket?)", "~(RestorableProperty<Object?>)", "String?(RestorableProperty<Object?>)", "ErrorDescription(RestorableProperty<Object?>)", "SynchronousFuture<bool>(bool)", "bool(_ModalRouteAspect)", "RestorationScope(BuildContext,Widget?)", "Actions(BuildContext)", "IgnorePointer(BuildContext,Widget?)", "IOSScrollViewFlingVelocityTracker(PointerEvent)", "MacOSScrollViewFlingVelocityTracker(PointerEvent)", "CupertinoDesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "MaterialRectArcTween(Rect?,Rect?)", "Widget(BuildContext{key!GlobalKey<State<StatefulWidget>>,onPressed!~(),semanticsLabel!String})", "Widget(BuildContext,ViewportOffset)", "Null(List<~>)", "Widget(BuildContext{onPressed!~(),semanticsLabel!String,usesDefaultAlignment:bool})", "Widget(BuildContext{onPressed!~(),selectionOnTapEnabled!bool,semanticsLabel!String})", "~(CkPicture)", "~(Offset)", "~(String,Object?)", "bool(ScrollbarOrientation)", "~(DragGestureRecognizer)", "_HorizontalThumbDragGestureRecognizer()", "_VerticalThumbDragGestureRecognizer()", "_TrackTapGestureRecognizer()", "~(_TrackTapGestureRecognizer)", "~(PointerHoverEvent)", "MaterialPageRoute<0^>(RouteSettings,Widget(BuildContext))<Object?>", "Rect(Rect)", "bool(Rect)", "String(ShortcutActivator)", "~(ShortcutActivator,Intent)", "List<_ActivatorIntentPair>()", "Intent?()", "BuildContext?()", "Action<Intent>?()", "_SingleChildViewport(BuildContext,ViewportOffset)", "~(RenderBox)", "Element?()", "bool(Element?)", "List<Element>()", "IOSSystemContextMenuItemData(IOSSystemContextMenuItem)", "DefaultTextStyle(BuildContext)", "_SelectionToolbarWrapper(BuildContext)", "~(String,JavaScriptFunction)", "~(RenderingRenderCanvas,int)", "double(_Diagonal)", "0^?(0^?(ButtonStyle?))<Object?>", "0^?(WidgetStateProperty<0^>?(ButtonStyle?))<Object?>", "~(Symbol0,@)", "int(JSObject)", "WidgetStateProperty<TextStyle?>?(ButtonStyle?)", "~([Object?])", "TapAndHorizontalDragGestureRecognizer()", "~(TapAndHorizontalDragGestureRecognizer)", "TapAndPanGestureRecognizer()", "~(TapAndPanGestureRecognizer)", "ForcePressGestureRecognizer()", "~(ForcePressGestureRecognizer)", "~([TapUpDetails?])", "~(UndoTextIntent)", "~(RedoTextIntent)", "_ViewScope(BuildContext,PipelineOwner)", "~(FlutterErrorDetails)", "~(InspectorReferenceData)", "bool([String?])", "bool(String?[String?])", "List<Object?>(String?,String)", "WidgetStateProperty<EdgeInsetsGeometry?>?(ButtonStyle?)", "Map<String,Object?>?(String)", "Map<String,Object?>?(String{addAdditionalPropertiesCallback:Map<String,Object>?(DiagnosticsNode,InspectorSerializationDelegate)?})", "~(String,int)", "WidgetStateProperty<BorderSide?>?(ButtonStyle?)", "Future<Null>(String)", "Future<Null>(String?,String)", "WidgetStateProperty<OutlinedBorder?>?(ButtonStyle?)", "Set<InspectorReferenceData>()", "InspectorSerializationDelegate()", "Map<String,Object>?(DiagnosticsNode,InspectorSerializationDelegate)", "Map<String,Object>(DiagnosticsNode,InspectorSerializationDelegate)", "List<int>()", "Map<String,List<Object?>>()", "double(RenderObject)", "~({selectionOnTapEnabled:bool?})", "Future<~>(String,ByteData?,~(ByteData?)?)", "Future<Response>(Client)", "bool(String,String)", "Null(String,String[Object?])", "~(List<int>)", "MediaType()", "MouseCursor?(Set<WidgetState>)", "MouseCursor?(ButtonStyle?)", "PlaybackEvent(PlayerEvent)", "bool(PlayerEvent)", "Duration?(PlaybackEvent)", "ProcessingState(PlaybackEvent)", "Duration(PlaybackEvent)", "IcyMetadata?(PlaybackEvent)", "+(PlaybackEvent,IndexedAudioSource?)(PlaybackEvent)", "~(List<+(PlaybackEvent,IndexedAudioSource?)>)", "~(PlaybackEvent)", "int?(SequenceState)", "List<IndexedAudioSource>(SequenceState)", "List<int>(SequenceState)", "bool(SequenceState)", "LoopMode(SequenceState)", "int?(PlaybackEvent)", "+code,index,message(int?,int?,String?)(PlaybackEvent)", "bool(+code,index,message(int?,int?,String?))", "PlayerException(+code,index,message(int?,int?,String?))", "PlayerState(PlayerEvent)", "Null(AudioSession)", "~(AudioInterruptionEvent)", "Future<~>(PlayerException)", "~(String,int?)", "~(ProcessingState)", "Color?(ButtonStyle?)", "~(PlayerEvent)", "bool(int?)", "Duration?(LoadResponse)", "bool(ProcessingState)", "bool(bool)", "~(AudioPlayerPlatform)", "~(PlayerDataMessage)", "~(PlaybackEventMessage)", "Null(Object[StackTrace?])", "VisualDensity?(ButtonStyle?)", "AudioPlayerPlatform(AudioPlayerPlatform)", "Future<Duration?>(AudioPlayerPlatform)", "bool(Uri,String)", "List<IndexedAudioSource>(AudioSource)", "AudioSourceMessage(AudioSource)", "~(List<IndexedAudioSource>)", "MaterialTapTargetSize?(ButtonStyle?)", "Map<@,@>(AudioSourceMessage)", "PlaybackEventMessage(Map<@,@>)", "PlayerDataMessage(@)", "AudioSourcePlayer(AudioSourceMessage)", "List<IndexedAudioSourcePlayer>(AudioSourcePlayer)", "Future<Object?>()", "Duration?(ButtonStyle?)", "bool?(ButtonStyle?)", "AlignmentGeometry?(ButtonStyle?)", "InteractiveInkFeatureFactory?(ButtonStyle?)", "int(Hct,Hct)", "String(String?)", "bool(String?)", "int(int,int)", "Splash(BuildContext,Animation<double>,Animation<double>)", "~(String,String?)", "~(int,int,int)", "JSObject?()", "RegisteredFont?(ByteBuffer,String,String)", "List<PictureLayer0>()", "Column(BuildContext,AsyncSnapshot<List<@>>)", "BorderSide?(Set<WidgetState>)", "ProfilePage(BuildContext,Animation<double>,Animation<double>)", "GridView(BuildContext,BoxConstraints)", "GestureDetector(BuildContext,int)", "~({allowPlatformDefault!bool})", "~(int,bool(FlutterHtmlKeyboardEvent))", "Rect()?(RenderBox)", "bool(BuildContext)", "Widget(BuildContext,AsyncSnapshot<List<@>>)", "~(Intent?)", "Future<~>([JSObject?])", "~(bool?)", "bool(InkHighlight?)", "SignUp(BuildContext,Animation<double>,Animation<double>)", "Color(_HighlightType)", "FutureBuilder<SharedPreferences>(BuildContext,Animation<double>,Animation<double>)", "Widget(BuildContext,AsyncSnapshot<SharedPreferences>)", "Semantics(BuildContext)", "Padding(BuildContext,AsyncSnapshot<List<@>>)", "Widget(BuildContext,Animation<double>,Animation<double>)", "RenderObjectWidget(BuildContext,BoxConstraints)", "String?()", "int(_Line)", "JavaScriptFunction()", "Object(_Line)", "Object(_Highlight)", "int(_Highlight,_Highlight)", "List<_Line>(MapEntry<Object,List<_Highlight>>)", "SourceSpanWithContext()", "String(String,String)", "bool(int,int)", "~(Zone?,ZoneDelegate?,Zone,Object,StackTrace)", "0^(Zone?,ZoneDelegate?,Zone,0^())<Object?>", "0^(Zone?,ZoneDelegate?,Zone,0^(1^),1^)<Object?,Object?>", "0^(Zone?,ZoneDelegate?,Zone,0^(1^,2^),1^,2^)<Object?,Object?,Object?>", "0^()(Zone,ZoneDelegate,Zone,0^())<Object?>", "0^(1^)(Zone,ZoneDelegate,Zone,0^(1^))<Object?,Object?>", "0^(1^,2^)(Zone,ZoneDelegate,Zone,0^(1^,2^))<Object?,Object?,Object?>", "AsyncError?(Zone,ZoneDelegate,Zone,Object,StackTrace?)", "~(Zone?,ZoneDelegate?,Zone,~())", "Timer(Zone,ZoneDelegate,Zone,Duration,~())", "Timer(Zone,ZoneDelegate,Zone,Duration,~(Timer))", "~(Zone,ZoneDelegate,Zone,String)", "Zone(Zone?,ZoneDelegate?,Zone,ZoneSpecification?,Map<Object?,Object?>?)", "int(Comparable<@>,Comparable<@>)", "List<String>(String,List<String>)", "0^(0^,0^)<num>", "Size?(Size?,Size?,double)", "double?(num?,num?,double)", "Color?(Color?,Color?,double)", "PigeonMultiFactorInfo(Object)", "UserCredential0(JSObject)", "MultiFactorInfo0<JSObject>(JSObject)", "MultiFactorInfo(MultiFactorInfo0<JSObject>)", "0&(Object,StackTrace)", "@(Object)", "Widget(BuildContext,Offset,Offset,Widget)", "~(FlutterErrorDetails{forceReport:bool})", "DiagnosticsNode(String)", "~(String?{wrapWidth:int?})", "StackFrame?(String)", "double(double,double,double)", "MultiSurfaceViewRasterizer()", "~(RenderBox,Offset)", "Widget(BuildContext,Animation<double>)", "bool?(bool?,bool?,double)", "Future<Null>(MethodCall)", "Widget(BuildContext,Widget)", "OutlinedBorder?(OutlinedBorder?,OutlinedBorder?,double)", "EdgeInsetsGeometry?(EdgeInsetsGeometry?,EdgeInsetsGeometry?,double)", "TextStyle?(TextStyle?,TextStyle?,double)", "int(_TaskEntry<@>,_TaskEntry<@>)", "bool({priority!int,scheduler!SchedulerBinding})", "Color?(Color?,Color?,Color?[Color?])", "List<LicenseEntry>(String)", "~(FocusNode{alignment:double?,alignmentPolicy:ScrollPositionAlignmentPolicy?,curve:Curve?,duration:Duration?})", "int(Element,Element)", "IconThemeData(IconThemeData?,IconThemeData?,double)", "Widget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "List<Route<@>>(NavigatorState,String)", "Widget(BuildContext,Animation<double>,Animation<double>,Widget)", "int(Widget,int)", "StatefulWidget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "Iterable<DiagnosticsNode>(Iterable<DiagnosticsNode>)", "0&(Object,StackTrace{fromPigeon:bool})", "Map<Type,@>(List<@>)"],
+    types: ["~()", "bool()", "double(double)", "~(JSObject)", "double(DynamicScheme)", "TonalPalette(DynamicScheme)", "~(Duration)", "DynamicColor(DynamicScheme)", "String()", "List<DiagnosticsNode>()", "Color(Set<WidgetState>)", "~(AnimationStatus)", "~(Object?)", "~(RenderObject)", "Future<~>()", "Future<bool>()", "FlutterError?(SemanticsNode)", "~(Element)", "FadeTransition(BuildContext,Animation<double>,Animation<double>,Widget)", "~(bool)", "Null()", "bool(Element)", "Widget(BuildContext)", "~(PaintingContext,Offset)", "~(DragUpdateDetails)", "Null(JSObject)", "bool(BoxHitTestResult,Offset)", "Future<~>(bool)", "ToneDeltaPair(DynamicScheme)", "bool(Object?)", "~(PointerEvent)", "Future<Map<String,@>>(Map<String,String>)", "Null(Object,StackTrace)", "~(ByteData?)", "~(int)", "bool(SemanticsNode)", "~(DragEndDetails)", "~(TapDownDetails)", "Null(@)", "~(DragStartDetails)", "~(Object,StackTrace)", "~(@)", "~(Selectable0)", "bool(FocusNode)", "Null(~)", "bool(String)", "Tween<double>(@)", "String(String)", "Future<Map<String,Object?>>(Map<String,String>)", "int(int)", "Padding(BuildContext,BoxConstraints)", "bool(FlutterHtmlKeyboardEvent)", "double(RenderBox)", "~(PointerExitEvent)", "Size(RenderBox,BoxConstraints)", "int(FocusNode,FocusNode)", "Padding(BuildContext,int)", "bool(NotoFont)", "~(RestorableProperty<Object?>,~())", "TextStyle(Set<WidgetState>)", "~(PointerEnterEvent)", "~(String)", "~(SemanticsConfiguration)", "bool(DiagnosticsNode)", "int()", "Future<Null>(@)", "bool(ScrollNotification)", "SystemMouseCursor(Set<WidgetState>)", "Future<Map<String,Object>>(Map<String,String>)", "double(RenderBox,double)", "~(double)", "bool(int)", "~(PointerDownEvent)", "int(RenderObject,RenderObject)", "~(TapUpDetails)", "String(int)", "~(~())", "bool(_RouteEntry)", "bool(OverlayEntry)", "TextBoundary()", "SongsList(BuildContext,Animation<double>,Animation<double>)", "Future<@>(MethodCall)", "bool(InheritedElement)", "bool(Selectable0)", "List<Object>(String?,String)", "bool(InlineSpan)", "0&()", "Color(Color)", "Null(Object)", "Null(String)", "Future<String>()", "~(NavigatorObserver)", "Null(bool)", "bool(double)", "List<Object>()", "~(Object[StackTrace?])", "Set<0^>()<Object?>", "~(Object?,Object?)", "WidgetStateProperty<Color?>?(ButtonStyle?)", "Color?(Set<WidgetState>)", "Null(@,@)", "Offset(Offset)", "~(Object)", "JSObject()", "ColorTween(@)", "~(ForcePressDetails)", "~(TapDragDownDetails)", "~([Intent?])", "Future<~>(String)", "@(@)", "bool(@)", "LogIn(BuildContext,Animation<double>,Animation<double>)", "WidgetStateProperty<Size?>?(ButtonStyle?)", "~(DiagnosticsNode)", "~(Timer)", "SizedBox(BuildContext,BoxConstraints)", "BorderSide(Set<WidgetState>)", "bool(KeyData)", "MouseCursor(Set<WidgetState>)", "String(Match)", "Future<Null>(List<String>)", "TapGestureRecognizer()", "~(DragDownDetails)", "bool(ScrollMetricsNotification)", "~(TapGestureRecognizer)", "bool(_Highlight)", "Matrix4(double)", "int(Object?)", "String(Object?)", "int(String)", "PlayPage(BuildContext,Animation<double>,Animation<double>)", "bool(FocusableActionDetector)", "LayoutBuilder(BuildContext,AsyncSnapshot<List<@>>)", "int(@,@)", "Future<~>(double)", "int(SemanticsNode,SemanticsNode)", "~(List<FrameTiming>)", "~(ImageInfo,bool)", "JSObject(Object?)", "bool(RenderBox)", "Null(JSObject?)", "Future<Null>()", "~(~)", "TextBox(TextBox)", "~({curve:Curve,descendant:RenderObject?,duration:Duration,rect:Rect?})", "bool(Object?,Object?)", "JSObject?(int)", "~(@,@)", "Widget(BuildContext,Set<WidgetState>,Widget?)?(ButtonStyle?)", "~(SemanticsUpdate0)", "~(ImageStreamListener)", "ImageStreamCompleter()", "_SemanticsFragment(SemanticsConfiguration)", "~(_SelectableFragment)", "+boundaryEnd,boundaryStart(TextPosition,TextPosition)(TextPosition)", "bool(BoxHitTestResult)", "~(SliverConstraints)", "bool(ShapeBorder)", "double({from!double,to!double})", "~(Object,StackTrace?)", "~(Offset,RenderBox)", "Size(RenderBox)", "Future<ImageStreamCompleter>()", "~(SemanticsActionEvent)", "~(SemanticsNode)", "List<SemanticsNode>(_SemanticsSortGroup)", "Align(BuildContext,double,Widget?)", "List<String>()", "Future<ByteData?>(ByteData?)", "Future<~>(MethodCall)", "~(RestorationBucket)", "Map<Object?,Object?>()", "JSObject(int{params:Object?})", "double(Size)", "Size()", "_ZoomExitTransition(BuildContext,Animation<double>,Widget?)", "bool(NavigationNotification)", "~(RenderBox?)", "ChildSemanticsConfigurationsResult(List<SemanticsConfiguration>)", "~(FocusHighlightMode)", "Rect()", "Future<~>(@)", "~([Duration?])", "TextPosition(TextPosition,bool,TextBoundary)", "double(Set<WidgetState>)", "bool(RenderObject)", "WidgetStateProperty<double?>?(ButtonStyle?)", "Color?()", "double()", "KeyEventResult(FocusNode,KeyEvent)", "int(_ReadingOrderSortData,_ReadingOrderSortData)", "bool(ParentDataElement<ParentData>)", "LongPressGestureRecognizer()", "~(LongPressGestureRecognizer)", "VerticalDragGestureRecognizer()", "~(VerticalDragGestureRecognizer)", "HorizontalDragGestureRecognizer()", "~(HorizontalDragGestureRecognizer)", "PanGestureRecognizer()", "~(PanGestureRecognizer)", "Tween<@>?(Tween<@>?,@,Tween<@>(@))", "AlignmentGeometryTween(@)", "EdgeInsetsGeometryTween(@)", "DecorationTween(@)", "double?(RenderBox,BoxConstraints,TextBaseline)", "bool(Object)", "Widget(BuildContext,Widget?)", "PolynomialFit?()", "bool(~(ObjectEvent)?)", "~(Picture)", "VelocityTracker(PointerEvent)", "~(Image0)", "Color?(Color?)", "int(Selectable0,Selectable0)", "~(PointerSignalEvent)", "bool(Selectable0,double)", "Future<~>(FirebaseWebService)", "Future<UserCredential0>()", "_ZoomEnterTransition(BuildContext,Animation<double>,Widget?)", "~(TapDragUpDetails)", "~(LongPressStartDetails)", "~(LongPressMoveUpdateDetails)", "~(LongPressEndDetails)", "double?(+(BoxConstraints,TextBaseline))", "~(TapDragUpdateDetails)", "~(TapDragEndDetails)", "~(UserWeb?)", "UserWeb?(User0?)", "Map<String,Object?>?(String?,String)", "_Channel()", "~(String,String)", "Object?(Object?)", "~(String,@)", "Duration()", "Future<AudioPlayerPlatform>()", "Map<@,@>(AudioEffectMessage)", "@()", "@(String)", "String(double,double,String)", "~(SemanticsObject)", "~([~])", "bool(SemanticsObject)", "~(Duration?)", "Null(Duration?)", "~(GestureMode)", "Slider(BuildContext,AsyncSnapshot<Duration>)", "~(AppLifecycleState)", "~(ViewFocusEvent)", "DisposablePath()", "KeyData()", "JSObject([JSObject?])", "Future<ServiceExtensionResponse>(String,Map<String,String>)", "String?(String?)", "HomePage(BuildContext,Animation<double>,Animation<double>)", "DisplayLyricsChords(BuildContext,Animation<double>,Animation<double>)", "List<JSObject>()", "Set<String>()", "Future<JSObject>([JSObject?])", "Widget?(BuildContext,Animation<double>,Animation<double>,bool,Widget?)", "double(RenderBox,BoxConstraints)", "Widget(BuildContext,EditableTextState)", "~(TapDragStartDetails)", "FirebaseAuth()", "bool(LayoutChangedNotification)", "ByteBuffer(Object?)", "Null(JSArray<Object?>,JSObject)", "ShapeBorderTween(@)", "String?(String)", "MethodChannelFirebaseAuth()", "Widget(BuildContext,Animation<double>,Animation<double>,bool,Widget?)", "PageTransitionsBuilder?(TargetPlatform)", "ModalBarrier(BuildContext,Widget?)", "Actions(BuildContext,Widget?)", "MultiFactorInfo(PigeonMultiFactorInfo)", "bool(Set<WidgetState>)", "~(_AdjustSliderIntent)", "Future<~>(App)", "~(JSArray<Object?>,JSObject)", "~(DismissDirection)", "~(Surface)", "~(TextSelection,SelectionChangedCause?)", "InputDecorator(BuildContext,Widget?)", "Semantics(BuildContext,Widget?)", "UnmanagedRestorationScope(FormFieldState<String>)", "ThemeDataTween(@)", "AppBarThemeData()", "ThemeData()", "MapEntry<Object,ThemeExtension<@>>(Object,ThemeExtension<@>)", "bool(MapEntry<Object,ThemeExtension<@>>)", "bool(TooltipState)", "~(JSObject,List<PointerData>)", "Null(ImageStreamCompleter)", "Map<String,@>(UserInfo0<JSObject>)", "~(ImageChunkEvent)", "UserInfo0<JSObject>(@)", "Future<Codec0>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})", "Future<Codec0>(ImmutableBuffer{getTargetSize:TargetImageSize(int,int)?})", "~({allowPlatformDefault:bool})", "EdgeInsetsGeometry(EdgeInsetsGeometry,ShapeBorder)", "ShapeBorder(ShapeBorder)", "String(ShapeBorder)", "double(double,FlutterView)", "Color(double)", "_LiveImage()", "~(ImageInfo?,bool)", "Future<~>(Object,StackTrace?)", "0&(@,@)", "Null(AssetManifest)", "~(CoreInitializeResponse)", "~(ImageInfo)", "~(Object,StackTrace?)?(ImageStreamListener)", "~(ImageChunkEvent)?(ImageStreamListener)", "~(Codec0)", "bool(+(int,@))", "Paint(BoxShadow)", "Rect(BoxShadow)", "Path(BoxShadow)", "bool(Canvas,BoxShadow,Path)", "bool(Canvas,BoxShadow)", "bool(int,bool)", "GlyphInfo?()", "bool(MapEntry<Object?,Object?>)", "LineMetrics(LineMetrics)", "DiagnosticsNode(InlineSpan)", "FirebaseWebService()", "HitTestResult(Offset,int)", "double?()", "Size(BoxConstraints)", "String(@)", "DiagnosticsNode(RenderBox)", "~(TextSelection)", "bool(InlineSpanSemanticsInformation)", "Rect(Rect?,TextBox)", "String(String,String?)", "BoxConstraints(RenderBox)", "MouseCursor(MouseTrackerAnnotation)", "~(MouseTrackerAnnotation,Matrix4)", "bool(MouseTrackerAnnotation)", "_ButtonSanitizer()", "_PointerDeviceState()", "App()", "TickerFuture({from:double?})", "Surface()", "~(List<_SemanticsFragment>{isMergeUp:bool})", "~(_RenderObjectSemantics)", "SemanticsConfiguration?(_SemanticsFragment)", "~(CkCanvas)", "List<_SemanticsFragment>(List<_SemanticsFragment>)", "List<_RenderObjectSemantics>(_RenderObjectSemantics)", "Set<SemanticsTag>?(_SemanticsFragment)", "Set<SemanticsTag>(Set<SemanticsTag>)", "DiagnosticsNode(_RenderObjectSemantics)", "~(UniqueRef<JSObject>)", "bool(_SelectableFragment)", "bool(SemanticBehavior)", "+boundaryEnd,boundaryStart(TextPosition,TextPosition)(TextPosition,String)", "OneSequenceGestureRecognizer(Factory<OneSequenceGestureRecognizer>)", "TransformLayer?(PaintingContext,Offset)", "~(bool,String)", "~(double,String{mustBeNegative:bool,mustBePositive:bool})", "~(bool,String{details:List<DiagnosticsNode>?})", "bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})", "~(NotoFont)", "~(TapMoveDetails)", "DateTime()", "~(int?,SemanticsObject)", "~(List<Object?>)", "bool(RenderSliver)", "~(NativeUint8List)", "String(String,Color)", "~(String,JSObject)", "~(FrameTiming)", "~(int,_FrameCallbackEntry)", "~(EditingState?,TextEditingDeltaState?)", "String?(int)", "~(String?)", "SemanticsNode(_TraversalSortNode)", "String(SemanticsTag)", "String(SemanticsAction)", "String?(CustomSemanticsAction)", "DiagnosticsNode(SemanticsNode)", "double(@)", "~(List<JSObject>,JSObject)", "int(SemanticsNode)", "SemanticsNode(int)", "List<DiagnosticsNode>(SemanticsNode)", "~(SemanticsTag)", "~(SemanticsAction,~(Object?))", "ByteData(ByteData?)", "Future<_AssetManifestBin>(String)", "AssetMetadata(Map<Object?,Object?>)", "Stream<LicenseEntry>()", "Future<String?>(String?)", "Future<~>(ByteData?,~(ByteData?))", "FontFamily(@)", "Future<Map<String,@>>(@)", "~(RawKeyEvent)", "Set<LogicalKeyboardKey>(LogicalKeyboardKey)", "int(_PlatformChannelStats,_PlatformChannelStats)", "HotRestartCacheHandler?()", "Future<Null>(ByteData?)", "RawKeyEventData()", "Future<~>(~)", "~(Size?)", "Center(Widget)", "ErrorDescription(RestorationBucket)", "List<RestorationBucket>()", "List<RestorationBucket>(List<RestorationBucket>)", "double(num)", "List<@>(String)", "List<num>(SelectionRect)", "Map<String,@>(IOSSystemContextMenuItemData)", "PlatformViewSurface(BuildContext,PlatformViewController)", "_HtmlElementViewController(PlatformViewCreationParams)", "Future<~>(PointerEvent)", "Element(int)", "FontAsset(@)", "OffscreenCanvasViewRasterizer()", "~(Action<Intent>)", "RenderCanvas()", "bool(DiagnosticsNode?)", "Route<@>?(RouteSettings)", "Route<@>(RouteSettings)", "Widget(BuildContext,bool,Widget?)", "Localizations(BuildContext,Widget?)", "bool(KeepAliveNotification)", "bool(StackFrame)", "ClipPath(BuildContext)", "ErrorDescription(String)", "CkPath()", "Future<double>()", "CkCanvas(CkPictureRecorder)", "String(DiagnosticsNode)", "Future<bool>(MethodCall)", "DefaultSelectionStyle(BuildContext)", "Future<~>(AnimationStatus)", "~(ScrollNotification)", "~(Layer0)", "~({callback!Future<Map<String,@>>(Map<String,String>),name!String})", "@(@,String)", "Null(JavaScriptFunction,JavaScriptFunction)", "~(TransposeCharactersIntent)", "~(ReplaceTextIntent)", "~(ScrollToDocumentBoundaryIntent)", "~(ScrollIntent)", "~(ExtendSelectionByPageIntent)", "~(UpdateSelectionIntent)", "Object?(DismissIntent)", "TextEditingValue(TextEditingValue,TextInputFormatter)", "MapEntry<int,String>(MapEntry<String,String>)", "TextFieldTapRegion(BuildContext)", "~(PointerUpEvent)", "~(TextEditingValue)", "bool(TextEditingValue?,TextEditingValue)", "TextEditingValue(TextEditingValue)", "Null(~())", "CompositedTransformTarget(BuildContext,ViewportOffset)", "bool(HitTestEntry<HitTestTarget>)", "Null(Object?)", "~([FocusNode?])", "Map<String,Object?>(DiagnosticsNode)", "DiagnosticsNode(FocusNode)", "String(FocusNode)", "Set<FocusNode>()", "bool(KeyMessage)", "~(_FocusTraversalGroupInfo)", "bool(_DirectionalPolicyDataEntry)", "~(Map<String,Object?>)", "bool(TraversalDirection)", "Set<Directionality>(_ReadingOrderSortData)", "Null(@,StackTrace)", "List<Directionality>(BuildContext)", "Rect(_ReadingOrderSortData)", "int(_ReadingOrderDirectionalGroupData,_ReadingOrderDirectionalGroupData)", "String(_ReadingOrderSortData)", "List<_ReadingOrderSortData>(_ReadingOrderSortData,Iterable<_ReadingOrderSortData>)", "bool(_ReadingOrderSortData)", "bool(FormFieldState<@>)", "HashSet<GlobalKey<State<StatefulWidget>>>()", "~(Element,Map<Element,GlobalKey<State<StatefulWidget>>>)", "~(Element,GlobalKey<State<StatefulWidget>>)", "Set<Element>()", "String(GlobalKey<State<StatefulWidget>>)", "String(Element)", "DiagnosticsProperty<Element>(Element)", "Element?(Element)", "Object?(int,Element?)", "int(InheritedElement,InheritedElement)", "DiagnosticsNode(InheritedElement)", "~(int,@)", "DoubleTapGestureRecognizer()", "~(DoubleTapGestureRecognizer)", "_Future<@>?()", "Iterable<String>(String)", "String(GestureArenaMember)", "_GestureArena()", "~(PointerDataPacket)", "double?(int)", "ViewClipChain()", "bool(PointerData)", "~(PointerPanZoomStartEvent)", "~(RenderSemanticsGestureHandler)", "String(GestureRecognizer)", "~(StatefulElement,Object)", "Positioned(BuildContext,Widget?)", "~(_HeroFlight)", "Widget(BuildContext,Animation<double>,HeroFlightDirection,BuildContext,BuildContext)", "bool(_HeroFlight)", "MediaQuery(BuildContext,Widget?)", "IconTheme(BuildContext)", "_PointerEventDescription?(PointerData)", "Future<JSObject>()", "String(double)", "~(_TapTracker)", "BoxConstraintsTween(@)", "Matrix4Tween(@)", "TextStyleTween(@)", "BorderRadiusTween(@)", "~(Constraints)", "Future<@>(_Pending)", "Map<~(PointerEvent),Matrix4?>()", "bool(LocalizationsDelegate<@>)", "Map<Type,@>(Map<Type,@>)", "Null(Map<Type,@>)", "Type(LocalizationsDelegate<@>)", "MediaQuery(BuildContext)", "~(~(PointerEvent),Matrix4?)", "bool(Route<@>?)", "_CombiningGestureArenaMember()", "~(@,StackTrace)", "CupertinoTextSelectionToolbarButton(ContextMenuButtonItem)", "DesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "_RouteEntry(Route<@>)", "MapEntry<String?,List<Object>>(@,@)", "_RenderTheaterMarker()", "RenderBox(int)", "~(BoxConstraints)", "ClipRect(BuildContext,Widget?)", "~(Size,Offset)", "Null(RestorationBucket?)", "~(RestorableProperty<Object?>)", "String?(RestorableProperty<Object?>)", "ErrorDescription(RestorableProperty<Object?>)", "SynchronousFuture<bool>(bool)", "bool(_ModalRouteAspect)", "RestorationScope(BuildContext,Widget?)", "Actions(BuildContext)", "IgnorePointer(BuildContext,Widget?)", "IOSScrollViewFlingVelocityTracker(PointerEvent)", "MacOSScrollViewFlingVelocityTracker(PointerEvent)", "CupertinoDesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "MaterialRectArcTween(Rect?,Rect?)", "Widget(BuildContext{key!GlobalKey<State<StatefulWidget>>,onPressed!~(),semanticsLabel!String})", "Widget(BuildContext,ViewportOffset)", "Null(List<~>)", "Widget(BuildContext{onPressed!~(),semanticsLabel!String,usesDefaultAlignment:bool})", "Widget(BuildContext{onPressed!~(),selectionOnTapEnabled!bool,semanticsLabel!String})", "~(CkPicture)", "~(Offset)", "~(String,Object?)", "bool(ScrollbarOrientation)", "~(DragGestureRecognizer)", "_HorizontalThumbDragGestureRecognizer()", "_VerticalThumbDragGestureRecognizer()", "_TrackTapGestureRecognizer()", "~(_TrackTapGestureRecognizer)", "~(PointerHoverEvent)", "MaterialPageRoute<0^>(RouteSettings,Widget(BuildContext))<Object?>", "Rect(Rect)", "bool(Rect)", "String(ShortcutActivator)", "~(ShortcutActivator,Intent)", "List<_ActivatorIntentPair>()", "Intent?()", "BuildContext?()", "Action<Intent>?()", "_SingleChildViewport(BuildContext,ViewportOffset)", "~(RenderBox)", "Element?()", "bool(Element?)", "List<Element>()", "IOSSystemContextMenuItemData(IOSSystemContextMenuItem)", "DefaultTextStyle(BuildContext)", "_SelectionToolbarWrapper(BuildContext)", "~(String,JavaScriptFunction)", "~(RenderingRenderCanvas,int)", "double(_Diagonal)", "0^?(0^?(ButtonStyle?))<Object?>", "0^?(WidgetStateProperty<0^>?(ButtonStyle?))<Object?>", "~(Symbol0,@)", "int(JSObject)", "WidgetStateProperty<TextStyle?>?(ButtonStyle?)", "~([Object?])", "TapAndHorizontalDragGestureRecognizer()", "~(TapAndHorizontalDragGestureRecognizer)", "TapAndPanGestureRecognizer()", "~(TapAndPanGestureRecognizer)", "ForcePressGestureRecognizer()", "~(ForcePressGestureRecognizer)", "~([TapUpDetails?])", "~(UndoTextIntent)", "~(RedoTextIntent)", "_ViewScope(BuildContext,PipelineOwner)", "~(FlutterErrorDetails)", "~(InspectorReferenceData)", "bool([String?])", "bool(String?[String?])", "List<Object?>(String?,String)", "WidgetStateProperty<EdgeInsetsGeometry?>?(ButtonStyle?)", "Map<String,Object?>?(String)", "Map<String,Object?>?(String{addAdditionalPropertiesCallback:Map<String,Object>?(DiagnosticsNode,InspectorSerializationDelegate)?})", "~(String,int)", "WidgetStateProperty<BorderSide?>?(ButtonStyle?)", "Future<Null>(String)", "Future<Null>(String?,String)", "WidgetStateProperty<OutlinedBorder?>?(ButtonStyle?)", "Set<InspectorReferenceData>()", "InspectorSerializationDelegate()", "Map<String,Object>?(DiagnosticsNode,InspectorSerializationDelegate)", "Map<String,Object>(DiagnosticsNode,InspectorSerializationDelegate)", "List<int>()", "Map<String,List<Object?>>()", "double(RenderObject)", "~({selectionOnTapEnabled:bool?})", "Future<~>(String,ByteData?,~(ByteData?)?)", "Future<Response>(Client)", "bool(String,String)", "Null(String,String[Object?])", "~(List<int>)", "MediaType()", "MouseCursor?(Set<WidgetState>)", "MouseCursor?(ButtonStyle?)", "PlaybackEvent(PlayerEvent)", "bool(PlayerEvent)", "Duration?(PlaybackEvent)", "ProcessingState(PlaybackEvent)", "Duration(PlaybackEvent)", "IcyMetadata?(PlaybackEvent)", "+(PlaybackEvent,IndexedAudioSource?)(PlaybackEvent)", "~(List<+(PlaybackEvent,IndexedAudioSource?)>)", "~(PlaybackEvent)", "int?(SequenceState)", "List<IndexedAudioSource>(SequenceState)", "List<int>(SequenceState)", "bool(SequenceState)", "LoopMode(SequenceState)", "int?(PlaybackEvent)", "+code,index,message(int?,int?,String?)(PlaybackEvent)", "bool(+code,index,message(int?,int?,String?))", "PlayerException(+code,index,message(int?,int?,String?))", "PlayerState(PlayerEvent)", "Null(AudioSession)", "~(AudioInterruptionEvent)", "Future<~>(PlayerException)", "~(String,int?)", "~(ProcessingState)", "Color?(ButtonStyle?)", "~(PlayerEvent)", "bool(int?)", "Duration?(LoadResponse)", "bool(ProcessingState)", "bool(bool)", "~(AudioPlayerPlatform)", "~(PlayerDataMessage)", "~(PlaybackEventMessage)", "Null(Object[StackTrace?])", "VisualDensity?(ButtonStyle?)", "AudioPlayerPlatform(AudioPlayerPlatform)", "Future<Duration?>(AudioPlayerPlatform)", "bool(Uri,String)", "List<IndexedAudioSource>(AudioSource)", "AudioSourceMessage(AudioSource)", "~(List<IndexedAudioSource>)", "MaterialTapTargetSize?(ButtonStyle?)", "Map<@,@>(AudioSourceMessage)", "PlaybackEventMessage(Map<@,@>)", "PlayerDataMessage(@)", "AudioSourcePlayer(AudioSourceMessage)", "List<IndexedAudioSourcePlayer>(AudioSourcePlayer)", "Future<Object?>()", "Duration?(ButtonStyle?)", "bool?(ButtonStyle?)", "AlignmentGeometry?(ButtonStyle?)", "InteractiveInkFeatureFactory?(ButtonStyle?)", "int(Hct,Hct)", "String(String?)", "bool(String?)", "int(int,int)", "Splash(BuildContext,Animation<double>,Animation<double>)", "~(String,String?)", "~(int,int,int)", "JSObject?()", "RegisteredFont?(ByteBuffer,String,String)", "List<PictureLayer0>()", "Column(BuildContext,AsyncSnapshot<List<@>>)", "BorderSide?(Set<WidgetState>)", "ProfilePage(BuildContext,Animation<double>,Animation<double>)", "GridView(BuildContext,BoxConstraints)", "GestureDetector(BuildContext,int)", "~({allowPlatformDefault!bool})", "~(int,bool(FlutterHtmlKeyboardEvent))", "Rect()?(RenderBox)", "bool(BuildContext)", "Widget(BuildContext,AsyncSnapshot<List<@>>)", "~(Intent?)", "Future<~>([JSObject?])", "~(bool?)", "bool(InkHighlight?)", "SignUp(BuildContext,Animation<double>,Animation<double>)", "Color(_HighlightType)", "FutureBuilder<SharedPreferences>(BuildContext,Animation<double>,Animation<double>)", "Widget(BuildContext,AsyncSnapshot<SharedPreferences>)", "Semantics(BuildContext)", "Padding(BuildContext,AsyncSnapshot<List<@>>)", "Widget(BuildContext,Animation<double>,Animation<double>)", "RenderObjectWidget(BuildContext,BoxConstraints)", "String?()", "int(_Line)", "JavaScriptFunction()", "Object(_Line)", "Object(_Highlight)", "int(_Highlight,_Highlight)", "List<_Line>(MapEntry<Object,List<_Highlight>>)", "SourceSpanWithContext()", "String(String,String)", "bool(int,int)", "~(Zone?,ZoneDelegate?,Zone,Object,StackTrace)", "0^(Zone?,ZoneDelegate?,Zone,0^())<Object?>", "0^(Zone?,ZoneDelegate?,Zone,0^(1^),1^)<Object?,Object?>", "0^(Zone?,ZoneDelegate?,Zone,0^(1^,2^),1^,2^)<Object?,Object?,Object?>", "0^()(Zone,ZoneDelegate,Zone,0^())<Object?>", "0^(1^)(Zone,ZoneDelegate,Zone,0^(1^))<Object?,Object?>", "0^(1^,2^)(Zone,ZoneDelegate,Zone,0^(1^,2^))<Object?,Object?,Object?>", "AsyncError?(Zone,ZoneDelegate,Zone,Object,StackTrace?)", "~(Zone?,ZoneDelegate?,Zone,~())", "Timer(Zone,ZoneDelegate,Zone,Duration,~())", "Timer(Zone,ZoneDelegate,Zone,Duration,~(Timer))", "~(Zone,ZoneDelegate,Zone,String)", "Zone(Zone?,ZoneDelegate?,Zone,ZoneSpecification?,Map<Object?,Object?>?)", "int(Comparable<@>,Comparable<@>)", "List<String>(String,List<String>)", "0^(0^,0^)<num>", "Size?(Size?,Size?,double)", "double?(num?,num?,double)", "Color?(Color?,Color?,double)", "PigeonMultiFactorInfo(Object)", "UserCredential0(JSObject)", "MultiFactorInfo0<JSObject>(JSObject)", "MultiFactorInfo(MultiFactorInfo0<JSObject>)", "0&(Object,StackTrace)", "@(Object)", "Widget(BuildContext,Offset,Offset,Widget)", "~(FlutterErrorDetails{forceReport:bool})", "DiagnosticsNode(String)", "~(String?{wrapWidth:int?})", "StackFrame?(String)", "double(double,double,double)", "MultiSurfaceViewRasterizer()", "~(RenderBox,Offset)", "Widget(BuildContext,Animation<double>)", "bool?(bool?,bool?,double)", "Future<Null>(MethodCall)", "Widget(BuildContext,Widget)", "OutlinedBorder?(OutlinedBorder?,OutlinedBorder?,double)", "EdgeInsetsGeometry?(EdgeInsetsGeometry?,EdgeInsetsGeometry?,double)", "TextStyle?(TextStyle?,TextStyle?,double)", "int(_TaskEntry<@>,_TaskEntry<@>)", "bool({priority!int,scheduler!SchedulerBinding})", "Color?(Color?,Color?,Color?[Color?])", "List<LicenseEntry>(String)", "~(FocusNode{alignment:double?,alignmentPolicy:ScrollPositionAlignmentPolicy?,curve:Curve?,duration:Duration?})", "int(Element,Element)", "IconThemeData(IconThemeData?,IconThemeData?,double)", "Widget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "List<Route<@>>(NavigatorState,String)", "Widget(BuildContext,Animation<double>,Animation<double>,Widget)", "int(Widget,int)", "StatefulWidget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "Iterable<DiagnosticsNode>(Iterable<DiagnosticsNode>)", "0&(Object,StackTrace{fromPigeon:bool})", "Map<Type,@>(List<@>)"],
     interceptorsByTag: null,
     leafTags: null,
     arrayRti: Symbol("$ti"),

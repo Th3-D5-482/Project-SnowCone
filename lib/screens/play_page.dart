@@ -113,8 +113,10 @@ class _PlayPageState extends State<PlayPage> {
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
     return WillPopScope(
-      onWillPop: () {
+      onWillPop: () async {
         player.stop();
+        SharedPreferences pref1 = await SharedPreferences.getInstance();
+        pref1.setBool('wasPlaying', true);
         return Future.value(true);
       },
       child: Scaffold(
@@ -157,8 +159,12 @@ class _PlayPageState extends State<PlayPage> {
                               child: Padding(
                                 padding: EdgeInsetsGeometry.only(left: 8),
                                 child: IconButton(
-                                  onPressed: () {
+                                  onPressed: () async {
                                     player.stop();
+                                    SharedPreferences pref1 =
+                                        await SharedPreferences.getInstance();
+                                    pref1.setBool('wasPlaying', true);
+                                    // ignore: use_build_context_synchronously
                                     Navigator.of(context).pop();
                                   },
                                   icon: Icon(
