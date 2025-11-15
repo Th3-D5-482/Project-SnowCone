@@ -1,19 +1,19 @@
-[Verse]
-C           G
+Verse
+[C]           [G]
 You are my strength
-Am          F
+[Am]          [F]
 When I am weak
-C           G
+[C]           [G]
 You lift me up
-Am          F
+[Am]          [F]
 When I can't speak
 
 [Chorus]
-F           C
+[F]           [C]
 I will praise You
-G           Am
+[G]           [Am]
 All of my days
-F           C
+[F]           [C]
 You are faithful
-G           C
+[G]           [C]
 Worthy of praise
