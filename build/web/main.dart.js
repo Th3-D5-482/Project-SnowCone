@@ -216078,7 +216078,7 @@
   };
   A._PlayPageState_build_closure.prototype = {
     call$2(context, constraints) {
-      var t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, _null = null,
+      var t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, _null = null,
         horizontalPadding = constraints.maxWidth > 1000 ? 200 : 0,
         t1 = this.$this,
         t2 = A.BoxDecoration$(_null, _null, _null, _null, new A.LinearGradient(B.Alignment_0_m1, B.Alignment_0_1, B.TileMode_0, A._setArrayType([A.Color$fromRGBO(0, 0, 0, 0.8), A.Color$(A.int_parse(t1._widget.backgroundColor, _null)), A.Color$fromRGBO(0, 0, 0, 0.8)], type$.JSArray_Color), A._setArrayType([0, 0.5, 1], type$.JSArray_double), _null), _null, B.BoxShape_0),
@@ -216103,14 +216103,13 @@
       t13 = A.Text$("Lyrics preview", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, B.TextDecoration_1, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
       t14 = A.SizedBox$(_null, 20, _null);
       t15 = A.Text$(t1.lyricsContent, 5, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, 2, true, _null, _null, _null, B.TextOverflow_2, _null, _null, _null, _null), _null, _null);
-      t16 = A.SizedBox$(_null, 30, _null);
-      t17 = A.ElevatedButton_styleFrom(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, B.Color_vnR, _null, _null, new A.EdgeInsets(24, 12, 24, 12), _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, _null, _null);
-      t17 = A.Expanded$(A.ElevatedButton$(A.Text$("Show lyrics", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_5, _null), new A._PlayPageState_build__closure4(t1, context), t17), 1);
-      t18 = A.SizedBox$(_null, _null, 20);
+      t16 = A.ElevatedButton_styleFrom(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, B.Color_vnR, _null, _null, new A.EdgeInsets(24, 12, 24, 12), _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, _null, _null);
+      t16 = A.Expanded$(A.ElevatedButton$(A.Text$("Show lyrics", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_5, _null), new A._PlayPageState_build__closure4(t1, context), t16), 1);
+      t17 = A.SizedBox$(_null, _null, 20);
       t9 = B.Map_GGfjP.$index(0, t9._as(800));
       t9.toString;
       t9 = A.ElevatedButton_styleFrom(_null, _null, t9, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(24, 12, 24, 12), _null, new A.RoundedRectangleBorder(A.BorderRadius$circular(20), B.BorderSide_Ah5), _null, _null, _null, _null, _null);
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t4, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t6, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t7, _null), t8, t11, t10, new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Card$(new A.Padding(B.EdgeInsets_16_16_16_16, A.Column$(A._setArrayType([t13, t14, t15, t16, A.Row$(A._setArrayType([t17, t18, A.ElevatedButton$(A.Text$("Chords", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._PlayPageState_build__closure5(t1, context), t9)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), t12, _null), 370, 1 / 0), _null), A.SizedBox$(_null, 30, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t4, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t6, _null), new A.Padding(B.EdgeInsets_30_0_30_0, t7, _null), t8, t11, t10, new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Card$(new A.Padding(B.EdgeInsets_16_16_16_16, A.Column$(A._setArrayType([t13, t14, t15, A.Row$(A._setArrayType([t16, t17, A.ElevatedButton$(A.Text$("Chords", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 16, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A._PlayPageState_build__closure5(t1, context), t9)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), t12, _null), 350, 1 / 0), _null), A.SizedBox$(_null, 30, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },
     $signature: 35
   };
