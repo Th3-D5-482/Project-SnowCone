@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:snowcone/screens/profile_page.dart';
 
 class LibraryPage extends StatefulWidget {
   const LibraryPage({super.key});
@@ -37,11 +38,38 @@ class _LibraryPageState extends State<LibraryPage> {
                       children: [
                         Row(
                           children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/images/random/Th3_D5_482.jpeg',
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder:
+                                        (
+                                          context,
+                                          animation,
+                                          secondaryAnimation,
+                                        ) => ProfilePage(),
+                                    transitionDuration: Duration(
+                                      milliseconds: 800,
+                                    ),
+                                    transitionsBuilder:
+                                        (
+                                          context,
+                                          animation,
+                                          secondaryAnimation,
+                                          child,
+                                        ) => FadeTransition(
+                                          opacity: animation,
+                                          child: child,
+                                        ),
+                                  ),
+                                );
+                              },
+                              child: CircleAvatar(
+                                backgroundImage: AssetImage(
+                                  'assets/images/random/Th3_D5_482.jpeg',
+                                ),
+                                radius: 20,
                               ),
-                              radius: 20,
                             ),
                             SizedBox(width: 12),
                             Text(
