@@ -342,122 +342,145 @@ class _DisplayLyricsChordsState extends State<DisplayLyricsChords> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: StreamBuilder<Duration>(
-                    stream: player.positionStream,
-                    builder: (context, snapshot) {
-                      final position = snapshot.data ?? Duration.zero;
-                      final duration = totalDuration;
-                      return Slider(
-                        min: 0,
-                        max: duration.inMilliseconds.toDouble(),
-                        value: position.inMilliseconds
-                            .clamp(0, duration.inMilliseconds)
-                            .toDouble(),
-                        onChanged: (value) async {
-                          final seekPosition = Duration(
-                            milliseconds: value.toInt(),
-                          );
-                          await player.seek(seekPosition);
-                        },
-                        activeColor: Colors.white,
-                        inactiveColor: Colors.grey.shade700,
-                      );
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        formatDuration(currentPosition),
-                        style: TextStyle(color: Colors.white),
+                LayoutBuilder(
+                  builder: (context, constraints) {
+                    final screenWidth = constraints.maxWidth;
+                    bool isDesktop =
+                        (kIsWeb || Platform.isWindows) && screenWidth > 1000;
+                    // ignore: unused_local_variable
+                    double horizontalPadding = isDesktop ? 200 : 8;
+                    return Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: horizontalPadding,
                       ),
-                      Text(
-                        formatDuration(totalDuration),
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        final newPostion =
-                            currentPosition - Duration(seconds: 10);
-                        player.seek(
-                          newPostion >= Duration.zero
-                              ? newPostion
-                              : Duration.zero,
-                        );
-                      },
-                      icon: Icon(
-                        Icons.replay_10_rounded,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(width: 12),
-                    IconButton(
-                      onPressed: () {
-                        setState(() {
-                          if (isRestart) {
-                            isPlaying = true;
-                            isRestart = false;
-                            player.seek(Duration.zero);
-                            player.play();
-                          } else if (isPlaying) {
-                            isPlaying = !isPlaying;
-                            player.stop();
-                          } else {
-                            isPlaying = !isPlaying;
-                            player.play();
-                          }
-                        });
-                      },
-                      icon: isRestart
-                          ? Icon(
-                              Icons.replay_circle_filled_rounded,
-                              size: 80,
-                              color: Colors.white,
-                            )
-                          : isPlaying
-                          ? Icon(
-                              Icons.pause_circle_filled_rounded,
-                              size: 80,
-                              color: Colors.white,
-                            )
-                          : Icon(
-                              Icons.play_circle_rounded,
-                              size: 80,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0,
+                              vertical: kIsWeb ? 16 : 8,
                             ),
-                    ),
-                    SizedBox(width: 12),
-                    IconButton(
-                      onPressed: () {
-                        final newPostion =
-                            currentPosition + Duration(seconds: 10);
-                        player.seek(
-                          newPostion <= totalDuration
-                              ? newPostion
-                              : totalDuration,
-                        );
-                      },
-                      icon: Icon(
-                        Icons.forward_10_rounded,
-                        size: 40,
-                        color: Colors.white,
+                            child: StreamBuilder<Duration>(
+                              stream: player.positionStream,
+                              builder: (context, snapshot) {
+                                final position = snapshot.data ?? Duration.zero;
+                                final duration = totalDuration;
+                                return Slider(
+                                  min: 0,
+                                  max: duration.inMilliseconds.toDouble(),
+                                  value: position.inMilliseconds
+                                      .clamp(0, duration.inMilliseconds)
+                                      .toDouble(),
+                                  onChanged: (value) async {
+                                    final seekPosition = Duration(
+                                      milliseconds: value.toInt(),
+                                    );
+                                    await player.seek(seekPosition);
+                                  },
+                                  activeColor: Colors.white,
+                                  inactiveColor: Colors.grey.shade700,
+                                );
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 30.0,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  formatDuration(currentPosition),
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  formatDuration(totalDuration),
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  final newPostion =
+                                      currentPosition - Duration(seconds: 10);
+                                  player.seek(
+                                    newPostion >= Duration.zero
+                                        ? newPostion
+                                        : Duration.zero,
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.replay_10_rounded,
+                                  size: 40,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 12),
+                              IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    if (isRestart) {
+                                      isPlaying = true;
+                                      isRestart = false;
+                                      player.seek(Duration.zero);
+                                      player.play();
+                                    } else if (isPlaying) {
+                                      isPlaying = !isPlaying;
+                                      player.stop();
+                                    } else {
+                                      isPlaying = !isPlaying;
+                                      player.play();
+                                    }
+                                  });
+                                },
+                                icon: isRestart
+                                    ? Icon(
+                                        Icons.replay_circle_filled_rounded,
+                                        size: 80,
+                                        color: Colors.white,
+                                      )
+                                    : isPlaying
+                                    ? Icon(
+                                        Icons.pause_circle_filled_rounded,
+                                        size: 80,
+                                        color: Colors.white,
+                                      )
+                                    : Icon(
+                                        Icons.play_circle_rounded,
+                                        size: 80,
+                                        color: Colors.white,
+                                      ),
+                              ),
+                              SizedBox(width: 12),
+                              IconButton(
+                                onPressed: () {
+                                  final newPostion =
+                                      currentPosition + Duration(seconds: 10);
+                                  player.seek(
+                                    newPostion <= totalDuration
+                                        ? newPostion
+                                        : totalDuration,
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.forward_10_rounded,
+                                  size: 40,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                        ],
                       ),
-                    ),
-                  ],
+                    );
+                  },
                 ),
-                SizedBox(height: 20),
               ],
             ),
           ),
