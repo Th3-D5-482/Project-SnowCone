@@ -4,8 +4,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database/database.dart';
+import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/play_page.dart';
 import 'package:snowcone/screens/profile_page.dart';
+import 'package:snowcone/screens/search_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,6 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
@@ -24,7 +27,30 @@ class _HomePageState extends State<HomePage> {
         SystemNavigator.pop();
         return Future.value(false);
       },
-      child: Scaffold(body: HomeView()),
+      child: Scaffold(
+        body: IndexedStack(
+          index: index,
+          children: [HomeView(), SearchPage(), LibraryPage()],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: index,
+          backgroundColor: Colors.transparent,
+          selectedFontSize: 14,
+          unselectedFontSize: 14,
+          iconSize: 28,
+          onTap: (value) => setState(() {
+            index = value;
+          }),
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.library_music_rounded),
+              label: 'Library',
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
