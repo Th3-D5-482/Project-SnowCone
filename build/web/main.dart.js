@@ -216089,7 +216089,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.bool),
-        $async$returnValue, $async$self = this;
+        $async$returnValue, $async$self = this, t1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -216097,12 +216097,14 @@
           switch ($async$goto) {
             case 0:
               // Function start
-              $async$self.$this.player.stop$0();
+              t1 = $async$self.$this;
+              t1.player.stop$0();
               $async$goto = 3;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 3:
               // returning from await.
               $async$result._setValue$3("Bool", "wasPlaying", true);
+              t1.___PlayPageState_isRestart_AI = false;
               $async$returnValue = A.Future_Future$value(true, type$.bool);
               // goto return
               $async$goto = 1;
@@ -216158,7 +216160,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this;
+        $async$self = this, t1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -216166,12 +216168,14 @@
           switch ($async$goto) {
             case 0:
               // Function start
-              $async$self.$this.player.stop$0();
+              t1 = $async$self.$this;
+              t1.player.stop$0();
               $async$goto = 2;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 2:
               // returning from await.
               $async$result._setValue$3("Bool", "wasPlaying", true);
+              t1.___PlayPageState_isRestart_AI = false;
               A.Navigator_of($async$self.context).pop$1$0(type$.nullable_Object);
               // implicit return
               return A._asyncReturn(null, $async$completer);
