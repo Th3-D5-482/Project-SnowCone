@@ -117,7 +117,7 @@ class _PlayPageState extends State<PlayPage> {
         player.stop();
         SharedPreferences pref1 = await SharedPreferences.getInstance();
         pref1.setBool('wasPlaying', true);
-        isRestart = false;
+        pref1.setBool('isRestart', false);
         return Future.value(true);
       },
       child: Scaffold(
@@ -165,7 +165,7 @@ class _PlayPageState extends State<PlayPage> {
                                     SharedPreferences pref1 =
                                         await SharedPreferences.getInstance();
                                     pref1.setBool('wasPlaying', true);
-                                    isRestart = false;
+                                    pref1.setBool('isRestart', false);
                                     // ignore: use_build_context_synchronously
                                     Navigator.of(context).pop();
                                   },

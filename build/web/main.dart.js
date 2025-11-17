@@ -216089,7 +216089,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.bool),
-        $async$returnValue, $async$self = this, t1;
+        $async$returnValue, $async$self = this, pref1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -216097,14 +216097,14 @@
           switch ($async$goto) {
             case 0:
               // Function start
-              t1 = $async$self.$this;
-              t1.player.stop$0();
+              $async$self.$this.player.stop$0();
               $async$goto = 3;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 3:
               // returning from await.
-              $async$result._setValue$3("Bool", "wasPlaying", true);
-              t1.___PlayPageState_isRestart_AI = false;
+              pref1 = $async$result;
+              pref1._setValue$3("Bool", "wasPlaying", true);
+              pref1._setValue$3("Bool", "isRestart", false);
               $async$returnValue = A.Future_Future$value(true, type$.bool);
               // goto return
               $async$goto = 1;
@@ -216160,7 +216160,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this, t1;
+        $async$self = this, pref1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -216168,14 +216168,14 @@
           switch ($async$goto) {
             case 0:
               // Function start
-              t1 = $async$self.$this;
-              t1.player.stop$0();
+              $async$self.$this.player.stop$0();
               $async$goto = 2;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 2:
               // returning from await.
-              $async$result._setValue$3("Bool", "wasPlaying", true);
-              t1.___PlayPageState_isRestart_AI = false;
+              pref1 = $async$result;
+              pref1._setValue$3("Bool", "wasPlaying", true);
+              pref1._setValue$3("Bool", "isRestart", false);
               A.Navigator_of($async$self.context).pop$1$0(type$.nullable_Object);
               // implicit return
               return A._asyncReturn(null, $async$completer);
