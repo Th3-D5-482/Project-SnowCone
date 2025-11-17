@@ -82,6 +82,12 @@ class _SongsListState extends State<SongsList> {
                           widget.isBand
                               ? CircleAvatar(
                                   radius: 115,
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    30,
+                                    30,
+                                    30,
+                                  ),
                                   backgroundImage: NetworkImage(
                                     widget.imageName,
                                   ),

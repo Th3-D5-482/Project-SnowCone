@@ -216925,7 +216925,7 @@
         t6 = t1._widget,
         t7 = t6.isBand,
         t8 = t6.imageName;
-      t7 = t7 ? A.CircleAvatar$(_null, new A.NetworkImage(t8, 1, _null, B.WebHtmlElementStrategy_0), _null, 115) : A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(t8, _null, 240, 240));
+      t7 = t7 ? A.CircleAvatar$(B.Color_lW6, new A.NetworkImage(t8, 1, _null, B.WebHtmlElementStrategy_0), _null, 115) : A.ClipRRect$(A.BorderRadius$circular(8), A.Image$network(t8, _null, 240, 240));
       t8 = type$.JSArray_Widget;
       return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t3, new A.Padding(B.EdgeInsets_8_0_0_0, t4, _null), t5, t7, A.SizedBox$(_null, 20, _null), A.Text$(t6.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t8), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 460, _null), B.Clip_0, _null, _null, t2, _null, _null, _null, _null, _null, _null, _null), A.FutureBuilder$(new A._SongsListState_build__closure0(t1), A.getMusic("Music"), type$.List_dynamic)], t8), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
