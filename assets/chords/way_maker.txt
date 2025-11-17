@@ -1,6 +1,3 @@
-Title: Way Maker
-Key: [A]
-
 [Intro]
 [A] [E] [B] [C#m]
 

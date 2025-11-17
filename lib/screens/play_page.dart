@@ -333,7 +333,6 @@ class _PlayPageState extends State<PlayPage> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 22,
                                     color: Colors.white,
-                                    decoration: TextDecoration.underline,
                                   ),
                                 ),
                                 SizedBox(height: 20),

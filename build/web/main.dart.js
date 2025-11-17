@@ -216140,7 +216140,7 @@
       t9 = type$.MaterialColor._eval$1("ColorSwatch.T");
       t12 = B.Map_GGfjP.$index(0, t9._as(900));
       t12.toString;
-      t13 = A.Text$("Lyrics preview", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, B.TextDecoration_1, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
+      t13 = A.Text$("Lyrics preview", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 22, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null);
       t14 = A.SizedBox$(_null, 20, _null);
       t15 = A.Text$(t1.lyricsContent, 5, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, 2, true, _null, _null, _null, B.TextOverflow_2, _null, _null, _null, _null), _null, _null);
       t16 = A.SizedBox$(_null, 30, _null);
@@ -226954,7 +226954,6 @@
     B.TextCapitalization_1 = new A.TextCapitalization(1, "sentences");
     B.TextCapitalization_2 = new A.TextCapitalization(2, "characters");
     B.TextCapitalization_30 = new A.TextCapitalization0(3, "none");
-    B.TextDecoration_1 = new A.TextDecoration(1);
     B.TextGranularity_0 = new A.TextGranularity(0, "character");
     B.TextGranularity_1 = new A.TextGranularity(1, "word");
     B.TextGranularity_2 = new A.TextGranularity(2, "paragraph");
@@ -226995,6 +226994,7 @@
     B.TextStyle_5v7 = new A.TextStyle(false, B.CupertinoDynamicColor_QkJ, null, "CupertinoSystemText", null, null, 17, null, null, -0.41, null, null, null, null, null, null, null, B.TextDecoration_0, null, null, null, null, null, null, null, null);
     B.TextStyle_7RY = new A.TextStyle(true, B.Color_wst, null, null, null, null, 10, null, null, null, null, null, 1.2, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_8hE = new A.TextStyle(true, null, null, null, null, null, 18, B.FontWeight_6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    B.TextDecoration_1 = new A.TextDecoration(1);
     B.TextStyle_9IC = new A.TextStyle(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, B.TextDecoration_1, null, null, null, null, null, null, null, null);
     B.TextStyle_Czj = new A.TextStyle(false, B.CupertinoDynamicColor_b5s, null, "CupertinoSystemDisplay", null, null, 21, B.FontWeight_3, null, 0.4, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     B.TextStyle_Gna = new A.TextStyle(true, B.Color_wst, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
