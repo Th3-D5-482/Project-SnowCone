@@ -78,11 +78,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
-                      "I'm a developer blending thoughtful design with clean code to build meaningful apps, websites, and real-world digital solutions.",
+                      "I'm a developer who blends thoughtful design with clean, maintainable code to build intuitive digital experiences. From scalable systems to refined UI flows, I approach every project with precision and empathy. I believe great tools serve real human needs—and that elegance begins with clarity. My goal is to create solutions that look good, feel right, and work flawlessly.",
                       style: TextStyle(color: Colors.grey, fontSize: 18),
                     ),
                   ),
-                  kIsWeb ? SizedBox(height: 160) : SizedBox(height: 240),
+                  kIsWeb ? SizedBox(height: 160) : SizedBox(height: 100),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(
