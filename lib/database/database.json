@@ -251,64 +251,24 @@
       "chords": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/chords/my_lighthouse.txt"
     },
     {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Miles%20Minnick%20-%20Christlike.mp3",
-      "id": 27,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/christlike.png",
-      "isRecentlyListened": false,
-      "name": "Christlike",
-      "backgroundColor": "0xFF9FA8DA",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/christlike.txt",
-      "chords": "https://chordify.net/chords/miles-minnick-christlike-official-music-video-miles-minnick",
-      "youtube": "https://www.youtube.com/watch?v=gFUU36wSDXw",
-      "ultimateGuitar": "https://www.ultimate-guitar.com/artist/christlike_2008984"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Lecrae%20-%20Tell%20The%20World.mp3",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/chain_breaker.mp3",
       "id": 25,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/telltheworld.png",
-      "isRecentlyListened": false,
-      "name": "Tell The World",
-      "backgroundColor": "0xFFE0B2B2",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/telltheworld.txt",
-      "chords": "https://tabs.ultimate-guitar.com/tab/lecrae/tell-the-world-chords-1240869",
-      "youtube": "https://www.youtube.com/watch?v=bo9x5jMTfDs",
-      "ultimateGuitar": "https://tabs.ultimate-guitar.com/tab/lecrae/tell-the-world-chords-1240869"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Rend%20Collective%20-%20Build%20Your%20Kingdom%20Here.mp3",
-      "id": 26,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/buildyourkingdomhere.png",
-      "isRecentlyListened": false,
-      "name": "Build Your Kingdom Here",
-      "backgroundColor": "0xFF81C784",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/buildyourkingdomhere.txt",
-      "chords": "https://tabs.ultimate-guitar.com/tab/rend-collective/build-your-kingdom-here-chords-1142801",
-      "youtube": "https://www.youtube.com/watch?v=sbdJXKqVgtg",
-      "ultimateGuitar": "https://tabs.ultimate-guitar.com/tab/rend-collective/build-your-kingdom-here-chords-1142801"
-    },
-    {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Zach%20Williams%20-%20Chain%20Breaker.mp3",
-      "id": 28,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/chainbreaker.png",
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/chain_breaker.png",
       "isRecentlyListened": false,
       "name": "Chain Breaker",
-      "backgroundColor": "0xFFFFD54F",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/chainbreaker.txt",
-      "chords": "https://tabs.ultimate-guitar.com/tab/zach-williams/chain-breaker-chords-1851577",
-      "youtube": "https://www.youtube.com/watch?v=cd_xxmXdQz4",
-      "ultimateGuitar": "https://tabs.ultimate-guitar.com/tab/zach-williams/chain-breaker-chords-1851577"
+      "backgroundColor": "0xFFF3F0EC",
+      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/chain_breaker.txt",
+      "chords": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/chords/chain_breaker.txt"
     },
     {
-      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/Zach%20Williams%20-%20There%20Was%20Jesus.mp3",
-      "id": 29,
-      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/therewasjesus.png",
+      "audio": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/Audio/there_was_jesus.mp3",
+      "id": 26,
+      "image": "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/there_was_jesus.png",
       "isRecentlyListened": false,
       "name": "There Was Jesus",
-      "backgroundColor": "0xFFCE93D8",
-      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/therewasjesus.txt",
-      "chords": "https://tabs.ultimate-guitar.com/tab/zach-williams/there-was-jesus-chords-2847242",
-      "youtube": "https://www.youtube.com/watch?v=oa997xkppAE",
-      "ultimateGuitar": "https://tabs.ultimate-guitar.com/tab/zach-williams/there-was-jesus-chords-2847242"
+      "backgroundColor": "0xFFEFF3F1",
+      "lyrics": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/lyrics/there_was_jesus.txt",
+      "chords": "https://raw.githubusercontent.com/Th3-D5-482/Project-SnowCone/master/assets/chords/there_was_jesus.txt"
     }
   ],
   "TopMixes": [
@@ -601,8 +561,8 @@
       "color": "#cc0088",
       "backgroundColor": "0xFFF6CCE4",
       "groupID": [
-        26,
-        24
+        3,
+        22
       ]
     },
     {
@@ -612,8 +572,8 @@
       "color": "#b2590d",
       "backgroundColor": "0xFFE6CDB9",
       "groupID": [
-        28,
-        29
+        25,
+        26
       ]
     }
   ]
