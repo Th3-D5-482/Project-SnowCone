@@ -216195,7 +216195,7 @@
         t6 = A.Text$("Th3_D5_482", _null, _null, _null, A.TextStyle$(_null, _null, B.Color_wst, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
         t7 = A.SizedBox$(_null, 20, _null),
         t8 = A.Text$("I'm a developer who blends thoughtful design with clean, maintainable code to build intuitive digital experiences. From scalable systems to refined UI flows, I approach every project with precision and empathy. I believe great tools serve real human needs\u2014and that elegance begins with clarity. My goal is to create solutions that look good, feel right, and work flawlessly.", _null, _null, _null, A.TextStyle$(_null, _null, B.MaterialColor_wdy, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null),
-        t9 = A.SizedBox$(_null, 0, _null),
+        t9 = A.SizedBox$(_null, 120, _null),
         t10 = A.ElevatedButton_styleFrom(_null, _null, _null, _null, _null, _null, _null, _null, _null, new A.Size(350, 50), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
       return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t3, t4, t5, t6, t7, new A.Padding(B.EdgeInsets_30_0_30_0, t8, _null), t9, A.ElevatedButton$(A.Text$("Sign out", _null, _null, _null, _null, _null, _null), new A._ProfilePageState_build__closure0(context), t10)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null);
     },

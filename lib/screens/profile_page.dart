@@ -82,7 +82,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       style: TextStyle(color: Colors.grey, fontSize: 18),
                     ),
                   ),
-                  kIsWeb ? SizedBox(height: 0) : SizedBox(height: 100),
+                  kIsWeb ? SizedBox(height: 120) : SizedBox(height: 100),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(
