@@ -216180,7 +216180,7 @@
   };
   A._ProfilePageState.prototype = {
     build$1(context) {
-      return A.Scaffold$(A.SafeArea$(true, A.LayoutBuilder$(new A._ProfilePageState_build_closure()), B.EdgeInsets_0_0_0_0, true), null);
+      return A.Scaffold$(A.SafeArea$(true, A.SingleChildScrollView$(A.LayoutBuilder$(new A._ProfilePageState_build_closure()), B.Axis_1), B.EdgeInsets_0_0_0_0, true), null);
     }
   };
   A._ProfilePageState_build_closure.prototype = {
