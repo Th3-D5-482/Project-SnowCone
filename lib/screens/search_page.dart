@@ -27,6 +27,7 @@ class _SearchPageState extends State<SearchPage> {
   void initState() {
     super.initState();
     searchInput = TextEditingController();
+    searchInput.clear();
   }
 
   @override

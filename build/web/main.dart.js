@@ -216336,6 +216336,7 @@
     initState$0() {
       this.super$State$initState();
       this.___SearchPageState_searchInput_AI = A.TextEditingController$(null);
+      this.get$searchInput().set$value(B.TextEditingValue_2Hq);
     },
     dispose$0() {
       this.get$searchInput().dispose$0();
