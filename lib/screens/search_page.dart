@@ -100,7 +100,7 @@ class _SearchPageState extends State<SearchPage> {
                       controller: searchInput,
                       style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
-                        hintText: 'What are you looking for?',
+                        hintText: 'Type of a song name or lyrics...',
                         hintStyle: TextStyle(
                           color: Colors.black,
                           fontSize: 14,
@@ -130,6 +130,7 @@ class _SearchPageState extends State<SearchPage> {
                       keyboardType: TextInputType.text,
                       autocorrect: true,
                       enableSuggestions: true,
+                      onSubmitted: (value) {},
                     ),
                     SizedBox(height: 20),
                     Text(
