@@ -756,6 +756,7 @@ class _HomeViewState extends State<HomeView> {
                                                           animation,
                                                           secondaryAnimation,
                                                         ) => PlayPage(
+                                                          id: recentSong['id'],
                                                           backgroundColor:
                                                               recentSong['backgroundColor'],
                                                           imageName:
@@ -866,6 +867,7 @@ class _HomeViewState extends State<HomeView> {
                                                           animation,
                                                           secondaryAnimation,
                                                         ) => PlayPage(
+                                                          id: recentSong['id'],
                                                           backgroundColor:
                                                               recentSong['backgroundColor'],
                                                           imageName:

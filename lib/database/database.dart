@@ -89,3 +89,41 @@ Future<List<dynamic>> getBrowseAll(String encode) async {
     throw Exception('Failed to load data');
   }
 }
+
+Future<List<Map<String, dynamic>>> getFavorites(String encode) async {
+  final response = await http.get(Uri.parse('$baseUrl/$encode.json'));
+  if (response.statusCode == 200) {
+    final decoded = json.decode(response.body);
+    if (decoded == null) return [];
+    if (decoded is Map) {
+      return decoded.values
+          .map<Map<String, dynamic>>((item) => Map<String, dynamic>.from(item))
+          .toList();
+    }
+    if (decoded is List) {
+      return decoded.whereType<Map<String, dynamic>>().toList();
+    }
+    return [];
+  } else {
+    throw Exception('Failed to load');
+  }
+}
+
+Future<void> writeFavorite(int songId, bool isFavorite) async {
+  final response = await http.put(
+    Uri.parse('$baseUrl/Favorites/$songId.json'),
+    body: json.encode({'songId': songId, 'isFavorite': isFavorite}),
+  );
+  if (response.statusCode != 200) {
+    throw Exception('Failed to write to Favorites');
+  }
+}
+
+Future<void> deleteFavorites(int songId) async {
+  final response = await http.delete(
+    Uri.parse('$baseUrl/Favorites/$songId.json'),
+  );
+  if (response.statusCode != 200) {
+    throw Exception('Failed to delete Favorite');
+  }
+}

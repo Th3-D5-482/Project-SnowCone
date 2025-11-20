@@ -142,6 +142,7 @@ class _SongsListState extends State<SongsList> {
                                                 animation,
                                                 secondaryAnimation,
                                               ) => PlayPage(
+                                                id: songList['id'],
                                                 backgroundColor:
                                                     songList['backgroundColor'],
                                                 imageName: songList['image'],

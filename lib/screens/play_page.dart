@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/display_lyrics_chords.dart';
 
 class PlayPage extends StatefulWidget {
+  final int id;
   final String backgroundColor;
   final String imageName;
   final String songName;
@@ -15,6 +17,7 @@ class PlayPage extends StatefulWidget {
   final String chords;
   const PlayPage({
     super.key,
+    required this.id,
     required this.backgroundColor,
     required this.imageName,
     required this.songName,
@@ -35,7 +38,7 @@ class _PlayPageState extends State<PlayPage> {
   String lyricsContent = '';
   String chords = '';
   late bool isRestart = false;
-  bool isFavorite = false;
+  late bool isFavorite = false;
 
   @override
   void initState() {
@@ -62,6 +65,24 @@ class _PlayPageState extends State<PlayPage> {
     });
     loadLyrics();
     getChords();
+    getFavoritesData();
+  }
+
+  Future<void> getFavoritesData() async {
+    final favoritesDatas = await getFavorites('Favorites');
+    final match = favoritesDatas.firstWhere(
+      (item) => item['songId'] == widget.id,
+      orElse: () => {},
+    );
+    if (match.isNotEmpty && match['isFavorite'] == true) {
+      setState(() {
+        isFavorite = true;
+      });
+    } else {
+      setState(() {
+        isFavorite = false;
+      });
+    }
   }
 
   Future<void> navigatingBackCode() async {
@@ -324,6 +345,11 @@ class _PlayPageState extends State<PlayPage> {
                               setState(() {
                                 isFavorite = !isFavorite;
                               });
+                              if (isFavorite) {
+                                await writeFavorite(widget.id, isFavorite);
+                              } else {
+                                await deleteFavorites(widget.id);
+                              }
                             },
                             icon: isFavorite
                                 ? Icon(

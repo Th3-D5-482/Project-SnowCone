@@ -151,6 +151,7 @@ class _SearchPageState extends State<SearchPage> {
                               pageBuilder:
                                   (context, animation, secondaryAnimation) =>
                                       PlayPage(
+                                        id: resultSong['id'],
                                         backgroundColor:
                                             resultSong['backgroundColor'],
                                         imageName: resultSong['image'],
