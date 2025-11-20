@@ -216177,10 +216177,25 @@
   };
   A._PlayPageState_build__closure4.prototype = {
     call$0() {
-      var t1 = this.$this;
-      t1.setState$1(new A._PlayPageState_build___closure5(t1));
+      var $async$goto = 0,
+        $async$completer = A._makeAsyncAwaitCompleter(type$.void),
+        $async$self = this, t1;
+      var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+        if ($async$errorCode === 1)
+          return A._asyncRethrow($async$result, $async$completer);
+        while (true)
+          switch ($async$goto) {
+            case 0:
+              // Function start
+              t1 = $async$self.$this;
+              t1.setState$1(new A._PlayPageState_build___closure5(t1));
+              // implicit return
+              return A._asyncReturn(null, $async$completer);
+          }
+      });
+      return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 0
+    $signature: 13
   };
   A._PlayPageState_build___closure5.prototype = {
     call$0() {

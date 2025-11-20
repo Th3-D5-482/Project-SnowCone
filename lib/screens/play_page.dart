@@ -320,7 +320,7 @@ class _PlayPageState extends State<PlayPage> {
                         Align(
                           alignment: Alignment.topRight,
                           child: IconButton(
-                            onPressed: () {
+                            onPressed: () async {
                               setState(() {
                                 isFavorite = !isFavorite;
                               });
