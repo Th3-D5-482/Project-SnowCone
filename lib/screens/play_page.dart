@@ -35,6 +35,7 @@ class _PlayPageState extends State<PlayPage> {
   String lyricsContent = '';
   String chords = '';
   late bool isRestart = false;
+  bool isFavorite = false;
 
   @override
   void initState() {
@@ -245,6 +246,7 @@ class _PlayPageState extends State<PlayPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        SizedBox(width: 70),
                         IconButton(
                           onPressed: () {
                             final newPosition =
@@ -312,6 +314,28 @@ class _PlayPageState extends State<PlayPage> {
                             Icons.forward_10_rounded,
                             size: 40,
                             color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                isFavorite = !isFavorite;
+                              });
+                            },
+                            icon: isFavorite
+                                ? Icon(
+                                    Icons.favorite_rounded,
+                                    size: 38,
+                                    color: Colors.redAccent,
+                                  )
+                                : Icon(
+                                    Icons.favorite_outline_rounded,
+                                    size: 38,
+                                    color: Colors.grey.shade400,
+                                  ),
                           ),
                         ),
                       ],
