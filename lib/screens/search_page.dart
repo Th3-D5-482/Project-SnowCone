@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:snowcone/database/database.dart';
+import 'package:snowcone/screens/play_page.dart';
 import 'package:snowcone/screens/profile_page.dart';
 import 'package:snowcone/screens/songs_list.dart';
 
@@ -130,7 +131,62 @@ class _SearchPageState extends State<SearchPage> {
                       keyboardType: TextInputType.text,
                       autocorrect: true,
                       enableSuggestions: true,
-                      onSubmitted: (value) {},
+                      onSubmitted: (value) async {
+                        final musicData = await getMusic('Music');
+                        final searchDatas = musicData.where((item) {
+                          final tag = item['searchTags'];
+                          return tag.any(
+                            (tag) =>
+                                tag.toString().toLowerCase().trim() ==
+                                value.toLowerCase().trim(),
+                          );
+                        }).toList();
+                        if (searchDatas.isNotEmpty) {
+                          final resultSong = searchDatas.first;
+                          searchInput.clear();
+                          // ignore: use_build_context_synchronously
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      PlayPage(
+                                        backgroundColor:
+                                            resultSong['backgroundColor'],
+                                        imageName: resultSong['image'],
+                                        songName: resultSong['name'],
+                                        audio: resultSong['audio'],
+                                        lyrics: resultSong['lyrics'],
+                                        chords: resultSong['chords'],
+                                      ),
+                            ),
+                          );
+                        } else {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Row(
+                                children: [
+                                  Icon(
+                                    Icons.music_off_rounded,
+                                    color: Colors.white,
+                                    size: 24,
+                                  ),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Song not found',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              backgroundColor: Colors.redAccent,
+                              duration: Duration(seconds: 3),
+                            ),
+                          );
+                        }
+                      },
                     ),
                     SizedBox(height: 20),
                     Text(
