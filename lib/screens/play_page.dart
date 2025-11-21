@@ -39,6 +39,7 @@ class _PlayPageState extends State<PlayPage> {
   String chords = '';
   late bool isRestart = false;
   late bool isFavorite = false;
+  late String emailID;
 
   @override
   void initState() {
@@ -69,10 +70,13 @@ class _PlayPageState extends State<PlayPage> {
   }
 
   Future<void> getFavoritesData() async {
-    final favoritesDatas = await getFavorites('Favorites');
+    SharedPreferences pref2 = await SharedPreferences.getInstance();
+    emailID = pref2.getString('getEmail')!;
+    final safeEmail = emailID.replaceAll('.', '_').replaceAll('@', '_');
+    final favoritesDatas = await getFavorites('Favorites/$safeEmail');
     final match = favoritesDatas.firstWhere(
       (item) => item['songId'] == widget.id,
-      orElse: () => {},
+      orElse: () => <String, dynamic>{},
     );
     if (match.isNotEmpty && match['isFavorite'] == true) {
       setState(() {
@@ -342,13 +346,20 @@ class _PlayPageState extends State<PlayPage> {
                           alignment: Alignment.topRight,
                           child: IconButton(
                             onPressed: () async {
+                              SharedPreferences pref2 =
+                                  await SharedPreferences.getInstance();
+                              emailID = pref2.getString('getEmail')!;
                               setState(() {
                                 isFavorite = !isFavorite;
                               });
                               if (isFavorite) {
-                                await writeFavorite(widget.id, isFavorite);
+                                await writeFavorite(
+                                  widget.id,
+                                  emailID,
+                                  isFavorite,
+                                );
                               } else {
-                                await deleteFavorites(widget.id);
+                                await deleteFavorites(widget.id, emailID);
                               }
                             },
                             icon: isFavorite

@@ -95,23 +95,29 @@ Future<List<Map<String, dynamic>>> getFavorites(String encode) async {
   if (response.statusCode == 200) {
     final decoded = json.decode(response.body);
     if (decoded == null) return [];
-    if (decoded is Map) {
+    if (decoded is Map<String, dynamic>) {
       return decoded.values
+          .whereType<Map>()
           .map<Map<String, dynamic>>((item) => Map<String, dynamic>.from(item))
           .toList();
     }
     if (decoded is List) {
-      return decoded.whereType<Map<String, dynamic>>().toList();
+      return decoded
+          .whereType<Map>()
+          .map<Map<String, dynamic>>((item) => Map<String, dynamic>.from(item))
+          .toList();
     }
     return [];
   } else {
-    throw Exception('Failed to load');
+    throw Exception('Failed to load favorites: ${response.statusCode}');
   }
 }
 
-Future<void> writeFavorite(int songId, bool isFavorite) async {
+Future<void> writeFavorite(int songId, String email, bool isFavorite) async {
+  final safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
+  Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json');
   final response = await http.put(
-    Uri.parse('$baseUrl/Favorites/$songId.json'),
+    Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json'),
     body: json.encode({'songId': songId, 'isFavorite': isFavorite}),
   );
   if (response.statusCode != 200) {
@@ -119,9 +125,10 @@ Future<void> writeFavorite(int songId, bool isFavorite) async {
   }
 }
 
-Future<void> deleteFavorites(int songId) async {
+Future<void> deleteFavorites(int songId, String email) async {
+  final safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
   final response = await http.delete(
-    Uri.parse('$baseUrl/Favorites/$songId.json'),
+    Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json'),
   );
   if (response.statusCode != 200) {
     throw Exception('Failed to delete Favorite');

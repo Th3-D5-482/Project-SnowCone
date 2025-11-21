@@ -204,6 +204,9 @@ class _LogInState extends State<LogIn> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(content: Text('Login successful')),
                               );
+                              SharedPreferences pref2 =
+                                  await SharedPreferences.getInstance();
+                              pref2.setString('getEmail', trimmedEmail);
                               // ignore: use_build_context_synchronously
                               Navigator.of(context).pushReplacement(
                                 PageRouteBuilder(

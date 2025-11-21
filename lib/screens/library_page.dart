@@ -65,7 +65,12 @@ class _LibraryPageState extends State<LibraryPage> {
                                 );
                               },
                               child: CircleAvatar(
-                                backgroundColor: Colors.black,
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  30,
+                                  30,
+                                  30,
+                                ),
                                 backgroundImage: AssetImage(
                                   'assets/images/random/Th3_D5_482.jpeg',
                                 ),

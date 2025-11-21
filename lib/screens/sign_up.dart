@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/screens/home_page.dart';
 import 'package:snowcone/screens/log_in.dart';
 
@@ -165,6 +166,9 @@ class _SignUpState extends State<SignUp> {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Sign up successful!')),
                             );
+                            SharedPreferences pref2 =
+                                await SharedPreferences.getInstance();
+                            pref2.setString('getEmail', trimmedEmail);
                             //ignore: use_build_context_synchronously
                             Navigator.of(context).pushReplacement(
                               PageRouteBuilder(
