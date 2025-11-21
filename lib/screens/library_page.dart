@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/profile_page.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -12,6 +14,23 @@ class LibraryPage extends StatefulWidget {
 }
 
 class _LibraryPageState extends State<LibraryPage> {
+  bool isLiked = false;
+  late String email;
+  String? safeEmail;
+
+  @override
+  void initState() {
+    super.initState();
+    convertEmail();
+  }
+
+  Future<void> convertEmail() async {
+    SharedPreferences pref2 = await SharedPreferences.getInstance();
+    email = pref2.getString('getEmail')!;
+    safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,12 +84,6 @@ class _LibraryPageState extends State<LibraryPage> {
                                 );
                               },
                               child: CircleAvatar(
-                                backgroundColor: const Color.fromARGB(
-                                  255,
-                                  30,
-                                  30,
-                                  30,
-                                ),
                                 backgroundImage: AssetImage(
                                   'assets/images/random/Th3_D5_482.jpeg',
                                 ),
@@ -99,39 +112,88 @@ class _LibraryPageState extends State<LibraryPage> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 10),
                     Divider(color: Colors.grey[800], thickness: 2),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.8,
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            CircleAvatar(
-                              radius: 80,
-                              backgroundImage: AssetImage(
-                                'assets/images/random/library.png',
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            Text(
-                              'Your library is empty!',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              'Add music to make it yours.',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    StreamBuilder(
+                      stream: getFavoritesData('Favorites/$safeEmail'),
+                      builder: (context, asyncSnapshot) {
+                        // ignore: unused_local_variable
+                        final favoritesDatas = asyncSnapshot.data ?? [];
+                        final isLiked = favoritesDatas.isNotEmpty;
+                        return isLiked
+                            ? Column(
+                                children: [
+                                  SizedBox(height: 30),
+                                  Card(
+                                    color: Colors.transparent,
+                                    child: ListTile(
+                                      contentPadding: EdgeInsets.zero,
+                                      leading: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.pink.shade400,
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
+                                        ),
+                                        width: 56,
+                                        height: 56,
+                                        child: Icon(
+                                          Icons.favorite_rounded,
+                                          size: 32,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      title: Text('Liked Songs'),
+                                      titleTextStyle: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.8,
+                                child: Center(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 80,
+                                        backgroundColor: const Color.fromARGB(
+                                          255,
+                                          30,
+                                          30,
+                                          30,
+                                        ),
+                                        backgroundImage: AssetImage(
+                                          'assets/images/random/library.png',
+                                        ),
+                                      ),
+                                      SizedBox(height: 16),
+                                      Text(
+                                        'Your library is empty!',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'Add music to make it yours.',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                      },
                     ),
                   ],
                 ),

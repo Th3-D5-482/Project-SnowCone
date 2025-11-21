@@ -113,6 +113,44 @@ Future<List<Map<String, dynamic>>> getFavorites(String encode) async {
   }
 }
 
+Stream<List<Map<String, dynamic>>> getFavoritesData(String encode) async* {
+  while (true) {
+    try {
+      final response = await http.get(Uri.parse('$baseUrl/$encode.json'));
+      if (response.statusCode == 200) {
+        final decoded = json.decode(response.body);
+
+        if (decoded == null) {
+          yield [];
+        } else if (decoded is Map<String, dynamic>) {
+          yield decoded.values
+              .whereType<Map<String, dynamic>>()
+              .map((item) => Map<String, dynamic>.from(item))
+              .toList();
+        } else if (decoded is List) {
+          yield decoded
+              .whereType<Map<String, dynamic>>()
+              .map((item) => Map<String, dynamic>.from(item))
+              .toList();
+        } else {
+          yield [];
+        }
+      } else {
+        // You can either throw or yieldError here
+        throw Exception('Failed to load favorites: ${response.statusCode}');
+      }
+    } catch (e) {
+      // Optional: yieldError instead of throwing
+      yield [];
+    }
+
+    // Respect cancellation: if the stream is closed, break out
+    if (!await Future.delayed(const Duration(seconds: 5), () => true)) {
+      break;
+    }
+  }
+}
+
 Future<void> writeFavorite(int songId, String email, bool isFavorite) async {
   final safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
   Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json');
