@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/profile_page.dart';
+import 'package:snowcone/screens/songs_list.dart';
 
 class LibraryPage extends StatefulWidget {
   const LibraryPage({super.key});
@@ -84,6 +85,12 @@ class _LibraryPageState extends State<LibraryPage> {
                                 );
                               },
                               child: CircleAvatar(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  30,
+                                  30,
+                                  30,
+                                ),
                                 backgroundImage: AssetImage(
                                   'assets/images/random/Th3_D5_482.jpeg',
                                 ),
@@ -124,30 +131,52 @@ class _LibraryPageState extends State<LibraryPage> {
                             ? Column(
                                 children: [
                                   SizedBox(height: 30),
-                                  Card(
-                                    color: Colors.transparent,
-                                    child: ListTile(
-                                      contentPadding: EdgeInsets.zero,
-                                      leading: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.pink.shade400,
-                                          borderRadius: BorderRadius.circular(
-                                            12,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        PageRouteBuilder(
+                                          pageBuilder:
+                                              (
+                                                context,
+                                                animation,
+                                                secondaryAnimation,
+                                              ) => SongsList(
+                                                imageName:
+                                                    'https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066',
+                                                songTitle: 'Liked Songs',
+                                                isBand: false,
+                                                backgroundColor: '0xFFF8BBD0',
+                                                groupID: [0],
+                                                isLikedSongs: true,
+                                              ),
+                                        ),
+                                      );
+                                    },
+                                    child: Card(
+                                      color: Colors.transparent,
+                                      child: ListTile(
+                                        contentPadding: EdgeInsets.zero,
+                                        leading: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.pink.shade400,
+                                            borderRadius: BorderRadius.circular(
+                                              12,
+                                            ),
+                                          ),
+                                          width: 56,
+                                          height: 56,
+                                          child: Icon(
+                                            Icons.favorite_rounded,
+                                            size: 32,
+                                            color: Colors.white,
                                           ),
                                         ),
-                                        width: 56,
-                                        height: 56,
-                                        child: Icon(
-                                          Icons.favorite_rounded,
-                                          size: 32,
+                                        title: Text('Liked Songs'),
+                                        titleTextStyle: TextStyle(
                                           color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
                                         ),
-                                      ),
-                                      title: Text('Liked Songs'),
-                                      titleTextStyle: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
                                       ),
                                     ),
                                   ),

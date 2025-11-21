@@ -75,7 +75,7 @@ class _PlayPageState extends State<PlayPage> {
     final safeEmail = emailID.replaceAll('.', '_').replaceAll('@', '_');
     final favoritesDatas = await getFavorites('Favorites/$safeEmail');
     final match = favoritesDatas.firstWhere(
-      (item) => item['songId'] == widget.id,
+      (item) => item['id'] == widget.id,
       orElse: () => <String, dynamic>{},
     );
     if (match.isNotEmpty && match['isFavorite'] == true) {
@@ -357,6 +357,12 @@ class _PlayPageState extends State<PlayPage> {
                                   widget.id,
                                   emailID,
                                   isFavorite,
+                                  widget.backgroundColor,
+                                  widget.imageName,
+                                  widget.songName,
+                                  widget.audio,
+                                  widget.lyrics,
+                                  widget.chords,
                                 );
                               } else {
                                 await deleteFavorites(widget.id, emailID);

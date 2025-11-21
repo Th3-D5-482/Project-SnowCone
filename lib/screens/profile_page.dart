@@ -62,6 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     SizedBox(height: 90),
                     CircleAvatar(
+                      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
                       radius: 110,
                       backgroundImage: AssetImage(
                         'assets/images/random/Th3_D5_482.jpeg',

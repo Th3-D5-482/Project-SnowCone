@@ -151,12 +151,31 @@ Stream<List<Map<String, dynamic>>> getFavoritesData(String encode) async* {
   }
 }
 
-Future<void> writeFavorite(int songId, String email, bool isFavorite) async {
+Future<void> writeFavorite(
+  int id,
+  String email,
+  bool isFavorite,
+  String background,
+  String image,
+  String name,
+  String audio,
+  String lyrics,
+  String chords,
+) async {
   final safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
-  Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json');
+  Uri.parse('$baseUrl/Favorites/$safeEmail/$id.json');
   final response = await http.put(
-    Uri.parse('$baseUrl/Favorites/$safeEmail/$songId.json'),
-    body: json.encode({'songId': songId, 'isFavorite': isFavorite}),
+    Uri.parse('$baseUrl/Favorites/$safeEmail/$id.json'),
+    body: json.encode({
+      'id': id,
+      'isFavorite': isFavorite,
+      'backgroundColor': background,
+      'image': image,
+      'name': name,
+      'audio': audio,
+      'lyrics': lyrics,
+      'chords': chords,
+    }),
   );
   if (response.statusCode != 200) {
     throw Exception('Failed to write to Favorites');

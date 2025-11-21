@@ -141,6 +141,7 @@ class _HomeViewState extends State<HomeView> {
                               );
                             },
                             child: const CircleAvatar(
+                              backgroundColor: Color.fromARGB(255, 30, 30, 30),
                               backgroundImage: AssetImage(
                                 'assets/images/random/Th3_D5_482.jpeg',
                               ),
@@ -203,6 +204,7 @@ class _HomeViewState extends State<HomeView> {
                                             backgroundColor:
                                                 song['backgroundColor'],
                                             groupID: song['groupID'],
+                                            isLikedSongs: false,
                                           ),
                                       transitionsBuilder:
                                           (
@@ -309,6 +311,7 @@ class _HomeViewState extends State<HomeView> {
                                                               topMix['backgroundColor'],
                                                           groupID:
                                                               topMix['groupID'],
+                                                          isLikedSongs: false,
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -438,6 +441,8 @@ class _HomeViewState extends State<HomeView> {
                                                                   topMix['backgroundColor'],
                                                               groupID:
                                                                   topMix['groupID'],
+                                                              isLikedSongs:
+                                                                  false,
                                                             ),
                                                         transitionsBuilder:
                                                             (
@@ -573,6 +578,7 @@ class _HomeViewState extends State<HomeView> {
                                                               artist['backgroundColor']!,
                                                           groupID:
                                                               artist['groupID']!,
+                                                          isLikedSongs: false,
                                                         ),
                                                     transitionsBuilder:
                                                         (
@@ -654,6 +660,7 @@ class _HomeViewState extends State<HomeView> {
                                                               artist['backgroundColor'],
                                                           groupID:
                                                               artist['groupID'],
+                                                          isLikedSongs: false,
                                                         ),
                                                     transitionsBuilder:
                                                         (

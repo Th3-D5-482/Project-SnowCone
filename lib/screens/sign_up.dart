@@ -58,6 +58,7 @@ class _SignUpState extends State<SignUp> {
                   children: [
                     SizedBox(height: 50),
                     CircleAvatar(
+                      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
                       radius: 100,
                       backgroundImage: AssetImage(
                         'assets/images/random/logo2.png',

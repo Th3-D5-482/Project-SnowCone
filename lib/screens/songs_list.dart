@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/play_page.dart';
 
@@ -11,6 +12,7 @@ class SongsList extends StatefulWidget {
   final bool isBand;
   final String backgroundColor;
   final List groupID;
+  final bool isLikedSongs;
   const SongsList({
     super.key,
     required this.imageName,
@@ -18,6 +20,7 @@ class SongsList extends StatefulWidget {
     required this.isBand,
     required this.backgroundColor,
     required this.groupID,
+    required this.isLikedSongs,
   });
 
   @override
@@ -25,6 +28,22 @@ class SongsList extends StatefulWidget {
 }
 
 class _SongsListState extends State<SongsList> {
+  late String email;
+  String? safeEmail;
+
+  @override
+  void initState() {
+    super.initState();
+    convertEmail();
+  }
+
+  Future<void> convertEmail() async {
+    SharedPreferences pref2 = await SharedPreferences.getInstance();
+    email = pref2.getString('getEmail')!;
+    safeEmail = email.replaceAll('.', '_').replaceAll('@', '_');
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +98,31 @@ class _SongsListState extends State<SongsList> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          widget.isBand
+                          widget.isLikedSongs
+                              ? Column(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.pink.shade400,
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
+                                        ),
+                                        width: 200,
+                                        height: 200,
+                                        child: Icon(
+                                          Icons.favorite_rounded,
+                                          size: 96,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 40),
+                                  ],
+                                )
+                              : widget.isBand
                               ? CircleAvatar(
                                   radius: 115,
                                   backgroundColor: const Color.fromARGB(
@@ -112,95 +155,203 @@ class _SongsListState extends State<SongsList> {
                       ),
                     ),
                   ),
-                  FutureBuilder(
-                    future: getMusic("Music"),
-                    builder: (context, asyncSnapshot) {
-                      final songLists = (asyncSnapshot.data ?? [])
-                          .where((item) => widget.groupID.contains(item['id']))
-                          .toList();
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: SizedBox(
-                          height: 480,
-                          child: Expanded(
-                            child: ListView.builder(
-                              padding: EdgeInsets.zero,
-                              itemCount: songLists.length,
-                              physics: NeverScrollableScrollPhysics(),
-                              scrollDirection: Axis.vertical,
-                              itemBuilder: (context, index) {
-                                final songList = songLists[index];
-                                return Padding(
-                                  padding: const EdgeInsets.only(top: 8),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      Navigator.of(context).push(
-                                        PageRouteBuilder(
-                                          pageBuilder:
-                                              (
-                                                context,
-                                                animation,
-                                                secondaryAnimation,
-                                              ) => PlayPage(
-                                                id: songList['id'],
-                                                backgroundColor:
-                                                    songList['backgroundColor'],
-                                                imageName: songList['image'],
-                                                songName: songList['name'],
-                                                audio: songList['audio'],
-                                                lyrics: songList['lyrics'],
-                                                chords: songList['chords'],
+                  widget.isLikedSongs
+                      ? FutureBuilder(
+                          future: getFavorites('Favorites/$safeEmail'),
+                          builder: (context, asyncSnapshot) {
+                            final songLists = (asyncSnapshot.data ?? []);
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                              ),
+                              child: SizedBox(
+                                height: 480,
+                                child: Expanded(
+                                  child: ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    itemCount: songLists.length,
+                                    physics: NeverScrollableScrollPhysics(),
+                                    scrollDirection: Axis.vertical,
+                                    itemBuilder: (context, index) {
+                                      final songList = songLists[index];
+                                      return Padding(
+                                        padding: const EdgeInsets.only(top: 8),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                    ) => PlayPage(
+                                                      id: songList['id'],
+                                                      backgroundColor:
+                                                          songList['backgroundColor'],
+                                                      imageName:
+                                                          songList['image'],
+                                                      songName:
+                                                          songList['name'],
+                                                      audio: songList['audio'],
+                                                      lyrics:
+                                                          songList['lyrics'],
+                                                      chords:
+                                                          songList['chords'],
+                                                    ),
+                                                transitionsBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                      child,
+                                                    ) => FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    ),
+                                                transitionDuration: Duration(
+                                                  milliseconds: 800,
+                                                ),
                                               ),
-                                          transitionsBuilder:
-                                              (
-                                                context,
-                                                animation,
-                                                secondaryAnimation,
-                                                child,
-                                              ) => FadeTransition(
-                                                opacity: animation,
-                                                child: child,
+                                            );
+                                          },
+                                          child: Card(
+                                            child: ListTile(
+                                              contentPadding: EdgeInsets.zero,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(12.0),
                                               ),
-                                          transitionDuration: Duration(
-                                            milliseconds: 800,
+                                              tileColor: Colors.black,
+                                              leading: Image.network(
+                                                songList['image'],
+                                                fit: BoxFit.cover,
+                                              ),
+                                              title: Text(
+                                                songList['name'],
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              trailing: Padding(
+                                                padding: const EdgeInsets.only(
+                                                  right: 8.0,
+                                                ),
+                                                child: Icon(
+                                                  Icons.play_arrow_rounded,
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       );
                                     },
-                                    child: Card(
-                                      child: ListTile(
-                                        contentPadding: EdgeInsets.zero,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            12.0,
-                                          ),
-                                        ),
-                                        tileColor: Colors.black,
-                                        leading: Image.network(
-                                          songList['image'],
-                                          fit: BoxFit.cover,
-                                        ),
-                                        title: Text(
-                                          songList['name'],
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                        trailing: Padding(
-                                          padding: const EdgeInsets.only(
-                                            right: 8.0,
-                                          ),
-                                          child: Icon(Icons.play_arrow_rounded),
-                                        ),
-                                      ),
-                                    ),
                                   ),
-                                );
-                              },
-                            ),
-                          ),
+                                ),
+                              ),
+                            );
+                          },
+                        )
+                      : FutureBuilder(
+                          future: getMusic("Music"),
+                          builder: (context, asyncSnapshot) {
+                            final songLists = (asyncSnapshot.data ?? [])
+                                .where(
+                                  (item) => widget.groupID.contains(item['id']),
+                                )
+                                .toList();
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                              ),
+                              child: SizedBox(
+                                height: 480,
+                                child: Expanded(
+                                  child: ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    itemCount: songLists.length,
+                                    physics: NeverScrollableScrollPhysics(),
+                                    scrollDirection: Axis.vertical,
+                                    itemBuilder: (context, index) {
+                                      final songList = songLists[index];
+                                      return Padding(
+                                        padding: const EdgeInsets.only(top: 8),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                    ) => PlayPage(
+                                                      id: songList['id'],
+                                                      backgroundColor:
+                                                          songList['backgroundColor'],
+                                                      imageName:
+                                                          songList['image'],
+                                                      songName:
+                                                          songList['name'],
+                                                      audio: songList['audio'],
+                                                      lyrics:
+                                                          songList['lyrics'],
+                                                      chords:
+                                                          songList['chords'],
+                                                    ),
+                                                transitionsBuilder:
+                                                    (
+                                                      context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                      child,
+                                                    ) => FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    ),
+                                                transitionDuration: Duration(
+                                                  milliseconds: 800,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                          child: Card(
+                                            child: ListTile(
+                                              contentPadding: EdgeInsets.zero,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(12.0),
+                                              ),
+                                              tileColor: Colors.black,
+                                              leading: Image.network(
+                                                songList['image'],
+                                                fit: BoxFit.cover,
+                                              ),
+                                              title: Text(
+                                                songList['name'],
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              trailing: Padding(
+                                                padding: const EdgeInsets.only(
+                                                  right: 8.0,
+                                                ),
+                                                child: Icon(
+                                                  Icons.play_arrow_rounded,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
                         ),
-                      );
-                    },
-                  ),
                 ],
               ),
             );

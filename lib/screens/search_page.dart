@@ -80,6 +80,12 @@ class _SearchPageState extends State<SearchPage> {
                             );
                           },
                           child: CircleAvatar(
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              30,
+                              30,
+                              30,
+                            ),
                             backgroundImage: AssetImage(
                               'assets/images/random/Th3_D5_482.jpeg',
                             ),
@@ -252,6 +258,7 @@ class _SearchPageState extends State<SearchPage> {
                                                 backgroundColor:
                                                     genres['backgroundColor'],
                                                 groupID: genres['groupID'],
+                                                isLikedSongs: false,
                                               ),
                                           transitionsBuilder:
                                               (
@@ -388,6 +395,7 @@ class _SearchPageState extends State<SearchPage> {
                                                   backgroundColor:
                                                       browseAll['backgroundColor'],
                                                   groupID: browseAll['groupID'],
+                                                  isLikedSongs: false,
                                                 ),
                                             transitionsBuilder:
                                                 (
