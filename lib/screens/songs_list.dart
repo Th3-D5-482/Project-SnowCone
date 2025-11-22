@@ -156,100 +156,124 @@ class _SongsListState extends State<SongsList> {
                     ),
                   ),
                   widget.isLikedSongs
-                      ? FutureBuilder(
-                          future: getFavorites('Favorites/$safeEmail'),
+                      ? StreamBuilder(
+                          stream: getFavoritesData('Favorites/$safeEmail'),
                           builder: (context, asyncSnapshot) {
                             final songLists = (asyncSnapshot.data ?? []);
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16.0,
-                              ),
-                              child: SizedBox(
-                                height: 480,
-                                child: Expanded(
-                                  child: ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    itemCount: songLists.length,
-                                    physics: NeverScrollableScrollPhysics(),
-                                    scrollDirection: Axis.vertical,
-                                    itemBuilder: (context, index) {
-                                      final songList = songLists[index];
-                                      return Padding(
-                                        padding: const EdgeInsets.only(top: 8),
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            Navigator.of(context).push(
-                                              PageRouteBuilder(
-                                                pageBuilder:
-                                                    (
-                                                      context,
-                                                      animation,
-                                                      secondaryAnimation,
-                                                    ) => PlayPage(
-                                                      id: songList['id'],
-                                                      backgroundColor:
-                                                          songList['backgroundColor'],
-                                                      imageName:
-                                                          songList['image'],
-                                                      songName:
-                                                          songList['name'],
-                                                      audio: songList['audio'],
-                                                      lyrics:
-                                                          songList['lyrics'],
-                                                      chords:
-                                                          songList['chords'],
+                            final songListx = songLists.isNotEmpty;
+                            return songListx
+                                ? Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0,
+                                    ),
+                                    child: SizedBox(
+                                      height: 480,
+                                      child: Expanded(
+                                        child: ListView.builder(
+                                          padding: EdgeInsets.zero,
+                                          itemCount: songLists.length,
+                                          physics:
+                                              NeverScrollableScrollPhysics(),
+                                          scrollDirection: Axis.vertical,
+                                          itemBuilder: (context, index) {
+                                            final songList = songLists[index];
+                                            return Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 8,
+                                              ),
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Navigator.of(context).push(
+                                                    PageRouteBuilder(
+                                                      pageBuilder:
+                                                          (
+                                                            context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                          ) => PlayPage(
+                                                            id: songList['id'],
+                                                            backgroundColor:
+                                                                songList['backgroundColor'],
+                                                            imageName:
+                                                                songList['image'],
+                                                            songName:
+                                                                songList['name'],
+                                                            audio:
+                                                                songList['audio'],
+                                                            lyrics:
+                                                                songList['lyrics'],
+                                                            chords:
+                                                                songList['chords'],
+                                                          ),
+                                                      transitionsBuilder:
+                                                          (
+                                                            context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child,
+                                                          ) => FadeTransition(
+                                                            opacity: animation,
+                                                            child: child,
+                                                          ),
+                                                      transitionDuration:
+                                                          Duration(
+                                                            milliseconds: 800,
+                                                          ),
                                                     ),
-                                                transitionsBuilder:
-                                                    (
-                                                      context,
-                                                      animation,
-                                                      secondaryAnimation,
-                                                      child,
-                                                    ) => FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
+                                                  );
+                                                },
+                                                child: Card(
+                                                  child: ListTile(
+                                                    contentPadding:
+                                                        EdgeInsets.zero,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            12.0,
+                                                          ),
                                                     ),
-                                                transitionDuration: Duration(
-                                                  milliseconds: 800,
+                                                    tileColor: Colors.black,
+                                                    leading: Image.network(
+                                                      songList['image'],
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                    title: Text(
+                                                      songList['name'],
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                    trailing: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                            right: 8.0,
+                                                          ),
+                                                      child: Icon(
+                                                        Icons
+                                                            .play_arrow_rounded,
+                                                      ),
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             );
                                           },
-                                          child: Card(
-                                            child: ListTile(
-                                              contentPadding: EdgeInsets.zero,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(12.0),
-                                              ),
-                                              tileColor: Colors.black,
-                                              leading: Image.network(
-                                                songList['image'],
-                                                fit: BoxFit.cover,
-                                              ),
-                                              title: Text(
-                                                songList['name'],
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              trailing: Padding(
-                                                padding: const EdgeInsets.only(
-                                                  right: 8.0,
-                                                ),
-                                                child: Icon(
-                                                  Icons.play_arrow_rounded,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
                                         ),
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            );
+                                      ),
+                                    ),
+                                  )
+                                : Padding(
+                                    padding: EdgeInsetsGeometry.only(top: 150),
+                                    child: Center(
+                                      child: Text(
+                                        'No Liked songs',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  );
                           },
                         )
                       : FutureBuilder(

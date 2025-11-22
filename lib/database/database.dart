@@ -136,15 +136,11 @@ Stream<List<Map<String, dynamic>>> getFavoritesData(String encode) async* {
           yield [];
         }
       } else {
-        // You can either throw or yieldError here
         throw Exception('Failed to load favorites: ${response.statusCode}');
       }
     } catch (e) {
-      // Optional: yieldError instead of throwing
       yield [];
     }
-
-    // Respect cancellation: if the stream is closed, break out
     if (!await Future.delayed(const Duration(seconds: 5), () => true)) {
       break;
     }

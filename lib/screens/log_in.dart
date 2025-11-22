@@ -201,10 +201,6 @@ class _LogInState extends State<LogIn> {
                                     await SharedPreferences.getInstance();
                                 await pref.setBool('isChecked', true);
                               }
-                              // ignore: use_build_context_synchronously
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Login successful')),
-                              );
                               SharedPreferences pref2 =
                                   await SharedPreferences.getInstance();
                               pref2.setString('getEmail', trimmedEmail);
@@ -236,19 +232,81 @@ class _LogInState extends State<LogIn> {
                               if (e.code == 'user-not-found') {
                                 // ignore: use_build_context_synchronously
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('User not found')),
+                                  SnackBar(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    duration: Duration(seconds: 3),
+                                    content: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.error_outline_rounded,
+                                          size: 24,
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'User not found',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 );
                               } else if (e.code == 'wrong-password') {
                                 // ignore: use_build_context_synchronously
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Wrong password')),
+                                  SnackBar(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    duration: Duration(seconds: 3),
+                                    content: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.error_outline_outlined,
+                                          size: 24,
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'Wrong password',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 );
                               } else {
                                 // ignore: use_build_context_synchronously
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text(
-                                      'Invalid login details. Please check your email or password, or sign up if you don\'t have an account.',
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    duration: Duration(seconds: 3),
+                                    content: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.error_outline_outlined,
+                                          size: 24,
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'Invalid email or password',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 );
@@ -259,7 +317,27 @@ class _LogInState extends State<LogIn> {
                             // Show error message
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('Please fill in all fields'),
+                                backgroundColor: Colors.redAccent,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                duration: Duration(seconds: 3),
+                                content: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.error_outline_outlined,
+                                      size: 24,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text(
+                                      'Please fill in all fields',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           }

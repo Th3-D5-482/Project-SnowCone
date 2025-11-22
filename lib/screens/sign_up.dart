@@ -163,10 +163,6 @@ class _SignUpState extends State<SignUp> {
                                   email: trimmedEmail,
                                   password: trimmedPassword,
                                 );
-                            // ignore: use_build_context_synchronously
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Sign up successful!')),
-                            );
                             SharedPreferences pref2 =
                                 await SharedPreferences.getInstance();
                             pref2.setString('getEmail', trimmedEmail);
@@ -195,24 +191,103 @@ class _SignUpState extends State<SignUp> {
                             if (e.code == 'email-already-in-use') {
                               // ignore: use_build_context_synchronously
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Email already in use')),
+                                SnackBar(
+                                  backgroundColor: Colors.redAccent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  duration: Duration(seconds: 3),
+                                  content: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.error_outline_rounded,
+                                        size: 24,
+                                        color: Colors.white,
+                                      ),
+                                      SizedBox(width: 8),
+                                      Text(
+                                        'Email already in use',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               );
                             } else if (e.code == 'weak-password') {
                               // ignore: use_build_context_synchronously
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Weak password')),
+                                SnackBar(
+                                  backgroundColor: Colors.redAccent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  duration: Duration(seconds: 3),
+                                  content: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.error_outline_rounded,
+                                        size: 24,
+                                        color: Colors.white,
+                                      ),
+                                      SizedBox(width: 8),
+                                      Text(
+                                        'Weak password',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               );
                             } else {
                               // ignore: use_build_context_synchronously
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Error: ${e.message}')),
+                                SnackBar(
+                                  backgroundColor: Colors.redAccent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  duration: Duration(seconds: 3),
+                                  content: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.error_outline_rounded,
+                                        size: 24,
+                                      ),
+                                      SizedBox(width: 8),
+                                      Text('Error: ${e.message}'),
+                                    ],
+                                  ),
+                                ),
                               );
                             }
                           }
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text('Please fill in all fields'),
+                              backgroundColor: Colors.redAccent,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              duration: Duration(seconds: 3),
+                              content: Row(
+                                children: [
+                                  Icon(Icons.error_outline_rounded, size: 24),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Please fill in all fields',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           );
                         }

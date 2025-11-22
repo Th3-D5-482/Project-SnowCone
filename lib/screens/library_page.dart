@@ -141,6 +141,7 @@ class _LibraryPageState extends State<LibraryPage> {
                                                 animation,
                                                 secondaryAnimation,
                                               ) => SongsList(
+                                                key: UniqueKey(),
                                                 imageName:
                                                     'https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066',
                                                 songTitle: 'Liked Songs',

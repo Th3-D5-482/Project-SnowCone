@@ -56765,9 +56765,6 @@
     },
     _SignUpState_build___closure0: function _SignUpState_build___closure0() {
     },
-    SongsList$(backgroundColor, groupID, imageName, isBand, isLikedSongs, songTitle) {
-      return new A.SongsList(imageName, songTitle, isBand, backgroundColor, groupID, isLikedSongs, null);
-    },
     SongsList: function SongsList(t0, t1, t2, t3, t4, t5, t6) {
       var _ = this;
       _.imageName = t0;
@@ -123610,7 +123607,7 @@
       }
     },
     build$1(context) {
-      var t1, t2, theme, snackBarTheme, defaults, contentTextStyle, snackBarBehavior, width, t3, isFloatingSnackBar, horizontalPadding, padding, actionTextPainter, margin, t4, snackBarWidth, actionOverflowThreshold, willOverflowAction, t5, snackBar, elevation, backgroundColor, shape, snackBarTransition, _this = this, _null = null;
+      var t1, t2, theme, snackBarTheme, defaults, contentTextStyle, snackBarBehavior, width, t3, isFloatingSnackBar, horizontalPadding, padding, actionTextPainter, margin, t4, snackBarWidth, actionOverflowThreshold, willOverflowAction, t5, snackBar, elevation, shape, snackBarTransition, _this = this, _null = null;
       A.debugCheckHasMediaQuery(context);
       A.debugCheckHasMediaQuery(context);
       t1 = type$.MediaQuery;
@@ -123669,16 +123666,11 @@
       elevation = snackBarTheme.elevation;
       if (elevation == null)
         elevation = defaults.get$elevation();
-      t1 = t1.backgroundColor;
-      backgroundColor = t1 == null ? snackBarTheme.backgroundColor : t1;
-      if (backgroundColor == null)
-        backgroundColor = defaults.get$backgroundColor();
-      t1 = _this._widget;
-      t1.toString;
-      shape = snackBarTheme.shape;
+      t3 = t1.shape;
+      shape = t3 == null ? snackBarTheme.shape : t3;
       if (shape == null)
         shape = isFloatingSnackBar ? defaults.get$shape() : _null;
-      snackBar = A.Material$(B.Duration_200000, true, _null, new A.Theme(theme, snackBar, _null), t1.clipBehavior, backgroundColor, elevation, _null, _null, shape, _null, _null, B.MaterialType_0);
+      snackBar = A.Material$(B.Duration_200000, true, _null, new A.Theme(theme, snackBar, _null), t1.clipBehavior, t1.backgroundColor, elevation, _null, _null, shape, _null, _null, B.MaterialType_0);
       if (isFloatingSnackBar)
         snackBar = A.SafeArea$(false, width != null ? new A.Padding(new A.EdgeInsets(0, margin.top, 0, margin.bottom), A.SizedBox$(snackBar, _null, width), _null) : new A.Padding(margin, snackBar, _null), B.EdgeInsets_0_0_0_0, false);
       t3 = t1.hitTestBehavior;
@@ -215753,16 +215745,14 @@
   };
   A._HomeViewState_build______closure5.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.song;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, false, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -215829,16 +215819,14 @@
   };
   A._HomeViewState_build_______closure8.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, false, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -215894,16 +215882,14 @@
   };
   A._HomeViewState_build________closure.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.topMix;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, false, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -215984,7 +215970,7 @@
       A._asString(t5);
       t1 = t2.$index(t1, "groupID");
       t1.toString;
-      return A.SongsList$(t5, type$.List_dynamic._as(t1), t3, true, false, t4);
+      return new A.SongsList(t3, t4, true, t5, type$.List_dynamic._as(t1), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -216022,16 +216008,14 @@
   };
   A._HomeViewState_build_______closure3.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.artist;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, true, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), true, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -216345,7 +216329,7 @@
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
-      return A.SongsList$("0xFFF8BBD0", [0], "https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066", false, true, "Liked Songs");
+      return new A.SongsList("https://ik.imagekit.io/j7iwyd9ys/Project%20SnowCone/images/songs/how_great_is_our_god.png?updatedAt=1758811880066", "Liked Songs", false, "0xFFF8BBD0", [0], true, new A.UniqueKey());
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -216463,7 +216447,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$handler = 1, $async$errorStack = [], $async$self = this, trimmedEmail, trimmedPassword, pref, pref2, e, app, exception, t1, t2, $async$exception;
+        $async$handler = 1, $async$errorStack = [], $async$self = this, trimmedEmail, trimmedPassword, pref, pref2, e, app, exception, t3, t4, t1, t2, $async$exception;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1) {
           $async$errorStack.push($async$result);
@@ -216507,16 +216491,14 @@
               // returning from await.
             case 11:
               // join
-              t1 = $async$self.context;
-              A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Login successful", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
               $async$goto = 14;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 14:
               // returning from await.
               pref2 = $async$result;
               pref2._setValue$3("String", "getEmail", A._asString(trimmedEmail));
-              t2 = type$.dynamic;
-              A.Navigator_of(t1).pushReplacement$2$1(A.PageRouteBuilder$(new A._LogInState_build___closure1(), A.Duration$(0, 100, 0), new A._LogInState_build___closure2(), t2), t2, type$.nullable_Object);
+              t1 = type$.dynamic;
+              A.Navigator_of($async$self.context).pushReplacement$2$1(A.PageRouteBuilder$(new A._LogInState_build___closure1(), A.Duration$(0, 100, 0), new A._LogInState_build___closure2(), t1), t1, type$.nullable_Object);
               $async$handler = 1;
               // goto after finally
               $async$goto = 8;
@@ -216528,14 +216510,25 @@
               t1 = A.unwrapException($async$exception);
               if (t1 instanceof A.FirebaseAuthException) {
                 e = t1;
-                if (e.code === "user-not-found")
-                  A.ScaffoldMessenger_of($async$self.context).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("User not found", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
-                else {
+                if (e.code === "user-not-found") {
+                  t1 = A.ScaffoldMessenger_of($async$self.context);
+                  t2 = A.BorderRadius$circular(12);
+                  t3 = A.Duration$(0, 0, 3);
+                  t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_63250_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("User not found", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t3, null, null, null, null, null, null, new A.RoundedRectangleBorder(t2, B.BorderSide_Ah5), null, null));
+                } else {
                   t1 = $async$self.context;
-                  if (e.code === "wrong-password")
-                    A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Wrong password", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
-                  else
-                    A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Invalid login details. Please check your email or password, or sign up if you don't have an account.", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+                  t2 = type$.JSArray_Widget;
+                  if (e.code === "wrong-password") {
+                    t1 = A.ScaffoldMessenger_of(t1);
+                    t3 = A.BorderRadius$circular(12);
+                    t4 = A.Duration$(0, 0, 3);
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_61477_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("Wrong password", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t4, null, null, null, null, null, null, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5), null, null));
+                  } else {
+                    t1 = A.ScaffoldMessenger_of(t1);
+                    t3 = A.BorderRadius$circular(12);
+                    t4 = A.Duration$(0, 0, 3);
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_61477_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("Invalid email or password", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t4, null, null, null, null, null, null, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5), null, null));
+                  }
                 }
               } else
                 throw $async$exception;
@@ -216554,7 +216547,10 @@
               break;
             case 4:
               // else
-              A.ScaffoldMessenger_of($async$self.context).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Please fill in all fields", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+              t1 = A.ScaffoldMessenger_of($async$self.context);
+              t2 = A.BorderRadius$circular(12);
+              t3 = A.Duration$(0, 0, 3);
+              t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_61477_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("Please fill in all fields", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t3, null, null, null, null, null, null, new A.RoundedRectangleBorder(t2, B.BorderSide_Ah5), null, null));
             case 3:
               // join
               // implicit return
@@ -217513,16 +217509,14 @@
   };
   A._SearchPageState_build______closure1.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.genres;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, false, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -217595,16 +217589,14 @@
   };
   A._SearchPageState_build______closure.prototype = {
     call$3(context, animation, secondaryAnimation) {
-      var t1, t2, t3, t4;
+      var t1, t2;
       type$.BuildContext._as(context);
       t1 = type$.Animation_double;
       t1._as(animation);
       t1._as(secondaryAnimation);
       t1 = this.browseAll;
       t2 = J.getInterceptor$asx(t1);
-      t3 = A._asString(t2.$index(t1, "image"));
-      t4 = A._asString(t2.$index(t1, "name"));
-      return A.SongsList$(A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), t3, false, false, t4);
+      return new A.SongsList(A._asString(t2.$index(t1, "image")), A._asString(t2.$index(t1, "name")), false, A._asString(t2.$index(t1, "backgroundColor")), type$.List_dynamic._as(t2.$index(t1, "groupID")), false, null);
     },
     "call*": "call$3",
     $requiredArgCount: 3,
@@ -217711,7 +217703,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$handler = 1, $async$errorStack = [], $async$self = this, trimmedEmail, trimmedPassword, pref2, e, app, exception, t1, t2, $async$exception;
+        $async$handler = 1, $async$errorStack = [], $async$self = this, trimmedEmail, trimmedPassword, pref2, e, app, exception, t3, t4, t1, t2, $async$exception;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1) {
           $async$errorStack.push($async$result);
@@ -217740,16 +217732,14 @@
               return A._asyncAwait(A.FirebaseAuth_FirebaseAuth$instanceFor(new A.FirebaseApp(app)).createUserWithEmailAndPassword$2$email$password(trimmedEmail, trimmedPassword), $async$call$0);
             case 9:
               // returning from await.
-              t1 = $async$self.context;
-              A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Sign up successful!", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
               $async$goto = 10;
               return A._asyncAwait(A.SharedPreferences_getInstance(), $async$call$0);
             case 10:
               // returning from await.
               pref2 = $async$result;
               pref2._setValue$3("String", "getEmail", A._asString(trimmedEmail));
-              t2 = type$.dynamic;
-              A.Navigator_of(t1).pushReplacement$2$1(A.PageRouteBuilder$(new A._SignUpState_build___closure1(), B.Duration_100000, new A._SignUpState_build___closure2(), t2), t2, type$.nullable_Object);
+              t1 = type$.dynamic;
+              A.Navigator_of($async$self.context).pushReplacement$2$1(A.PageRouteBuilder$(new A._SignUpState_build___closure1(), B.Duration_100000, new A._SignUpState_build___closure2(), t1), t1, type$.nullable_Object);
               $async$handler = 1;
               // goto after finally
               $async$goto = 8;
@@ -217761,14 +217751,25 @@
               t1 = A.unwrapException($async$exception);
               if (t1 instanceof A.FirebaseAuthException) {
                 e = t1;
-                if (e.code === "email-already-in-use")
-                  A.ScaffoldMessenger_of($async$self.context).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Email already in use", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
-                else {
+                if (e.code === "email-already-in-use") {
+                  t1 = A.ScaffoldMessenger_of($async$self.context);
+                  t2 = A.BorderRadius$circular(12);
+                  t3 = A.Duration$(0, 0, 3);
+                  t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_63250_MaterialIcons_false, B.Color_wst, null, 24), A.SizedBox$(null, null, 8), A.Text$("Email already in use", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t3, null, null, null, null, null, null, new A.RoundedRectangleBorder(t2, B.BorderSide_Ah5), null, null));
+                } else {
                   t1 = $async$self.context;
-                  if (e.code === "weak-password")
-                    A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Weak password", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
-                  else
-                    A.ScaffoldMessenger_of(t1).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Error: " + A.S(e.message), null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+                  t2 = type$.JSArray_Widget;
+                  if (e.code === "weak-password") {
+                    t1 = A.ScaffoldMessenger_of(t1);
+                    t3 = A.BorderRadius$circular(12);
+                    t4 = A.Duration$(0, 0, 3);
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_63250_MaterialIcons_false, B.Color_wst, null, 24), A.SizedBox$(null, null, 8), A.Text$("Weak password", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t4, null, null, null, null, null, null, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5), null, null));
+                  } else {
+                    t1 = A.ScaffoldMessenger_of(t1);
+                    t3 = A.BorderRadius$circular(12);
+                    t4 = A.Duration$(0, 0, 3);
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_63250_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("Error: " + A.S(e.message), null, null, null, null, null, null)], t2), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t4, null, null, null, null, null, null, new A.RoundedRectangleBorder(t3, B.BorderSide_Ah5), null, null));
+                  }
                 }
               } else
                 throw $async$exception;
@@ -217787,7 +217788,10 @@
               break;
             case 4:
               // else
-              A.ScaffoldMessenger_of($async$self.context).showSnackBar$1(A.SnackBar$(null, null, null, null, null, B.Clip_1, null, A.Text$("Please fill in all fields", null, null, null, null, null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+              t1 = A.ScaffoldMessenger_of($async$self.context);
+              t2 = A.BorderRadius$circular(12);
+              t3 = A.Duration$(0, 0, 3);
+              t1.showSnackBar$1(A.SnackBar$(null, null, null, B.MaterialAccentColor_Hga, null, B.Clip_1, null, A.Row$(A._setArrayType([A.Icon$(B.IconData_63250_MaterialIcons_false, null, null, 24), A.SizedBox$(null, null, 8), A.Text$("Please fill in all fields", null, null, null, A.TextStyle$(null, null, null, null, null, null, null, null, null, null, null, 16, null, null, B.FontWeight_6, null, null, true, null, null, null, null, null, null, null, null), null, null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, 0), null, t3, null, null, null, null, null, null, new A.RoundedRectangleBorder(t2, B.BorderSide_Ah5), null, null));
             case 3:
               // join
               // implicit return
@@ -217931,7 +217935,7 @@
       }
       t7 = type$.JSArray_Widget;
       t2 = A.Container$(_null, A.SizedBox$(A.Column$(A._setArrayType([t3, new A.Padding(B.EdgeInsets_8_0_0_0, t4, _null), t5, t6, A.SizedBox$(_null, 20, _null), A.Text$(t1._widget.songTitle, _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 24, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), 460, _null), B.Clip_0, _null, _null, t2, _null, _null, _null, _null, _null, _null, _null);
-      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t1._widget.isLikedSongs ? A.FutureBuilder$(new A._SongsListState_build__closure0(), A.getFavorites("Favorites/" + A.S(t1.safeEmail)), type$.List_Map_String_dynamic) : A.FutureBuilder$(new A._SongsListState_build__closure1(t1), A.getMusic("Music"), type$.List_dynamic)], t7), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
+      return new A.Padding(new A.EdgeInsets(horizontalPadding, 16, horizontalPadding, 16), A.Column$(A._setArrayType([t2, t1._widget.isLikedSongs ? A.StreamBuilder$(new A._SongsListState_build__closure0(), A.getFavoritesData("Favorites/" + A.S(t1.safeEmail)), type$.List_Map_String_dynamic) : A.FutureBuilder$(new A._SongsListState_build__closure1(t1), A.getMusic("Music"), type$.List_dynamic)], t7), B.CrossAxisAlignment_0, B.MainAxisAlignment_2, B.MainAxisSize_1), _null);
     },
     $signature: 37
   };
@@ -217943,10 +217947,13 @@
   };
   A._SongsListState_build__closure0.prototype = {
     call$2(context, asyncSnapshot) {
-      var songLists = type$.AsyncSnapshot_List_Map_String_dynamic._as(asyncSnapshot).data;
+      var songLists, t1, _null = null;
+      type$.BuildContext._as(context);
+      songLists = type$.AsyncSnapshot_List_Map_String_dynamic._as(asyncSnapshot).data;
       if (songLists == null)
         songLists = A._setArrayType([], type$.JSArray_Map_String_dynamic);
-      return new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Expanded$(A.ListView$builder(new A._SongsListState_build___closure1(songLists), J.get$length$asx(songLists), B.EdgeInsets_0_0_0_0, new A.NeverScrollableScrollPhysics(null), B.Axis_1, false), 1), 480, null), null);
+      t1 = J.getInterceptor$asx(songLists);
+      return t1.get$isNotEmpty(songLists) ? new A.Padding(B.EdgeInsets_16_0_16_0, A.SizedBox$(A.Expanded$(A.ListView$builder(new A._SongsListState_build___closure1(songLists), t1.get$length(songLists), B.EdgeInsets_0_0_0_0, new A.NeverScrollableScrollPhysics(_null), B.Axis_1, false), 1), 480, _null), _null) : new A.Padding(new A.EdgeInsets(0, 150, 0, 0), A.Center$(A.Text$("No Liked songs", _null, _null, _null, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null, _null), _null);
     },
     $signature: 726
   };
@@ -226239,8 +226246,10 @@
     B.IconData_59069_MaterialIcons_false = new A.IconData(59069, "MaterialIcons", false);
     B.IconData_59070_MaterialIcons_false = new A.IconData(59070, "MaterialIcons", false);
     B.IconData_59083_MaterialIcons_false = new A.IconData(59083, "MaterialIcons", false);
+    B.IconData_61477_MaterialIcons_false = new A.IconData(61477, "MaterialIcons", false);
     B.IconData_62775_MaterialIcons_false = new A.IconData(62775, "MaterialIcons", false);
     B.IconData_62834_MaterialIcons_true = new A.IconData(62834, "MaterialIcons", true);
+    B.IconData_63250_MaterialIcons_false = new A.IconData(63250, "MaterialIcons", false);
     B.IconData_63287_MaterialIcons_false = new A.IconData(63287, "MaterialIcons", false);
     B.IconData_63288_MaterialIcons_false = new A.IconData(63288, "MaterialIcons", false);
     B.IconData_63390_MaterialIcons_false = new A.IconData(63390, "MaterialIcons", false);
