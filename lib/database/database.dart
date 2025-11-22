@@ -141,7 +141,7 @@ Stream<List<Map<String, dynamic>>> getFavoritesData(String encode) async* {
     } catch (e) {
       yield [];
     }
-    if (!await Future.delayed(const Duration(seconds: 5), () => true)) {
+    if (!await Future.delayed(const Duration(microseconds: 1), () => true)) {
       break;
     }
   }
