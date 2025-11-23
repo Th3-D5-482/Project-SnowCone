@@ -164,27 +164,17 @@ class _SongsListState extends State<SongsList> {
                             if (asyncSnapshot.connectionState ==
                                 ConnectionState.waiting) {
                               return const Center(
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 160),
-                                    CircularProgressIndicator(),
-                                  ],
-                                ),
+                                child: CircularProgressIndicator(),
                               );
                             }
                             if (songLists.isEmpty) {
                               return const Center(
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 160),
-                                    Text(
-                                      'No Liked songs',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
+                                child: Text(
+                                  'No Liked songs',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               );
                             }
