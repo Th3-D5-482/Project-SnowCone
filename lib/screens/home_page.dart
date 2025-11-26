@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snowcone/database/database.dart';
-import 'package:snowcone/screens/library_page.dart';
 import 'package:snowcone/screens/play_page.dart';
 import 'package:snowcone/screens/profile_page.dart';
 import 'package:snowcone/screens/search_page.dart';
@@ -28,10 +27,7 @@ class _HomePageState extends State<HomePage> {
         return Future.value(false);
       },
       child: Scaffold(
-        body: IndexedStack(
-          index: index,
-          children: [HomeView(), SearchPage(), LibraryPage()],
-        ),
+        body: IndexedStack(index: index, children: [HomeView(), SearchPage()]),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
           backgroundColor: Colors.transparent,
@@ -44,10 +40,6 @@ class _HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.library_music_rounded),
-              label: 'Library',
-            ),
           ],
         ),
       ),

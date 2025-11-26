@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:snowcone/database/database.dart';
 import 'package:snowcone/screens/display_lyrics_chords.dart';
 
 class PlayPage extends StatefulWidget {
@@ -66,27 +65,6 @@ class _PlayPageState extends State<PlayPage> {
     });
     loadLyrics();
     getChords();
-    getFavoritesData();
-  }
-
-  Future<void> getFavoritesData() async {
-    SharedPreferences pref2 = await SharedPreferences.getInstance();
-    emailID = pref2.getString('getEmail')!;
-    final safeEmail = emailID.replaceAll('.', '_').replaceAll('@', '_');
-    final favoritesDatas = await getFavorites('Favorites/$safeEmail');
-    final match = favoritesDatas.firstWhere(
-      (item) => item['id'] == widget.id,
-      orElse: () => <String, dynamic>{},
-    );
-    if (match.isNotEmpty && match['isFavorite'] == true) {
-      setState(() {
-        isFavorite = true;
-      });
-    } else {
-      setState(() {
-        isFavorite = false;
-      });
-    }
   }
 
   Future<void> navigatingBackCode() async {
@@ -271,7 +249,6 @@ class _PlayPageState extends State<PlayPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(width: 70),
                         IconButton(
                           onPressed: () {
                             final newPosition =
@@ -339,46 +316,6 @@ class _PlayPageState extends State<PlayPage> {
                             Icons.forward_10_rounded,
                             size: 40,
                             color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(width: 10),
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: IconButton(
-                            onPressed: () async {
-                              SharedPreferences pref2 =
-                                  await SharedPreferences.getInstance();
-                              emailID = pref2.getString('getEmail')!;
-                              setState(() {
-                                isFavorite = !isFavorite;
-                              });
-                              if (isFavorite) {
-                                await writeFavorite(
-                                  widget.id,
-                                  emailID,
-                                  isFavorite,
-                                  widget.backgroundColor,
-                                  widget.imageName,
-                                  widget.songName,
-                                  widget.audio,
-                                  widget.lyrics,
-                                  widget.chords,
-                                );
-                              } else {
-                                await deleteFavorites(widget.id, emailID);
-                              }
-                            },
-                            icon: isFavorite
-                                ? Icon(
-                                    Icons.favorite_rounded,
-                                    size: 38,
-                                    color: Colors.redAccent,
-                                  )
-                                : Icon(
-                                    Icons.favorite_outline_rounded,
-                                    size: 38,
-                                    color: Colors.grey.shade400,
-                                  ),
                           ),
                         ),
                       ],
