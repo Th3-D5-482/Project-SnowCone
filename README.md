@@ -58,7 +58,7 @@ The dashboard showcases recent songs organized by album, mixes, worship and prai
 Ready to experience the magic? Choose your platform and dive in:
 
 - 🔗 **[Try in Browser](https://th3d5482snowcone.netlify.app)** – No install, just vibes
-- 📱 **[Get for Android](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/app-debug.apk](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/1))** – Sideload the magic, no Play Store needed  
+- 📱 **[Get for Android](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/1)** – Sideload the magic, no Play Store needed  
 - 🖥️ **[Get for Windows](https://github.com/Th3-D5-482/Project-SnowCone/releases/tag/V1.0.0/SnowCone-Windows.zip)** – Fire it up on your PC, mate  
 
 ---
