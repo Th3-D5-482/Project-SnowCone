@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [C] [C] [C] [C]
 
-[Verse 1]
+Verse 1
 [C]
 I believe You gave sight to the blind  
 [F]
@@ -11,7 +11,7 @@ I believe there were wonders and signs
         [F]
 And You're still the same  
 
-[Verse 2]
+Verse 2
 [C]
 I believe every word that You said  
 [F]
@@ -21,7 +21,7 @@ That Your goodness is good without end
         [F]
 And You'll never change  
 
-[Chorus]
+Chorus
 [C]
 I will tell of Your wonders, sing of Your grace  
 [Am]
@@ -39,7 +39,7 @@ The Lord is faithful, yesterday
         [C]     [G]
 Now, and always, always  
 
-[Verse 3]
+Verse 3
 [C]
 I believe You will come in the clouds  
 [F]
@@ -49,7 +49,7 @@ In Your presence, I know there is power
 [G]     [F]
 Power to save  
 
-[Bridge]
+Bridge
 [Am]     [G]
 You were, You are  
 [C]         [F]

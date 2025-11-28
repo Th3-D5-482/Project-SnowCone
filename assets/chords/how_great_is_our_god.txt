@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [G] [Em7] [C2] [D]
 
-[Verse 1]
+Verse 1
 [G]              [Em7]
 The splendor of a King, clothed in majesty  
 [C2]
@@ -11,7 +11,7 @@ He wraps Himself in light, and darkness tries to hide
 [C2]
 And trembles at His voice, trembles at His voice  
 
-[Chorus]
+Chorus
 [G]
 How great is our God, sing with me  
 [Em7]
@@ -19,7 +19,7 @@ How great is our God, and all will see
 [C]     [D]         [G]
 How great, how great is our God  
 
-[Verse 2]
+Verse 2
 [G]              [Em7]
 Age to age He stands, and time is in His hands  
 [C2]
@@ -29,7 +29,7 @@ The Godhead, three in one: Father, Spirit, Son
 [C2]
 The Lion and the Lamb, the Lion and the Lamb  
 
-[Bridge]
+Bridge
 [G]
 Name above all names  
 [Em7]

@@ -1,4 +1,4 @@
-[Verse 1]  
+Verse 1
 [C]                           [Csus4]    [C]  
 If you've been walkin' the same old road for miles and miles  
 [C]        [Am7]                              [Asus4]   [Am7]  
@@ -8,7 +8,7 @@ If you're tryin' to fill the same old holes inside
 [F]                          [G]  
 There's a better life, there's a better life  
 
-[Verse 2]  
+Verse 2  
 [C]                                    [Csus4]      [C]  
 We've all searched for the light of day in the dead of night  
 [Am7]                               [Asus4]     [Am7]  
@@ -18,7 +18,7 @@ We've all run to things we know just ain't right
 [F]                 [G]  
 There's a better life, there's a better life  
 
-[Chorus]  
+Chorus  
 [C]          [Csus4] [C]  
 If you got pain, He's a pain taker  
 [G]                   [C]  
@@ -28,7 +28,7 @@ If you need freedom or savin', He's a prison shakin' Savior
 [Gsus]   [G]              [C]       [F] [C]  
 If you got chains, He's a chain breaker  
 
-[Bridge]  
+Bridge  
 [F] [C]               [Am]  
 If you believe it, if you receive it  
 [F] [C]                        [Am]      [F]  
@@ -42,7 +42,7 @@ If you believe it, if you receive it
 [C]                            [Am]   [F]  
 If you can feel it, somebody testify  
 
-[Outro]  
+Outro  
 [G/B]  [Am7]               [C/E]  
 If you need freedom or saving  
 [F]  

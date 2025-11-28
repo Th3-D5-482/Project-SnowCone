@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [G] [Gsus4] [G] [Gsus4]
 
-[Verse 1]
+Verse 1
 [G]
 I love You, Lord  
 [C]        [G]
@@ -15,7 +15,7 @@ Until I lay my head
 [C]        [D]        [G]
 I will sing of the goodness of God  
 
-[Chorus]
+Chorus
 [C]              [G]
 All my life You have been faithful  
 [C]                    [G]     [D]
@@ -25,7 +25,7 @@ With every breath that I am able
 [C]        [D]        [G]
 I will sing of the goodness of God  
 
-[Verse 2]
+Verse 2
 [G]
 I love Your voice  
 [C]              [G]
@@ -39,7 +39,7 @@ I’ve known You as a Friend
 [C]        [D]        [G]
 I have lived in the goodness of God  
 
-[Bridge]
+Bridge
 [G/B]        [C]
 Your goodness is running after,  
 [D]        [G]

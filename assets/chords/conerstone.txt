@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [C] [Am] [F] [G]
 
-[Verse 1]
+Verse 1
 [C]
 My hope is built on nothing less  
 [F]                  [G]
@@ -11,7 +11,7 @@ I dare not trust the sweetest frame
 [F]       [G]         [C]
 But wholly trust in Jesus' name  
 
-[Chorus]
+Chorus
 [C/E]   [F]   [Am]  [G]
 Christ alone, Cornerstone  
 [C/E]     [F]         [Am]     [G]
@@ -23,7 +23,7 @@ He is Lord
       [C]
 Lord of all  
 
-[Verse 2]
+Verse 2
 [C]
 When darkness seems to hide His face  
 [F]            [G]
@@ -33,13 +33,13 @@ In every high and stormy gale
 [F]      [G]          [C]
 My anchor holds within the veil  
 
-[Bridge]
+Bridge
 [Am]
 He is Lord  
 [F]   [G]
 Lord of all  
 
-[Verse 3]
+Verse 3
 [C]
 When He shall come with trumpet sound  
 [F]             [G]

@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [D] [F#m] [Bm] [G]
 
-[Verse 1]
+Verse 1
 [D]        [F#m]
 As I rise, strength of God  
 [Bm]        [G]
@@ -11,10 +11,10 @@ As I wake, eyes of God
 [Bm]        [G]
 Look upon, be my sight  
 
-[Interlude]
+Interlude
 [D] [F#m] [Bm] [G]
 
-[Verse 2]
+Verse 2
 [D]        [F#m]
 As I wait, heart of God  
 [Bm]        [G]
@@ -26,7 +26,7 @@ Lead me on, be my guide
            [A]
 Be my guide  
 
-[Chorus]
+Chorus
 [G]
 Above and below me  
 [D]
@@ -38,7 +38,7 @@ Christ be all around me
 [G]
 Yeah  
 
-[Verse 3]
+Verse 3
 [D]        [F#m]
 As I go, Hand of God  
 [Bm]        [G]
@@ -50,11 +50,11 @@ Fall upon, bring me peace
            [A]
 Bring me peace  
 
-[Post-Chorus]
+Post-Chorus
 [D] [Bm] [A]           [G]
 Ooh, ooh, Christ be all around me, yeah  
 
-[Bridge]
+Bridge
 [A]
 Your life, Your death  
 [Bm]

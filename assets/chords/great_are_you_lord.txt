@@ -1,4 +1,4 @@
-[Intro]
+Intro
 [C] [Em] [D] [C] [Em] [D]
 
 [Verse 1]
@@ -13,7 +13,7 @@ Every heart that is broken
 [C] [Em]       [D]
 Great are You, Lord  
 
-[Chorus]
+Chorus
 [C]            [Em]
 It’s Your breath in our lungs  
 [D]
@@ -23,7 +23,7 @@ It’s Your breath in our lungs
 [D]
 So we pour out our praise to You only  
 
-[Bridge]
+Bridge
 [G]
 All the earth will shout Your praise  
 [Gsus4]

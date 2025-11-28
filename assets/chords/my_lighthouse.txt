@@ -1,4 +1,4 @@
-[Verse 1]
+Verse 1
 [C]                   [F]      [C]
 In my wrestling and in my doubts
 [F]      [C]            [G]
@@ -10,7 +10,7 @@ You are the peace in my troubled sea
 [F]           [C]            [G]        [C]
 You are the peace in my troubled sea
 
-[Verse 2]
+Verse 2
 [C]                  [F]         [C]
 In the silence You won't let go
 [F]      [C]              [G]
@@ -22,7 +22,7 @@ You are the peace in my troubled sea
 [F]           [C]            [G]        [C]
 You are the peace in my troubled sea
 
-[Chorus]
+Chorus
 [F]       [C]      [Am]      [G]
 My lighthouse, My lighthouse
 [F]              [C]        [Am]             [G]
@@ -40,7 +40,7 @@ Safe to shore-woah-woah
          [C]
 Safe to shore
 
-[Verse 3]
+Verse 3
 [C]                   [F]      [C]
 I won't fear what tomorrow brings
 [F]          [C]            [G]
@@ -52,7 +52,7 @@ You are the peace in my troubled sea
 [F]           [C]            [G]        [C]
 You are the peace in my troubled sea
 
-[Bridge]
+Bridge
 [F]      [C]
 Fire before us
 [Am]          [G]

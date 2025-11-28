@@ -1,4 +1,4 @@
-[Verse]
+Verse
 [G]        [C]        [D]
 We stand and lift up our hands  
 [G/B]      [C]        [D]
@@ -8,13 +8,13 @@ We bow down and worship Him now
 [G/B]      [C]        [D]
 How great, how awesome is He  
 
-[Pre-Chorus]
+Pre-Chorus
 [A]        [C]
 And together we sing  
 [A]        [C]
 Everyone sing  
 
-[Chorus]
+Chorus
 [G/B]      [C]        [D]
 Holy is the Lord God Almighty  
 [Em]        [C]            [D]
@@ -26,7 +26,7 @@ The earth is filled with His glory
 [Em]        [C]            [D]
 The earth is filled with His glory  
 
-[Bridge]
+Bridge
 [G]        [D/F#]
 It’s rising up all around  
 [F]            [C]

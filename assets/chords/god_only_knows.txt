@@ -1,7 +1,7 @@
-[Intro]
+Intro
 [G] [Bm] [A] [G] [Bm] [A]
 
-[Verse 1]
+Verse 1
 [G]                                [Bm]
 Wide awake, while the world is sound asleep and  
 [A]
@@ -11,7 +11,7 @@ Nobody, nobody, nobody sees you
 [A]
 Nobody, nobody would believe you  
 
-[Verse 2]
+Verse 2
 [G]                               [Bm]
 Every day you try to pick up all the pieces  
 [A]
@@ -21,7 +21,7 @@ Nobody, nobody, nobody sees you
 [A]
 Nobody, nobody would believe you  
 
-[Chorus]
+Chorus
 [G]            [Bm]           [A]
 God only knows what you've been through  
               [D]            [G]
@@ -35,13 +35,13 @@ God only knows the real you
                     [D]           [G]
 There's a kind of love that God only knows  
 
-[Post-Chorus]
+Post-Chorus
 [G]           [Bm]
 There's a kinda love that  
 [A]
 There's a kinda love  
 
-[Verse 3]
+Verse 3
 [G]                             [Bm]
 You keep a cover over every single secret  
 [A]
@@ -51,7 +51,7 @@ Somebody, somebody, somebody sees you
 [A]
 Somebody, somebody will never leave you  
 
-[Bridge]
+Bridge
 [G]
 For the lonely, for the ashamed  
 [A]
