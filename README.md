@@ -1,5 +1,11 @@
 # 🎵 Project SnowCone
 
+### 🔐 Code name: Project SnowCone (The Last Project)
+
+### 👤 Created by: [Th3-D5-482](https://www.github.com/Th3-D5-482)
+
+---
+
 ## ⚠️ Disclaimer  
 
 SnowCone is a personal, faith-centered project created for self-learning and growth. It’s not intended for commercial use or distribution. All content is curated respectfully, with no intent to infringe on copyright. This app reflects a journey of purpose, not profit.
